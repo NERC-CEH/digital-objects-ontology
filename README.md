@@ -1,1 +1,1 @@
-# digital-objects-ontology
+# Digital Objects Ontology
