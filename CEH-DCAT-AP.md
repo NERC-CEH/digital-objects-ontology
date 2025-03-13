@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 12/03/2025
+Last updated: 13/03/2025
 
 Contributors: Helen Rawsthorne
 
@@ -11,6 +11,10 @@ The EIDC holds records for datasets. Each record can be accessed in multiple for
 
 ## Overview
 
+Say something about main classes vs secondary classes.
+
+Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
+
 ### How to interpret the tables
 
 #### Range column
@@ -19,13 +23,13 @@ Either identical to source or more strict, but never contradictory.
 
 #### Cardinality column
 
-0.. implies optional
+0.. implies optional unless stated otherwise in Usage column
 
 1 or 1.. implies mandatory
 
 #### Usage column
 
-If empty, definition is identical to definition given in source. Any usage instructions given should be added to the definition in the source. If contradictory, use those given here. 
+Any usage notes written in this column should be taken as supplementary to the definition and usage notes in the source specification. If contradictory, use those given here.
 
 #### Reuse column
 
@@ -34,7 +38,7 @@ To understand relationship with DCAT 3
 - A: reused as defined and expressed in DCAT 3
 - E: reused with additional usage notes or additional restrictions compared to DCAT 3
 - N: in DCAT 3 but not in CEH-DCAT-AP
-- P: CEH-DCAT-AP profile specific extension (i.e. a term not mentioned in DCAT 3)
+- P: CEH-DCAT-AP profile specific extension (i.e. a term not mentioned in DCAT 3), can be used in combination with A or E
 
 ### Namespaces
 
@@ -69,13 +73,13 @@ Every instance of this class must also be an instance of `prov:Entity`.
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
-| `foaf:homepage` | `foaf:Document` | 1 |  | A |
+| `foaf:homepage` | `foaf:Document` | 1 | Use the URI of the homepage, which will be inferred as an instance of the `foaf:Document` class. | A |
 | `dcat:themeTaxonomy` | `rdfs:Resource` |  | TODO | E |
 | `dcat:resource` | `dcat:Resource` | 0..* |  | A |
-| `dcat:dataset` | `dcat:Dataset` | 0..* |  | A |
+| `dcat:dataset` | `dcat:Dataset` | 0..* | Must use the [DOI](https://www.doi.org/) URI (where possible). | A |
 | `dcat:service` | `dcat:DataService` | 0..* |  | A |
 | `dcat:catalog` | `dcat:Catalog` | 0..* |  | A |
-| `dcat:record` | `	dcat:CatalogRecord` | 0..* |  | A |
+| `dcat:record` | `dcat:CatalogRecord` |  |  | N |
 
 #### Cataloged Resource
 
@@ -87,41 +91,42 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, must als
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
-| `dcterms:accessRights` | `dcterms:RightsStatement` | 1 | No need to explicitly instantiate the `dcterms:RightsStatement`. Use as range the IRI of a term from the [Limitations on public access code list](https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess), which will be inferred as an instance of the `dcterms:RightsStatement` class. [Issue: or do we need a text label to go with it as in https://github.com/NERC-CEH/digital-objects-ontology/issues/21 ?] | E |
+| `dcterms:accessRights` | `dcterms:RightsStatement` | 1 | Use the URI of a term from the [Limitations on public access code list](https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess), which will be inferred as an instance of the `dcterms:RightsStatement` class. [Issue: or do we need a text label to go with it as in https://github.com/NERC-CEH/digital-objects-ontology/issues/21 ?] | E |
 | `dcterms:conformsTo` |  | .. | TODO |  |
-| `dcat:contactPoint` | `vcard:Kind` | 1..* | [Issue: Will probably always be a `vcard:Organization` if we don't want to give emails of individuals?] | E |
-| `dcterms:creator` | `foaf:Agent` | 0..* | It is mandatory to have at least one `dcterms:creator` or `dcterms:contributor`. Wherever possible, use ORCID for individuals and ROR for organisations. If ROR doesn't exist, submit a request to add the organisation. | E |
-| `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | Mandatory in at least one language. Must use a language tag (e.g. `@en`). | E |
-| `dcterms:title` | `rdfs:Literal` typed as `xsd:string` | 1..* | Mandatory in at least one language. Must use a language tag (e.g. `@en`). | E |
-| `dcterms:issued` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, use date when metadata record put online, not date of end of embargo. | E |
-| `dcterms:modified` | `rdfs:Literal` typed as `xsd:date` | .. | [Issue: DCAT says this indicates a change to the resource, not just the catalog record... shouldn't this be a new version? think about this] | E |
-| `dcterms:language` | `dcterms:LinguisticSystem` | 1..* | No need to explicitly instantiate the `dcterms:LinguisticSystem`. Use as range the IRI of a term from [ISO 639-1](https://id.loc.gov/vocabulary/iso639-1.html), which will be inferred as an instance of the `dcterms:LinguisticSystem` class. If representations of a dataset are available for each language separately, define an instance of dcat:Distribution for each language and describe the specific language of each distribution using dcterms:language (i.e., the dataset will have multiple dcterms:language values and each distribution will have just one as the value of its dcterms:language property). In case of multilingual distributions, the distributions will have multiple dcterms:language values.  | E |
-| `dcterms:publisher` | `foaf:Agent` | 1..* | Wherever possible, use ORCID for individuals and ROR for organisations. If ROR doesn't exist, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] | E |
-| `dcterms:identifier` | `rdfs:Literal` typed as `xsd:anyURL` | 1..* | Mandatory, at least the catlogue-specific PID given to the resource. If the resource has a DOI, it must be stated here too. | E |
+| `dcat:contactPoint` | `vcard:Organization` or `vcard:Individual` | 1..* | Use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | E |
+| `dcterms:creator` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the `dcat:Resource` class must have at least one `dcterms:creator` or `dcterms:contributor`. Must use an [ORCID](https://orcid.org/) URI for people (where possible) and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: what URI for people who don't/can't have an orcid?] | E |
+| `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | E |
+| `dcterms:title` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | E |
+| `dcterms:issued` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, use the date when the metadata record was put online, not the date of the end of the embargo. | E |
+| `dcterms:modified` | `rdfs:Literal` typed as `xsd:date` | 1 | TODO [Issue: DCAT says this indicates a change to the resource, not just the catalog record... do we need this? shouldn't this be a new version? think about this] | E |
+| `dcterms:language` | `dcterms:LinguisticSystem` | 1..* | Use the URI of a term from the [ISO 639-1](https://id.loc.gov/vocabulary/iso639-1.html), which will be inferred as an instance of the `dcterms:LinguisticSystem` class. | E |
+| `dcterms:publisher` | `foaf:Person` or `foaf:Organization` | 1..* | Must use an [ORCID](https://orcid.org/) URI for people (where possible) and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] [Issue: can there be more than one publisher?] | E |
+| `dcterms:identifier` | `rdfs:Literal` typed as `xsd:anyURL` or `xsd:string` | 1..* | Must use an URI (where possible). Must use at least the catalogue-specific PID. Must use the [DOI](https://www.doi.org/) URI (where possible). | E |
 | `dcat:theme` |  | .. | TODO |  |
-| `dcterms:type` |  | .. | [Issue: currently we use terms from https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7, but maybe we should migrate to https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd as it includes `Workflow` and `Model`, neither of which are in dcterms? If we do that, do not include term `Other`. Both vocabs are recommended by DCAT for this predicate.] |  |
+| `dcterms:type` |  | .. | TODO [Issue: currently we use terms from https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7, but maybe we should migrate to https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd as it includes `Workflow` and `Model`, neither of which are in dcterms? If we do that, do not include term `Other`. Both vocabs are recommended by DCAT for this predicate.] |  |
 | `dcterms:relation` |  |  |  | N |
 | `dcat:qualifiedRelation` |  |  |  | N |
 | `dcat:keyword` |  | .. | TODO |  |
-| `dcat:landingPage` | `foaf:Document` | 1..* | Mandatory. Must only link to the catalogue in which the resource was deposited originally. [Issue: does it make sense to allow putting two links that direct to the same page? E.g. DOI and catalog PID.] | E |
+| `dcat:landingPage` | `foaf:Document` | 1..* | Use the URI of the landing page, which will be inferred as an instance of the `foaf:Document` class. [Issue: does it make sense to allow putting two links that direct to the same page? E.g. DOI and catalog PID.] | E |
 | `prov:qualifiedAttribution` |  |  |  | N |
-| `dcterms:license` | `dcterms:LicenseDocument` | 1 | Link directly to IRI. | E |
-| `dcterms:rights` | `dcterms:RightsStatement` | 0..1 |  | A |
+| `dcterms:license` | `dcterms:LicenseDocument` | 1 | Use the URI of a licence document, which will be inferred as an instance of the `dcterms:LicenseDocument` class. | E |
+| `dcterms:rights` | `dcterms:RightsStatement` | 0..1 | Use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | A |
 | `dcterms:hasPart` |  |  |  | N |
 | `odrl:hasPolicy` |  |  |  | N |
-| `dcterms:isReferencedBy` |  | 0..* | One per publication (do not put DOI and another PID of the same resource). Use DOI where possible, second best option is other PID. | E |
-| `dcat:previousVersion` |  | 0..1 | PID of the previous version of the resource. Equivalent to `pav:previousVersion` but must only define `dcat:previousVersion`. May be used without using `dcterms:replaces`. | E |
+| `dcterms:isReferencedBy` | `rdfs:Literal` typed as `xsd:anyURL` or `xsd:string` | 0..* | Must use an URI (where possible). Must use the [DOI](https://www.doi.org/) URI (where possible). Use only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for the PID of the same resource). | E |
+| `dcat:previousVersion` | `rdfs:Literal` typed as `xsd:anyURL` or `xsd:string` | 0..1 | Must use an URI (where possible). Must use the [DOI](https://www.doi.org/) URI (where possible). May be used without using `dcterms:replaces`. | E |
 | `dcat:hasVersion` |  |  |  | N |
 | `dcat:hasCurrentVersion` |  |  |  | N |
-| `dcterms:replaces` |  | 0..1 | PID of the resource being replaced. If used, `dcat:previousVersion` must also be used. | E |
-| `dcat:version` |  | 1 | Mandatory. String, semantic versionning? SemVer, SchemaVer, https://www.ands.org.au/working-with-data/data-management/data-versioning |  |
-| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Mandatory if previous version exists. Mandatory in at least one language. Must use a language tag (e.g. `@en`). | E |
-| `adms:status` |  | .. | [Issue: choose a vocabulary to use out of: Those defined in the ISO standard for item registration [ISO-19135] (accepted / not accepted, deprecated, experimental, reserved, retired, stable, submitted, superseded, valid / invalid). The progress codes defined in [ISO-19115] (accepted, completed, deprecated, final, historical archive, not accepted, obsolete, ongoing, pending, planned, proposed, required, retired, superseded, tentative, under development, valid, withdrawn). The ADMS Status vocabulary [ADMS-SKOS], used in [DCAT-AP], which includes four statuses: completed, deprecated, under development, and withdrawn. The dataset statuses [EUV-DS] and concept statuses [EUV-CS] vocabularies from the EU Vocabularies registry.] | E |
+| `dcterms:replaces` | `rdfs:Literal` typed as `xsd:anyURL` or `xsd:string` | 0..1 | Must use an URI (where possible). Must use the [DOI](https://www.doi.org/) URI (where possible). If used, `dcat:previousVersion` must also be used. | E |
+| `dcat:version` | `rdfs:Literal` typed as `xsd:string` | 1 | Use [SemVer](http://semver.org/) or [SchemaVer](https://snowplow.io/blog/introducing-schemaver-for-semantic-versioning-of-schemas) (where possible). |  |
+| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use if previous version exists. Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | E |
+| `adms:status` |  | .. | TODO [Issue: choose a vocabulary to use out of: Those defined in the ISO standard for item registration [ISO-19135] (accepted / not accepted, deprecated, experimental, reserved, retired, stable, submitted, superseded, valid / invalid). The progress codes defined in [ISO-19115] (accepted, completed, deprecated, final, historical archive, not accepted, obsolete, ongoing, pending, planned, proposed, required, retired, superseded, tentative, under development, valid, withdrawn). The ADMS Status vocabulary [ADMS-SKOS], used in [DCAT-AP], which includes four statuses: completed, deprecated, under development, and withdrawn. The dataset statuses [EUV-DS] and concept statuses [EUV-CS] vocabularies from the EU Vocabularies registry.] | E |
 | `dcat:first` |  |  |  | N |
 | `dcat:last` |  |  |  | N |
 | `dcat:prev` |  |  |  | N |
-| `rdau:P60402` | `foaf:Agent` | 1 | "has custodian" | P E |
-| `rdau:P60404` | `foaf:Agent` | 1 | "has owner" [Issue: alternative would be rdau:P60400 "has current owner"] | P E |
+| `rdau:P60402` | `foaf:Person` or `foaf:Organization` | 1 | Must use an [ORCID](https://orcid.org/) URI for people (where possible) and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] [Issue: can there be more than one custodian?] | P E |
+| `rdau:P60404` | `foaf:Person` or `foaf:Organization` | 1 | Must use an [ORCID](https://orcid.org/) URI for people (where possible) and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] [Issue: can there be more than one owner?] [Issue: alternative would be rdau:P60400 "has current owner"] | P E |
+| `dcterms:contributor` | `foaf:Person` or `foaf:Organization` | 1..* | Must have at least one instance of `dcterms:contributor` or `dcterms:creator`. Must use an [ORCID](https://orcid.org/) URI for people (where possible) and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: what URI for people who don't/can't have an orcid?] | P E |
 
 [Issue: how to indicate last time metadata record updated?]
 
@@ -164,8 +169,8 @@ Every instance of this class must also be an instance of `prov:Entity`.
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
-| `dcterms:title` | `rdfs:Literal` typed as `xsd:string` | 1..* | Mandatory in at least one language. Must use a language tag (e.g. `@en`). | E |
-| `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | Mandatory in at least one language. Must use a language tag (e.g. `@en`). | E |
+| `dcterms:title` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | E |
+| `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | E |
 | `dcterms:issued` | `rdfs:Literal` typed as `xsd:date` | 1 | Mandatory. If embargoed, use date when metadata record put online, not date of end of embargo. | E |
 | `dcterms:modified` | `rdfs:Literal` typed as `xsd:date` | .. | [Issue: DCAT says this indicates a change to the resource, not just the catalog record... shouldn't this be a new version? think about this] | E |
 | `dcterms:license` | `dcterms:LicenseDocument` | 1 | Link directly to IRI. | E |
@@ -201,6 +206,81 @@ Every instance of this class must also be an instance of `prov:Entity`.
 
 ### Secondary Classes
 
+#### Rights Statement
+
+`dcterms:RightsStatement`
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `odrs:copyrightHolder` | `foaf:Person` or `foaf:Organization` | .. | Wherever possible, use ORCID for individuals and ROR for organisations. If ROR doesn't exist, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] [Issue: is it possible for there to be more than one?] | P E |
+| `odrs:copyrightStatement` | `foaf:Document` | 0..1 |  | P A |
+| `odrs:copyrightNotice` | `rdfs:Literal` typed as `xsd:string` | 0..* | Use when predicate is `dcterms:rights`. Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `odrs:copyrightYear` | `rdfs:Literal` typed as `xsd:gYear` | 0..1 |  | P E |
+
+#### Organization (vCard)
+
+`vcard:Organization`
+
+How to define URI? Could use email address if we didn't have more than one postal address for the same email. Why do we need to give postal address?
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `vcard:hasFN` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:hasAddress` | `vcard:Address` | 1 |  | P A |
+| `vcard:hasEmail` | `vcard:Email` | 1 | Use <mailto:> | P E |
+| `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | ROR | P E |
+
+#### Individual
+
+`vcard:Individual`
+
+Use <mailto:> as URI.
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `vcard:hasFN` | `rdfs:Literal` typed as `xsd:string` | 1..* | [Issue: consider breaking down into title, given name, family name?] | P E |
+| `vcard:organization-name` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:hasAddress` | `vcard:Address` | 1 |  | P A |
+| `vcard:hasEmail` | `vcard:Email` | 1 | Use <mailto:> | P E |
+| `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | ORCID | P E |
+
+#### Address
+
+`vcard:Address`
+
+Blank node.
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `vcard:street-address` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:locality` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:region` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:country-name` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `vcard:postal-code` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
+
+#### Person
+
+`foaf:Person`
+
+Use ORCID as URI.
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1 | [Issue: consider breaking down into title, given name, family name?] | P E |
+| `org:memberOf` | `foaf:Organization` ≡ `org:Organization` | 0..* |  | P E |
+| `foaf:mbox` | `owl:Thing` | 0..1 | Use <mailto:> | P E |
+
+#### Organization (FOAF) ≡ Organization (Org)
+
+`foaf:Organization` ≡ `org:Organization`
+
+Use ROR as URI.
+
+| Property | Range | Cardinality | Usage | Reuse |
+| --- | --- | --- | --- | --- |
+| `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1..* | Must use a language tag (e.g. `@en`). May be duplicated in multiple languages. | P E |
+| `foaf:mbox` | `owl:Thing` | 0..1 | Use <mailto:> | P E |
+
 #### Location
 
 `dcterms:Location`
@@ -222,19 +302,24 @@ Every instance of this class must also be an instance of `prov:Entity`.
 | `time:hasBeginning` |  |  |  | N |
 | `time:hasEnd` |  |  |  | N |
 
-#### License Document
+#### Activity
+
+`prov:Activity`
+
+#### Classes not used
+
+Cos we don't instantiate them explicitly although they are the range of a predicate of a main class.
+
+`foaf:Document`
+
+`dcterms:LinguisticSystem`
 
 `dcterms:LicenseDocument`
 
-Not used.
+`dcterms:Standard`
 
-#### Rights Statement
+`dcterms:MediaType`
 
-`dcterms:RightsStatement`
+`dcterms:MediaTypeOrExtent`
 
-| Property | Range | Cardinality | Usage | Reuse |
-| --- | --- | --- | --- | --- |
-| `odrs:copyrightHolder` | `foaf:Agent` | .. | Wherever possible, use ORCID for individuals and ROR for organisations. If ROR doesn't exist, submit a request to add the organisation. [Issue: Will probably always be a `foaf:Organization`?] [Issue: is it possible for there to be more than one?] | P E |
-| `odrs:copyrightStatement` | `foaf:Document` | 0..1 |  | P A |
-| `odrs:copyrightNotice` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Use when predicate is `dcterms:rights`. Must use a language tag (e.g. `@en`). | P E |
-| `odrs:copyrightYear` | `rdfs:Literal` typed as `xsd:gYear` | 0..1 |  | P E |
+`spdx:Checksum`
