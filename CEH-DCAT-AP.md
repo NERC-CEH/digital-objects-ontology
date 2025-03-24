@@ -1,13 +1,12 @@
 # CEH DCAT Application Profile
 
-Last updated: 20/03/2025
+Last updated: 24/03/2025
 
 Contributors: Helen Rawsthorne
 
 ## Introduction
 
 The EIDC holds records for datasets. Each record can be accessed in multiple formats including Turtle, which is used to express RDF data. The aim of this application profile is to provide a model that can be used to describe all resources at CEH, so as to standardise them across the organisation and align them with community best practices. The model is an application profile of the DCAT 3 vocabulary. It overlaps a lot with DCAT-AP 3.0, but we can not use that as it is specific to data portals in the EU so is too restrictive in parts.
-
 
 ## Overview
 
@@ -34,14 +33,14 @@ Contains the accepted cardinality of the property.
 
 #### Usage column
 
-Contains any usage notes, which should be taken as supplementary to the definition and usage notes in the source specification. If contradictory, use those given here.
+Contains usage notes for the property, which should be taken as supplementary to the definition and usage notes given in the source specification. If contradictory, use those given here.
 
 #### Reuse column
 
 Contains one or two letter codes to understand the relationship between the property and DCAT 3.
 
-- A: reused as defined and expressed in DCAT 3
-- E: reused with additional usage notes or additional restrictions compared to DCAT 3 (including a change in cardinality)
+- A: reused exactly as defined and expressed in DCAT 3
+- E: reused with additional usage notes or additional restrictions compared to DCAT 3 (including only a change in cardinality)
 - N: in DCAT 3 but not in CEH-DCAT-AP
 - P: CEH-DCAT-AP profile specific extension (i.e. a term not mentioned in DCAT 3), can be used in combination with A or E
 
@@ -94,7 +93,9 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 This class is a super-class of `dcat:Dataset`, of `dcat:DataService` and of `dcat:Catalog`.
 
-Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:qualifiedAttribution`, `prov:wasGeneratedBy`).
+Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`).
+
+![Properties of the class Cataloged Resource](/CEH-DCAT-AP_diagrams/dcat-resource.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -113,7 +114,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:type` |  | 1 | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/24] |  |
 | `dcterms:relation` |  |  |  | N |
 | `dcat:qualifiedRelation` |  |  |  | N |
-| `dcat:keyword` |  | 0..* | TODO |  |
+| `dcat:keyword` | `rdfs:Literal` typed as `xsd:anyURL` | 1..* | TODO |  |
 | `dcat:landingPage` | `foaf:Document` | 1..* |  | E |
 | `prov:qualifiedAttribution` |  |  |  | N |
 | `dcterms:license` | `dcterms:LicenseDocument` | 1 |  | E |
@@ -121,20 +122,20 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:hasPart` |  |  |  | N |
 | `odrl:hasPolicy` |  |  |  | N |
 | `dcterms:isReferencedBy` | `dcat:resource` or `prov:Entity` or `fabio:Expression` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. Use only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for the PID of the same resource). | E |
-| `dcat:previousVersion` | `dcat:resource` | 0..1 | SHOULD use the [DOI](https://www.doi.org/) URI. May be used without using `dcterms:replaces`. | E |
+| `dcat:previousVersion` | `dcat:resource` | 0..1 | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:hasVersion` |  |  |  | N |
 | `dcat:hasCurrentVersion` |  |  |  | N |
-| `dcterms:replaces` | `dcat:resource` | 0..1 | SHOULD use the [DOI](https://www.doi.org/) URI. If used, `dcat:previousVersion` must also be used. | E |
+| `dcterms:replaces` | `dcat:resource` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:version` | `rdfs:Literal` typed as `xsd:string` | 1 | Use [SemVer](http://semver.org/) or [SchemaVer](https://snowplow.io/blog/introducing-schemaver-for-semantic-versioning-of-schemas) (where possible). |  |
 | `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use if previous version exists. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
-| `adms:status` |  | .. | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/25] | E |
+| `adms:status` | `skos:Concept` | .. | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/25] | E |
 | `dcat:first` |  |  |  | N |
 | `dcat:last` |  |  |  | N |
 | `dcat:prev` |  |  |  | N |
-| `rdau:P60402` (has oustodian) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
+| `rdau:P60402` (has coustodian) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
 | `rdau:P60400` (has current owner) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
-| `dcterms:contributor` | `foaf:Person` or `foaf:Organization` | 1..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | P E |
-| `geodcatap:topicCategory` |  | 1..* | MUST use the URI of a term from the [Topic categories in accordance with EN ISO 19115 code list](https://inspire.ec.europa.eu/metadata-codelist/TopicCategory). | P A |
+| `dcterms:contributor` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | P E |
+| `geodcatap:topicCategory` | `skos:Concept` | 1..* | MUST use the URI of a term from the [Topic categories in accordance with EN ISO 19115 code list](https://inspire.ec.europa.eu/metadata-codelist/TopicCategory). | P A |
 
 [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/22]
 
@@ -214,7 +215,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 ### Secondary Classes
 
-#### Rights Statement
+#### Rights Statement (DCTerms)
 
 `dcterms:RightsStatement`
 
@@ -242,11 +243,11 @@ How to define URI? Could use email address if we didn't have more than one posta
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `vcard:hasFN` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
-| `vcard:hasAddress` | `vcard:Address` | 1 |  | P A |
+| `vcard:hasAddress` | `vcard:Address` | 0..1 |  | P A |
 | `vcard:hasEmail` | `vcard:Email` | 1 | SHOULD use a <mailto:> URI. | P E |
 | `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | SHOULD use a [ROR ID](https://ror.org/) URI. | P E |
 
-#### Address
+#### Address (vCard)
 
 `vcard:Address`
 
@@ -258,7 +259,7 @@ How to define URI? Could use email address if we didn't have more than one posta
 | `vcard:country-name` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `vcard:postal-code` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
 
-#### Individual
+#### Individual (vCard)
 
 `vcard:Individual`
 
@@ -273,7 +274,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 | `vcard:hasEmail` | `vcard:Email` | 1 | SHOULD use a <mailto:> URI. | P E |
 | `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | ORCID | P E |
 
-#### Name
+#### Name (vCard)
 
 `vcard:Name`
 
@@ -283,7 +284,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 | `vcard:given-name` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
 | `vcard:honorific-prefix` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
 
-#### Person
+#### Person (FOAF)
 
 `foaf:Person`
 
@@ -309,7 +310,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `foaf:mbox` | `owl:Thing` | 0..1 | SHOULD use a <mailto:> URI. | P E |
 
-#### Location
+#### Location (DCTerms)
 
 `dcterms:Location`
 
@@ -319,7 +320,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | `dcat:bbox` | `rdfs:Literal` typed as `geo:wktLiteral` | 0..1 |  | E |
 | `dcat:centroid` |  |  |  | N |
 
-#### Period of Time
+#### Period of Time (DCTerms)
 
 `dcterms:PeriodOfTime`
 
@@ -330,13 +331,13 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | `time:hasBeginning` |  |  |  | N |
 | `time:hasEnd` |  |  |  | N |
 
-#### Activity
+#### Activity (PROV-O)
 
 `prov:Activity`
 
 #### Classes not used
 
-No predicates are used with the following classes as subjects.
+No properties are used with the following classes as subjects.
 
 `foaf:Document`
 
@@ -351,3 +352,5 @@ No predicates are used with the following classes as subjects.
 `dcterms:MediaTypeOrExtent`
 
 `spdx:Checksum`
+
+`vcard:Email`
