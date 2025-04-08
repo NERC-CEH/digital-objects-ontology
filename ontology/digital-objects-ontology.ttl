@@ -1,0 +1,404 @@
+@prefix : <https://ceh.ac.uk/digital-objects-ontology/> .
+@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
+@prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
+@prefix epi: <https://epimorphics.com/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <https://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frapo: <http://purl.org/spar/frapo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://ceh.ac.uk/digital-objects-ontology/> .
+
+<https://ceh.ac.uk/digital-objects-ontology/> rdf:type owl:Ontology ;
+                                               owl:versionIRI <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> ;
+                                               dcterms:created "2025-01-01"^^xsd:date ;
+                                               dcterms:creator <https://orcid.org/0000-0002-6540-8547> ;
+                                               dcterms:description "Brief description..."@en ;
+                                               dcterms:issued "2025-01-01"^^xsd:date ;
+                                               dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
+                                               dcterms:modified "2025-01-01"^^xsd:date ;
+                                               dcterms:publisher <https://ror.org/00pggkr55> ;
+                                               dcterms:title "Digital Objects Ontology"@en ;
+                                               vann:preferredNamespacePrefix "doo" ;
+                                               vann:preferredNamespaceUri "https://ceh.ac.uk/digital-objects-ontology/" ;
+                                               owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+geo:wktLiteral rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:ObjectProperty ;
+                rdfs:domain prov:Activity ;
+                rdfs:range prov:Activity .
+
+
+###  http://purl.org/spar/frapo/awards
+frapo:awards rdf:type owl:ObjectProperty ;
+             rdfs:domain frapo:FundingAgency ;
+             rdfs:range frapo:Grant .
+
+
+###  http://purl.org/spar/frapo/enables
+frapo:enables rdf:type owl:ObjectProperty ;
+              rdfs:domain foaf:Project ;
+              rdfs:range frapo:Investigation .
+
+
+###  http://purl.org/spar/frapo/funds
+frapo:funds rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( frapo:FundingAgency
+                                        frapo:Grant
+                                      )
+                        ] ;
+            rdfs:range foaf:Project .
+
+
+###  http://purl.org/spar/frapo/hasOutput
+frapo:hasOutput rdf:type owl:ObjectProperty ;
+                rdfs:domain frapo:Investigation ;
+                rdfs:range prov:Entity .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#belongsTo
+ef:belongsTo rdf:type owl:ObjectProperty ;
+             rdfs:domain ef:MonitoringFacility ;
+             rdfs:range ef:MonitoringNetwork .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#contains
+ef:contains rdf:type owl:ObjectProperty ;
+            rdfs:domain ef:MonitoringNetwork ;
+            rdfs:range ef:MonitoringFacility .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#involvedIn
+ef:involvedIn rdf:type owl:ObjectProperty ;
+              rdfs:domain ef:AbstractMonitoringFeature ;
+              rdfs:range ef:MonitoringActivity .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#relatedTo
+ef:relatedTo rdf:type owl:ObjectProperty ;
+             rdfs:domain ef:MonitoringFacility ;
+             rdfs:range ef:MonitoringFacility .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#setUpFor
+ef:setUpFor rdf:type owl:ObjectProperty ;
+            rdfs:domain ef:MonitoringActivity ;
+            rdfs:range ef:MonitoringProgramme .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#specialisedType
+ef:specialisedType rdf:type owl:ObjectProperty ;
+                   rdfs:domain ef:MonitoringFacility ;
+                   rdfs:range ef:SpecialisedEMF .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#triggers
+ef:triggers rdf:type owl:ObjectProperty ;
+            rdfs:domain ef:MonitoringProgramme ;
+            rdfs:range ef:MonitoringActivity .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#uses
+ef:uses rdf:type owl:ObjectProperty ;
+        rdfs:domain ef:MonitoringActivity ;
+        rdfs:range ef:AbstractMonitoringFeature .
+
+
+###  http://www.w3.org/ns/prov#used
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:domain prov:Activity ;
+          rdfs:range prov:Entity .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range prov:Agent .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
+doo:originatingGrant rdf:type owl:ObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range frapo:Grant .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/originatingProject
+doo:originatingProject rdf:type owl:ObjectProperty ;
+                       rdfs:domain prov:Entity ;
+                       rdfs:range foaf:Project .
+
+
+###  https://epimorphics.com/originatingFacility
+epi:originatingFacility rdf:type owl:ObjectProperty ;
+                        rdfs:domain prov:Entity ;
+                        rdfs:range ef:MonitoringFacility .
+
+
+###  https://epimorphics.com/originatingProgramme
+epi:originatingProgramme rdf:type owl:ObjectProperty ;
+                         rdfs:domain prov:Entity ;
+                         rdfs:range ef:MonitoringProgramme .
+
+
+###  https://epimorphics.com/utilises
+epi:utilises rdf:type owl:ObjectProperty ;
+             rdfs:domain ef:MonitoringProgramme ;
+             rdfs:range ef:AbstractMonitoringFeature .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/spar/frapo/hasEndDate
+frapo:hasEndDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( frapo:Investigation
+                                             foaf:Project
+                                           )
+                             ] ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/spar/frapo/hasFunderIdentifier
+frapo:hasFunderIdentifier rdf:type owl:DatatypeProperty ;
+                          rdfs:domain frapo:FundingAgency ;
+                          rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/spar/frapo/hasGrantNumber
+frapo:hasGrantNumber rdf:type owl:DatatypeProperty ;
+                     rdfs:domain frapo:Grant ;
+                     rdfs:range xsd:string .
+
+
+###  http://purl.org/spar/frapo/hasStartDate
+frapo:hasStartDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( frapo:Investigation
+                                               foaf:Project
+                                             )
+                               ] ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#boundingBox
+ef:boundingBox rdf:type owl:DatatypeProperty ;
+               rdfs:domain ef:MonitoringActivity ;
+               rdfs:range geo:wktLiteral .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#name
+ef:name rdf:type owl:DatatypeProperty ;
+        rdfs:domain ef:AbstractMonitoringObject ;
+        rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#purpose
+ef:purpose rdf:type owl:DatatypeProperty ;
+           rdfs:domain ef:MonitoringFacility ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/fabio/Expression
+fabio:Expression rdf:type owl:Class .
+
+
+###  http://purl.org/spar/frapo/FundingAgency
+frapo:FundingAgency rdf:type owl:Class ;
+                    rdfs:subClassOf foaf:Organization .
+
+
+###  http://purl.org/spar/frapo/Grant
+frapo:Grant rdf:type owl:Class .
+
+
+###  http://purl.org/spar/frapo/Investigation
+frapo:Investigation rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+geo:SpatialObject rdf:type owl:Class .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#AbstractMonitoringFeature
+ef:AbstractMonitoringFeature rdf:type owl:Class ;
+                             rdfs:subClassOf geo:SpatialObject ,
+                                             ef:AbstractMonitoringObject .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#AbstractMonitoringObject
+ef:AbstractMonitoringObject rdf:type owl:Class .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#MonitoringActivity
+ef:MonitoringActivity rdf:type owl:Class .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#MonitoringFacility
+ef:MonitoringFacility rdf:type owl:Class ;
+                      rdfs:subClassOf ef:AbstractMonitoringFeature .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#MonitoringNetwork
+ef:MonitoringNetwork rdf:type owl:Class ;
+                     rdfs:subClassOf ef:AbstractMonitoringFeature .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#MonitoringProgramme
+ef:MonitoringProgramme rdf:type owl:Class ;
+                       rdfs:subClassOf ef:AbstractMonitoringObject .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#SpecialisedEMF
+ef:SpecialisedEMF rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf prov:Agent .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent .
+
+
+###  http://xmlns.com/foaf/0.1/Project
+foaf:Project rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3.org/2015/03/inspire/ef#Platform
+ef:Platform rdf:type owl:NamedIndividual ,
+                     ef:SpecialisedEMF .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#Sensor
+ef:Sensor rdf:type owl:NamedIndividual ,
+                   ef:SpecialisedEMF .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#Site
+ef:Site rdf:type owl:NamedIndividual ,
+                 ef:SpecialisedEMF .
+
+
+###  http://www.w3.org/2015/03/inspire/ef#Station
+ef:Station rdf:type owl:NamedIndividual ,
+                    ef:SpecialisedEMF .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( ef:Platform
+                        ef:Sensor
+                        ef:Site
+                        ef:Station
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
