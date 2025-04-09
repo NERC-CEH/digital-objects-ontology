@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 24/03/2025
+Last updated: 25/03/2025
 
 Contributors: Helen Rawsthorne
 
@@ -10,7 +10,9 @@ The EIDC holds records for datasets. Each record can be accessed in multiple for
 
 ## Overview
 
-Say something about main classes vs secondary classes.
+The section Main Classes is dedicated to the seven main classes upon which the DCAT vocabulary is based. Each class has its own section, which details the way it is to be used in this application profile. The section Secondary Classes contains details of other classes that are part of this application profile but that are not part of the DCAT vocabulary.
+
+![Overview of the CEH DCAT Application Profile](/CEH-DCAT-AP_diagrams/dcat.svg)
 
 Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
 
@@ -91,7 +93,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 `dcat:Resource`
 
-This class is a super-class of `dcat:Dataset`, of `dcat:DataService` and of `dcat:Catalog`.
+This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:Catalog` and of `dcat:DatasetSeries`.
 
 Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`).
 
@@ -100,7 +102,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `dcterms:accessRights` | `dcterms:RightsStatement` | 1 | SHOULD use the URI of a term from the [Limitations on public access code list](https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess). | E |
-| `dcterms:conformsTo` |  | .. | TODO |  |
+| `dcterms:conformsTo` | `dcterms:Standard` | 0..* |  | A |
 | `dcat:contactPoint` | `vcard:Organization` or `vcard:Individual` | 1..* | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/9] | E |
 | `dcterms:creator` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | E |
 | `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
@@ -272,7 +274,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 | `vcard:organization-name` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `vcard:hasAddress` | `vcard:Address` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | P A |
 | `vcard:hasEmail` | `vcard:Email` | 1 | SHOULD use a <mailto:> URI. | P E |
-| `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | ORCID | P E |
+| `vcard:hasUID` | `rdfs:Literal` typed as `xsd:anyURI` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI. | P E |
 
 #### Name (vCard)
 
