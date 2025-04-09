@@ -12,7 +12,7 @@ The EIDC holds records for datasets. Each record can be accessed in multiple for
 
 The section Main Classes is dedicated to the seven main classes upon which the DCAT vocabulary is based. Each class has its own section, which details the way it is to be used in this application profile. The section Secondary Classes contains details of other classes that are part of this application profile but that are not part of the DCAT vocabulary.
 
-![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP_diagrams/dcat.svg)
+![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat.svg)
 
 Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
 
@@ -80,7 +80,7 @@ This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Catalog](/CEH-DCAT-AP_diagrams/dcat-catalog.svg)
+![Diagram of the class Catalog](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-catalog.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:C
 
 Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`).
 
-![Diagram of the class Cataloged Resource](/CEH-DCAT-AP_diagrams/dcat-resource.svg)
+![Diagram of the class Cataloged Resource](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-resource.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -158,7 +158,7 @@ This class is a sub-class of `dcat:Resource` and a super-class of `dcat:Catalog`
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Dataset](/CEH-DCAT-AP_diagrams/dcat-dataset.svg)
+![Diagram of the class Dataset](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dataset.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -179,13 +179,13 @@ This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Dataset Series](/CEH-DCAT-AP_diagrams/dcat-datasetseries.svg)
+![Diagram of the class Dataset Series](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-datasetseries.svg)
 
 #### Distribution
 
 `dcat:Distribution`
 
-![Diagram of the class Distribution](/CEH-DCAT-AP_diagrams/dcat-distribution.svg)
+![Diagram of the class Distribution](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-distribution.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -218,7 +218,7 @@ This class is a sub-class of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Data Service](/CEH-DCAT-AP_diagrams/dcat-dataservice.svg)
+![Diagram of the class Data Service](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dataservice.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
