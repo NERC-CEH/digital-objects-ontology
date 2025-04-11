@@ -1,35 +1,40 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
-@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
+@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .  # HMR: doesn't resolve, should consider alternative.
 @prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <doi:dataset> a dcat:Dataset, prov:Entity;
-   dcterms:contributor <orcid:you> .
+   dcterms:contributor <orcid:you> ;  # HMR: it isn't mandatory to specify a role. The role isn't specified for this contributor.
+   epi:originatingProgramme <uri:project> .
 
 <doi:article> a fabio:JournalArticle, dcat:Resource, prov:Entity ;
-   dcterms:contributor <orcid:me> .
+   dcterms:contributor <orcid:me> ;  # HMR: the role is specified for this contributor, but the time interval when the role is valid isn't specified.
+   epi:originatingProgramme <uri:project> .
 
-<uri:project> a frapo:Project ;
-   dcterms:contributor <orcid:you>, <orcid:me> .
+<uri:project> a frapo:Project, ef:EnvironmentalMonitoringProgramme ;
+   dcterms:contributor <orcid:you>, <orcid:me> ; # HMR: the role is specified for both of these contributors, with the time intervals when the roles are valid.
+   frapo:hasStartDate "2017"^^xsd:dateTime ;
+   frapo:hasEndDate "2025"^^xsd:dateTime .
 
 <orcid:me> a foaf:Person ;
    foaf:name "Me McMe" ;
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole  scoro:corresponding-author ;
-      pro:relatesToEntity <doi:article> ] ;  # HMR: using the subproperty pro:relatesToDocument implies that the range is a foaf:Document... overkill?
+      pro:relatesToEntity <doi:article> ] ;  # HMR: using the subproperty pro:relatesToDocument implies that the range is a foaf:Document... overkill? Already defining them as fabio:JournalArticle, dcat:Resource and prov:Entity.
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole  scoro:principal-investigator ;
       pro:relatesToEntity <uri:project> ;
       tvc:atTime [ a tvc:TimeInterval ;
-        ti:hasIntervalStartDate "2017"^^xsd:dateTime ;
-        ti:hasIntervalEndDate "2024"^^xsd:dateTime ] ] .
+         ti:hasIntervalStartDate "2017"^^xsd:dateTime ;  # HMR: why not use frapo:hasStartDate instead?
+         ti:hasIntervalEndDate "2024"^^xsd:dateTime ] ] .  # HMR: could use the same mechanism for affiliations.
 
 <orcid:you> a foaf:Person ;
    foaf:name "You McYou" ;
@@ -37,4 +42,7 @@
       pro:withRole  scoro:principal-investigator ;
       pro:relatesToEntity <uri:project> ;
       tvc:atTime [ a tvc:TimeInterval ;
-        ti:hasIntervalStartDate "2024"^^xsd:dateTime ] ] .
+         ti:hasIntervalStartDate "2024"^^xsd:dateTime ] ] ;
+   pro:holdsRoleInTime [ a pro:RoleInTime ;
+      pro:withRole  scoro:undertakes-modelling ;
+      pro:relatesToEntity <uri:project> ].  # HMR: a contributor can have more than one role related to the same entity.
