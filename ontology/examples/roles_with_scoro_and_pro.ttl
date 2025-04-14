@@ -1,14 +1,15 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
+@prefix epi: <https://epimorphics.com/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
-@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .  # HMR: doesn't resolve, should consider alternative.
-@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+# @prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .  # HMR: doesn't resolve, should consider alternative.
+# @prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <doi:dataset> a dcat:Dataset, prov:Entity;
@@ -30,19 +31,20 @@
       pro:withRole  scoro:corresponding-author ;
       pro:relatesToEntity <doi:article> ] ;  # HMR: using the subproperty pro:relatesToDocument implies that the range is a foaf:Document... overkill? Already defining them as fabio:JournalArticle, dcat:Resource and prov:Entity.
    pro:holdsRoleInTime [ a pro:RoleInTime ;
-      pro:withRole  scoro:principal-investigator ;
+      pro:withRole scoro:principal-investigator ;  # HMR: could use the same mechanism for affiliations.
       pro:relatesToEntity <uri:project> ;
-      tvc:atTime [ a tvc:TimeInterval ;
-         ti:hasIntervalStartDate "2017"^^xsd:dateTime ;  # HMR: why not use frapo:hasStartDate instead?
-         ti:hasIntervalEndDate "2024"^^xsd:dateTime ] ] .  # HMR: could use the same mechanism for affiliations.
+      # tvc:atTime [ a ti:TimeInterval ;  # HMR: ti: ontology doesn't resolve. Why not use frapo:hasStartDate (range is xsd:dateTime) instead? Can't use dcat:startDate as it's for dataset temporal coverage.
+         # ti:hasIntervalStartDate "2017"^^xsd:dateTime ;  
+         # ti:hasIntervalEndDate "2024"^^xsd:dateTime ] ] .  
+      frapo:hasStartDate "2017"^^xsd:dateTime ;
+      frapo:hasEndDate "2024"^^xsd:dateTime ] .
 
 <orcid:you> a foaf:Person ;
    foaf:name "You McYou" ;
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole  scoro:principal-investigator ;
       pro:relatesToEntity <uri:project> ;
-      tvc:atTime [ a tvc:TimeInterval ;
-         ti:hasIntervalStartDate "2024"^^xsd:dateTime ] ] ;
+      frapo:hasStartDate "2024"^^xsd:dateTime ] ;  # HMR: it's possible to have only a start date or only an end date if the other's unknown
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole  scoro:undertakes-modelling ;
       pro:relatesToEntity <uri:project> ].  # HMR: a contributor can have more than one role related to the same entity.
