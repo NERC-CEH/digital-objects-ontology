@@ -24,4 +24,4 @@
 
 - See [this folder](/CEH-DCAT-AP/)
 
-![Overview diagram of the CEH DCAT Application Profile](/CEH-DCAT-AP/dcat.svg)
+![Overview diagram of the CEH DCAT Application Profile](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat.svg)
