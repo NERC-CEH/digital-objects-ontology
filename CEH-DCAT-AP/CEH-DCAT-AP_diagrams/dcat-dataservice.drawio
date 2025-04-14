@@ -44,13 +44,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="HYuESzJ4fi00zX4bSRF1-7" value="rdfs:Resource" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
-          <mxGeometry x="530" y="280" width="180" height="30" as="geometry" />
+          <mxGeometry x="530" y="280" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HYuESzJ4fi00zX4bSRF1-8" value="rdfs:Resource" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
-          <mxGeometry x="530" y="320" width="180" height="30" as="geometry" />
+          <mxGeometry x="530" y="320" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HYuESzJ4fi00zX4bSRF1-18" value="dcat:Dataset" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#FFFFCC;" parent="1" vertex="1">
-          <mxGeometry x="530" y="360" width="180" height="30" as="geometry" />
+          <mxGeometry x="530" y="360" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HYuESzJ4fi00zX4bSRF1-19" value="" style="rounded=1;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#E6E6E6;dashed=1;dashPattern=1 4;" parent="1" vertex="1">
           <mxGeometry x="-140" y="190" width="290" height="70" as="geometry" />
