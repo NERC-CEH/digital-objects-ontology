@@ -1,105 +1,80 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .  # I suggest using dcterms to avoid confusion
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix odrs: <http://schema.theodi.org/odrs#> .
 @prefix org: <http://data.semanticweb.org/organization/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix : <https://catalogue.ceh.ac.uk/id/> .
 
+# see https://catalogue.ceh.ac.uk/documents/a754cae2-d6a4-456e-b367-e99891d7920f
 # see https://catalogue.ceh.ac.uk/documents/a754cae2-d6a4-456e-b367-e99891d7920f?format=ttl
-
-
-# A CATALOGUE
-<https://catalogue.ceh.ac.uk/eidc/documents>
-    a dcat:Catalog ;
-    dcterms:title "EIDC"@en ;
-    dcterms:description "Environmental Information Data Centre"@en ;
-    foaf:homepage <https://catalogue.ceh.ac.uk/eidc/documents> ;
-    dcterms:publisher <https://ror.org/00pggkr55> ;
-    dcterms:language <http://id.loc.gov/vocabulary/iso639-1/en>  ;
-    dcat:dataset :a754cae2-d6a4-456e-b367-e99891d7920f , :5609a35a-c360-4125-b122-1fa1475e0e2d , :18b7c387-037d-4949-98bc-e8db5ef4264c .
 
 # A DATASET
 :a754cae2-d6a4-456e-b367-e99891d7920f
-    a dcat:Dataset ;  # dcmitype:Dataset should not be here, if we want to use it it should be like this:
-    dcterms:type dcmitype:Dataset ;  # see https://www.w3.org/TR/vocab-dcat-3/#classifying-dataset-types
-    dcterms:identifier "https://catalogue.ceh.ac.uk/id/a754cae2-d6a4-456e-b367-e99891d7920f"^^xsd:anyURI , "https://doi.org/10.5285/a754cae2-d6a4-456e-b367-e99891d7920f"^^xsd:anyURI ;  # need to add anyURI
-    dcterms:title "Historic Standardised Precipitation Index time series for IHU Hydrometric Areas (1862-2015) v2"@en ;  # probably shouldn't have v2 in the title. need to add language tag
-    dcterms:description "Standardised Precipitation Index (SPI) data for..."@en ;  # need to add language tag
-    dcterms:bibliographicCitation "Tanguy, M., Fry, M., Svensson, C., Hannaford, J. (2017). Historic Standardised Precipitation Index time series for IHU Hydrometric Areas (1862-2015) v2. NERC Environmental Information Data Centre. https://doi.org/10.5285/a754cae2-d6a4-456e-b367-e99891d7920f"@en ;  # there are errors in this in the ttl file: missing semicolon and curly bracket instead of normal bracket around year. need to add language tag
-    dcterms:provenance "Description of the method used to collect the data."@en ;  # this is not the right predicate to use. this paragraph actually contains lots of different information including grants, versions, citations, method used to collect the data, method used to process the data... see http://purl.org/dc/terms/provenance, it's actually for a statement of any changes in ownership and custody of the resource
-    # prov:wasGeneratedBy ceh:anActivity ;
+    a dcat:Dataset, prov:Entity ;
+    doo:originatingProject <my:project> ;
+    epi:originatingProgramme <my:project> ;
+    epi:originatingFacility <my:facility> ;
+    doo:originatingGrant <my:grant> ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> ;
-    dcterms:available "2015-02-25"^^xsd:date ;
-    dcterms:modified "2015-12-15"^^xsd:date ;  # suggestion to add
-    dcat:contactPoint <https://ror.org/04xw4m193> ;
-    dcterms:temporal "1992-10-06/2012-12-27"^^dcterms:PeriodOfTime ;  # think we need to change this
-    dcat:temporalResolution "P1D"^^xsd:duration ;  # suggestion to add
-    dcterms:spatial "POLYGON((-8.648 49.864, -8.648 60.861, 1.768 60.861, 1.768 49.864, -8.648 49.864))"^^geo:wktLiteral ;
-    dcat:spatialResolutionInMeters "30.0"^^xsd:decimal ;  # suggestion to add
-    dcterms:publisher <https://ror.org/04xw4m193> ;
-    dcterms:language <http://id.loc.gov/vocabulary/iso639-1/en> ;  # better to use an uri rather than a literal?
-    dcat:theme ;  # use this for INSPIRE theme? we could reate a specialisation of this predicate in our own ontology and specify the INSPIRE vocab as the only allowed range
-    dcterms:subject <http://sws.geonames.org/2635167>, "Drayton", <http://www.eionet.europa.eu/gemet/concept/6406> ;  # do we really want to combine place names with other keywords? maybe we could create a specialisation of this predicate in our own ontology and specify the vocabs we will allow people to choose thier keywords from
-    dcterms:isReferencedBy <https://doi.org/10.1016/j.ecolind.2015.11.033>, <https://doi.org/10.1016/j.ecolind.2016.01.061> ;
-    dcat:landingPage <https://catalogue.ceh.ac.uk/id/0cd4abd2-1bc9-48bc-b5c2-cebdeaa23ceb>, <https://doi.org/10.5285/0cd4abd2-1bc9-48bc-b5c2-cebdeaa23ceb> ;
-    dcat:distribution :a754cae2-d6a4-456e-b367-e99891d7920f-csv ;  # would be better to create an uri for the distribution, will be useful for when it'll be accessible via an api ;) https://www.w3.org/TR/vocab-dcat-3/#a-dataset-available-from-a-service. do we need a seperate namespace?
-    dcat:inSeries <https://catalogue.ceh.ac.uk/documents/4971bce4-8a81-4e23-9637-7fcff37c5f21> ;  # suggestion to add. we're obliged to define it like this and only use its inverse dcat:seriesMember as well as (not instead of)
-    dcat:version "2.0"^^xsd:string ;  # equivalent to pav:version
-    dcat:previousVersion <https://catalogue.ceh.ac.uk/documents/18b7c387-037d-4949-98bc-e8db5ef4264c> ;  # equivalent to pav:previousVersion
-    dcterms:replaces <https://catalogue.ceh.ac.uk/documents/18b7c387-037d-4949-98bc-e8db5ef4264c> .
+    dcterms:isReferencedBy <my:article> .
 
-# A DEPRECATED DATASET
-:18b7c387-037d-4949-98bc-e8db5ef4264c
-    a dcat:Dataset ;
-    dcat:version "1.0"^^xsd:string .
+# A GRANT
+<my:grant>
+    a frapo:Grant ;
+    frapo:hasGrantNumber "NE/L01016X/1"^^xsd:string ;
+    frapo:funds <my:project> .
 
-# A DISTRIBUTION
-:a754cae2-d6a4-456e-b367-e99891d7920f-csv
-    a dcat:Distribution ;
-    dcat:accessURL <https://catalogue.ceh.ac.uk/id/0cd4abd2-1bc9-48bc-b5c2-cebdeaa23ceb>, <https://doi.org/10.5285/0cd4abd2-1bc9-48bc-b5c2-cebdeaa23ceb> ;  # should we put both or just the catalogue link?
-    dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
-    dcterms:accessRights [ a dcterms:RightsStatement ;
-        odrs:attributionText "no limitations to public access"@en ;
-        odrs:attributionUrl <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations>
-    ] ;
-    dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv> ;  # this predicate must be used if format is present in IANA vocab
-    dcat:format <https://vocab.nerc.ac.uk/collection/M01/current/NC/> .  # this predicate can be used only if format not present in IANA vocab, like NetCDF. NetCDF soon to be in IANA vocab (hopefully): https://www.iana.org/assignments/provisional-standard-media-types/provisional-standard-media-types.xhtml
+# A FUNDING AGENCY
+<https://ror.org/02b5d8509>
+    a frapo:FundingAgency, prov:Organization ;
+    frapo:hasFunderIdentifier <https://ror.org/02b5d8509> ;
+    frapo:awards <my:grant> ;
+    frapo:funds <my:project> ;
+    foaf:name "NERC" ;
+    foaf:homepage <https://www.ukri.org/councils/nerc/> .
 
-# A CONTACT POINT
-# do we really need to give name of person? could use vcard:Organization and have UKCEH, and others like UK Environmental Change Network (https://catalogue.ceh.ac.uk/documents/0cd4abd2-1bc9-48bc-b5c2-cebdeaa23ceb), basically just define a few contact points for the different sub-organisations or whatever (only ones that have a dedicated email address).
-# if we really need to, could use https://sparontologies.github.io/scoro/current/scoro.html#d4e963 to define corresponding author
-<https://ror.org/04xw4m193>
-    a vcard:Organization ;  # instead of individual
-    vcard:organization-name "UK Centre for Ecology & Hydrology"@en ;
-    vcard:hasEmail <mailto:enquiries@ceh.ac.uk> .  # issue assigning this email to this person's vcard? possible to specify type of email address maybe? otherwise how do we know which to show on different pages (https://catalogue.ceh.ac.uk/infrastructure/documents sometimes personal email addresses are given in this catalogue like https://catalogue.ceh.ac.uk/documents/41fde219-6d9c-4027-a982-47b5dfd7f367)
+# A PROJECT
+<my:project>
+    a foaf:Project, ef:EnvironmentalMonitoringProgramme ;
+    foaf:homepage <https://gtr.ukri.org/projects?ref=NE/L01016X/1> ;
+    foaf:name "Analysis of historic drought and water scarcity in the UK: a systems-based study of drivers, impacts and their interactions"@en ;
+    frapo:hasProjectIdentifier "NE/L01016X/1"^^xsd:string ;
+    frapo:hasStartDate "2014-03-01T00:00:00"^^xsd:dateTime ;
+    frapo:hasStartDate "2019-11-30T23:59:59"^^xsd:dateTime ;
+    epi:utilises <my:facility> .
+
+# A FACILITY
+<my:facility>
+    a ef:EnvironmentalMonitoringFacility ;
+    doo:specialisedEMFType doo:Sensor .
+
+# AN ARTICLE
+<my:article>
+    a dcat:Resource, prov:Entity, fabio:JournalArticle ;
+    dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .
 
 # A CONTRIBUTOR
 <https://orcid.org/0000-0002-0027-0436>
-    a foaf:Person ;  # has to be a foaf:Person and not a vcard:Individual. could we ALWAYS ask for email address or ALWAYS ask for orcid to use as person identifier? orcid more persistent
+    a foaf:Person, prov:Person ;
     foaf:mbox <mailto:sabrei@ceh.ac.uk> ;
     foaf:name "Susannah Rennie" ;
-    org:memberOf <https://ror.org/00pggkr55> .
-
-# A DATA SERVICE
-<http://vocab.nerc.ac.uk/sparql>
-    a dcat:DataService ;
-    dcterms:description "A SPARQL Protocol-compliant service that provides access to all of this catalogue's information"@en ;
-    dcterms:title "CEH SPARQL Service"@en ;
-    dcat:servesDataset <https://catalogue.ceh.ac.uk/eidc/documents> ;  # cos catalogue is subclass of dataset
-    dcterms:type dcmitype:Service ;
-    dcat:endpointURL <http://vocab.nerc.ac.uk/sparql> .
-
-# A COLLECTION
-<https://catalogue.ceh.ac.uk/documents/4971bce4-8a81-4e23-9637-7fcff37c5f21>
-    a dcat:DatasetSeries ;
-    dcterms:title "Environmental Change Network (ECN) data holdings"@en .
+    org:memberOf <https://ror.org/00pggkr55> ;
+    pro:holdsRoleInTime [ a pro:RoleInTime ;
+        pro:withRole scoro:principal-investigator ;
+        pro:relatesToEntity <my:project> ;
+        frapo:hasStartDate "2014-03-01T00:00:00"^^xsd:dateTime ;
+        frapo:hasEndDate "2019-11-30T23:59:59"^^xsd:dateTime ] ;
+    pro:holdsRoleInTime [ a pro:RoleInTime ;
+        pro:withRole  scoro:corresponding-author ;
+        pro:relatesToEntity <my:article> ] .
 
 # AN ORGANISATION
 <https://ror.org/00pggkr55>
-    a foaf:Organization , org:Organization ;  # equivalent classes so don't need to declare both but just fyi
+    a foaf:Organization , prov:Organization ;
     foaf:name "UKCEH" ;
     foaf:homepage <https://www.ukceh.ac.uk> .
