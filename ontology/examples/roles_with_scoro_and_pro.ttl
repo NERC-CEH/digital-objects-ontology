@@ -28,7 +28,7 @@
 <orcid:me> a foaf:Person ;
    foaf:name "Me McMe" ;
    pro:holdsRoleInTime [ a pro:RoleInTime ;
-      pro:withRole  scoro:corresponding-author ;
+      pro:withRole scoro:corresponding-author ;
       pro:relatesToEntity <doi:article> ] ;  # HMR: using the subproperty pro:relatesToDocument implies that the range is a foaf:Document... overkill? Already defining them as fabio:JournalArticle, dcat:Resource and prov:Entity.
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole scoro:principal-investigator ;  # HMR: could use the same mechanism for affiliations.
@@ -42,9 +42,9 @@
 <orcid:you> a foaf:Person ;
    foaf:name "You McYou" ;
    pro:holdsRoleInTime [ a pro:RoleInTime ;
-      pro:withRole  scoro:principal-investigator ;
+      pro:withRole scoro:principal-investigator ;
       pro:relatesToEntity <uri:project> ;
       frapo:hasStartDate "2024"^^xsd:dateTime ] ;  # HMR: it's possible to have only a start date or only an end date if the other's unknown
    pro:holdsRoleInTime [ a pro:RoleInTime ;
-      pro:withRole  scoro:undertakes-modelling ;
+      pro:withRole scoro:undertakes-modelling ;
       pro:relatesToEntity <uri:project> ].  # HMR: a contributor can have more than one role related to the same entity.
