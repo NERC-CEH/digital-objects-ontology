@@ -5,23 +5,23 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="V8MGVwaTu69svF25npwr-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;strokeColor=#CCCCCC;" parent="1" vertex="1">
-          <mxGeometry x="40" y="-1120" width="960" height="870" as="geometry" />
+          <mxGeometry x="40" y="-1120" width="980" height="870" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-2" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=default;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry width="960" height="50" as="geometry" />
+          <mxGeometry width="980" height="50" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-3" value="&lt;b&gt;SYMBOLOGY&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;rowspan=1;colspan=2;" parent="V8MGVwaTu69svF25npwr-2" vertex="1">
-          <mxGeometry width="960" height="50" as="geometry">
+          <mxGeometry width="980" height="50" as="geometry">
             <mxRectangle width="260" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-2" vertex="1" visible="0">
-          <mxGeometry x="260" width="700" height="50" as="geometry">
-            <mxRectangle width="700" height="50" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="50" as="geometry">
+            <mxRectangle width="720" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="50" width="960" height="50" as="geometry" />
+          <mxGeometry y="50" width="980" height="50" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-6" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-5" vertex="1">
           <mxGeometry width="260" height="50" as="geometry">
@@ -29,12 +29,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-7" value="Class (see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;). The main classes have been assigned a colour, which are consistent across all diagrams in this repository (custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-5" vertex="1">
-          <mxGeometry x="260" width="700" height="50" as="geometry">
-            <mxRectangle width="700" height="50" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="50" as="geometry">
+            <mxRectangle width="720" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="100" width="960" height="90" as="geometry" />
+          <mxGeometry y="100" width="980" height="90" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-9" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-8" vertex="1">
           <mxGeometry width="260" height="90" as="geometry">
@@ -42,12 +42,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-10" value="Qualified cardinality restriction of a concept on a data property&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-8" vertex="1">
-          <mxGeometry x="260" width="700" height="90" as="geometry">
-            <mxRectangle width="700" height="90" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="90" as="geometry">
+            <mxRectangle width="720" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="190" width="960" height="80" as="geometry" />
+          <mxGeometry y="190" width="980" height="80" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-12" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-11" vertex="1">
           <mxGeometry width="260" height="80" as="geometry">
@@ -55,12 +55,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-13" value="Individual belonging to a class (see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-11" vertex="1">
-          <mxGeometry x="260" width="700" height="80" as="geometry">
-            <mxRectangle width="700" height="80" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="80" as="geometry">
+            <mxRectangle width="720" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="270" width="960" height="40" as="geometry" />
+          <mxGeometry y="270" width="980" height="40" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-15" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-14" vertex="1">
           <mxGeometry width="260" height="40" as="geometry">
@@ -68,12 +68,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-16" value="Qualified cardinality restriction of a concept on an object property&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-14" vertex="1">
-          <mxGeometry x="260" width="700" height="40" as="geometry">
-            <mxRectangle width="700" height="40" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="40" as="geometry">
+            <mxRectangle width="720" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-17" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="310" width="960" height="40" as="geometry" />
+          <mxGeometry y="310" width="980" height="40" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-18" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-17" vertex="1">
           <mxGeometry width="260" height="40" as="geometry">
@@ -81,12 +81,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-19" value="Sub-class relationship between two classes&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-17" vertex="1">
-          <mxGeometry x="260" width="700" height="40" as="geometry">
-            <mxRectangle width="700" height="40" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="40" as="geometry">
+            <mxRectangle width="720" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-20" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="350" width="960" height="90" as="geometry" />
+          <mxGeometry y="350" width="980" height="90" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-20" vertex="1">
           <mxGeometry width="260" height="90" as="geometry">
@@ -94,12 +94,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-22" value="Union of classes&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-20" vertex="1">
-          <mxGeometry x="260" width="700" height="90" as="geometry">
-            <mxRectangle width="700" height="90" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="90" as="geometry">
+            <mxRectangle width="720" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="440" width="960" height="60" as="geometry" />
+          <mxGeometry y="440" width="980" height="60" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-24" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-23" vertex="1">
           <mxGeometry width="260" height="60" as="geometry">
@@ -107,12 +107,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-25" value="Block to indicate all the namespaces used in the ontology. The @base namespace is the URI used for the current ontology&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-23" vertex="1">
-          <mxGeometry x="260" width="700" height="60" as="geometry">
-            <mxRectangle width="700" height="60" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="60" as="geometry">
+            <mxRectangle width="720" height="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="500" width="960" height="90" as="geometry" />
+          <mxGeometry y="500" width="980" height="90" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-27" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-26" vertex="1">
           <mxGeometry width="260" height="90" as="geometry">
@@ -120,38 +120,38 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-28" value="Block to indicate annotation properties describing the ontology. The annotations should include the prefix and the annotation name&amp;nbsp;(see&amp;nbsp;&lt;a href=&quot;https://chowlk.linkeddata.es/notation.html&quot;&gt;Chowlk | Notation&lt;/a&gt;)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-26" vertex="1">
-          <mxGeometry x="260" width="700" height="90" as="geometry">
-            <mxRectangle width="700" height="90" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="90" as="geometry">
+            <mxRectangle width="720" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-29" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="590" width="960" height="90" as="geometry" />
+          <mxGeometry y="590" width="980" height="90" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-30" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-29" vertex="1">
           <mxGeometry width="260" height="90" as="geometry">
             <mxRectangle width="260" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="V8MGVwaTu69svF25npwr-31" value="Block to indicate that any entity that is identified as belonging to one of the classes in this block must be explicitly identified as belonging to all other classes in the block as well (custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-29" vertex="1">
-          <mxGeometry x="260" width="700" height="90" as="geometry">
-            <mxRectangle width="700" height="90" as="alternateBounds" />
+        <mxCell id="V8MGVwaTu69svF25npwr-31" value="Any entity that is indicated as being a member of one of the classes in this block must be explicitly indicated as being a member of all other classes in the block as well (custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-29" vertex="1">
+          <mxGeometry x="260" width="720" height="90" as="geometry">
+            <mxRectangle width="720" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-32" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="680" width="960" height="90" as="geometry" />
+          <mxGeometry y="680" width="980" height="90" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-32" vertex="1">
           <mxGeometry width="260" height="90" as="geometry">
             <mxRectangle width="260" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="V8MGVwaTu69svF25npwr-34" value="Blocks may overlap, meaning that any entity that is identified as belonging to one of the classes in the lowest layer must respect the rule for the layer in question and all layers above it. The inverse is not true, so that any entity that is identified as belonging to one of the classes in the highest layer is only required to respect the rule for the layer in question&amp;nbsp;(custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-32" vertex="1">
-          <mxGeometry x="260" width="700" height="90" as="geometry">
-            <mxRectangle width="700" height="90" as="alternateBounds" />
+        <mxCell id="V8MGVwaTu69svF25npwr-34" value="Blocks may overlap, meaning that any entity that is indicated as being a member of one of the classes&amp;nbsp;in the lowest layer must respect the rule for the layer in question and all layers above it. The inverse is not true, so that any entity that is indicated as being a member of one of the classes&amp;nbsp;in the highest layer is only required to respect the rule for the layer in question&amp;nbsp;(custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-32" vertex="1">
+          <mxGeometry x="260" width="720" height="90" as="geometry">
+            <mxRectangle width="720" height="90" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-35" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="V8MGVwaTu69svF25npwr-1" vertex="1">
-          <mxGeometry y="770" width="960" height="100" as="geometry" />
+          <mxGeometry y="770" width="980" height="100" as="geometry" />
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-36" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="V8MGVwaTu69svF25npwr-35" vertex="1">
           <mxGeometry width="260" height="100" as="geometry">
@@ -159,8 +159,8 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-37" value="Set of concepts that originate from a specified external vocabulary (custom notation)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" parent="V8MGVwaTu69svF25npwr-35" vertex="1">
-          <mxGeometry x="260" width="700" height="100" as="geometry">
-            <mxRectangle width="700" height="100" as="alternateBounds" />
+          <mxGeometry x="260" width="720" height="100" as="geometry">
+            <mxRectangle width="720" height="100" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V8MGVwaTu69svF25npwr-41" value="ns:Class" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;verticalAlign=middle;" parent="1" vertex="1">
