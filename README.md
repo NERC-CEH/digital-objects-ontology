@@ -17,6 +17,7 @@
 - Scope: diverse research outputs (articles, datasets), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles
 - This ontology is compatible with the [CEH DCAT AP](/CEH-DCAT-AP/)
 - This ontology will be compatible with work being done on [modelling workflows](https://github.com/NERC-CEH/workflows-ontology) and modelling observed properties in datasets
+- In the diagram below, classes that are coloured in are defined in more detail (i.e. the object properties and datatype properties that apply to them) in the CEH DCAT Application Profile.
 
 ![Diagram of the Digital Objects Ontology](/ontology/digital_objects_ontology.svg)
 

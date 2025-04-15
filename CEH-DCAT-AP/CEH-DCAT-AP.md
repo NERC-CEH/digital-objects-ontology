@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 25/03/2025
+Last updated: 15/04/2025
 
 Contributors: Helen Rawsthorne
 
@@ -15,6 +15,10 @@ The section Main Classes is dedicated to the seven main classes upon which the D
 ![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat.svg)
 
 Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
+
+### Diagrams
+
+The diagrams are made with [draw.io](https://www.drawio.com/) using [Chowlk Visual Notation](https://chowlk.linkeddata.es/notation.html), plus custom notation (see [legend](/legend.png)). Each one of the Main Classes has been assigned a colour, to ease interpretation of the diagrams. This colour scheme is used in a consistent manner across all diagrams in this repository.
 
 ### How to interpret the tables
 
@@ -141,8 +145,10 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `rdau:P60400` (has current owner) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
 | `dcterms:contributor` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | P E |
 | `geodcatap:topicCategory` | `skos:Concept` | 1..* | MUST use the URI of a term from the [Topic categories in accordance with EN ISO 19115 code list](https://inspire.ec.europa.eu/metadata-codelist/TopicCategory). | P A |
-
-[Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/22]
+| `dcterms:bibliographicCitation` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
+| `dcterms:available` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use embargo end date and MUST NOT use date when metadata record was put online. | E |
+| `dcterms:provenance` |  | | TODO, see http://purl.org/dc/terms/provenance, it's actually for a statement of any changes in ownership and custody of the resource |  |
+| `dcterms:subject` |  | 1 | TODO, see https://github.com/NERC-CEH/digital-objects-ontology/issues/19, maybe we could create a specialisation of this predicate in our own ontology and specify the vocabs we will allow people to choose thier keywords from (dcat:theme is a subproperty of this one) |  |
 
 #### Catalog Record
 
@@ -266,10 +272,10 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
-| `vcard:street-address` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
-| `vcard:locality` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
-| `vcard:region` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
-| `vcard:country-name` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
+| `vcard:street-address` | `rdfs:Literal` typed as `xsd:string` | 0..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
+| `vcard:locality` | `rdfs:Literal` typed as `xsd:string` | 0..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
+| `vcard:region` | `rdfs:Literal` typed as `xsd:string` | 0..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
+| `vcard:country-name` | `rdfs:Literal` typed as `xsd:string` | 0..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `vcard:postal-code` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
 
 #### Individual (vCard)
@@ -303,6 +309,8 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
+![Diagram of the class Person (FOAF)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-foaf-person.svg)
+
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1 |  | P E |
@@ -317,6 +325,8 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 `foaf:Organization` ≡ `org:Organization`
 
 SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
+
+![Diagram of the class Organization (FOAF)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-foaf-organization.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
