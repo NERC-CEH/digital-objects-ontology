@@ -12,8 +12,10 @@
 ## The Digital Objects Ontology
 
 - See [this folder](/ontology/)
-- Two main modules, from FRAPO and SmOD
+- Four modules from external ontologies: FRAPO, SmOD, PRO and SCoRO
 - Also heavily relies on PROV-O
+- Integrates data model developed by Epimorphics
+- Includes a handful of new predicates
 - Scope: diverse research outputs (articles, datasets), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles
 - This ontology is compatible with the [CEH DCAT AP](/CEH-DCAT-AP/)
 - This ontology will be compatible with work being done on [modelling workflows](https://github.com/NERC-CEH/workflows-ontology) and modelling observed properties in datasets
