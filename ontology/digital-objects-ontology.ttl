@@ -1,7 +1,7 @@
 @prefix : <https://ceh.ac.uk/digital-objects-ontology/> .
-@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
+@prefix ef: <http://www.w3.org/2015/03/inspire/ef/> .
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
-@prefix epi: <https://epimorphics.com/> .
+@prefix epi: <https://epimorphics.com/ceh/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
@@ -15,67 +15,77 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix frapo: <http://purl.org/spar/frapo/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://ceh.ac.uk/digital-objects-ontology/> .
 
-<https://ceh.ac.uk/digital-objects-ontology/> rdf:type owl:Ontology ;
-                                               owl:versionIRI <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> ;
-                                               dcterms:created "2025-01-01"^^xsd:date ;
-                                               dcterms:creator <https://orcid.org/0000-0002-6540-8547> ;
-                                               dcterms:description "Brief description..."@en ;
-                                               dcterms:issued "2025-01-01"^^xsd:date ;
-                                               dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
-                                               dcterms:modified "2025-01-01"^^xsd:date ;
-                                               dcterms:publisher <https://ror.org/00pggkr55> ;
-                                               dcterms:title "Digital Objects Ontology"@en ;
-                                               vann:preferredNamespacePrefix "doo" ;
-                                               vann:preferredNamespaceUri "https://ceh.ac.uk/digital-objects-ontology/" ;
-                                               owl:versionInfo "0.0.1" .
+<https://ceh.ac.uk/digital-objects-ontology> rdf:type owl:Ontology ;
+                                              owl:versionIRI <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> ;
+                                              dcterms:created "2025-01-01"^^xsd:date ;
+                                              dcterms:creator <https://orcid.org/0000-0002-6540-8547> ;
+                                              dcterms:description "Brief description..."@en ;
+                                              dcterms:issued "2025-01-01"^^xsd:date ;
+                                              dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
+                                              dcterms:modified "2025-01-01"^^xsd:date ;
+                                              dcterms:publisher <https://ror.org/00pggkr55> ;
+                                              dcterms:title "Digital Objects Ontology"@en ;
+                                              vann:preferredNamespacePrefix "doo" ;
+                                              vann:preferredNamespaceUri "https://ceh.ac.uk/digital-objects-ontology/" ;
+                                              owl:versionInfo "0.0.1" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/terms/created
-dcterms:created rdf:type owl:AnnotationProperty .
+dcterms:created rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:AnnotationProperty .
+dcterms:description rdf:type owl:AnnotationProperty ;
+                    rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/issued
-dcterms:issued rdf:type owl:AnnotationProperty .
+dcterms:issued rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/modified
-dcterms:modified rdf:type owl:AnnotationProperty .
+dcterms:modified rdf:type owl:AnnotationProperty ;
+                 rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/publisher
-dcterms:publisher rdf:type owl:AnnotationProperty .
+dcterms:publisher rdf:type owl:AnnotationProperty ;
+                  rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty .
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty ;
+                              rdfs:isDefinedBy <http://purl.org/vocab/vann> .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty ;
+                           rdfs:isDefinedBy <http://purl.org/vocab/vann> .
 
 
 #################################################################
@@ -83,170 +93,196 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.opengis.net/ont/geosparql#wktLiteral
-geo:wktLiteral rdf:type rdfs:Datatype .
+geo:wktLiteral rdf:type rdfs:Datatype ;
+               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> .
 
 
 ###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
+xsd:date rdf:type rdfs:Datatype ;
+         rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema> .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.org/dc/terms/hasPart
-dcterms:hasPart rdf:type owl:ObjectProperty ;
-                rdfs:domain prov:Activity ;
-                rdfs:range prov:Activity .
-
-
-###  http://purl.org/spar/frapo/awards
+###  http://purl.org/cerif/frapo/awards
 frapo:awards rdf:type owl:ObjectProperty ;
              rdfs:domain frapo:FundingAgency ;
-             rdfs:range frapo:Grant .
+             rdfs:range frapo:Grant ;
+             rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/enables
+###  http://purl.org/cerif/frapo/enables
 frapo:enables rdf:type owl:ObjectProperty ;
               rdfs:domain foaf:Project ;
-              rdfs:range frapo:Investigation .
+              rdfs:range frapo:Investigation ;
+              rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/funds
+###  http://purl.org/cerif/frapo/funds
 frapo:funds rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( frapo:FundingAgency
                                         frapo:Grant
                                       )
                         ] ;
-            rdfs:range foaf:Project .
+            rdfs:range foaf:Project ;
+            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/hasOutput
+###  http://purl.org/cerif/frapo/hasOutput
 frapo:hasOutput rdf:type owl:ObjectProperty ;
                 rdfs:domain frapo:Investigation ;
-                rdfs:range prov:Entity .
+                rdfs:range prov:Entity ;
+                rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:ObjectProperty ;
+                rdfs:domain prov:Activity ;
+                rdfs:range prov:Activity ;
+                rdfs:isDefinedBy <http://purl.org/dc/terms> .
 
 
 ###  http://purl.org/spar/pro/holdsRoleInTime
 pro:holdsRoleInTime rdf:type owl:ObjectProperty ;
                     rdfs:domain foaf:Agent ;
-                    rdfs:range pro:RoleInTime .
+                    rdfs:range pro:RoleInTime ;
+                    rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/relatesToEntity
 pro:relatesToEntity rdf:type owl:ObjectProperty ;
                     rdfs:domain pro:RoleInTime ;
-                    rdfs:range prov:Entity .
+                    rdfs:range prov:Entity ;
+                    rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/withRole
 pro:withRole rdf:type owl:ObjectProperty ;
              rdfs:domain pro:RoleInTime ;
-             rdfs:range pro:Role .
+             rdfs:range pro:Role ;
+             rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#belongsTo
+###  http://www.w3.org/2015/03/inspire/ef/belongsTo
 ef:belongsTo rdf:type owl:ObjectProperty ;
              rdfs:domain ef:EnvironmentalMonitoringFacility ;
-             rdfs:range ef:EnvironmentalMonitoringNetwork .
+             rdfs:range ef:EnvironmentalMonitoringNetwork ;
+             rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#contains
+###  http://www.w3.org/2015/03/inspire/ef/contains
 ef:contains rdf:type owl:ObjectProperty ;
             rdfs:domain ef:EnvironmentalMonitoringNetwork ;
-            rdfs:range ef:EnvironmentalMonitoringFacility .
+            rdfs:range ef:EnvironmentalMonitoringFacility ;
+            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#involvedIn
+###  http://www.w3.org/2015/03/inspire/ef/involvedIn
 ef:involvedIn rdf:type owl:ObjectProperty ;
               rdfs:domain ef:AbstractMonitoringFeature ;
-              rdfs:range ef:MonitoringActivity .
+              rdfs:range ef:MonitoringActivity ;
+              rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#relatedTo
+###  http://www.w3.org/2015/03/inspire/ef/relatedTo
 ef:relatedTo rdf:type owl:ObjectProperty ;
              rdfs:domain ef:EnvironmentalMonitoringFacility ;
-             rdfs:range ef:EnvironmentalMonitoringFacility .
+             rdfs:range ef:EnvironmentalMonitoringFacility ;
+             rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#setUpFor
+###  http://www.w3.org/2015/03/inspire/ef/setUpFor
 ef:setUpFor rdf:type owl:ObjectProperty ;
             rdfs:domain ef:MonitoringActivity ;
-            rdfs:range ef:EnvironmentalMonitoringProgramme .
+            rdfs:range ef:EnvironmentalMonitoringProgramme ;
+            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#triggers
+###  http://www.w3.org/2015/03/inspire/ef/triggers
 ef:triggers rdf:type owl:ObjectProperty ;
             rdfs:domain ef:EnvironmentalMonitoringProgramme ;
-            rdfs:range ef:MonitoringActivity .
+            rdfs:range ef:MonitoringActivity ;
+            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#uses
+###  http://www.w3.org/2015/03/inspire/ef/uses
 ef:uses rdf:type owl:ObjectProperty ;
         rdfs:domain ef:MonitoringActivity ;
-        rdfs:range ef:AbstractMonitoringFeature .
+        rdfs:range ef:AbstractMonitoringFeature ;
+        rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
 ###  http://www.w3.org/ns/prov#used
 prov:used rdf:type owl:ObjectProperty ;
           rdfs:domain prov:Activity ;
-          rdfs:range prov:Entity .
+          rdfs:range prov:Entity ;
+          rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
 prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
                        rdfs:domain prov:Activity ;
-                       rdfs:range prov:Agent .
+                       rdfs:range prov:Agent ;
+                       rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
 prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
                     rdfs:domain prov:Entity ;
-                    rdfs:range prov:Activity .
+                    rdfs:range prov:Activity ;
+                    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
 doo:originatingGrant rdf:type owl:ObjectProperty ;
                      rdfs:domain prov:Entity ;
-                     rdfs:range frapo:Grant .
+                     rdfs:range frapo:Grant ;
+                     rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingProject
 doo:originatingProject rdf:type owl:ObjectProperty ;
                        rdfs:domain prov:Entity ;
-                       rdfs:range foaf:Project .
+                       rdfs:range foaf:Project ;
+                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType
 doo:specialisedEMFType rdf:type owl:ObjectProperty ;
                        rdfs:domain ef:EnvironmentalMonitoringFacility ;
-                       rdfs:range doo:SpecialisedEMF .
+                       rdfs:range doo:SpecialisedEMF ;
+                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
-###  https://epimorphics.com/originatingFacility
+###  https://epimorphics.com/ceh/originatingFacility
 epi:originatingFacility rdf:type owl:ObjectProperty ;
                         rdfs:domain prov:Entity ;
-                        rdfs:range ef:EnvironmentalMonitoringFacility .
+                        rdfs:range ef:EnvironmentalMonitoringFacility ;
+                        rdfs:isDefinedBy <https://epimorphics.com/ceh> .
 
 
-###  https://epimorphics.com/originatingProgramme
+###  https://epimorphics.com/ceh/originatingProgramme
 epi:originatingProgramme rdf:type owl:ObjectProperty ;
                          rdfs:domain prov:Entity ;
-                         rdfs:range ef:EnvironmentalMonitoringProgramme .
+                         rdfs:range ef:EnvironmentalMonitoringProgramme ;
+                         rdfs:isDefinedBy <https://epimorphics.com/ceh> .
 
 
-###  https://epimorphics.com/utilises
+###  https://epimorphics.com/ceh/utilises
 epi:utilises rdf:type owl:ObjectProperty ;
              rdfs:domain ef:EnvironmentalMonitoringProgramme ;
-             rdfs:range ef:AbstractMonitoringFeature .
+             rdfs:range ef:AbstractMonitoringFeature ;
+             rdfs:isDefinedBy <https://epimorphics.com/ceh> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://purl.org/spar/frapo/hasEndDate
+###  http://purl.org/cerif/frapo/hasEndDate
 frapo:hasEndDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
                                owl:unionOf ( frapo:Investigation
@@ -254,22 +290,25 @@ frapo:hasEndDate rdf:type owl:DatatypeProperty ;
                                              foaf:Project
                                            )
                              ] ;
-                 rdfs:range xsd:dateTime .
+                 rdfs:range xsd:dateTime ;
+                 rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/hasFunderIdentifier
+###  http://purl.org/cerif/frapo/hasFunderIdentifier
 frapo:hasFunderIdentifier rdf:type owl:DatatypeProperty ;
                           rdfs:domain frapo:FundingAgency ;
-                          rdfs:range xsd:anyURI .
+                          rdfs:range xsd:anyURI ;
+                          rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/hasGrantNumber
+###  http://purl.org/cerif/frapo/hasGrantNumber
 frapo:hasGrantNumber rdf:type owl:DatatypeProperty ;
                      rdfs:domain frapo:Grant ;
-                     rdfs:range xsd:string .
+                     rdfs:range xsd:string ;
+                     rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/hasStartDate
+###  http://purl.org/cerif/frapo/hasStartDate
 frapo:hasStartDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain [ rdf:type owl:Class ;
                                  owl:unionOf ( frapo:Investigation
@@ -277,175 +316,211 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
                                                foaf:Project
                                              )
                                ] ;
-                   rdfs:range xsd:dateTime .
+                   rdfs:range xsd:dateTime ;
+                   rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#boundingBox
+###  http://www.w3.org/2015/03/inspire/ef/boundingBox
 ef:boundingBox rdf:type owl:DatatypeProperty ;
                rdfs:domain ef:MonitoringActivity ;
-               rdfs:range geo:wktLiteral .
+               rdfs:range geo:wktLiteral ;
+               rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#name
+###  http://www.w3.org/2015/03/inspire/ef/name
 ef:name rdf:type owl:DatatypeProperty ;
         rdfs:domain ef:AbstractMonitoringObject ;
-        rdfs:range xsd:string .
+        rdfs:range xsd:string ;
+        rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#purpose
+###  http://www.w3.org/2015/03/inspire/ef/purpose
 ef:purpose rdf:type owl:DatatypeProperty ;
            rdfs:domain ef:EnvironmentalMonitoringFacility ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.org/spar/fabio/Expression
-fabio:Expression rdf:type owl:Class .
-
-
-###  http://purl.org/spar/frapo/FundingAgency
+###  http://purl.org/cerif/frapo/FundingAgency
 frapo:FundingAgency rdf:type owl:Class ;
-                    rdfs:subClassOf foaf:Organization .
+                    rdfs:subClassOf foaf:Organization ;
+                    rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/Grant
-frapo:Grant rdf:type owl:Class .
+###  http://purl.org/cerif/frapo/Grant
+frapo:Grant rdf:type owl:Class ;
+            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://purl.org/spar/frapo/Investigation
-frapo:Investigation rdf:type owl:Class .
+###  http://purl.org/cerif/frapo/Investigation
+frapo:Investigation rdf:type owl:Class ;
+                    rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+
+
+###  http://purl.org/spar/fabio/Expression
+fabio:Expression rdf:type owl:Class ;
+                 rdfs:isDefinedBy <http://purl.org/spar/fabio> .
 
 
 ###  http://purl.org/spar/pro/PublishingRole
 pro:PublishingRole rdf:type owl:Class ;
-                   rdfs:subClassOf pro:Role .
+                   rdfs:subClassOf pro:Role ;
+                   rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/Role
-pro:Role rdf:type owl:Class .
+pro:Role rdf:type owl:Class ;
+         rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/RoleInTime
-pro:RoleInTime rdf:type owl:Class .
+pro:RoleInTime rdf:type owl:Class ;
+               rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/scoro/AuthorshipRole
 scoro:AuthorshipRole rdf:type owl:Class ;
-                     rdfs:subClassOf pro:Role .
+                     rdfs:subClassOf pro:Role ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/DataRole
 scoro:DataRole rdf:type owl:Class ;
-               rdfs:subClassOf pro:Role .
+               rdfs:subClassOf pro:Role ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/EducationalRole
 scoro:EducationalRole rdf:type owl:Class ;
-                      rdfs:subClassOf pro:Role .
+                      rdfs:subClassOf pro:Role ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/FinancialRole
 scoro:FinancialRole rdf:type owl:Class ;
-                    rdfs:subClassOf pro:Role .
+                    rdfs:subClassOf pro:Role ;
+                    rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/InvestigationRole
 scoro:InvestigationRole rdf:type owl:Class ;
-                        rdfs:subClassOf pro:Role .
+                        rdfs:subClassOf pro:Role ;
+                        rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/OrganizationalRole
 scoro:OrganizationalRole rdf:type owl:Class ;
-                         rdfs:subClassOf pro:Role .
+                         rdfs:subClassOf pro:Role ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/ProjectRole
 scoro:ProjectRole rdf:type owl:Class ;
-                  rdfs:subClassOf pro:Role .
+                  rdfs:subClassOf pro:Role ;
+                  rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
-geo:SpatialObject rdf:type owl:Class .
+geo:SpatialObject rdf:type owl:Class ;
+                  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#AbstractMonitoringFeature
+###  http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature
 ef:AbstractMonitoringFeature rdf:type owl:Class ;
                              rdfs:subClassOf geo:SpatialObject ,
-                                             ef:AbstractMonitoringObject .
+                                             ef:AbstractMonitoringObject ;
+                             rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#AbstractMonitoringObject
-ef:AbstractMonitoringObject rdf:type owl:Class .
+###  http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject
+ef:AbstractMonitoringObject rdf:type owl:Class ;
+                            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#EnvironmentalMonitoringFacility
+###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility
 ef:EnvironmentalMonitoringFacility rdf:type owl:Class ;
-                                   rdfs:subClassOf ef:AbstractMonitoringFeature .
+                                   rdfs:subClassOf ef:AbstractMonitoringFeature ;
+                                   rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#EnvironmentalMonitoringNetwork
+###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork
 ef:EnvironmentalMonitoringNetwork rdf:type owl:Class ;
-                                  rdfs:subClassOf ef:AbstractMonitoringFeature .
+                                  rdfs:subClassOf ef:AbstractMonitoringFeature ;
+                                  rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#EnvironmentalMonitoringProgramme
+###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme
 ef:EnvironmentalMonitoringProgramme rdf:type owl:Class ;
-                                    rdfs:subClassOf ef:AbstractMonitoringObject .
+                                    rdfs:subClassOf ef:AbstractMonitoringObject ;
+                                    rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef#MonitoringActivity
-ef:MonitoringActivity rdf:type owl:Class .
+###  http://www.w3.org/2015/03/inspire/ef/MonitoringActivity
+ef:MonitoringActivity rdf:type owl:Class ;
+                      rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
 ###  http://www.w3.org/ns/prov#Activity
-prov:Activity rdf:type owl:Class .
+prov:Activity rdf:type owl:Class ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-prov:Agent rdf:type owl:Class .
+prov:Agent rdf:type owl:Class ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#Entity
-prov:Entity rdf:type owl:Class .
+prov:Entity rdf:type owl:Class ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#Organization
 prov:Organization rdf:type owl:Class ;
-                  rdfs:subClassOf prov:Agent .
+                  rdfs:subClassOf prov:Agent ;
+                  rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://www.w3.org/ns/prov#Person
 prov:Person rdf:type owl:Class ;
-            rdfs:subClassOf prov:Agent .
+            rdfs:subClassOf prov:Agent ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-foaf:Agent rdf:type owl:Class .
+foaf:Agent rdf:type owl:Class ;
+           rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class ;
-                  rdfs:subClassOf foaf:Agent .
+                  rdfs:subClassOf foaf:Agent ;
+                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
-            rdfs:subClassOf foaf:Agent .
+            rdfs:subClassOf foaf:Agent ;
+            rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
 ###  http://xmlns.com/foaf/0.1/Project
-foaf:Project rdf:type owl:Class .
+foaf:Project rdf:type owl:Class ;
+             rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF
-doo:SpecialisedEMF rdf:type owl:Class .
+doo:SpecialisedEMF rdf:type owl:Class ;
+                   rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://www.w3.org/ns/dcat#Resource
-dcat:Resource rdf:type owl:Class .
+dcat:Resource rdf:type owl:Class ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/dcat> .
 
 
 #################################################################
@@ -454,617 +529,740 @@ dcat:Resource rdf:type owl:Class .
 
 ###  http://purl.org/spar/pro/archivist
 pro:archivist rdf:type owl:NamedIndividual ,
-                       pro:PublishingRole .
+                       pro:PublishingRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/author
 pro:author rdf:type owl:NamedIndividual ,
-                    pro:PublishingRole .
+                    pro:PublishingRole ;
+           rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/authors-agent
 pro:authors-agent rdf:type owl:NamedIndividual ,
-                           pro:PublishingRole .
+                           pro:PublishingRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/biographer
 pro:biographer rdf:type owl:NamedIndividual ,
-                        pro:PublishingRole .
+                        pro:PublishingRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/blogger
 pro:blogger rdf:type owl:NamedIndividual ,
-                     pro:PublishingRole .
+                     pro:PublishingRole ;
+            rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/commissioning-editor
 pro:commissioning-editor rdf:type owl:NamedIndividual ,
-                                  pro:PublishingRole .
+                                  pro:PublishingRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/compiler
 pro:compiler rdf:type owl:NamedIndividual ,
-                      pro:PublishingRole .
+                      pro:PublishingRole ;
+             rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/contributor
 pro:contributor rdf:type owl:NamedIndividual ,
-                         pro:PublishingRole .
+                         pro:PublishingRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/copy-editor
 pro:copy-editor rdf:type owl:NamedIndividual ,
-                         pro:PublishingRole .
+                         pro:PublishingRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/copyright-owner
 pro:copyright-owner rdf:type owl:NamedIndividual ,
-                             pro:PublishingRole .
+                             pro:PublishingRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/critic
 pro:critic rdf:type owl:NamedIndividual ,
-                    pro:PublishingRole .
+                    pro:PublishingRole ;
+           rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/deputy-editor
 pro:deputy-editor rdf:type owl:NamedIndividual ,
-                           pro:PublishingRole .
+                           pro:PublishingRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/distributor
 pro:distributor rdf:type owl:NamedIndividual ,
-                         pro:PublishingRole .
+                         pro:PublishingRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/editor
 pro:editor rdf:type owl:NamedIndividual ,
-                    pro:PublishingRole .
+                    pro:PublishingRole ;
+           rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/editor-in-chief
 pro:editor-in-chief rdf:type owl:NamedIndividual ,
-                             pro:PublishingRole .
+                             pro:PublishingRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/executive-editor
 pro:executive-editor rdf:type owl:NamedIndividual ,
-                              pro:PublishingRole .
+                              pro:PublishingRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/ghost-writer
 pro:ghost-writer rdf:type owl:NamedIndividual ,
-                          pro:PublishingRole .
+                          pro:PublishingRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/guest-editor
 pro:guest-editor rdf:type owl:NamedIndividual ,
-                          pro:PublishingRole .
+                          pro:PublishingRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/journalist
 pro:journalist rdf:type owl:NamedIndividual ,
-                        pro:PublishingRole .
+                        pro:PublishingRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/librarian
 pro:librarian rdf:type owl:NamedIndividual ,
-                       pro:PublishingRole .
+                       pro:PublishingRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/managing-editor
 pro:managing-editor rdf:type owl:NamedIndividual ,
-                             pro:PublishingRole .
+                             pro:PublishingRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/peer-reviewer
 pro:peer-reviewer rdf:type owl:NamedIndividual ,
-                           pro:PublishingRole .
+                           pro:PublishingRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/printer
 pro:printer rdf:type owl:NamedIndividual ,
-                     pro:PublishingRole .
+                     pro:PublishingRole ;
+            rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/producer
 pro:producer rdf:type owl:NamedIndividual ,
-                      pro:PublishingRole .
+                      pro:PublishingRole ;
+             rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/production-editor
 pro:production-editor rdf:type owl:NamedIndividual ,
-                               pro:PublishingRole .
+                               pro:PublishingRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/proof-reader
 pro:proof-reader rdf:type owl:NamedIndividual ,
-                          pro:PublishingRole .
+                          pro:PublishingRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/publisher
 pro:publisher rdf:type owl:NamedIndividual ,
-                       pro:PublishingRole .
+                       pro:PublishingRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/reader
 pro:reader rdf:type owl:NamedIndividual ,
-                    pro:PublishingRole .
+                    pro:PublishingRole ;
+           rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/reviewer
 pro:reviewer rdf:type owl:NamedIndividual ,
-                      pro:PublishingRole .
+                      pro:PublishingRole ;
+             rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/senior-editor
 pro:senior-editor rdf:type owl:NamedIndividual ,
-                           pro:PublishingRole .
+                           pro:PublishingRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/series-editor
 pro:series-editor rdf:type owl:NamedIndividual ,
-                           pro:PublishingRole .
+                           pro:PublishingRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/pro/translator
 pro:translator rdf:type owl:NamedIndividual ,
-                        pro:PublishingRole .
+                        pro:PublishingRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/pro> .
 
 
 ###  http://purl.org/spar/scoro/access-provider
 scoro:access-provider rdf:type owl:NamedIndividual ,
-                               scoro:DataRole .
+                               scoro:DataRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/accountant
 scoro:accountant rdf:type owl:NamedIndividual ,
-                          scoro:FinancialRole .
+                          scoro:FinancialRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/administrator
 scoro:administrator rdf:type owl:NamedIndividual ,
-                             scoro:OrganizationalRole .
+                             scoro:OrganizationalRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/affiliate
 scoro:affiliate rdf:type owl:NamedIndividual ,
-                         scoro:OrganizationalRole .
+                         scoro:OrganizationalRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/agent
 scoro:agent rdf:type owl:NamedIndividual ,
-                     scoro:OrganizationalRole .
+                     scoro:OrganizationalRole ;
+            rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/article-guarantor
 scoro:article-guarantor rdf:type owl:NamedIndividual ,
-                                 scoro:AuthorshipRole .
+                                 scoro:AuthorshipRole ;
+                        rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/auditor
 scoro:auditor rdf:type owl:NamedIndividual ,
-                       scoro:FinancialRole .
+                       scoro:FinancialRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/chief-executive-officer
 scoro:chief-executive-officer rdf:type owl:NamedIndividual ,
-                                       scoro:OrganizationalRole .
+                                       scoro:OrganizationalRole ;
+                              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/chief-scientist
 scoro:chief-scientist rdf:type owl:NamedIndividual ,
-                               scoro:InvestigationRole .
+                               scoro:InvestigationRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/chief-technology-officer
 scoro:chief-technology-officer rdf:type owl:NamedIndividual ,
-                                        scoro:OrganizationalRole .
+                                        scoro:OrganizationalRole ;
+                               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/claimant
 scoro:claimant rdf:type owl:NamedIndividual ,
-                        scoro:FinancialRole .
+                        scoro:FinancialRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/co-applicant
 scoro:co-applicant rdf:type owl:NamedIndividual ,
-                            scoro:ProjectRole .
+                            scoro:ProjectRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/co-investigator
 scoro:co-investigator rdf:type owl:NamedIndividual ,
-                               scoro:InvestigationRole .
+                               scoro:InvestigationRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/collaborator
 scoro:collaborator rdf:type owl:NamedIndividual ,
-                            scoro:InvestigationRole .
+                            scoro:InvestigationRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/college-fellow
 scoro:college-fellow rdf:type owl:NamedIndividual ,
-                              scoro:OrganizationalRole .
+                              scoro:OrganizationalRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/college-head
 scoro:college-head rdf:type owl:NamedIndividual ,
-                            scoro:OrganizationalRole .
+                            scoro:OrganizationalRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/computer-programmer
 scoro:computer-programmer rdf:type owl:NamedIndividual ,
-                                   scoro:InvestigationRole .
+                                   scoro:InvestigationRole ;
+                          rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/consortium-author
 scoro:consortium-author rdf:type owl:NamedIndividual ,
-                                 scoro:AuthorshipRole .
+                                 scoro:AuthorshipRole ;
+                        rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/consultant
 scoro:consultant rdf:type owl:NamedIndividual ,
-                          scoro:InvestigationRole .
+                          scoro:InvestigationRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/contact-person
 scoro:contact-person rdf:type owl:NamedIndividual ,
-                              scoro:OrganizationalRole .
+                              scoro:OrganizationalRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/contractor
 scoro:contractor rdf:type owl:NamedIndividual ,
-                          scoro:FinancialRole .
+                          scoro:FinancialRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/corresponding-author
 scoro:corresponding-author rdf:type owl:NamedIndividual ,
-                                    scoro:AuthorshipRole .
+                                    scoro:AuthorshipRole ;
+                           rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/curator
 scoro:curator rdf:type owl:NamedIndividual ,
-                       scoro:DataRole .
+                       scoro:DataRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/data-creator
 scoro:data-creator rdf:type owl:NamedIndividual ,
-                            scoro:DataRole .
+                            scoro:DataRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/data-curator
 scoro:data-curator rdf:type owl:NamedIndividual ,
-                            scoro:DataRole .
+                            scoro:DataRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/data-manager
 scoro:data-manager rdf:type owl:NamedIndividual ,
-                            scoro:DataRole .
+                            scoro:DataRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/data-publisher
 scoro:data-publisher rdf:type owl:NamedIndividual ,
-                              scoro:DataRole .
+                              scoro:DataRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/data-user
 scoro:data-user rdf:type owl:NamedIndividual ,
-                         scoro:DataRole .
+                         scoro:DataRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/departmental-administrator
 scoro:departmental-administrator rdf:type owl:NamedIndividual ,
-                                          scoro:OrganizationalRole .
+                                          scoro:OrganizationalRole ;
+                                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/director
 scoro:director rdf:type owl:NamedIndividual ,
-                        scoro:OrganizationalRole .
+                        scoro:OrganizationalRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/doctoral-student
 scoro:doctoral-student rdf:type owl:NamedIndividual ,
-                                scoro:EducationalRole .
+                                scoro:EducationalRole ;
+                       rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/embargo-controller
 scoro:embargo-controller rdf:type owl:NamedIndividual ,
-                                  scoro:DataRole .
+                                  scoro:DataRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/employee
 scoro:employee rdf:type owl:NamedIndividual ,
-                        scoro:OrganizationalRole .
+                        scoro:OrganizationalRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/employer
 scoro:employer rdf:type owl:NamedIndividual ,
-                        scoro:OrganizationalRole .
+                        scoro:OrganizationalRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/faculty-member
 scoro:faculty-member rdf:type owl:NamedIndividual ,
-                              scoro:EducationalRole .
+                              scoro:EducationalRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/financial-controller
 scoro:financial-controller rdf:type owl:NamedIndividual ,
-                                    scoro:FinancialRole .
+                                    scoro:FinancialRole ;
+                           rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/funder
 scoro:funder rdf:type owl:NamedIndividual ,
-                      scoro:FinancialRole .
+                      scoro:FinancialRole ;
+             rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/funding-recipient
 scoro:funding-recipient rdf:type owl:NamedIndividual ,
-                                 scoro:FinancialRole .
+                                 scoro:FinancialRole ;
+                        rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/head-of-department
 scoro:head-of-department rdf:type owl:NamedIndividual ,
-                                  scoro:OrganizationalRole .
+                                  scoro:OrganizationalRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/host-institution
 scoro:host-institution rdf:type owl:NamedIndividual ,
-                                scoro:OrganizationalRole .
+                                scoro:OrganizationalRole ;
+                       rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/illustrator
 scoro:illustrator rdf:type owl:NamedIndividual ,
-                           scoro:AuthorshipRole .
+                           scoro:AuthorshipRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/inventor
 scoro:inventor rdf:type owl:NamedIndividual ,
-                        scoro:InvestigationRole .
+                        scoro:InvestigationRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/lead-applicant
 scoro:lead-applicant rdf:type owl:NamedIndividual ,
-                              scoro:ProjectRole .
+                              scoro:ProjectRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/manager
 scoro:manager rdf:type owl:NamedIndividual ,
-                       scoro:OrganizationalRole .
+                       scoro:OrganizationalRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/master-student
 scoro:master-student rdf:type owl:NamedIndividual ,
-                              scoro:EducationalRole .
+                              scoro:EducationalRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/member
 scoro:member rdf:type owl:NamedIndividual ,
-                      scoro:OrganizationalRole .
+                      scoro:OrganizationalRole ;
+             rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/non-academic-staff-member
 scoro:non-academic-staff-member rdf:type owl:NamedIndividual ,
-                                         scoro:OrganizationalRole .
+                                         scoro:OrganizationalRole ;
+                                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/organizer
 scoro:organizer rdf:type owl:NamedIndividual ,
-                         scoro:OrganizationalRole .
+                         scoro:OrganizationalRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/owner
 scoro:owner rdf:type owl:NamedIndividual ,
-                     scoro:FinancialRole .
+                     scoro:FinancialRole ;
+            rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/participant
 scoro:participant rdf:type owl:NamedIndividual ,
-                           scoro:OrganizationalRole .
+                           scoro:OrganizationalRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/partner
 scoro:partner rdf:type owl:NamedIndividual ,
-                       scoro:OrganizationalRole .
+                       scoro:OrganizationalRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/patent-holder
 scoro:patent-holder rdf:type owl:NamedIndividual ,
-                             scoro:OrganizationalRole .
+                             scoro:OrganizationalRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/photographer
 scoro:photographer rdf:type owl:NamedIndividual ,
-                            scoro:AuthorshipRole .
+                            scoro:AuthorshipRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/possessor
 scoro:possessor rdf:type owl:NamedIndividual ,
-                         scoro:OrganizationalRole .
+                         scoro:OrganizationalRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/postdoctoral-researcher
 scoro:postdoctoral-researcher rdf:type owl:NamedIndividual ,
-                                       scoro:InvestigationRole .
+                                       scoro:InvestigationRole ;
+                              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/postgraduate-student
 scoro:postgraduate-student rdf:type owl:NamedIndividual ,
-                                    scoro:EducationalRole .
+                                    scoro:EducationalRole ;
+                           rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/principal-author
 scoro:principal-author rdf:type owl:NamedIndividual ,
-                                scoro:AuthorshipRole .
+                                scoro:AuthorshipRole ;
+                       rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/principal-investigator
 scoro:principal-investigator rdf:type owl:NamedIndividual ,
-                                      scoro:InvestigationRole .
+                                      scoro:InvestigationRole ;
+                             rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/programme-manager
 scoro:programme-manager rdf:type owl:NamedIndividual ,
-                                 scoro:OrganizationalRole .
+                                 scoro:OrganizationalRole ;
+                        rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/project-leader
 scoro:project-leader rdf:type owl:NamedIndividual ,
-                              scoro:ProjectRole .
+                              scoro:ProjectRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/project-manager
 scoro:project-manager rdf:type owl:NamedIndividual ,
-                               scoro:ProjectRole .
+                               scoro:ProjectRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/project-member
 scoro:project-member rdf:type owl:NamedIndividual ,
-                              scoro:ProjectRole .
+                              scoro:ProjectRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/project-student
 scoro:project-student rdf:type owl:NamedIndividual ,
-                               scoro:InvestigationRole .
+                               scoro:InvestigationRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/purchaser
 scoro:purchaser rdf:type owl:NamedIndividual ,
-                         scoro:FinancialRole .
+                         scoro:FinancialRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/registrar
 scoro:registrar rdf:type owl:NamedIndividual ,
-                         scoro:OrganizationalRole .
+                         scoro:OrganizationalRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/registration-agency
 scoro:registration-agency rdf:type owl:NamedIndividual ,
-                                   scoro:OrganizationalRole .
+                                   scoro:OrganizationalRole ;
+                          rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/registration-authority
 scoro:registration-authority rdf:type owl:NamedIndividual ,
-                                      scoro:OrganizationalRole .
+                                      scoro:OrganizationalRole ;
+                             rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/repository-manager
 scoro:repository-manager rdf:type owl:NamedIndividual ,
-                                  scoro:DataRole .
+                                  scoro:DataRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/research-assistant
 scoro:research-assistant rdf:type owl:NamedIndividual ,
-                                  scoro:InvestigationRole .
+                                  scoro:InvestigationRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/research-student
 scoro:research-student rdf:type owl:NamedIndividual ,
-                                scoro:InvestigationRole .
+                                scoro:InvestigationRole ;
+                       rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/researcher
 scoro:researcher rdf:type owl:NamedIndividual ,
-                          scoro:InvestigationRole .
+                          scoro:InvestigationRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/rights-holder
 scoro:rights-holder rdf:type owl:NamedIndividual ,
-                             scoro:OrganizationalRole .
+                             scoro:OrganizationalRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/scholar
 scoro:scholar rdf:type owl:NamedIndividual ,
-                       scoro:InvestigationRole .
+                       scoro:InvestigationRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/senior-author
 scoro:senior-author rdf:type owl:NamedIndividual ,
-                             scoro:AuthorshipRole .
+                             scoro:AuthorshipRole ;
+                    rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/service-engineer
 scoro:service-engineer rdf:type owl:NamedIndividual ,
-                                scoro:InvestigationRole .
+                                scoro:InvestigationRole ;
+                       rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/spokesperson
 scoro:spokesperson rdf:type owl:NamedIndividual ,
-                            scoro:OrganizationalRole .
+                            scoro:OrganizationalRole ;
+                   rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/sponsor
 scoro:sponsor rdf:type owl:NamedIndividual ,
-                       scoro:FinancialRole .
+                       scoro:FinancialRole ;
+              rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/stakeholder
 scoro:stakeholder rdf:type owl:NamedIndividual ,
-                           scoro:OrganizationalRole .
+                           scoro:OrganizationalRole ;
+                  rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/sub-contractor
 scoro:sub-contractor rdf:type owl:NamedIndividual ,
-                              scoro:FinancialRole .
+                              scoro:FinancialRole ;
+                     rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/successor
 scoro:successor rdf:type owl:NamedIndividual ,
-                         scoro:OrganizationalRole .
+                         scoro:OrganizationalRole ;
+                rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/supervisor
 scoro:supervisor rdf:type owl:NamedIndividual ,
-                          scoro:EducationalRole .
+                          scoro:EducationalRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/supplier
 scoro:supplier rdf:type owl:NamedIndividual ,
-                        scoro:FinancialRole .
+                        scoro:FinancialRole ;
+               rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/technician
 scoro:technician rdf:type owl:NamedIndividual ,
-                          scoro:InvestigationRole .
+                          scoro:InvestigationRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/undergraduate-student
 scoro:undergraduate-student rdf:type owl:NamedIndividual ,
-                                     scoro:EducationalRole .
+                                     scoro:EducationalRole ;
+                            rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/vice-chancellor
 scoro:vice-chancellor rdf:type owl:NamedIndividual ,
-                               scoro:OrganizationalRole .
+                               scoro:OrganizationalRole ;
+                      rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/web-master
 scoro:web-master rdf:type owl:NamedIndividual ,
-                          scoro:DataRole .
+                          scoro:DataRole ;
+                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  http://purl.org/spar/scoro/workpackage-leader
 scoro:workpackage-leader rdf:type owl:NamedIndividual ,
-                                  scoro:ProjectRole .
+                                  scoro:ProjectRole ;
+                         rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/platform
 doo:platform rdf:type owl:NamedIndividual ,
-                      doo:SpecialisedEMF .
+                      doo:SpecialisedEMF ;
+             rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/sensor
 doo:sensor rdf:type owl:NamedIndividual ,
-                    doo:SpecialisedEMF .
+                    doo:SpecialisedEMF ;
+           rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/site
 doo:site rdf:type owl:NamedIndividual ,
-                  doo:SpecialisedEMF .
+                  doo:SpecialisedEMF ;
+         rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/station
 doo:station rdf:type owl:NamedIndividual ,
-                     doo:SpecialisedEMF .
+                     doo:SpecialisedEMF ;
+            rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 #################################################################
