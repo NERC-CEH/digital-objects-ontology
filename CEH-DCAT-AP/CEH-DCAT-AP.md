@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 15/04/2025
+Last updated: 23/04/2025
 
 Contributors: Helen Rawsthorne
 
@@ -234,17 +234,21 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 ### Secondary Classes
 
-#### Rights Statement (DCTerms)
+#### Rights Statement (DC Terms)
 
 `dcterms:RightsStatement`
 
 When used with predicate `dcterms:accessRights`:
+
+![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-rightsstatement-accessrights.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `rdfs:label` | `rdfs:Literal` typed as `xsd:string` | 1..* | SHOULD use the label given for the resource at the resource URI. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 
 When used with predicate `dcterms:rights`:
+
+![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-rightsstatement-rights.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -259,6 +263,8 @@ When used with predicate `dcterms:rights`:
 
 How to define URI? Could use email address if we didn't have more than one postal address for the same email. Why do we need to give postal address?
 
+![Diagram of the class Organization (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-organization.svg)
+
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `vcard:hasFN` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
@@ -269,6 +275,8 @@ How to define URI? Could use email address if we didn't have more than one posta
 #### Address (vCard)
 
 `vcard:Address`
+
+![Diagram of the class Address (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-address.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -284,6 +292,8 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
+![Diagram of the class Individual (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-individual.svg)
+
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `vcard:hasFN` | `rdfs:Literal` typed as `xsd:string` | 1..* |  | P E |
@@ -296,6 +306,8 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 #### Name (vCard)
 
 `vcard:Name`
+
+![Diagram of the class Name (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-name.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -333,9 +345,11 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `foaf:mbox` | `owl:Thing` | 0..1 | SHOULD use a <mailto:> URI. | P E |
 
-#### Location (DCTerms)
+#### Location (DC Terms)
 
 `dcterms:Location`
+
+![Diagram of the class Location (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-location.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -343,9 +357,11 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | `dcat:bbox` | `rdfs:Literal` typed as `geo:wktLiteral` | 0..1 |  | E |
 | `dcat:centroid` |  |  |  | N |
 
-#### Period of Time (DCTerms)
+#### Period of Time (DC Terms)
 
 `dcterms:PeriodOfTime`
+
+![Diagram of the class Period of Time (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-periodoftime.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -357,6 +373,8 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 #### Activity (PROV-O)
 
 `prov:Activity`
+
+TODO/see methods work
 
 #### Classes not used
 
