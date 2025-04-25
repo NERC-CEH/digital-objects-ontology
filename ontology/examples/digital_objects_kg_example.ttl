@@ -18,25 +18,11 @@
     a dcat:Dataset, prov:Entity ;
     doo:originatingProject <my:project> ;
     epi:originatingProgramme <my:project> ;
-    epi:originatingFacility <my:facility> ;
     doo:originatingGrant <my:grant> ;
+    epi:originatingFacility <my:facility> ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> ;
-    dcterms:isReferencedBy <my:article> .
-
-# A GRANT
-<my:grant>
-    a frapo:Grant ;
-    frapo:hasGrantNumber "NE/L01016X/1"^^xsd:string ;
-    frapo:funds <my:project> .
-
-# A FUNDING AGENCY
-<https://ror.org/02b5d8509>
-    a frapo:FundingAgency, prov:Organization ;
-    frapo:hasFunderIdentifier <https://ror.org/02b5d8509> ;
-    frapo:awards <my:grant> ;
-    frapo:funds <my:project> ;
-    foaf:name "NERC" ;
-    foaf:homepage <https://www.ukri.org/councils/nerc/> .
+    dcterms:isReferencedBy <my:article> ;
+    ceh:originatingMethodThing <my:method> .
 
 # A PROJECT
 <my:project>
@@ -48,15 +34,25 @@
     frapo:hasStartDate "2019-11-30T23:59:59"^^xsd:dateTime ;
     epi:utilises <my:facility> .
 
+# A FUNDING AGENCY
+<https://ror.org/02b5d8509>
+    a frapo:FundingAgency, prov:Organization ;
+    frapo:hasFunderIdentifier <https://ror.org/02b5d8509> ;
+    frapo:awards <my:grant> ;
+    frapo:funds <my:project> ;
+    foaf:name "NERC" ;
+    foaf:homepage <https://www.ukri.org/councils/nerc/> .
+
+# A GRANT
+<my:grant>
+    a frapo:Grant ;
+    frapo:hasGrantNumber "NE/L01016X/1"^^xsd:string ;
+    frapo:funds <my:project> .
+
 # A FACILITY
 <my:facility>
     a ef:EnvironmentalMonitoringFacility ;
     doo:specialisedEMFType doo:Sensor .
-
-# AN ARTICLE
-<my:article>
-    a dcat:Resource, prov:Entity, fabio:JournalArticle ;
-    dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .
 
 # A CONTRIBUTOR
 <https://orcid.org/0000-0002-0027-0436>
@@ -78,3 +74,13 @@
     a foaf:Organization , prov:Organization ;
     foaf:name "UKCEH" ;
     foaf:homepage <https://www.ukceh.ac.uk> .
+
+# AN ARTICLE
+<my:article>
+    a dcat:Resource, prov:Entity, fabio:JournalArticle ;
+    dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .
+
+# A METHOD
+<my:method>
+    a ceh:MethodThing, prov:Entity ;
+    dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .
