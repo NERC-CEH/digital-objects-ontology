@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 23/04/2025
+Last updated: 28/04/2025
 
 Contributors: Helen Rawsthorne
 
@@ -57,6 +57,7 @@ Contains one or two letter codes to understand the relationship between the prop
 | adms | http://www.w3.org/ns/adms# |
 | dcat | http://www.w3.org/ns/dcat# |
 | dcterms | http://purl.org/dc/terms/ |
+| doo | https://ceh.ac.uk/digital-objects-ontology/ |
 | fabio | http://purl.org/spar/fabio/ |
 | foaf | http://xmlns.com/foaf/0.1/ |
 | geo | http://www.opengis.net/ont/geosparql# |
@@ -64,6 +65,7 @@ Contains one or two letter codes to understand the relationship between the prop
 | locn | http://www.w3.org/ns/locn# |
 | odrl | http://www.w3.org/ns/odrl/2/ |
 | odrs | http://schema.theodi.org/odrs# |
+| poso | http://purl.org/poso/ |
 | prov | http://www.w3.org/ns/prov# |
 | rdau | http://rdaregistry.info/Elements/u/ |
 | rdfs | http://www.w3.org/2000/01/rdf-schema# |
@@ -109,7 +111,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
 | `dcterms:accessRights` | `dcterms:RightsStatement` | 1 | SHOULD use the URI of a term from the [Limitations on public access code list](https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess). | E |
-| `dcterms:conformsTo` | `dcterms:Standard` | 0..* |  | A |
+| `dcterms:conformsTo` | `dcterms:Standard` | 0..* | If used to specify the coordinate reference system, SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | E |
 | `dcat:contactPoint` | `vcard:Organization` or `vcard:Individual` | 1..* | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/9] | E |
 | `dcterms:creator` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | E |
 | `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
@@ -130,13 +132,13 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:rights` | `dcterms:RightsStatement` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | A |
 | `dcterms:hasPart` |  |  |  | N |
 | `odrl:hasPolicy` |  |  |  | N |
-| `dcterms:isReferencedBy` | `dcat:resource` or `prov:Entity` or `fabio:Expression` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. Use only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for the PID of the same resource). | E |
+| `dcterms:isReferencedBy` | `dcat:resource` or `prov:Entity` or `fabio:Expression` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. MUST be used only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for the PID of the same resource). | E |
 | `dcat:previousVersion` | `dcat:resource` | 0..1 | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:hasVersion` |  |  |  | N |
 | `dcat:hasCurrentVersion` |  |  |  | N |
 | `dcterms:replaces` | `dcat:resource` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:version` | `rdfs:Literal` typed as `xsd:string` | 1 | Use [SemVer](http://semver.org/) or [SchemaVer](https://snowplow.io/blog/introducing-schemaver-for-semantic-versioning-of-schemas) (where possible). |  |
-| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | Must use if previous version exists. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
+| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST be used if previous version exists. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
 | `adms:status` | `skos:Concept` | .. | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/25] | E |
 | `dcat:first` |  |  |  | N |
 | `dcat:last` |  |  |  | N |
@@ -147,7 +149,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `geodcatap:topicCategory` | `skos:Concept` | 1..* | MUST use the URI of a term from the [Topic categories in accordance with EN ISO 19115 code list](https://inspire.ec.europa.eu/metadata-codelist/TopicCategory). | P A |
 | `dcterms:bibliographicCitation` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `dcterms:available` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use embargo end date and MUST NOT use date when metadata record was put online. | E |
-| `dcterms:provenance` |  | | TODO, see http://purl.org/dc/terms/provenance, it's actually for a statement of any changes in ownership and custody of the resource |  |
+| `dcterms:provenance` |  |  | TODO, see http://purl.org/dc/terms/provenance, it's actually for a statement of any changes in ownership and custody of the resource. |  |
 | `dcterms:subject` |  | 1 | TODO, see https://github.com/NERC-CEH/digital-objects-ontology/issues/19, maybe we could create a specialisation of this predicate in our own ontology and specify the vocabs we will allow people to choose thier keywords from (dcat:theme is a subproperty of this one) |  |
 
 #### Catalog Record
@@ -176,6 +178,8 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcterms:temporal` | `dcterms:PeriodOfTime` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | E |
 | `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` | 0..1 |  | A |
 | `prov:wasGeneratedBy` | `prov:Activity` | .. | TODO |  |
+| `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | P E |
+| `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
 
 #### Dataset Series
 
@@ -209,12 +213,14 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcat:byteSize` | `rdfs:Literal` typed as `xsd:nonNegativeInteger` | 0..1 |  | E |
 | `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` | 0..1 |  | E |
 | `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` | 0..1 |  | A |
-| `dcterms:conformsTo` | `dcterms:Standard` | 0..* |  | A |
+| `dcterms:conformsTo` | `dcterms:Standard` | 0..* | If used to specify the coordinate reference system, SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | E |
 | `dcat:mediaType` | `dcterms:MediaType` | .. | TODO | A |
 | `dcterms:format` | `dcterms:MediaTypeOrExtent` | .. | TODO | A |
 | `dcat:compressFormat` | `dcterms:MediaType` | .. | TODO | A |
 | `dcat:packageFormat` | `dcterms:MediaType` | 0..1 |  | A |
 | `spdx:checksum` | `spdx:Checksum` | 0..1 |  | A |
+| `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | P E |
+| `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
 
 #### Data Service
 

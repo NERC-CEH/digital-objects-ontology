@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram name="Page-1" id="dRh6jTIBIImA6vXcn6LJ">
-    <mxGraphModel dx="2501" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2022" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,10 +44,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-10" value="dcat:Distribution" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#CCFFE6;" parent="1" vertex="1">
-          <mxGeometry x="530" y="280" width="140" height="30" as="geometry" />
+          <mxGeometry x="530" y="280" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-11" value="dcat:DatasetSeries" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#FFE6CC;" parent="1" vertex="1">
-          <mxGeometry x="530" y="320" width="140" height="30" as="geometry" />
+          <mxGeometry x="530" y="320" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-19" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" parent="1" source="pjDf02SLqKIFOyRl_HYM-14" target="pjDf02SLqKIFOyRl_HYM-21" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -64,7 +64,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-21" value="dcterms:PeriodOfTime" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
-          <mxGeometry x="530" y="400" width="140" height="30" as="geometry" />
+          <mxGeometry x="530" y="400" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-94" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="30" y="280" width="210" height="100" as="geometry" />
@@ -76,7 +76,7 @@
           <mxGeometry width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-97" value="dcterms:Location" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
-          <mxGeometry x="530" y="360" width="140" height="30" as="geometry" />
+          <mxGeometry x="530" y="360" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pjDf02SLqKIFOyRl_HYM-109" value="" style="rounded=1;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#E6E6E6;dashed=1;dashPattern=1 4;" parent="1" vertex="1">
           <mxGeometry x="-250" y="190" width="400" height="70" as="geometry" />
@@ -99,6 +99,49 @@
             <mxPoint x="-80" y="335" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" parent="1" target="bef3hlJ9fTX9Oo9CjZpv-3" source="pjDf02SLqKIFOyRl_HYM-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="330" as="sourcePoint" />
+            <mxPoint x="439" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-2" value="&lt;div&gt;poso:hasSRS [0..*]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="bef3hlJ9fTX9Oo9CjZpv-1">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="104" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-3" value="poso:SRS" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="530" y="440" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-4" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" parent="1" target="bef3hlJ9fTX9Oo9CjZpv-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="295" as="sourcePoint" />
+            <mxPoint x="439" y="907" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-5" value="&lt;div&gt;doo:spatialRepresentationType [0..*]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="bef3hlJ9fTX9Oo9CjZpv-4">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="111" y="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-6" value="doo:SpatialRepresentation" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="530" y="480" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-7" value="&lt;u&gt;doo:tabular&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="530" y="510" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-8" value="&lt;div&gt;&lt;u&gt;doo:raster&lt;/u&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="530" y="570" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bef3hlJ9fTX9Oo9CjZpv-9" value="&lt;div&gt;&lt;u&gt;doo:vector&lt;/u&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="530" y="540" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
