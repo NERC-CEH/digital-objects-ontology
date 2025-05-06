@@ -1,6 +1,5 @@
 @prefix : <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix ef: <http://www.w3.org/2015/03/inspire/ef/> .
-@prefix ceh: <https://ceh.ac.uk/method-things-ontology/> .
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix epi: <https://epimorphics.com/ceh/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -279,6 +278,13 @@ doo:originatingProject rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
+###  https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
+doo:spatialRepresentationType rdf:type owl:ObjectProperty ;
+                              rdfs:domain dcat:Resource ;
+                              rdfs:range doo:SpatialRepresentation ;
+                              rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
+
+
 ###  https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType
 doo:specialisedEMFType rdf:type owl:ObjectProperty ;
                        rdfs:domain ef:EnvironmentalMonitoringFacility ;
@@ -540,6 +546,11 @@ foaf:Person rdf:type owl:Class ;
 ###  http://xmlns.com/foaf/0.1/Project
 foaf:Project rdf:type owl:Class ;
              rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation
+doo:SpatialRepresentation rdf:type owl:Class ;
+                          rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF
@@ -1276,6 +1287,12 @@ doo:platform rdf:type owl:NamedIndividual ,
              rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
+###  https://ceh.ac.uk/digital-objects-ontology/raster
+doo:raster rdf:type owl:NamedIndividual ,
+                    doo:SpatialRepresentation ;
+           rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
+
+
 ###  https://ceh.ac.uk/digital-objects-ontology/sensor
 doo:sensor rdf:type owl:NamedIndividual ,
                     doo:SpecialisedEMF ;
@@ -1292,6 +1309,18 @@ doo:site rdf:type owl:NamedIndividual ,
 doo:station rdf:type owl:NamedIndividual ,
                      doo:SpecialisedEMF ;
             rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/tabular
+doo:tabular rdf:type owl:NamedIndividual ,
+                     doo:SpatialRepresentation ;
+            rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/vector
+doo:vector rdf:type owl:NamedIndividual ,
+                    doo:SpatialRepresentation ;
+           rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
 
 
 #################################################################
