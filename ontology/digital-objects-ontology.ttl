@@ -218,6 +218,7 @@ ef:uses rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/ns/prov#used
 prov:used rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf prov:wasInfluencedBy ;
           rdfs:domain prov:Activity ;
           rdfs:range prov:Entity ;
           rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
@@ -225,16 +226,43 @@ prov:used rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
 prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf prov:wasInfluencedBy ;
                        rdfs:domain prov:Activity ;
                        rdfs:range prov:Agent ;
                        rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf prov:wasInfluencedBy ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity ;
+                    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
 prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf prov:wasInfluencedBy ;
                     rdfs:domain prov:Entity ;
                     rdfs:range prov:Activity ;
                     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+prov:wasInfluencedBy rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( prov:Activity
+                                                 prov:Agent
+                                                 prov:Entity
+                                               )
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( prov:Activity
+                                                prov:Agent
+                                                prov:Entity
+                                              )
+                                ] ;
+                     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
@@ -256,13 +284,6 @@ doo:specialisedEMFType rdf:type owl:ObjectProperty ;
                        rdfs:domain ef:EnvironmentalMonitoringFacility ;
                        rdfs:range doo:SpecialisedEMF ;
                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
-
-
-###  https://ceh.ac.uk/method-things-ontology/originatingMethodThing
-ceh:originatingMethodThing rdf:type owl:ObjectProperty ;
-                           rdfs:domain prov:Entity ;
-                           rdfs:range ceh:MethodThing ;
-                           rdfs:isDefinedBy <https://ceh.ac.uk/method-things-ontology> .
 
 
 ###  https://epimorphics.com/ceh/originatingFacility
@@ -524,12 +545,6 @@ foaf:Project rdf:type owl:Class ;
 ###  https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF
 doo:SpecialisedEMF rdf:type owl:Class ;
                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
-
-
-###  https://ceh.ac.uk/method-things-ontology/MethodThing
-ceh:MethodThing rdf:type owl:Class ;
-                rdfs:subClassOf dcat:Resource ;
-                rdfs:isDefinedBy <https://ceh.ac.uk/method-things-ontology> .
 
 
 ###  https://www.w3.org/ns/dcat#Resource
