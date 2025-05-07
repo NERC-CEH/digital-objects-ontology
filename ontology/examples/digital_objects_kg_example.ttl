@@ -1,17 +1,24 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
+@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
+@prefix epi: <https://epimorphics.com/ceh/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix odrs: <http://schema.theodi.org/odrs#> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix org: <http://data.semanticweb.org/organization/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix wfo: <https://ceh.ac.uk/workflows-ontology/> .
 @prefix : <https://catalogue.ceh.ac.uk/id/> .
 
-# see https://catalogue.ceh.ac.uk/documents/a754cae2-d6a4-456e-b367-e99891d7920f
-# see https://catalogue.ceh.ac.uk/documents/a754cae2-d6a4-456e-b367-e99891d7920f?format=ttl
+# KNOWLEDGE GRAPH OF A FULLY-DESCRIBED DIGITAL OBJECT (A DATASET DESCRIBED WITH ITS ORIGINATING PROJECT, FACILITY, METHOD, GRANT AND FUNDING AGENCY, A RELATED ARTICLE, CONTRIBUTORS TO THE DATASET AND THE ARTICLE, THEIR ROLES AND AFFILIATIONS), MODELLED ACCORDING TO THE DIGITAL OBJECTS ONTOLOGY (https://github.com/NERC-CEH/digital-objects-ontology/tree/main/ontology)
+
+# LOOSELY BASED ON THE FOLLOWING RECORD IN THE EIDC:
+# https://catalogue.ceh.ac.uk/documents/a754cae2-d6a4-456e-b367-e99891d7920f
 
 # A DATASET
 :a754cae2-d6a4-456e-b367-e99891d7920f
@@ -22,7 +29,7 @@
     epi:originatingFacility <my:facility> ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> ;
     dcterms:isReferencedBy <my:article> ;
-    ceh:originatingMethodThing <my:method> .
+    prov:wasDerivedFrom <my:method> .
 
 # A PROJECT
 <my:project>
@@ -52,7 +59,7 @@
 # A FACILITY
 <my:facility>
     a ef:EnvironmentalMonitoringFacility ;
-    doo:specialisedEMFType doo:Sensor .
+    doo:specialisedEMFType doo:sensor .
 
 # A CONTRIBUTOR
 <https://orcid.org/0000-0002-0027-0436>
@@ -82,5 +89,5 @@
 
 # A METHOD
 <my:method>
-    a ceh:MethodThing, prov:Entity ;
+    a wfo:MethodThing, prov:Entity ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .

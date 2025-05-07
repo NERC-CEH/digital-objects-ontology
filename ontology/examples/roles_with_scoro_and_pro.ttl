@@ -1,16 +1,19 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
-@prefix epi: <https://epimorphics.com/> .
+@prefix epi: <https://epimorphics.com/ceh/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 # @prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .  # HMR: doesn't resolve, should consider alternative.
 # @prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# KNOWLEDGE GRAPH THAT DEMONSTRATES HOW THE SCORO (https://sparontologies.github.io/scoro/current/scoro.html) AND PRO (https://sparontologies.github.io/pro/current/pro.html) ONTOLOGIES CAN BE USED TO DESCRIBE THE ROLES OF CONTRIBUTORS TO DIGITAL OBJECTS, INCLUDING THE TIME INTERVAL WHEN THE ROLE IS VALID
 
 <doi:dataset> a dcat:Dataset, prov:Entity;
    dcterms:contributor <orcid:you> ;  # HMR: it isn't mandatory to specify a role. The role isn't specified for this contributor.
@@ -47,4 +50,4 @@
       frapo:hasStartDate "2024"^^xsd:dateTime ] ;  # HMR: it's possible to have only a start date or only an end date if the other's unknown
    pro:holdsRoleInTime [ a pro:RoleInTime ;
       pro:withRole scoro:undertakes-modelling ;
-      pro:relatesToEntity <uri:project> ].  # HMR: a contributor can have more than one role related to the same entity.
+      pro:relatesToEntity <uri:project> ] .  # HMR: a contributor can have more than one role related to the same entity.
