@@ -12,7 +12,7 @@ The EIDC holds records for datasets. Each record can be accessed in multiple for
 
 The section Main Classes is dedicated to the seven main classes upon which the DCAT vocabulary is based. Each class has its own section, which details the way it is to be used in this application profile. The section Secondary Classes contains details of other classes that are part of this application profile but that are not part of the DCAT vocabulary.
 
-![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat.svg)
+![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP/diagrams/dcat.svg)
 
 Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
 
@@ -88,7 +88,7 @@ This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Catalog](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-catalog.svg)
+![Diagram of the class Catalog](/CEH-DCAT-AP/diagrams/dcat-catalog.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:C
 
 Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`, `prov:wasDerivedFrom`).
 
-![Diagram of the class Cataloged Resource](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-resource.svg)
+![Diagram of the class Cataloged Resource](/CEH-DCAT-AP/diagrams/dcat-resource.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -176,7 +176,7 @@ This class is a sub-class of `dcat:Resource` and a super-class of `dcat:Catalog`
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Dataset](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dataset.svg)
+![Diagram of the class Dataset](/CEH-DCAT-AP/diagrams/dcat-dataset.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -196,13 +196,13 @@ This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Dataset Series](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-datasetseries.svg)
+![Diagram of the class Dataset Series](/CEH-DCAT-AP/diagrams/dcat-datasetseries.svg)
 
 #### Distribution
 
 `dcat:Distribution`
 
-![Diagram of the class Distribution](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-distribution.svg)
+![Diagram of the class Distribution](/CEH-DCAT-AP/diagrams/dcat-distribution.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -239,7 +239,7 @@ This class is a sub-class of `dcat:Resource`.
 
 Every instance of this class MUST also be an instance of the class `prov:Entity`.
 
-![Diagram of the class Data Service](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dataservice.svg)
+![Diagram of the class Data Service](/CEH-DCAT-AP/diagrams/dcat-dataservice.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -255,7 +255,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 When used with predicate `dcterms:accessRights`:
 
-![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-rightsstatement-accessrights.svg)
+![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-rightsstatement-accessrights.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -263,7 +263,7 @@ When used with predicate `dcterms:accessRights`:
 
 When used with predicate `dcterms:rights`:
 
-![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-rightsstatement-rights.svg)
+![Diagram of the class Rights Statement (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-rightsstatement-rights.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -278,7 +278,7 @@ When used with predicate `dcterms:rights`:
 
 How to define URI? Could use email address if we didn't have more than one postal address for the same email. Why do we need to give postal address?
 
-![Diagram of the class Organization (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-organization.svg)
+![Diagram of the class Organization (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-organization.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -291,7 +291,7 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 `vcard:Address`
 
-![Diagram of the class Address (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-address.svg)
+![Diagram of the class Address (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-address.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -307,7 +307,7 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
-![Diagram of the class Individual (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-individual.svg)
+![Diagram of the class Individual (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-individual.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -322,7 +322,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 `vcard:Name`
 
-![Diagram of the class Name (vCard)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-vcard-name.svg)
+![Diagram of the class Name (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-name.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -336,7 +336,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
-![Diagram of the class Person (FOAF)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-foaf-person.svg)
+![Diagram of the class Person (FOAF)](/CEH-DCAT-AP/diagrams/dcat-foaf-person.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -353,7 +353,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
-![Diagram of the class Organization (FOAF)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-foaf-organization.svg)
+![Diagram of the class Organization (FOAF)](/CEH-DCAT-AP/diagrams/dcat-foaf-organization.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -365,7 +365,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 `dcterms:Location`
 
-![Diagram of the class Location (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-location.svg)
+![Diagram of the class Location (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-location.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
@@ -377,7 +377,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 `dcterms:PeriodOfTime`
 
-![Diagram of the class Period of Time (DC Terms)](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-dcterms-periodoftime.svg)
+![Diagram of the class Period of Time (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-periodoftime.svg)
 
 | Property | Range | Cardinality | Usage | Reuse |
 | --- | --- | --- | --- | --- |
