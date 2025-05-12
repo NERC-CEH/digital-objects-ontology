@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 28/04/2025
+Last updated: 12/05/2025
 
 Contributors: Helen Rawsthorne
 
@@ -39,7 +39,7 @@ Contains the accepted cardinality of the property.
 
 #### Usage column
 
-Contains usage notes for the property, which should be taken as supplementary to the definition and usage notes given in the source specification. If contradictory, use those given here.
+Contains usage notes for the property, which should be taken as supplementary to the definition and usage notes given in the source specification. If contradictory, use those given here. "See also" comments indicate predicates with similar semantics that should be checked to ensure correct choice is made.
 
 #### Reuse column
 
@@ -63,8 +63,10 @@ Contains one or two letter codes to understand the relationship between the prop
 | geo | http://www.opengis.net/ont/geosparql# |
 | geodcatap | http://data.europa.eu/930/ |
 | locn | http://www.w3.org/ns/locn# |
+| mmv | https://ceh.ac.uk/method-metadata-vocabulary/ |
 | odrl | http://www.w3.org/ns/odrl/2/ |
 | odrs | http://schema.theodi.org/odrs# |
+| org | http://data.semanticweb.org/organization/ |
 | poso | http://purl.org/poso/ |
 | prov | http://www.w3.org/ns/prov# |
 | rdau | http://rdaregistry.info/Elements/u/ |
@@ -104,7 +106,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:Catalog` and of `dcat:DatasetSeries`.
 
-Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`).
+Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`, `prov:wasDerivedFrom`).
 
 ![Diagram of the class Cataloged Resource](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat-resource.svg)
 
@@ -116,7 +118,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:creator` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | E |
 | `dcterms:description` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
 | `dcterms:title` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
-| `dcterms:issued` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use date when metadata record was put online and MUST NOT use embargo end date. | E |
+| `dcterms:issued` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use date when metadata record was put online and MUST NOT use embargo end date. See also `dcterms:available`. | E |
 | `dcterms:modified` | `rdfs:Literal` typed as `xsd:date` | 1 | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/22] | E |
 | `dcterms:language` | `dcterms:LinguisticSystem` | 1..* | MUST use the URI of a term from the [ISO 639-1](https://id.loc.gov/vocabulary/iso639-1.html). | E |
 | `dcterms:publisher` | `foaf:Person` or `foaf:Organization` | 1..* | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/23] | E |
@@ -138,19 +140,27 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcat:hasCurrentVersion` |  |  |  | N |
 | `dcterms:replaces` | `dcat:resource` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:version` | `rdfs:Literal` typed as `xsd:string` | 1 | Use [SemVer](http://semver.org/) or [SchemaVer](https://snowplow.io/blog/introducing-schemaver-for-semantic-versioning-of-schemas) (where possible). |  |
-| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST be used if previous version exists. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | E |
-| `adms:status` | `skos:Concept` | .. | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/25] | E |
+| `adms:versionNotes` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST be used if previous version exists. MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/28] | E |
+| `adms:status` | `skos:Concept` | 1 | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/25] | E |
 | `dcat:first` |  |  |  | N |
 | `dcat:last` |  |  |  | N |
 | `dcat:prev` |  |  |  | N |
-| `rdau:P60402` (has coustodian) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
+| `prov:wasGeneratedBy` | `prov:Activity` | 0..* | TODO |  |
+| `rdau:P60402` (has custodian) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
 | `rdau:P60400` (has current owner) | `foaf:Person` or `foaf:Organization` | 1 | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/26] | P E |
 | `dcterms:contributor` | `foaf:Person` or `foaf:Organization` | 0..* | Every instance of the class `dcat:Resource` MUST have at least one `dcterms:creator` or `dcterms:contributor`. SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/10] | P E |
 | `geodcatap:topicCategory` | `skos:Concept` | 1..* | MUST use the URI of a term from the [Topic categories in accordance with EN ISO 19115 code list](https://inspire.ec.europa.eu/metadata-codelist/TopicCategory). | P A |
 | `dcterms:bibliographicCitation` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
-| `dcterms:available` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use embargo end date and MUST NOT use date when metadata record was put online. | E |
+| `dcterms:available` | `rdfs:Literal` typed as `xsd:date` | 1 | If embargoed, MUST use embargo end date and MUST NOT use date when metadata record was put online. See also `dcterms:issued`. | E |
 | `dcterms:provenance` |  |  | TODO, see http://purl.org/dc/terms/provenance, it's actually for a statement of any changes in ownership and custody of the resource. |  |
 | `dcterms:subject` |  | 1 | TODO, see https://github.com/NERC-CEH/digital-objects-ontology/issues/19, maybe we could create a specialisation of this predicate in our own ontology and specify the vocabs we will allow people to choose thier keywords from (dcat:theme is a subproperty of this one) |  |
+| `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/29] | P E |
+| `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
+| `mmv:distribution` | `mmv:Distribution` | 0..* | For distributions of any catalogued resource except datasets. The predicate `dcat:distribution`, pointing to the class `dcat:Distribution`, MUST be used if the subject is a `dcat:Dataset`. | P A |
+| `mmv:repositoryURL` | `rdfs:Resource` | 0..* | For dynamic data stores, e.g. Github, Gitlab, Bitbucket. | P A |
+| `mmv:archiveURL` | `rdfs:Resource` | 0..* | For static data stores, e.g. Zenodo, Figshare, HAL. | P A |
+| `prov:wasDerivedFrom` | `prov:Entity` | 0..* |  | P A |
+| `prov:wasInfluencedBy` | `prov:Entity` | 0..* |  | P A |
 
 #### Catalog Record
 
@@ -172,14 +182,11 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | --- | --- | --- | --- | --- |
 | `dcat:distribution` | `dcat:Distribution` | 0..* |  | A |
 | `dcterms:accrualPeriodicity` |  |  |  | N |
-| `dcat:inSeries` | `dcat:DatasetSeries` | 0..* |  | A |
-| `dcterms:spatial` | `dcterms:Location` | 0.. | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | E |
-| `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` | 0..1 |  | A |
-| `dcterms:temporal` | `dcterms:PeriodOfTime` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | E |
-| `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` | 0..1 |  | A |
-| `prov:wasGeneratedBy` | `prov:Activity` | .. | TODO |  |
-| `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | P E |
-| `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
+| `dcat:inSeries` | `dcat:DatasetSeries` | 0..* | [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/11] | A |
+| `dcterms:spatial` | `dcterms:Location` | 0.. | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/20] | E |
+| `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
+| `dcterms:temporal` | `dcterms:PeriodOfTime` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/5] | E |
+| `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
 
 #### Dataset Series
 
@@ -211,16 +218,18 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcat:accessService` | `dcat:DataService` | 0..* |  | A |
 | `dcat:downloadURL` | `rdfs:Resource` | 0..* |  | A |
 | `dcat:byteSize` | `rdfs:Literal` typed as `xsd:nonNegativeInteger` | 0..1 |  | E |
-| `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` | 0..1 |  | E |
-| `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` | 0..1 |  | A |
+| `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | E |
+| `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
 | `dcterms:conformsTo` | `dcterms:Standard` | 0..* | If used to specify the coordinate reference system, SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | E |
 | `dcat:mediaType` | `dcterms:MediaType` | .. | TODO | A |
 | `dcterms:format` | `dcterms:MediaTypeOrExtent` | .. | TODO | A |
 | `dcat:compressFormat` | `dcterms:MediaType` | .. | TODO | A |
 | `dcat:packageFormat` | `dcterms:MediaType` | 0..1 |  | A |
-| `spdx:checksum` | `spdx:Checksum` | 0..1 |  | A |
 | `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | P E |
 | `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
+| `mmv:repositoryURL` | `rdfs:Resource` | 0..* | For dynamic data stores, e.g. Github, Gitlab, Bitbucket. | P A |
+| `mmv:archiveURL` | `rdfs:Resource` | 0..* | For static data stores, e.g. Zenodo, Figshare, HAL. | P A |
+| `mmv:demoURL` | `rdfs:Resource` | 0..* | For web app demos, visualisations, tutorials, etc. | P A |
 
 #### Data Service
 
@@ -334,7 +343,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 | `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1 |  | P E |
 | `foaf:familyName` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
 | `foaf:givenName` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
-| `foaf:title` | `rdfs:Literal` typed as `xsd:string` | 0..1 |  | P E |
+| `foaf:title` | `rdfs:Literal` typed as `xsd:string` | 0..1 | MUST use a language tag (e.g. `@en`). | P E |
 | `org:memberOf` | `foaf:Organization` ≡ `org:Organization` | 0..* |  | P E |
 | `foaf:mbox` | `owl:Thing` | 0..1 | SHOULD use a <mailto:> URI. | P E |
 
@@ -350,6 +359,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 | --- | --- | --- | --- | --- |
 | `foaf:name` | `rdfs:Literal` typed as `xsd:string` | 1..* | MUST use a language tag (e.g. `@en`). SHOULD be duplicated in multiple languages. | P E |
 | `foaf:mbox` | `owl:Thing` | 0..1 | SHOULD use a <mailto:> URI. | P E |
+| `foaf:homepage` | `foaf:Document` | 0..1 |  | E |
 
 #### Location (DC Terms)
 
@@ -382,7 +392,13 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 TODO/see methods work
 
-#### Classes not used
+ #### Distribution (Methods Metadata Vocabulary)
+
+ `mmv:Distribution`
+
+TODO/see methods work
+
+#### Secondary classes not requiring definition
 
 No properties are used with the following classes as subjects.
 
@@ -398,6 +414,12 @@ No properties are used with the following classes as subjects.
 
 `dcterms:MediaTypeOrExtent`
 
-`spdx:Checksum`
-
 `vcard:Email`
+
+`poso:SRS`
+
+`doo:SpatialRepresentation`
+
+`rdfs:Resource`
+
+`prov:Entity`
