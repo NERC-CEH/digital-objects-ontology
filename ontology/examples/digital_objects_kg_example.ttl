@@ -1,5 +1,4 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
@@ -7,12 +6,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix org: <http://data.semanticweb.org/organization/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix wfo: <https://ceh.ac.uk/workflows-ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <https://catalogue.ceh.ac.uk/id/> .
 
 # KNOWLEDGE GRAPH OF A FULLY-DESCRIBED DIGITAL OBJECT (A DATASET DESCRIBED WITH ITS ORIGINATING PROJECT, FACILITY, METHOD, GRANT AND FUNDING AGENCY, A RELATED ARTICLE, CONTRIBUTORS TO THE DATASET AND THE ARTICLE, THEIR ROLES AND AFFILIATIONS), MODELLED ACCORDING TO THE DIGITAL OBJECTS ONTOLOGY (https://github.com/NERC-CEH/digital-objects-ontology/tree/main/ontology)
