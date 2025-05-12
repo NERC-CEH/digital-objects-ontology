@@ -159,6 +159,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `mmv:distribution` | `mmv:Distribution` | 0..* | For distributions of any catalogued resource except datasets. The predicate `dcat:distribution`, pointing to the class `dcat:Distribution`, MUST be used if the subject is a `dcat:Dataset`. | P A |
 | `mmv:repositoryURL` | `rdfs:Resource` | 0..* | For dynamic data stores, e.g. Github, Gitlab, Bitbucket. | P A |
 | `mmv:archiveURL` | `rdfs:Resource` | 0..* | For static data stores, e.g. Zenodo, Figshare, HAL. | P A |
+| `mmv:demoURL` | `rdfs:Resource` | 0..* | For web app demos, visualisations, tutorials, etc. | P A |
 | `prov:wasDerivedFrom` | `prov:Entity` | 0..* |  | P A |
 | `prov:wasInfluencedBy` | `prov:Entity` | 0..* |  | P A |
 
