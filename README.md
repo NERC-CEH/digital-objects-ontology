@@ -22,10 +22,10 @@
 - In the diagram below, classes that are coloured in are defined in more detail (i.e. the object properties and datatype properties that apply to them) elsewhere, either in the [CEH DCAT Application Profile](/CEH-DCAT-AP/) or in the [Workflows/Method-Thing Ontology](https://github.com/NERC-CEH/workflows-ontology).
 - At some point, we should probably choose which of the many named individuals (roles) we want to keep in order to reduce the number of possibilites available (TODO)
 
-![Diagram of the Digital Objects Ontology](/ontology/digital_objects_ontology.svg)
+![Diagram of the Digital Objects Ontology](/ontology/diagrams/digital_objects_ontology.svg)
 
 ## The CEH DCAT Application Profile
 
 - See [this folder](/CEH-DCAT-AP/)
 
-![Overview diagram of the CEH DCAT Application Profile](/CEH-DCAT-AP/CEH-DCAT-AP_diagrams/dcat.svg)
+![Overview diagram of the CEH DCAT Application Profile](/CEH-DCAT-AP/diagrams/dcat.svg)
