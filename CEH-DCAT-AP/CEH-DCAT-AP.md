@@ -6,15 +6,15 @@ Contributors: Helen Rawsthorne
 
 ## Introduction
 
-The EIDC holds records for datasets. Each record can be accessed in multiple formats including Turtle, which is used to express RDF data. The aim of this application profile is to provide a model that can be used to describe all resources at CEH, so as to standardise them across the organisation and align them with community best practices. The model is an application profile of the DCAT 3 vocabulary. It overlaps a lot with DCAT-AP 3.0, but we can not use that as it is specific to data portals in the EU so is too restrictive in parts.
+The EIDC holds records for datasets. Each record can be accessed in multiple formats including Turtle, which is used to express RDF data. The aim of this application profile is to provide a model that can be used to describe all resources at CEH, so as to standardise them across the organisation and align them with community best practices. It is an application profile of the [DCAT 3 vocabulary](https://www.w3.org/TR/vocab-dcat-3/). It overlaps a lot with [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/), but we can not use that as it is specific to data portals in the EU so is too restrictive in parts.
 
 ## Overview
 
-The section Main Classes is dedicated to the seven main classes upon which the DCAT vocabulary is based. Each class has its own section, which details the way it is to be used in this application profile. The section Secondary Classes contains details of other classes that are part of this application profile but that are not part of the DCAT vocabulary.
+The section [Main Classes](#main-classes) is dedicated to the seven main classes upon which the DCAT vocabulary is based. Each class has its own section, which details all the relevant predicates associated with it and the way they are to be used in this application profile. The section [Secondary Classes](#secondary-classes) contains details of other classes that are part of this application profile but that are not part of the DCAT vocabulary.
 
 ![Overview diagram of the main classes in the CEH DCAT Application Profile](/CEH-DCAT-AP/diagrams/dcat.svg)
 
-Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate. This is to avoid the unnecessary creation of new URIs. But only when it doesn't seem useful to create an URI, cos dcat recommends avoiding blank nodes.
+Sometimes we recommend using a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes) as the object of a triple instead of explicitly instantiating the class defined as the range of a predicate, despite DCAT 3 recommending avoiding blank nodes. We do this is to avoid the unnecessary creation of new URIs when it doesn't seem useful to create an URI.
 
 ### Diagrams
 
@@ -46,7 +46,7 @@ Contains usage notes for the property, which should be taken as supplementary to
 Contains one or two letter codes to understand the relationship between the property and DCAT 3.
 
 - A: reused exactly as defined and expressed in DCAT 3
-- E: reused with additional usage notes or additional restrictions compared to DCAT 3 (including only a change in cardinality)
+- E: reused with additional usage notes or additional restrictions compared to DCAT 3 (includes cases in which the only difference is a change in the cardinality)
 - N: in DCAT 3 but not in CEH-DCAT-AP
 - P: CEH-DCAT-AP profile specific extension (i.e. a term not mentioned in DCAT 3), can be used in combination with A or E
 
@@ -98,7 +98,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcat:dataset` | `dcat:Dataset` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. | A |
 | `dcat:service` | `dcat:DataService` | 0..* |  | A |
 | `dcat:catalog` | `dcat:Catalog` | 0..* |  | A |
-| `dcat:record` | `dcat:CatalogRecord` |  |  | N |
+| `dcat:record` |  |  |  | N |
 
 #### Cataloged Resource
 
@@ -106,7 +106,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:Catalog` and of `dcat:DatasetSeries`.
 
-Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`. This is because some properties present in this application profile have the class `prov:Entity` as their domain (e.g. `prov:wasGeneratedBy`, `prov:wasDerivedFrom`).
+Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST also be an instance of the class `prov:Entity`.
 
 ![Diagram of the class Cataloged Resource](/CEH-DCAT-AP/diagrams/dcat-resource.svg)
 
@@ -134,7 +134,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:rights` | `dcterms:RightsStatement` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). | A |
 | `dcterms:hasPart` |  |  |  | N |
 | `odrl:hasPolicy` |  |  |  | N |
-| `dcterms:isReferencedBy` | `dcat:resource` or `prov:Entity` or `fabio:Expression` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. MUST be used only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for the PID of the same resource). | E |
+| `dcterms:isReferencedBy` | `dcat:resource` or `prov:Entity` or `fabio:Expression` | 0..* | SHOULD use the [DOI](https://www.doi.org/) URI. MUST be used only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for another PID of the same resource). | E |
 | `dcat:previousVersion` | `dcat:resource` | 0..1 | SHOULD use the [DOI](https://www.doi.org/) URI. | E |
 | `dcat:hasVersion` |  |  |  | N |
 | `dcat:hasCurrentVersion` |  |  |  | N |
@@ -160,8 +160,8 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `mmv:repositoryURL` | `rdfs:Resource` | 0..* | For dynamic data stores, e.g. Github, Gitlab, Bitbucket. | P A |
 | `mmv:archiveURL` | `rdfs:Resource` | 0..* | For static data stores, e.g. Zenodo, Figshare, HAL. | P A |
 | `mmv:demoURL` | `rdfs:Resource` | 0..* | For web app demos, visualisations, tutorials, etc. | P A |
-| `prov:wasDerivedFrom` | `prov:Entity` | 0..* |  | P A |
-| `prov:wasInfluencedBy` | `prov:Entity` | 0..* |  | P A |
+| `prov:wasDerivedFrom` | `prov:Entity` | 0..* | E.g. a model can be derived from a dataset, a dataset can be derived from a method. | P A |
+| `prov:wasInfluencedBy` | `prov:Entity` | 0..* | E.g. a method can be influenced by another method. | P A |
 
 #### Catalog Record
 
@@ -401,7 +401,7 @@ TODO/see methods work
 
 #### Secondary classes not requiring definition
 
-No properties are used with the following classes as subjects.
+No predicates are used with the following classes as subjects, which is why they are not defined in this application profile.
 
 `foaf:Document`
 
