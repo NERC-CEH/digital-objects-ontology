@@ -1,6 +1,6 @@
 # CEH DCAT Application Profile
 
-Last updated: 12/05/2025
+Last updated: 15/05/2025
 
 Contributors: Helen Rawsthorne
 
@@ -66,14 +66,14 @@ Contains one or two letter codes to understand the relationship between the prop
 | mmv | https://ceh.ac.uk/method-metadata-vocabulary/ |
 | odrl | http://www.w3.org/ns/odrl/2/ |
 | odrs | http://schema.theodi.org/odrs# |
-| org | http://data.semanticweb.org/organization/ |
+| org | http://www.w3.org/ns/org# |
 | poso | http://purl.org/poso/ |
 | prov | http://www.w3.org/ns/prov# |
 | rdau | http://rdaregistry.info/Elements/u/ |
 | rdfs | http://www.w3.org/2000/01/rdf-schema# |
 | spdx | http://spdx.org/rdf/terms# |
 | time | http://www.w3.org/2006/time# |
-| vcard | http://www.w3.org/2006/vcard/ |
+| vcard | http://www.w3.org/2006/vcard/ns# |
 | xsd | http://www.w3.org/2001/XMLSchema# |
 
 ## Specification
@@ -82,7 +82,7 @@ Contains one or two letter codes to understand the relationship between the prop
 
 #### Catalog
 
-`dcat:Catalog`
+[`dcat:Catalog`](https://www.w3.org/ns/dcat#Catalog)
 
 This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
@@ -102,7 +102,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 #### Cataloged Resource
 
-`dcat:Resource`
+[`dcat:Resource`](https://www.w3.org/ns/dcat#Resource)
 
 This class is a super-class of `dcat:Dataset`, of `dcat:DataService`, of `dcat:Catalog` and of `dcat:DatasetSeries`.
 
@@ -123,7 +123,7 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 | `dcterms:language` | `dcterms:LinguisticSystem` | 1..* | MUST use the URI of a term from the [ISO 639-1](https://id.loc.gov/vocabulary/iso639-1.html). | E |
 | `dcterms:publisher` | `foaf:Person` or `foaf:Organization` | 1..* | SHOULD use an [ORCID](https://orcid.org/) URI for people and a [ROR ID](https://ror.org/) URI for organisations. If the organisation does not yet exist in ROR, submit a request to add the organisation. [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/23] | E |
 | `dcterms:identifier` | `rdfs:Literal` typed as `xsd:anyURL` or `xsd:string` | 1..* | SHOULD use an URL. MUST use at least the catalogue-specific PID. SHOULD use the [DOI](https://www.doi.org/) URI. | E |
-| `dcat:theme` |  | .. | TODO - will be used for the defined list of UKCEH science topics (there is a "vocabulary" but it needs updating). This is because the scope of our catalogue is broader than INSPIRE data and we've never been particularly closely aligned with those standards (see https://github.com/NERC-CEH/digital-objects-ontology/issues/19#issuecomment-2737104171) |  |
+| `dcat:theme` |  | ?..? | TODO - will be used for the defined list of UKCEH science topics (there is a "vocabulary" but it needs updating). This is because the scope of our catalogue is broader than INSPIRE data and we've never been particularly closely aligned with those standards (see https://github.com/NERC-CEH/digital-objects-ontology/issues/19#issuecomment-2737104171) |  |
 | `dcterms:type` |  | 1 | TODO [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/24] |  |
 | `dcterms:relation` |  |  |  | N |
 | `dcat:qualifiedRelation` |  |  |  | N |
@@ -165,13 +165,13 @@ Every instance of the class `dcat:Resource`, or one of its sub-classes, MUST als
 
 #### Catalog Record
 
-`dcat:CatalogRecord`
+[`dcat:CatalogRecord`](https://www.w3.org/ns/dcat#CatalogRecord)
 
 Not used.
 
 #### Dataset
 
-`dcat:Dataset`
+[`dcat:Dataset`](https://www.w3.org/ns/dcat#Dataset)
 
 This class is a sub-class of `dcat:Resource` and a super-class of `dcat:Catalog`.
 
@@ -184,14 +184,14 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcat:distribution` | `dcat:Distribution` | 0..* |  | A |
 | `dcterms:accrualPeriodicity` |  |  |  | N |
 | `dcat:inSeries` | `dcat:DatasetSeries` | 0..* | [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/11] | A |
-| `dcterms:spatial` | `dcterms:Location` | 0.. | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/20] | E |
+| `dcterms:spatial` | `dcterms:Location` | 0..? | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/20] | E |
 | `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
 | `dcterms:temporal` | `dcterms:PeriodOfTime` | 0..1 | SHOULD use a [blankNodePropertyList](https://www.w3.org/TR/rdf12-turtle/#unlabeled-bnodes). [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/5] | E |
 | `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
 
 #### Dataset Series
 
-`dcat:DatasetSeries`
+[`dcat:DatasetSeries`](https://www.w3.org/ns/dcat#DatasetSeries)
 
 This class is a sub-class of `dcat:Dataset` and of `dcat:Resource`.
 
@@ -201,7 +201,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 #### Distribution
 
-`dcat:Distribution`
+[`dcat:Distribution`](https://www.w3.org/ns/dcat#Distribution)
 
 ![Diagram of the class Distribution](/CEH-DCAT-AP/diagrams/dcat-distribution.svg)
 
@@ -222,9 +222,9 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 | `dcat:spatialResolutionInMeters` | `rdfs:Literal` typed as `xsd:decimal` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | E |
 | `dcat:temporalResolution` | `rdfs:Literal` typed as `xsd:duration` [Issue: https://github.com/NERC-CEH/digital-objects-ontology/issues/27] | 0..1 |  | A |
 | `dcterms:conformsTo` | `dcterms:Standard` | 0..* | If used to specify the coordinate reference system, SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | E |
-| `dcat:mediaType` | `dcterms:MediaType` | .. | TODO | A |
-| `dcterms:format` | `dcterms:MediaTypeOrExtent` | .. | TODO | A |
-| `dcat:compressFormat` | `dcterms:MediaType` | .. | TODO | A |
+| `dcat:mediaType` | `dcterms:MediaType` | ?..? | TODO | A |
+| `dcterms:format` | `dcterms:MediaTypeOrExtent` | ?..? | TODO | A |
+| `dcat:compressFormat` | `dcterms:MediaType` | ?..? | TODO | A |
 | `dcat:packageFormat` | `dcterms:MediaType` | 0..1 |  | A |
 | `poso:hasSRS` | `poso:SRS` | 0..* | SHOULD use the URI of a term from the OGC CRS Registry (e.g. https://www.opengis.net/def/crs/EPSG/0/4326). | P E |
 | `doo:spatialRepresentationType` | `doo:SpatialRepresentation` | 0..* |  | P A |
@@ -234,7 +234,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 #### Data Service
 
-`dcat:DataService`
+[`dcat:DataService`](https://www.w3.org/ns/dcat#DataService)
 
 This class is a sub-class of `dcat:Resource`.
 
@@ -252,7 +252,7 @@ Every instance of this class MUST also be an instance of the class `prov:Entity`
 
 #### Rights Statement (DC Terms)
 
-`dcterms:RightsStatement`
+[`dcterms:RightsStatement`](http://purl.org/dc/terms/RightsStatement)
 
 When used with predicate `dcterms:accessRights`:
 
@@ -275,7 +275,7 @@ When used with predicate `dcterms:rights`:
 
 #### Organization (vCard)
 
-`vcard:Organization`
+[`vcard:Organization`](http://www.w3.org/2006/vcard/ns#Organization)
 
 How to define URI? Could use email address if we didn't have more than one postal address for the same email. Why do we need to give postal address?
 
@@ -290,7 +290,7 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 #### Address (vCard)
 
-`vcard:Address`
+[`vcard:Address`](http://www.w3.org/2006/vcard/ns#Address)
 
 ![Diagram of the class Address (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-address.svg)
 
@@ -304,7 +304,7 @@ How to define URI? Could use email address if we didn't have more than one posta
 
 #### Individual (vCard)
 
-`vcard:Individual`
+[`vcard:Individual`](http://www.w3.org/2006/vcard/ns#Individual)
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
@@ -321,7 +321,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 #### Name (vCard)
 
-`vcard:Name`
+[`vcard:Name`](http://www.w3.org/2006/vcard/ns#Name)
 
 ![Diagram of the class Name (vCard)](/CEH-DCAT-AP/diagrams/dcat-vcard-name.svg)
 
@@ -333,7 +333,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 #### Person (FOAF)
 
-`foaf:Person`
+[`foaf:Person`](http://xmlns.com/foaf/0.1/Person)
 
 SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
@@ -350,7 +350,7 @@ SHOULD use an [ORCID](https://orcid.org/) URI to instantiate this class.
 
 #### Organization (FOAF) ≡ Organization (Org)
 
-`foaf:Organization` ≡ `org:Organization`
+[`foaf:Organization`](http://xmlns.com/foaf/0.1/Organization) ≡ [`org:Organization`](https://www.w3.org/ns/org#Organization)
 
 SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
@@ -364,7 +364,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 #### Location (DC Terms)
 
-`dcterms:Location`
+[`dcterms:Location`](http://purl.org/dc/terms/Location)
 
 ![Diagram of the class Location (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-location.svg)
 
@@ -376,7 +376,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 #### Period of Time (DC Terms)
 
-`dcterms:PeriodOfTime`
+[`dcterms:PeriodOfTime`](http://purl.org/dc/terms/PeriodOfTime)
 
 ![Diagram of the class Period of Time (DC Terms)](/CEH-DCAT-AP/diagrams/dcat-dcterms-periodoftime.svg)
 
@@ -389,7 +389,7 @@ SHOULD use a [ROR ID](https://ror.org/) URI to instantiate this class.
 
 #### Activity (PROV-O)
 
-`prov:Activity`
+[`prov:Activity`](https://www.w3.org/TR/prov-o/#Activity)
 
 TODO/see methods work
 
