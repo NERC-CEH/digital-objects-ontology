@@ -7,13 +7,13 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geodcatap: <http://data.europa.eu/930/> .
 @prefix odrs: <http://schema.theodi.org/odrs#> .
-@prefix org: <http://data.semanticweb.org/organization/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix poso: <http://purl.org/poso/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <https://catalogue.ceh.ac.uk/id/> .
 
