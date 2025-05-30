@@ -1,0 +1,26 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-6540-8547",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "UK Centre for Ecology & Hydrology"
+            },
+            "familyName": "Rawsthorne",
+            "givenName": "Helen"
+        }
+    ],
+    "codeRepository": "https://github.com/NERC-CEH/digital-objects-ontology",
+    "description": "This is an ontology that covers the description of diverse research outputs (articles, datasets, methods, models, workflows, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles.",
+    "keywords": [
+        "OWL",
+        "ontology"
+    ],
+    "license": "https://spdx.org/licenses/OGL-UK-3.0",
+    "name": "Digital Objects Ontology",
+    "programmingLanguage": "OWL",
+    "developmentStatus": "wip"
+}
