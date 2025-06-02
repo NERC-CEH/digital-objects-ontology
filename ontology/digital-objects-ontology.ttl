@@ -6,6 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdo: <https://schema.org/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcat: <https://www.w3.org/ns/dcat#> .
@@ -23,12 +24,25 @@
 <https://ceh.ac.uk/digital-objects-ontology> rdf:type owl:Ontology ;
                                               owl:versionIRI <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> ;
                                               dcterms:created "2025-01-01"^^xsd:date ;
-                                              dcterms:creator <https://orcid.org/0000-0002-6540-8547> ;
+                                              dcterms:creator [
+                                                sdo:name "Helen Mair Rawsthorne"^^xsd:string ;
+                                                sdo:identifier <https://orcid.org/0000-0002-6540-8547> ;
+                                                sdo:honorificPrefix "Dr"^^xsd:string ;
+                                                sdo:affiliation [
+                                                  sdo:name "UK Centre for Ecology & Hydrology" ;
+                                                  sdo:url "https://www.ceh.ac.uk/"^^xsd:anyURI ;
+                                                  sdo:identifier "https://ror.org/00pggkr55"^^xsd:anyURI ;
+                                                ] ;
+                                              ] ;
                                               dcterms:description "Brief description..."@en ;
                                               dcterms:issued "2025-01-01"^^xsd:date ;
                                               dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
                                               dcterms:modified "2025-01-01"^^xsd:date ;
-                                              dcterms:publisher <https://ror.org/00pggkr55> ;
+                                              dcterms:publisher [
+                                                sdo:name "UK Centre for Ecology & Hydrology" ;
+                                                sdo:url "https://www.ceh.ac.uk/"^^xsd:anyURI ;
+                                                sdo:identifier "https://ror.org/00pggkr55"^^xsd:anyURI ;
+                                              ] ;
                                               dcterms:title "Digital Objects Ontology"@en ;
                                               vann:preferredNamespacePrefix "doo" ;
                                               vann:preferredNamespaceUri "https://ceh.ac.uk/digital-objects-ontology/" ;
