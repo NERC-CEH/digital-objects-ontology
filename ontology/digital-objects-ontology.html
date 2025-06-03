@@ -289,7 +289,7 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b1"
+        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db1"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -313,7 +313,7 @@ td {
     "https://schema.org/description": [
       {
         "@language": "en",
-        "@value": "Brief description..."
+        "@value": "This ontology allows describing diverse research outputs (articles, datasets, methods, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles."
       }
     ],
     "https://schema.org/license": [
@@ -329,15 +329,15 @@ td {
     ],
     "https://schema.org/publisher": [
       {
-        "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b3"
+        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db3"
       }
     ]
   },
   {
-    "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b1",
+    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db1",
     "https://schema.org/affiliation": [
       {
-        "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b2"
+        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db2"
       }
     ],
     "https://schema.org/honorificPrefix": [
@@ -359,10 +359,10 @@ td {
     ]
   },
   {
-    "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b2"
+    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db2"
   },
   {
-    "@id": "_:nd7a506f876f84a1f9bcefb01c1c8b9a2b3",
+    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db3",
     "https://schema.org/identifier": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -508,7 +508,7 @@ td {
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
             </dt>
-            <dd><p>Brief description...</p></dd>
+            <dd><p>This ontology allows describing diverse research outputs (articles, datasets, methods, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles.</p></dd>
           </div>
         </dl>
       </div>
@@ -3099,6 +3099,12 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A grant that funded the production of a digital object.</p></td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
@@ -3139,6 +3145,12 @@ td {
               <td>
                 <a href="https://ceh.ac.uk/digital-objects-ontology">Digital Objects Ontology</a>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A project that produced a digital object.</p></td>
             </tr>
             <tr>
               <th>
@@ -3185,6 +3197,12 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The spatial representation type of a digital object.</p></td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
@@ -3225,6 +3243,12 @@ td {
               <td>
                 <a href="https://ceh.ac.uk/digital-objects-ontology">Digital Objects Ontology</a>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The specialised type of an environmental monitoring facility (EMF).</p></td>
             </tr>
             <tr>
               <th>
@@ -3407,17 +3431,17 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
                   <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="http://purl.org/spar/pro/RoleInTime">pro:RoleInTime</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>

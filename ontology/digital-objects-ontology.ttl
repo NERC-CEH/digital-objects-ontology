@@ -34,7 +34,7 @@
                                                   sdo:identifier "https://ror.org/00pggkr55"^^xsd:anyURI ;
                                                 ] ;
                                               ] ;
-                                              dcterms:description "Brief description..."@en ;
+                                              dcterms:description "This ontology allows describing diverse research outputs (articles, datasets, methods, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               dcterms:issued "2025-01-01"^^xsd:date ;
                                               dcterms:license <https://eidc.ceh.ac.uk/licences/OGL/plain> ;
                                               dcterms:modified "2025-01-01"^^xsd:date ;
@@ -280,7 +280,8 @@ prov:wasInfluencedBy rdf:type owl:ObjectProperty ;
 
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
 doo:originatingGrant rdf:type owl:ObjectProperty ;
-                    rdfs:label "originating grant"@en ;
+                     rdfs:label "originating grant"@en ;
+                     dcterms:description "A grant that funded the production of a digital object."@en ;
                      rdfs:domain prov:Entity ;
                      rdfs:range frapo:Grant ;
                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
@@ -289,6 +290,7 @@ doo:originatingGrant rdf:type owl:ObjectProperty ;
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingProject
 doo:originatingProject rdf:type owl:ObjectProperty ;
                        rdfs:label "originating project"@en ;
+                       dcterms:description "A project that produced a digital object."@en ;
                        rdfs:domain prov:Entity ;
                        rdfs:range foaf:Project ;
                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
@@ -297,6 +299,7 @@ doo:originatingProject rdf:type owl:ObjectProperty ;
 ###  https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
 doo:spatialRepresentationType rdf:type owl:ObjectProperty ;
                               rdfs:label "spatial representation type"@en ;
+                              dcterms:description "The spatial representation type of a digital object."@en ;
                               rdfs:domain dcat:Resource ;
                               rdfs:range doo:SpatialRepresentation ;
                               rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
@@ -305,6 +308,7 @@ doo:spatialRepresentationType rdf:type owl:ObjectProperty ;
 ###  https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType
 doo:specialisedEMFType rdf:type owl:ObjectProperty ;
                        rdfs:label "specialied EMF type"@en ;
+                       dcterms:description "The specialised type of an environmental monitoring facility (EMF)."@en ;
                        rdfs:domain ef:EnvironmentalMonitoringFacility ;
                        rdfs:range doo:SpecialisedEMF ;
                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
