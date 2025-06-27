@@ -11,7 +11,7 @@ authors:
     affiliation: UK Centre for Ecology & Hydrology
     city: Lancaster
 repository-code: 'https://github.com/NERC-CEH/digital-objects-ontology'
-abstract: This is an ontology that covers the description of diverse research outputs (articles, datasets, methods, models, workflows, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles.
+abstract: This is an ontology that covers rich metadata for diverse research outputs (articles, datasets, methods, etc.) including descriptions of the projects which allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles.
 keywords:
   - OWL
   - ontology
