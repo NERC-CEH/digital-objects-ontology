@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9" pages="3">
   <diagram id="fuwcfzCdi4lV0n_IpoE1" name="ontology">
-    <mxGraphModel dx="3915" dy="2053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3470" dy="1779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -393,22 +393,6 @@
         </mxCell>
         <mxCell id="xbfcnlFWIqz_JqUDb5xA-32" value="&lt;a href=&quot;https://sparontologies.github.io/scoro/current/scoro.html&quot;&gt;SCoRO&lt;/a&gt;, the Scholarly&lt;div&gt;Contributions and&lt;/div&gt;&lt;div&gt;Roles Ontology&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;The numerous named&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;individuals that are&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106));&quot;&gt;members&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106));&quot;&gt;of these&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106));&quot;&gt;classes have not&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106));&quot;&gt;been&amp;nbsp;&lt;/span&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106)); font-size: 10px;&quot;&gt;included in this diagram&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106)); font-size: 10px;&quot;&gt;for&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(153, 153, 153), rgb(106, 106, 106)); font-size: 10px;&quot;&gt;the sake of readability&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#999999;" parent="1" vertex="1">
           <mxGeometry x="-950" y="-270" width="150" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="vX7wjKkstcepn1GWn-i9-2" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.9;entryY=1;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" parent="1" source="F8XiAjO3YJyf-TI3ZzNd-83" target="F8XiAjO3YJyf-TI3ZzNd-83" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-60" y="170" as="sourcePoint" />
-            <mxPoint x="-20" y="60" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="-190" y="221" />
-              <mxPoint x="-190" y="270" />
-              <mxPoint x="-60" y="270" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="-KJCgEf8XdIKsFLMFoNU-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;prov:wasDerivedFrom&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="vX7wjKkstcepn1GWn-i9-2" vertex="1" connectable="0">
-          <mxGeometry x="0.3395" relative="1" as="geometry">
-            <mxPoint x="-21" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="F8XiAjO3YJyf-TI3ZzNd-23" value="fdri:EnvironmentalMonitoringFacility" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
           <mxGeometry x="20" y="440" width="200" height="30" as="geometry" />
