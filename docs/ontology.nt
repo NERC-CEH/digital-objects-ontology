@@ -1,0 +1,1086 @@
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/created> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/name> "Helen Mair Rawsthorne" .
+_:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-6540-8547> .
+_:genid1 <https://schema.org/honorificPrefix> "Dr" .
+_:genid1 <https://schema.org/affiliation> _:genid2 .
+_:genid2 <https://schema.org/url> "https://www.ceh.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid2 <https://schema.org/name> "UK Centre for Ecology & Hydrology" .
+_:genid2 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/description> "This ontology allows describing diverse research outputs (articles, datasets, methods, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles."@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/issued> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/license> <https://eidc.ceh.ac.uk/licences/OGL/plain> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/modified> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/publisher> _:genid3 .
+_:genid3 <https://schema.org/url> "https://www.ceh.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid3 <https://schema.org/name> "UK Centre for Ecology & Hydrology" .
+_:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/title> "Digital Objects Ontology"@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ceh.ac.uk/digital-objects-ontology/" .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Objects Ontology"@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://ceh.ac.uk/digital-objects-ontology> <https://schema.org/codeRepository> <https://github.com/NERC-CEH/digital-objects-ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/honorificPrefix
+<https://schema.org/honorificPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/identifier
+<https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/name
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/url
+<https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.opengis.net/ont/geosparql#wktLiteral> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2001/XMLSchema> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/contains
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> .
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/utilises
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://purl.org/cerif/frapo/awards
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/FundingAgency> .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Grant> .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/cerif/frapo/funds
+<http://purl.org/cerif/frapo/funds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Grant> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/FundingAgency> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Project> .
+<http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/spar/pro/holdsRoleInTime
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/RoleInTime> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/relatesToEntity
+<http://purl.org/spar/pro/relatesToEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pro/relatesToEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/RoleInTime> .
+<http://purl.org/spar/pro/relatesToEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Entity> .
+<http://purl.org/spar/pro/relatesToEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/withRole
+<http://purl.org/spar/pro/withRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/RoleInTime> .
+<http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/hasInput
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ceh.ac.uk/method-metadata-ontology/Method> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/dcat#Dataset> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://purl.org/dc/terms/description> "A dataset that is the input of a method."@en .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/isOutputOf
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/dcat#Dataset> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://ceh.ac.uk/method-metadata-ontology/Method> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://purl.org/dc/terms/description> "A dataset that is the output of a method."@en .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#label> "is output of"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/originatingGrant
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Grant> .
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://purl.org/dc/terms/description> "A grant that funded the production of a digital object."@en .
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/2000/01/rdf-schema#label> "originating grant"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
+<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3.org/ns/dcat#Dataset> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ceh.ac.uk/method-metadata-ontology/Method> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#range> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#label> "spatial representation type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/cerif/frapo/hasEndDate
+<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/cerif/frapo/hasFunderIdentifier
+<http://purl.org/cerif/frapo/hasFunderIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasFunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/FundingAgency> .
+<http://purl.org/cerif/frapo/hasFunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/cerif/frapo/hasFunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/cerif/frapo/hasGrantNumber
+<http://purl.org/cerif/frapo/hasGrantNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasGrantNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/Grant> .
+<http://purl.org/cerif/frapo/hasGrantNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/cerif/frapo/hasGrantNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/cerif/frapo/hasStartDate
+<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Dataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://purl.org/cerif/frapo/FundingAgency
+<http://purl.org/cerif/frapo/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/cerif/frapo/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/cerif/frapo/Grant
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
+# http://purl.org/spar/fabio/Expression
+<http://purl.org/spar/fabio/Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Expression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
+# 
+# http://purl.org/spar/pro/PublishingRole
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/Role
+<http://purl.org/spar/pro/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pro/Role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/RoleInTime
+<http://purl.org/spar/pro/RoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pro/RoleInTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/scoro/AuthorshipRole
+<http://purl.org/spar/scoro/AuthorshipRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/AuthorshipRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/AuthorshipRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/DataRole
+<http://purl.org/spar/scoro/DataRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/DataRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/DataRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/EducationalRole
+<http://purl.org/spar/scoro/EducationalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/EducationalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/EducationalRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/FinancialRole
+<http://purl.org/spar/scoro/FinancialRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/FinancialRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/FinancialRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/InvestigationRole
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/OrganizationalRole
+<http://purl.org/spar/scoro/OrganizationalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/OrganizationalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/OrganizationalRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/ProjectRole
+<http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
+# 
+# http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
+# 
+# http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
+# 
+# http://xmlns.com/foaf/0.1/Project
+<http://xmlns.com/foaf/0.1/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Project> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation
+<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "spatial representation"@en .
+# 
+# https://ceh.ac.uk/method-metadata-ontology/Method
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/method-metadata-ontology> .
+# 
+# https://www.w3.org/ns/dcat#Dataset
+<https://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
+<https://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat> .
+# 
+# https://www.w3.org/ns/dcat#Resource
+<https://www.w3.org/ns/dcat#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/dcat#Resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spar/pro/archivist
+<http://purl.org/spar/pro/archivist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/archivist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/archivist> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/author
+<http://purl.org/spar/pro/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/authors-agent
+<http://purl.org/spar/pro/authors-agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/authors-agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/authors-agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/biographer
+<http://purl.org/spar/pro/biographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/biographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/biographer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/blogger
+<http://purl.org/spar/pro/blogger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/blogger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/blogger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/commissioning-editor
+<http://purl.org/spar/pro/commissioning-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/commissioning-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/commissioning-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/compiler
+<http://purl.org/spar/pro/compiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/compiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/compiler> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/contributor
+<http://purl.org/spar/pro/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/contributor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/copy-editor
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/copyright-owner
+<http://purl.org/spar/pro/copyright-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/copyright-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/copyright-owner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/critic
+<http://purl.org/spar/pro/critic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/critic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/critic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/deputy-editor
+<http://purl.org/spar/pro/deputy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/deputy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/deputy-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/distributor
+<http://purl.org/spar/pro/distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/distributor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/editor
+<http://purl.org/spar/pro/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/editor-in-chief
+<http://purl.org/spar/pro/editor-in-chief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/editor-in-chief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/editor-in-chief> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/executive-editor
+<http://purl.org/spar/pro/executive-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/executive-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/executive-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/ghost-writer
+<http://purl.org/spar/pro/ghost-writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/ghost-writer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/ghost-writer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/guest-editor
+<http://purl.org/spar/pro/guest-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/guest-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/guest-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/journalist
+<http://purl.org/spar/pro/journalist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/journalist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/journalist> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/librarian
+<http://purl.org/spar/pro/librarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/librarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/librarian> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/managing-editor
+<http://purl.org/spar/pro/managing-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/managing-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/managing-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/peer-reviewer
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/printer
+<http://purl.org/spar/pro/printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/printer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/producer
+<http://purl.org/spar/pro/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/producer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/production-editor
+<http://purl.org/spar/pro/production-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/production-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/production-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/proof-reader
+<http://purl.org/spar/pro/proof-reader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/proof-reader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/proof-reader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/publisher
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/reader
+<http://purl.org/spar/pro/reader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/reader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/reader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/reviewer
+<http://purl.org/spar/pro/reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/reviewer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/senior-editor
+<http://purl.org/spar/pro/senior-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/senior-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/senior-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/series-editor
+<http://purl.org/spar/pro/series-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/series-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/series-editor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/pro/translator
+<http://purl.org/spar/pro/translator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/translator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/translator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://purl.org/spar/scoro/access-provider
+<http://purl.org/spar/scoro/access-provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/access-provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/access-provider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/accountant
+<http://purl.org/spar/scoro/accountant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/accountant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/accountant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/administrator
+<http://purl.org/spar/scoro/administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/affiliate
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/agent
+<http://purl.org/spar/scoro/agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/article-guarantor
+<http://purl.org/spar/scoro/article-guarantor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/article-guarantor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/article-guarantor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/auditor
+<http://purl.org/spar/scoro/auditor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/auditor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/auditor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/chief-executive-officer
+<http://purl.org/spar/scoro/chief-executive-officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/chief-executive-officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/chief-executive-officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/chief-scientist
+<http://purl.org/spar/scoro/chief-scientist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/chief-scientist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/chief-scientist> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/chief-technology-officer
+<http://purl.org/spar/scoro/chief-technology-officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/chief-technology-officer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/chief-technology-officer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/claimant
+<http://purl.org/spar/scoro/claimant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/claimant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/claimant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/co-applicant
+<http://purl.org/spar/scoro/co-applicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/co-applicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/co-applicant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/co-investigator
+<http://purl.org/spar/scoro/co-investigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/co-investigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/co-investigator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/collaborator
+<http://purl.org/spar/scoro/collaborator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/collaborator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/collaborator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/college-fellow
+<http://purl.org/spar/scoro/college-fellow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/college-fellow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/college-fellow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/college-head
+<http://purl.org/spar/scoro/college-head> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/college-head> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/college-head> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/computer-programmer
+<http://purl.org/spar/scoro/computer-programmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/computer-programmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/computer-programmer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/consortium-author
+<http://purl.org/spar/scoro/consortium-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/consortium-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/consortium-author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/consultant
+<http://purl.org/spar/scoro/consultant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/consultant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/consultant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/contact-person
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/contractor
+<http://purl.org/spar/scoro/contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/contractor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/corresponding-author
+<http://purl.org/spar/scoro/corresponding-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/corresponding-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/corresponding-author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/curator
+<http://purl.org/spar/scoro/curator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/curator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/curator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/data-creator
+<http://purl.org/spar/scoro/data-creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/data-creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/data-curator
+<http://purl.org/spar/scoro/data-curator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-curator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/data-curator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/data-manager
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/data-publisher
+<http://purl.org/spar/scoro/data-publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/data-publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/data-user
+<http://purl.org/spar/scoro/data-user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/data-user> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/departmental-administrator
+<http://purl.org/spar/scoro/departmental-administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/departmental-administrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/departmental-administrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/director
+<http://purl.org/spar/scoro/director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/director> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/doctoral-student
+<http://purl.org/spar/scoro/doctoral-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/doctoral-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/doctoral-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/embargo-controller
+<http://purl.org/spar/scoro/embargo-controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/embargo-controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/embargo-controller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/employee
+<http://purl.org/spar/scoro/employee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/employee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/employee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/employer
+<http://purl.org/spar/scoro/employer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/employer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/employer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/faculty-member
+<http://purl.org/spar/scoro/faculty-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/faculty-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/faculty-member> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/financial-controller
+<http://purl.org/spar/scoro/financial-controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/financial-controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/financial-controller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/funder
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/funding-recipient
+<http://purl.org/spar/scoro/funding-recipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/funding-recipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/funding-recipient> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/head-of-department
+<http://purl.org/spar/scoro/head-of-department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/head-of-department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/head-of-department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/host-institution
+<http://purl.org/spar/scoro/host-institution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/host-institution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/host-institution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/illustrator
+<http://purl.org/spar/scoro/illustrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/illustrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/illustrator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/inventor
+<http://purl.org/spar/scoro/inventor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/inventor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/inventor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/lead-applicant
+<http://purl.org/spar/scoro/lead-applicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/lead-applicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/lead-applicant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/manager
+<http://purl.org/spar/scoro/manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/master-student
+<http://purl.org/spar/scoro/master-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/master-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/master-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/member
+<http://purl.org/spar/scoro/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/member> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/non-academic-staff-member
+<http://purl.org/spar/scoro/non-academic-staff-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/non-academic-staff-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/non-academic-staff-member> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/organizer
+<http://purl.org/spar/scoro/organizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/organizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/organizer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/owner
+<http://purl.org/spar/scoro/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/owner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/participant
+<http://purl.org/spar/scoro/participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/participant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/partner
+<http://purl.org/spar/scoro/partner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/partner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/partner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/patent-holder
+<http://purl.org/spar/scoro/patent-holder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/patent-holder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/patent-holder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/photographer
+<http://purl.org/spar/scoro/photographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/photographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/photographer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/possessor
+<http://purl.org/spar/scoro/possessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/possessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/possessor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/postdoctoral-researcher
+<http://purl.org/spar/scoro/postdoctoral-researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/postdoctoral-researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/postdoctoral-researcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/postgraduate-student
+<http://purl.org/spar/scoro/postgraduate-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/postgraduate-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/postgraduate-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/principal-author
+<http://purl.org/spar/scoro/principal-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/principal-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/principal-author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/principal-investigator
+<http://purl.org/spar/scoro/principal-investigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/principal-investigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/principal-investigator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/programme-manager
+<http://purl.org/spar/scoro/programme-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/programme-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/programme-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/project-leader
+<http://purl.org/spar/scoro/project-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/project-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/project-leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/project-manager
+<http://purl.org/spar/scoro/project-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/project-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/project-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/project-member
+<http://purl.org/spar/scoro/project-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/project-member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/project-member> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/project-student
+<http://purl.org/spar/scoro/project-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/project-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/project-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/purchaser
+<http://purl.org/spar/scoro/purchaser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/purchaser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/purchaser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/registrar
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/registration-agency
+<http://purl.org/spar/scoro/registration-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/registration-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/registration-agency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/registration-authority
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/repository-manager
+<http://purl.org/spar/scoro/repository-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/repository-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/repository-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/research-assistant
+<http://purl.org/spar/scoro/research-assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/research-assistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/research-assistant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/research-student
+<http://purl.org/spar/scoro/research-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/research-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/research-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/researcher
+<http://purl.org/spar/scoro/researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/researcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/rights-holder
+<http://purl.org/spar/scoro/rights-holder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/rights-holder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/rights-holder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/scholar
+<http://purl.org/spar/scoro/scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/scholar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/senior-author
+<http://purl.org/spar/scoro/senior-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/senior-author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/AuthorshipRole> .
+<http://purl.org/spar/scoro/senior-author> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/service-engineer
+<http://purl.org/spar/scoro/service-engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/service-engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/service-engineer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/spokesperson
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/sponsor
+<http://purl.org/spar/scoro/sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/sponsor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/stakeholder
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/sub-contractor
+<http://purl.org/spar/scoro/sub-contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/sub-contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/sub-contractor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/successor
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/supervisor
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/supplier
+<http://purl.org/spar/scoro/supplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/supplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
+<http://purl.org/spar/scoro/supplier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/technician
+<http://purl.org/spar/scoro/technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/technician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/InvestigationRole> .
+<http://purl.org/spar/scoro/technician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/undergraduate-student
+<http://purl.org/spar/scoro/undergraduate-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/undergraduate-student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/undergraduate-student> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/vice-chancellor
+<http://purl.org/spar/scoro/vice-chancellor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/vice-chancellor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/vice-chancellor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/web-master
+<http://purl.org/spar/scoro/web-master> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/web-master> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/DataRole> .
+<http://purl.org/spar/scoro/web-master> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# http://purl.org/spar/scoro/workpackage-leader
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/grid
+<https://ceh.ac.uk/digital-objects-ontology/grid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/grid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/grid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/grid> <http://www.w3.org/2000/01/rdf-schema#label> "grid"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/stereoModel
+<https://ceh.ac.uk/digital-objects-ontology/stereoModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/stereoModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/stereoModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/stereoModel> <http://www.w3.org/2000/01/rdf-schema#label> "stereo model"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/textTable
+<https://ceh.ac.uk/digital-objects-ontology/textTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/textTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/textTable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/textTable> <http://www.w3.org/2000/01/rdf-schema#label> "text table"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/tin
+<https://ceh.ac.uk/digital-objects-ontology/tin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/tin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/tin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/tin> <http://www.w3.org/2000/01/rdf-schema#label> "triangular irregular network (TIN)"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/vector
+<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/2000/01/rdf-schema#label> "vector"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/video
+<https://ceh.ac.uk/digital-objects-ontology/video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ceh.ac.uk/digital-objects-ontology/video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
+<https://ceh.ac.uk/digital-objects-ontology/video> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/video> <http://www.w3.org/2000/01/rdf-schema#label> "video"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann> .
+# 
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
