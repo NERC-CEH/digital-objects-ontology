@@ -1,8 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
-@prefix epi: <https://epimorphics.com/ceh/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix fdri: <http://fdri.ceh.ac.uk/vocab/metadata> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix pro: <http://purl.org/spar/pro/> .
@@ -17,13 +16,13 @@
 
 <doi:dataset> a dcat:Dataset, prov:Entity;
    dcterms:contributor <orcid:you> ;  # HMR: it isn't mandatory to specify a role. The role isn't specified for this contributor.
-   epi:originatingProgramme <uri:project> .
+   fdri:originatingProgramme <uri:project> .
 
 <doi:article> a fabio:JournalArticle, dcat:Resource, prov:Entity ;
    dcterms:contributor <orcid:me> ;  # HMR: the role is specified for this contributor, but the time interval when the role is valid isn't specified.
-   epi:originatingProgramme <uri:project> .
+   fdri:originatingProgramme <uri:project> .
 
-<uri:project> a frapo:Project, ef:EnvironmentalMonitoringProgramme ;
+<uri:project> a frapo:Project, fdri:EnvironmentalMonitoringProgramme ;
    dcterms:contributor <orcid:you>, <orcid:me> ; # HMR: the role is specified for both of these contributors, with the time intervals when the roles are valid.
    frapo:hasStartDate "2017"^^xsd:dateTime ;
    frapo:hasEndDate "2025"^^xsd:dateTime .
