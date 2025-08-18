@@ -86,11 +86,11 @@ $(function(){
 <dd><a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://eidc.ceh.ac.uk/licences/OGL/plain" target="_blank"><img src="https://img.shields.io/badge/License-https://eidc.ceh.ac.uk/licences/OGL/plain-blue.svg" alt="https://eidc.ceh.ac.uk/licences/OGL/plain" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
 <dd>Helen Mair Rawsthorne. Digital Objects Ontology. Revision: 0.0.1. Retrieved from: https://ceh.ac.uk/digital-objects-ontology/0.0.1/</dd>
 </dl>
 
-<hr/>
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
 <div class="status">
 <div>
@@ -114,12 +114,12 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>dcat</b></td><td>&lt;https://www.w3.org/ns/dcat#&gt;</td></tr>
 <tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>doo</b></td><td>&lt;https://ceh.ac.uk/digital-objects-ontology/&gt;</td></tr>
-<tr><td><b>ef</b></td><td>&lt;http://www.w3.org/2015/03/inspire/ef/&gt;</td></tr>
-<tr><td><b>epi</b></td><td>&lt;https://epimorphics.com/ceh/&gt;</td></tr>
 <tr><td><b>fabio</b></td><td>&lt;http://purl.org/spar/fabio/&gt;</td></tr>
+<tr><td><b>fdri</b></td><td>&lt;http://fdri.ceh.ac.uk/vocab/metadata/&gt;</td></tr>
 <tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
 <tr><td><b>frapo</b></td><td>&lt;http://purl.org/cerif/frapo/&gt;</td></tr>
 <tr><td><b>geo</b></td><td>&lt;http://www.opengis.net/ont/geosparql#&gt;</td></tr>
+<tr><td><b>mem</b></td><td>&lt;https://ceh.ac.uk/method-metadata-ontology/&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
 <tr><td><b>pro</b></td><td>&lt;http://purl.org/spar/pro/&gt;</td></tr>
 <tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>
@@ -147,23 +147,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature"
-         title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">
-         <span>Abstract Monitoring Feature</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject"
-         title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">
-         <span>Abstract Monitoring Object</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">
-         <span>Activity</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">
          <span>Agent</span>
       </a>
@@ -184,6 +167,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#https://www.w3.org/ns/dcat#Dataset" title="https://www.w3.org/ns/dcat#Dataset">
+         <span>Dataset</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/spar/scoro/EducationalRole" title="http://purl.org/spar/scoro/EducationalRole">
          <span>Educational Role</span>
       </a>
@@ -194,21 +182,45 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility"
-         title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">
          <span>Environmental Monitoring Facility</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork"
-         title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">
          <span>Environmental Monitoring Network</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme"
-         title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform">
+         <span>Environmental Monitoring Platform</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">
          <span>Environmental Monitoring Programme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor">
+         <span>Environmental Monitoring Sensor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite">
+         <span>Environmental Monitoring Site</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem">
+         <span>Environmental Monitoring System</span>
       </a>
    </li>
    <li>
@@ -232,19 +244,20 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation">
-         <span>Investigation</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/scoro/InvestigationRole" title="http://purl.org/spar/scoro/InvestigationRole">
          <span>Investigation Role</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity"
-         title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">
-         <span>Monitoring Activity</span>
+      <a href="#https://ceh.ac.uk/method-metadata-ontology/Method"
+         title="https://ceh.ac.uk/method-metadata-ontology/Method">
+         <span>Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">
+         <span>Observation Dataset</span>
       </a>
    </li>
    <li>
@@ -302,20 +315,6 @@ This ontology has the following classes and properties.</span>
          <span>Role In Time</span>
       </a>
    </li>
-   <li>
-      <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
-         title="http://www.opengis.net/ont/geosparql#SpatialObject">
-         <span>Spatial Object</span>
-      </a>
-   </li>
-   <li>
-      <a href="#SpatialRepresentation"
-         title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a>
-   </li>
-   <li>
-      <a href="#SpecialisedEMF"
-         title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a>
-   </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -325,18 +324,8 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/belongsTo" title="http://www.w3.org/2015/03/inspire/ef/belongsTo">
-         <span>belongs To</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/contains" title="http://www.w3.org/2015/03/inspire/ef/contains">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/contains" title="http://fdri.ceh.ac.uk/vocab/metadata/contains">
          <span>contains</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/cerif/frapo/enables" title="http://purl.org/cerif/frapo/enables">
-         <span>enables</span>
       </a>
    </li>
    <li>
@@ -345,9 +334,8 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://purl.org/cerif/frapo/hasOutput" title="http://purl.org/cerif/frapo/hasOutput">
-         <span>has Output</span>
-      </a>
+      <a href="#hasInput"
+         title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">
@@ -360,12 +348,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/involvedIn" title="http://www.w3.org/2015/03/inspire/ef/involvedIn">
-         <span>involved In</span>
-      </a>
+      <a href="#isOutputOf"
+         title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a>
    </li>
    <li>
-      <a href="#https://epimorphics.com/ceh/originatingFacility" title="https://epimorphics.com/ceh/originatingFacility">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">
          <span>originating Facility</span>
       </a>
    </li>
@@ -374,7 +362,8 @@ This ontology has the following classes and properties.</span>
          title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a>
    </li>
    <li>
-      <a href="#https://epimorphics.com/ceh/originatingProgramme" title="https://epimorphics.com/ceh/originatingProgramme">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">
          <span>originating Programme</span>
       </a>
    </li>
@@ -383,8 +372,9 @@ This ontology has the following classes and properties.</span>
          title="https://ceh.ac.uk/digital-objects-ontology/originatingProject">originating project</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/relatedTo" title="http://www.w3.org/2015/03/inspire/ef/relatedTo">
-         <span>related To</span>
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingSite"
+         title="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">
+         <span>originating Site</span>
       </a>
    </li>
    <li>
@@ -393,35 +383,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/setUpFor" title="http://www.w3.org/2015/03/inspire/ef/setUpFor">
-         <span>set Up For</span>
-      </a>
-   </li>
-   <li>
-      <a href="#spatialRepresentationType"
-         title="https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType">spatial representation type</a>
-   </li>
-   <li>
-      <a href="#specialisedEMFType"
-         title="https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType">specialied EMF type</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/triggers" title="http://www.w3.org/2015/03/inspire/ef/triggers">
-         <span>triggers</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">
          <span>used</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/uses" title="http://www.w3.org/2015/03/inspire/ef/uses">
-         <span>uses</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://epimorphics.com/ceh/utilises" title="https://epimorphics.com/ceh/utilises">
+      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises">
          <span>utilises</span>
       </a>
    </li>
@@ -454,11 +421,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/boundingBox" title="http://www.w3.org/2015/03/inspire/ef/boundingBox">
-         <span>bounding Box</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://purl.org/cerif/frapo/hasEndDate" title="http://purl.org/cerif/frapo/hasEndDate">
          <span>has End Date</span>
       </a>
@@ -476,16 +438,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/cerif/frapo/hasStartDate" title="http://purl.org/cerif/frapo/hasStartDate">
          <span>has Start Date</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/name" title="http://www.w3.org/2015/03/inspire/ef/name">
-         <span>name</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2015/03/inspire/ef/purpose" title="http://www.w3.org/2015/03/inspire/ef/purpose">
-         <span>purpose</span>
       </a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -871,10 +823,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#platform"
-         title="https://ceh.ac.uk/digital-objects-ontology/platform">platform</a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/scoro/possessor" title="http://purl.org/spar/scoro/possessor">
          <span>possessor</span>
       </a>
@@ -957,10 +905,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#raster"
-         title="https://ceh.ac.uk/digital-objects-ontology/raster">raster</a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/pro/reader" title="http://purl.org/spar/pro/reader">
          <span>reader</span>
       </a>
@@ -1027,10 +971,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#sensor"
-         title="https://ceh.ac.uk/digital-objects-ontology/sensor">sensor</a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/pro/series-editor" title="http://purl.org/spar/pro/series-editor">
          <span>series editor</span>
       </a>
@@ -1039,9 +979,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/spar/scoro/service-engineer" title="http://purl.org/spar/scoro/service-engineer">
          <span>service engineer</span>
       </a>
-   </li>
-   <li>
-      <a href="#site" title="https://ceh.ac.uk/digital-objects-ontology/site">site</a>
    </li>
    <li>
       <a href="#http://purl.org/spar/scoro/spokesperson" title="http://purl.org/spar/scoro/spokesperson">
@@ -1057,10 +994,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/spar/scoro/stakeholder" title="http://purl.org/spar/scoro/stakeholder">
          <span>stakeholder</span>
       </a>
-   </li>
-   <li>
-      <a href="#station"
-         title="https://ceh.ac.uk/digital-objects-ontology/station">station</a>
    </li>
    <li>
       <a href="#http://purl.org/spar/scoro/sub-contractor" title="http://purl.org/spar/scoro/sub-contractor">
@@ -1083,10 +1016,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#tabular"
-         title="https://ceh.ac.uk/digital-objects-ontology/tabular">tabular</a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/scoro/technician" title="http://purl.org/spar/scoro/technician">
          <span>technician</span>
       </a>
@@ -1101,10 +1030,6 @@ This ontology has the following classes and properties.</span>
          title="http://purl.org/spar/scoro/undergraduate-student">
          <span>undergraduate student</span>
       </a>
-   </li>
-   <li>
-      <a href="#vector"
-         title="https://ceh.ac.uk/digital-objects-ontology/vector">vector</a>
    </li>
    <li>
       <a href="#http://purl.org/spar/scoro/vice-chancellor" title="http://purl.org/spar/scoro/vice-chancellor">
@@ -1137,25 +1062,27 @@ This section provides details for each class and property defined by Digital Obj
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature"> <span>Abstract Monitoring Feature</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject"> <span>Abstract Monitoring Object</span> </a></li>
-  <li><a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity"> <span>Activity</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent"> <span>Agent</span> </a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent"> <span>Agent</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/AuthorshipRole" title="http://purl.org/spar/scoro/AuthorshipRole"> <span>Authorship Role</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/DataRole" title="http://purl.org/spar/scoro/DataRole"> <span>Data Role</span> </a></li>
+  <li><a href="#https://www.w3.org/ns/dcat#Dataset" title="https://www.w3.org/ns/dcat#Dataset"> <span>Dataset</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/EducationalRole" title="http://purl.org/spar/scoro/EducationalRole"> <span>Educational Role</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity"> <span>Entity</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility"> <span>Environmental Monitoring Facility</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork"> <span>Environmental Monitoring Network</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme"> <span>Environmental Monitoring Programme</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"> <span>Environmental Monitoring Facility</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"> <span>Environmental Monitoring Network</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform"> <span>Environmental Monitoring Platform</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"> <span>Environmental Monitoring Programme</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor"> <span>Environmental Monitoring Sensor</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"> <span>Environmental Monitoring Site</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem"> <span>Environmental Monitoring System</span> </a></li>
   <li><a href="#http://purl.org/spar/fabio/Expression" title="http://purl.org/spar/fabio/Expression"> <span>Expression</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/FinancialRole" title="http://purl.org/spar/scoro/FinancialRole"> <span>Financial Role</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/FundingAgency" title="http://purl.org/cerif/frapo/FundingAgency"> <span>Funding Agency</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/Grant" title="http://purl.org/cerif/frapo/Grant"> <span>Grant</span> </a></li>
-  <li><a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation"> <span>Investigation</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/InvestigationRole" title="http://purl.org/spar/scoro/InvestigationRole"> <span>Investigation Role</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity"> <span>Monitoring Activity</span> </a></li>
+  <li><a href="#https://ceh.ac.uk/method-metadata-ontology/Method" title="https://ceh.ac.uk/method-metadata-ontology/Method"> <span>Method</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset" title="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"> <span>Observation Dataset</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization"> <span>Organization</span> </a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization"> <span>Organization</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/OrganizationalRole" title="http://purl.org/spar/scoro/OrganizationalRole"> <span>Organizational Role</span> </a></li>
@@ -1167,100 +1094,7 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#https://www.w3.org/ns/dcat#Resource" title="https://www.w3.org/ns/dcat#Resource"> <span>Resource</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/Role" title="http://purl.org/spar/pro/Role"> <span>Role</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime"> <span>Role In Time</span> </a></li>
-  <li><a href="#http://www.opengis.net/ont/geosparql#SpatialObject" title="http://www.opengis.net/ont/geosparql#SpatialObject"> <span>Spatial Object</span> </a></li>
-  <li><a href="#SpatialRepresentation" title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a></li>
-  <li><a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a></li>
  </ul>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">
-  <h3>Abstract Monitoring Feature<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">Abstract Monitoring Object</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#SpatialObject" title="http://www.opengis.net/ont/geosparql#SpatialObject">Spatial Object</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">Environmental Monitoring Network</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/involvedIn" title="http://www.w3.org/2015/03/inspire/ef/involvedIn">involved In</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/uses" title="http://www.w3.org/2015/03/inspire/ef/uses">uses</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://epimorphics.com/ceh/utilises" title="https://epimorphics.com/ceh/utilises">utilises</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">
-  <h3>Abstract Monitoring Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/name" title="http://www.w3.org/2015/03/inspire/ef/name">name</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://www.w3.org/ns/prov#Activity">
-  <h3>Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Activity</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith">was Associated With</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was Generated By</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://www.w3.org/ns/prov#Agent">
   <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
@@ -1371,6 +1205,38 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://www.w3.org/ns/dcat#Dataset">
+  <h3>Dataset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://www.w3.org/ns/dcat#Dataset</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/dcat">http://www.w3.org/ns/dcat</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset" title="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">Observation Dataset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInput" title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://purl.org/spar/scoro/EducationalRole">
   <h3>Educational Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/scoro/EducationalRole</p>
@@ -1413,109 +1279,119 @@ This section provides details for each class and property defined by Digital Obj
     is in domain of
    </dt>
    <dd>
-    <a href="#https://epimorphics.com/ceh/originatingFacility" title="https://epimorphics.com/ceh/originatingFacility">originating Facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://epimorphics.com/ceh/originatingProgramme" title="https://epimorphics.com/ceh/originatingProgramme">originating Programme</a> <sup class="type-op" title="object property">op</sup>, <a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a> <sup class="type-op" title="object property">op</sup>, <a href="#originatingProject" title="https://ceh.ac.uk/digital-objects-ontology/originatingProject">originating project</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was Generated By</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a> <sup class="type-op" title="object property">op</sup>, <a href="#originatingProject" title="https://ceh.ac.uk/digital-objects-ontology/originatingProject">originating project</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was Generated By</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://purl.org/cerif/frapo/hasOutput" title="http://purl.org/cerif/frapo/hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity">relates To Entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity">relates To Entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">
   <h3>Environmental Monitoring Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <dl class="description">
    <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/belongsTo" title="http://www.w3.org/2015/03/inspire/ef/belongsTo">belongs To</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/purpose" title="http://www.w3.org/2015/03/inspire/ef/purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/relatedTo" title="http://www.w3.org/2015/03/inspire/ef/relatedTo">related To</a> <sup class="type-op" title="object property">op</sup>, <a href="#specialisedEMFType" title="https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType">specialied EMF type</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/contains" title="http://www.w3.org/2015/03/inspire/ef/contains">contains</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://epimorphics.com/ceh/originatingFacility" title="https://epimorphics.com/ceh/originatingFacility">originating Facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/relatedTo" title="http://www.w3.org/2015/03/inspire/ef/relatedTo">related To</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">originating Facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises">utilises</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">
   <h3>Environmental Monitoring Network<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/contains" title="http://www.w3.org/2015/03/inspire/ef/contains">contains</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/belongsTo" title="http://www.w3.org/2015/03/inspire/ef/belongsTo">belongs To</a> <sup class="type-op" title="object property">op</sup>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">
-  <h3>Environmental Monitoring Programme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme</p>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform">
+  <h3>Environmental Monitoring Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">
+  <h3>Environmental Monitoring Programme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <dl class="description">
    <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">Abstract Monitoring Object</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/triggers" title="http://www.w3.org/2015/03/inspire/ef/triggers">triggers</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://epimorphics.com/ceh/utilises" title="https://epimorphics.com/ceh/utilises">utilises</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises">utilises</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://epimorphics.com/ceh/originatingProgramme" title="https://epimorphics.com/ceh/originatingProgramme">originating Programme</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/setUpFor" title="http://www.w3.org/2015/03/inspire/ef/setUpFor">set Up For</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">originating Programme</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor">
+  <h3>Environmental Monitoring Sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite">
+  <h3>Environmental Monitoring Site<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem">
+  <h3>Environmental Monitoring System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
  </div>
@@ -1609,32 +1485,6 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://purl.org/cerif/frapo/Investigation">
-  <h3>Investigation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/cerif/frapo/Investigation</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/cerif/frapo/hasEndDate" title="http://purl.org/cerif/frapo/hasEndDate">has End Date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/cerif/frapo/hasOutput" title="http://purl.org/cerif/frapo/hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/cerif/frapo/hasStartDate" title="http://purl.org/cerif/frapo/hasStartDate">has Start Date</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/cerif/frapo/enables" title="http://purl.org/cerif/frapo/enables">enables</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://purl.org/spar/scoro/InvestigationRole">
   <h3>Investigation Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/scoro/InvestigationRole</p>
@@ -1661,29 +1511,41 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">
-  <h3>Monitoring Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/MonitoringActivity</p>
+ <div class="entity" id="https://ceh.ac.uk/method-metadata-ontology/Method">
+  <h3>Method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ceh.ac.uk/method-metadata-ontology/Method</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="https://ceh.ac.uk/method-metadata-ontology">https://ceh.ac.uk/method-metadata-ontology</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">
+  <h3>Observation Dataset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <dl class="description">
    <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://www.w3.org/ns/dcat#Dataset" title="https://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/boundingBox" title="http://www.w3.org/2015/03/inspire/ef/boundingBox">bounding Box</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/setUpFor" title="http://www.w3.org/2015/03/inspire/ef/setUpFor">set Up For</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/uses" title="http://www.w3.org/2015/03/inspire/ef/uses">uses</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/involvedIn" title="http://www.w3.org/2015/03/inspire/ef/involvedIn">involved In</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2015/03/inspire/ef/triggers" title="http://www.w3.org/2015/03/inspire/ef/triggers">triggers</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">originating Facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">originating Programme</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1815,7 +1677,7 @@ This section provides details for each class and property defined by Digital Obj
     is in domain of
    </dt>
    <dd>
-    <a href="#http://purl.org/cerif/frapo/enables" title="http://purl.org/cerif/frapo/enables">enables</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/cerif/frapo/hasEndDate" title="http://purl.org/cerif/frapo/hasEndDate">has End Date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/cerif/frapo/hasStartDate" title="http://purl.org/cerif/frapo/hasStartDate">has Start Date</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#http://purl.org/cerif/frapo/hasEndDate" title="http://purl.org/cerif/frapo/hasEndDate">has End Date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/cerif/frapo/hasStartDate" title="http://purl.org/cerif/frapo/hasStartDate">has Start Date</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -1888,14 +1750,6 @@ This section provides details for each class and property defined by Digital Obj
     <a href="http://www.w3.org/ns/dcat">http://www.w3.org/ns/dcat</a>
    </dd>
   </dl>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#spatialRepresentationType" title="https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType">spatial representation type</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
  </div>
  <div class="entity" id="http://purl.org/spar/pro/Role">
   <h3>Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -1949,103 +1803,24 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.opengis.net/ont/geosparql#SpatialObject">
-  <h3>Spatial Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#SpatialObject</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="SpatialRepresentation">
-  <h3>spatial representation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#spatialRepresentationType" title="https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType">spatial representation type</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    has members
-   </dt>
-   <dd>
-    <a href="#raster" title="https://ceh.ac.uk/digital-objects-ontology/raster">raster</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#tabular" title="https://ceh.ac.uk/digital-objects-ontology/tabular">tabular</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#vector" title="https://ceh.ac.uk/digital-objects-ontology/vector">vector</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="SpecialisedEMF">
-  <h3>specialised EMF<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#specialisedEMFType" title="https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType">specialied EMF type</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    has members
-   </dt>
-   <dd>
-    <a href="#platform" title="https://ceh.ac.uk/digital-objects-ontology/platform">platform</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#sensor" title="https://ceh.ac.uk/digital-objects-ontology/sensor">sensor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#site" title="https://ceh.ac.uk/digital-objects-ontology/site">site</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#station" title="https://ceh.ac.uk/digital-objects-ontology/station">station</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-  </dl>
- </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#http://purl.org/cerif/frapo/awards" title="http://purl.org/cerif/frapo/awards"> <span>awards</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/belongsTo" title="http://www.w3.org/2015/03/inspire/ef/belongsTo"> <span>belongs To</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/contains" title="http://www.w3.org/2015/03/inspire/ef/contains"> <span>contains</span> </a></li>
-  <li><a href="#http://purl.org/cerif/frapo/enables" title="http://purl.org/cerif/frapo/enables"> <span>enables</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/contains" title="http://fdri.ceh.ac.uk/vocab/metadata/contains"> <span>contains</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/funds" title="http://purl.org/cerif/frapo/funds"> <span>funds</span> </a></li>
-  <li><a href="#http://purl.org/cerif/frapo/hasOutput" title="http://purl.org/cerif/frapo/hasOutput"> <span>has Output</span> </a></li>
+  <li><a href="#hasInput" title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a></li>
   <li><a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart"> <span>has Part</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/holdsRoleInTime" title="http://purl.org/spar/pro/holdsRoleInTime"> <span>holds Role In Time</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/involvedIn" title="http://www.w3.org/2015/03/inspire/ef/involvedIn"> <span>involved In</span> </a></li>
-  <li><a href="#https://epimorphics.com/ceh/originatingFacility" title="https://epimorphics.com/ceh/originatingFacility"> <span>originating Facility</span> </a></li>
+  <li><a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"> <span>originating Facility</span> </a></li>
   <li><a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a></li>
-  <li><a href="#https://epimorphics.com/ceh/originatingProgramme" title="https://epimorphics.com/ceh/originatingProgramme"> <span>originating Programme</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme"> <span>originating Programme</span> </a></li>
   <li><a href="#originatingProject" title="https://ceh.ac.uk/digital-objects-ontology/originatingProject">originating project</a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/relatedTo" title="http://www.w3.org/2015/03/inspire/ef/relatedTo"> <span>related To</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingSite" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite"> <span>originating Site</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity"> <span>relates To Entity</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/setUpFor" title="http://www.w3.org/2015/03/inspire/ef/setUpFor"> <span>set Up For</span> </a></li>
-  <li><a href="#spatialRepresentationType" title="https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType">spatial representation type</a></li>
-  <li><a href="#specialisedEMFType" title="https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType">specialied EMF type</a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/triggers" title="http://www.w3.org/2015/03/inspire/ef/triggers"> <span>triggers</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used"> <span>used</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/uses" title="http://www.w3.org/2015/03/inspire/ef/uses"> <span>uses</span> </a></li>
-  <li><a href="#https://epimorphics.com/ceh/utilises" title="https://epimorphics.com/ceh/utilises"> <span>utilises</span> </a></li>
+  <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises"> <span>utilises</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith"> <span>was Associated With</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom"> <span>was Derived From</span> </a></li>
   <li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy"> <span>was Generated By</span> </a></li>
@@ -2080,89 +1855,17 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/belongsTo">
-  <h3>belongs To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/belongsTo</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">Environmental Monitoring Network</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/contains">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/contains">
   <h3>contains<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/contains</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/contains</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">Environmental Monitoring Network</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://purl.org/cerif/frapo/enables">
-  <h3>enables<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/cerif/frapo/enables</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://xmlns.com/foaf/0.1/Project" title="http://xmlns.com/foaf/0.1/Project">Project</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
  </div>
  <div class="entity" id="http://purl.org/cerif/frapo/funds">
   <h3>funds<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -2192,15 +1895,15 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://purl.org/cerif/frapo/hasOutput">
-  <h3>has Output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/cerif/frapo/hasOutput</p>
+ <div class="entity" id="hasInput">
+  <h3>has input<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/hasInput</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
+    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
    </dd>
   </dl>
   <div class="description">
@@ -2209,13 +1912,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+     <a href="https://ceh.ac.uk/digital-objects-ontology/Method" target="_blank" title="https://ceh.ac.uk/digital-objects-ontology/Method">Method</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://www.w3.org/ns/dcat#Dataset" title="https://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2237,13 +1940,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2276,15 +1979,15 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/involvedIn">
-  <h3>involved In<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/involvedIn</p>
+ <div class="entity" id="isOutputOf">
+  <h3>is output of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/isOutputOf</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
    </dd>
   </dl>
   <div class="description">
@@ -2293,41 +1996,47 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://www.w3.org/ns/dcat#Dataset" title="https://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">Monitoring Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="https://ceh.ac.uk/digital-objects-ontology/Method" target="_blank" title="https://ceh.ac.uk/digital-objects-ontology/Method">Method</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://epimorphics.com/ceh/originatingFacility">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">
   <h3>originating Facility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://epimorphics.com/ceh/originatingFacility</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <div class="description">
    <dl>
     <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingSite" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">originating Site</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset" title="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">Observation Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2360,15 +2069,15 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="https://epimorphics.com/ceh/originatingProgramme">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">
   <h3>originating Programme<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://epimorphics.com/ceh/originatingProgramme</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <div class="description">
@@ -2377,13 +2086,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset" title="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">Observation Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2416,30 +2125,24 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/relatedTo">
-  <h3>related To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/relatedTo</p>
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">
+  <h3>originating Site<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/originatingSite</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <div class="description">
    <dl>
     <dt>
-     has domain
+     has super-properties
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">originating Facility</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -2472,118 +2175,6 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/setUpFor">
-  <h3>set Up For<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/setUpFor</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">Monitoring Activity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="spatialRepresentationType">
-  <h3>spatial representation type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://www.w3.org/ns/dcat#Resource" title="https://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#SpatialRepresentation" title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="specialisedEMFType">
-  <h3>specialied EMF type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/triggers">
-  <h3>triggers<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/triggers</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">Monitoring Activity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://www.w3.org/ns/prov#used">
   <h3>used<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#used</p>
@@ -2607,7 +2198,7 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2618,43 +2209,15 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/uses">
-  <h3>uses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/uses</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">Monitoring Activity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://epimorphics.com/ceh/utilises">
+ <div class="entity" id="http://fdri.ceh.ac.uk/vocab/metadata/utilises">
   <h3>utilises<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://epimorphics.com/ceh/utilises</p>
+  <p><strong>IRI:</strong> http://fdri.ceh.ac.uk/vocab/metadata/utilises</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+    <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
    </dd>
   </dl>
   <div class="description">
@@ -2663,13 +2226,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">Abstract Monitoring Feature</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">Environmental Monitoring Network</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2697,7 +2260,7 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2771,7 +2334,7 @@ This section provides details for each class and property defined by Digital Obj
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2799,13 +2362,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2841,42 +2404,11 @@ This section provides details for each class and property defined by Digital Obj
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/boundingBox" title="http://www.w3.org/2015/03/inspire/ef/boundingBox"> <span>bounding Box</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/hasEndDate" title="http://purl.org/cerif/frapo/hasEndDate"> <span>has End Date</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/hasFunderIdentifier" title="http://purl.org/cerif/frapo/hasFunderIdentifier"> <span>has Funder Identifier</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/hasGrantNumber" title="http://purl.org/cerif/frapo/hasGrantNumber"> <span>has Grant Number</span> </a></li>
   <li><a href="#http://purl.org/cerif/frapo/hasStartDate" title="http://purl.org/cerif/frapo/hasStartDate"> <span>has Start Date</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/name" title="http://www.w3.org/2015/03/inspire/ef/name"> <span>name</span> </a></li>
-  <li><a href="#http://www.w3.org/2015/03/inspire/ef/purpose" title="http://www.w3.org/2015/03/inspire/ef/purpose"> <span>purpose</span> </a></li>
  </ul>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/boundingBox">
-  <h3>bounding Box<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/boundingBox</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/MonitoringActivity" title="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">Monitoring Activity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.opengis.net/ont/geosparql#wktLiteral" target="_blank" title="http://www.opengis.net/ont/geosparql#wktLiteral">wkt Literal</a> <sup class="type-ep" title="external property">ep</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://purl.org/cerif/frapo/hasEndDate">
   <h3>has End Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/cerif/frapo/hasEndDate</p>
@@ -2894,7 +2426,7 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime">Role In Time</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://xmlns.com/foaf/0.1/Project" title="http://xmlns.com/foaf/0.1/Project">Project</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://purl.org/cerif/frapo/Investigation" target="_blank" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime">Role In Time</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://xmlns.com/foaf/0.1/Project" title="http://xmlns.com/foaf/0.1/Project">Project</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2978,69 +2510,13 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#http://purl.org/cerif/frapo/Investigation" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime">Role In Time</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://xmlns.com/foaf/0.1/Project" title="http://xmlns.com/foaf/0.1/Project">Project</a> <sup class="type-c" title="class">c</sup>
+     <a href="http://purl.org/cerif/frapo/Investigation" target="_blank" title="http://purl.org/cerif/frapo/Investigation">Investigation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime">Role In Time</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://xmlns.com/foaf/0.1/Project" title="http://xmlns.com/foaf/0.1/Project">Project</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/name">
-  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/name</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject" title="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">Abstract Monitoring Object</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.w3.org/2015/03/inspire/ef/purpose">
-  <h3>purpose<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/2015/03/inspire/ef/purpose</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility" title="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -3123,7 +2599,6 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#http://purl.org/spar/scoro/patent-holder" title="http://purl.org/spar/scoro/patent-holder"> <span>patent holder</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/peer-reviewer" title="http://purl.org/spar/pro/peer-reviewer"> <span>peer reviewer</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/photographer" title="http://purl.org/spar/scoro/photographer"> <span>photographer</span> </a></li>
-  <li><a href="#platform" title="https://ceh.ac.uk/digital-objects-ontology/platform">platform</a></li>
   <li><a href="#http://purl.org/spar/scoro/possessor" title="http://purl.org/spar/scoro/possessor"> <span>possessor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/postdoctoral-researcher" title="http://purl.org/spar/scoro/postdoctoral-researcher"> <span>postdoctoral researcher</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/postgraduate-student" title="http://purl.org/spar/scoro/postgraduate-student"> <span>postgraduate student</span> </a></li>
@@ -3140,7 +2615,6 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#http://purl.org/spar/pro/proof-reader" title="http://purl.org/spar/pro/proof-reader"> <span>proof reader</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/publisher" title="http://purl.org/spar/pro/publisher"> <span>publisher</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/purchaser" title="http://purl.org/spar/scoro/purchaser"> <span>purchaser</span> </a></li>
-  <li><a href="#raster" title="https://ceh.ac.uk/digital-objects-ontology/raster">raster</a></li>
   <li><a href="#http://purl.org/spar/pro/reader" title="http://purl.org/spar/pro/reader"> <span>reader</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/registrar" title="http://purl.org/spar/scoro/registrar"> <span>registrar</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/registration-agency" title="http://purl.org/spar/scoro/registration-agency"> <span>registration agency</span> </a></li>
@@ -3154,23 +2628,18 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#http://purl.org/spar/scoro/scholar" title="http://purl.org/spar/scoro/scholar"> <span>scholar</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/senior-author" title="http://purl.org/spar/scoro/senior-author"> <span>senior author</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/senior-editor" title="http://purl.org/spar/pro/senior-editor"> <span>senior editor</span> </a></li>
-  <li><a href="#sensor" title="https://ceh.ac.uk/digital-objects-ontology/sensor">sensor</a></li>
   <li><a href="#http://purl.org/spar/pro/series-editor" title="http://purl.org/spar/pro/series-editor"> <span>series editor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/service-engineer" title="http://purl.org/spar/scoro/service-engineer"> <span>service engineer</span> </a></li>
-  <li><a href="#site" title="https://ceh.ac.uk/digital-objects-ontology/site">site</a></li>
   <li><a href="#http://purl.org/spar/scoro/spokesperson" title="http://purl.org/spar/scoro/spokesperson"> <span>spokesperson</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/sponsor" title="http://purl.org/spar/scoro/sponsor"> <span>sponsor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/stakeholder" title="http://purl.org/spar/scoro/stakeholder"> <span>stakeholder</span> </a></li>
-  <li><a href="#station" title="https://ceh.ac.uk/digital-objects-ontology/station">station</a></li>
   <li><a href="#http://purl.org/spar/scoro/sub-contractor" title="http://purl.org/spar/scoro/sub-contractor"> <span>sub contractor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/successor" title="http://purl.org/spar/scoro/successor"> <span>successor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/supervisor" title="http://purl.org/spar/scoro/supervisor"> <span>supervisor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/supplier" title="http://purl.org/spar/scoro/supplier"> <span>supplier</span> </a></li>
-  <li><a href="#tabular" title="https://ceh.ac.uk/digital-objects-ontology/tabular">tabular</a></li>
   <li><a href="#http://purl.org/spar/scoro/technician" title="http://purl.org/spar/scoro/technician"> <span>technician</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/translator" title="http://purl.org/spar/pro/translator"> <span>translator</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/undergraduate-student" title="http://purl.org/spar/scoro/undergraduate-student"> <span>undergraduate student</span> </a></li>
-  <li><a href="#vector" title="https://ceh.ac.uk/digital-objects-ontology/vector">vector</a></li>
   <li><a href="#http://purl.org/spar/scoro/vice-chancellor" title="http://purl.org/spar/scoro/vice-chancellor"> <span>vice chancellor</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/web-master" title="http://purl.org/spar/scoro/web-master"> <span>web master</span> </a></li>
   <li><a href="#http://purl.org/spar/scoro/workpackage-leader" title="http://purl.org/spar/scoro/workpackage-leader"> <span>workpackage leader</span> </a></li>
@@ -4675,26 +4144,6 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="platform">
-  <h3>platform<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/platform</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://purl.org/spar/scoro/possessor">
   <h3>possessor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/scoro/possessor</p>
@@ -5015,26 +4464,6 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="raster">
-  <h3>raster<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/raster</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpatialRepresentation" title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://purl.org/spar/pro/reader">
   <h3>reader<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/pro/reader</p>
@@ -5295,26 +4724,6 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="sensor">
-  <h3>sensor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/sensor</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://purl.org/spar/pro/series-editor">
   <h3>series editor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/pro/series-editor</p>
@@ -5352,26 +4761,6 @@ This section provides details for each class and property defined by Digital Obj
    </dt>
    <dd>
     <a href="#http://purl.org/spar/scoro/InvestigationRole" title="http://purl.org/spar/scoro/InvestigationRole">Investigation Role</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="site">
-  <h3>site<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/site</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -5432,26 +4821,6 @@ This section provides details for each class and property defined by Digital Obj
    </dt>
    <dd>
     <a href="#http://purl.org/spar/scoro/OrganizationalRole" title="http://purl.org/spar/scoro/OrganizationalRole">Organizational Role</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="station">
-  <h3>station<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/station</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpecialisedEMF" title="https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF">specialised EMF</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -5535,26 +4904,6 @@ This section provides details for each class and property defined by Digital Obj
    </dd>
   </dl>
  </div>
- <div class="entity" id="tabular">
-  <h3>tabular<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/tabular</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpatialRepresentation" title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://purl.org/spar/scoro/technician">
   <h3>technician<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/scoro/technician</p>
@@ -5612,26 +4961,6 @@ This section provides details for each class and property defined by Digital Obj
    </dt>
    <dd>
     <a href="#http://purl.org/spar/scoro/EducationalRole" title="http://purl.org/spar/scoro/EducationalRole">Educational Role</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="vector">
-  <h3>vector<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/vector</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#SpatialRepresentation" title="https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation">spatial representation</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -5702,7 +5031,6 @@ This section provides details for each class and property defined by Digital Obj
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
-<sup class="type-ep" title="External Properties">ep</sup>: External Properties
 </div>
 </div>
 </div>

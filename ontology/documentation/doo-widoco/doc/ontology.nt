@@ -20,6 +20,7 @@ _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://ww
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/title> "Digital Objects Ontology"@en .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ceh.ac.uk/digital-objects-ontology/" .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Objects Ontology"@en .
 <https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 # 
 # 
@@ -101,41 +102,65 @@ _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://ww
 # #################################################################
 # 
 # 
+# http://fdri.ceh.ac.uk/vocab/metadata/contains
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/utilises
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
 # http://purl.org/cerif/frapo/awards
 <http://purl.org/cerif/frapo/awards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/FundingAgency> .
 <http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Grant> .
 <http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
-# http://purl.org/cerif/frapo/enables
-<http://purl.org/cerif/frapo/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/cerif/frapo/enables> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Project> .
-<http://purl.org/cerif/frapo/enables> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Investigation> .
-<http://purl.org/cerif/frapo/enables> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
-# 
 # http://purl.org/cerif/frapo/funds
 <http://purl.org/cerif/frapo/funds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Grant> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/FundingAgency> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Grant> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/FundingAgency> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Project> .
 <http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
-# 
-# http://purl.org/cerif/frapo/hasOutput
-<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/Investigation> .
-<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Entity> .
-<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
 # http://purl.org/dc/terms/hasPart
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Activity> .
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
 # 
@@ -156,48 +181,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/RoleInTime> .
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/Role> .
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/belongsTo
-<http://www.w3.org/2015/03/inspire/ef/belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<http://www.w3.org/2015/03/inspire/ef/belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> .
-<http://www.w3.org/2015/03/inspire/ef/belongsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/contains
-<http://www.w3.org/2015/03/inspire/ef/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> .
-<http://www.w3.org/2015/03/inspire/ef/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<http://www.w3.org/2015/03/inspire/ef/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/involvedIn
-<http://www.w3.org/2015/03/inspire/ef/involvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/involvedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> .
-<http://www.w3.org/2015/03/inspire/ef/involvedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> .
-<http://www.w3.org/2015/03/inspire/ef/involvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/relatedTo
-<http://www.w3.org/2015/03/inspire/ef/relatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/relatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<http://www.w3.org/2015/03/inspire/ef/relatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<http://www.w3.org/2015/03/inspire/ef/relatedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/setUpFor
-<http://www.w3.org/2015/03/inspire/ef/setUpFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/setUpFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> .
-<http://www.w3.org/2015/03/inspire/ef/setUpFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> .
-<http://www.w3.org/2015/03/inspire/ef/setUpFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/triggers
-<http://www.w3.org/2015/03/inspire/ef/triggers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/triggers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> .
-<http://www.w3.org/2015/03/inspire/ef/triggers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> .
-<http://www.w3.org/2015/03/inspire/ef/triggers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/uses
-<http://www.w3.org/2015/03/inspire/ef/uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2015/03/inspire/ef/uses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> .
-<http://www.w3.org/2015/03/inspire/ef/uses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> .
-<http://www.w3.org/2015/03/inspire/ef/uses> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
 # 
 # http://www.w3.org/ns/prov#used
 <http://www.w3.org/ns/prov#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -229,31 +212,48 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.w3.org/ns/prov#wasInfluencedBy
 <http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Activity> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+<http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Activity> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Activity> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Activity> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/prov#wasInfluencedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/hasInput
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ceh.ac.uk/digital-objects-ontology/Method> .
+<https://ceh.ac.uk/digital-objects-ontology/Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/dcat#Dataset> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://purl.org/dc/terms/description> "A dataset that is the input of a method."@en .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
+# 
+# https://ceh.ac.uk/digital-objects-ontology/isOutputOf
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/dcat#Dataset> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://ceh.ac.uk/digital-objects-ontology/Method> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://purl.org/dc/terms/description> "A dataset that is the output of a method."@en .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> <http://www.w3.org/2000/01/rdf-schema#label> "is output of"@en .
 # 
 # https://ceh.ac.uk/digital-objects-ontology/originatingGrant
 <https://ceh.ac.uk/digital-objects-ontology/originatingGrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -271,40 +271,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://ceh.ac.uk/digital-objects-ontology/originatingProject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
 <https://ceh.ac.uk/digital-objects-ontology/originatingProject> <http://www.w3.org/2000/01/rdf-schema#label> "originating project"@en .
 # 
-# https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/dcat#Resource> .
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#range> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://purl.org/dc/terms/description> "The spatial representation type of a digital object."@en .
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#label> "spatial representation type"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://www.w3.org/2000/01/rdf-schema#range> <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> .
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://purl.org/dc/terms/description> "The specialised type of an environmental monitoring facility (EMF)."@en .
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> <http://www.w3.org/2000/01/rdf-schema#label> "specialied EMF type"@en .
-# 
-# https://epimorphics.com/ceh/originatingFacility
-<https://epimorphics.com/ceh/originatingFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://epimorphics.com/ceh/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
-<https://epimorphics.com/ceh/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<https://epimorphics.com/ceh/originatingFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://epimorphics.com/ceh> .
-# 
-# https://epimorphics.com/ceh/originatingProgramme
-<https://epimorphics.com/ceh/originatingProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://epimorphics.com/ceh/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
-<https://epimorphics.com/ceh/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> .
-<https://epimorphics.com/ceh/originatingProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://epimorphics.com/ceh> .
-# 
-# https://epimorphics.com/ceh/utilises
-<https://epimorphics.com/ceh/utilises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://epimorphics.com/ceh/utilises> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> .
-<https://epimorphics.com/ceh/utilises> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> .
-<https://epimorphics.com/ceh/utilises> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://epimorphics.com/ceh> .
-# 
 # 
 # 
 # #################################################################
@@ -316,18 +282,19 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/cerif/frapo/hasEndDate
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Project> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pro/RoleInTime> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Investigation> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Project> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pro/RoleInTime> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Investigation> .
+<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
@@ -345,38 +312,20 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/cerif/frapo/hasStartDate
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
-_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Project> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pro/RoleInTime> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Investigation> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Project> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pro/RoleInTime> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/cerif/frapo/Investigation> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/boundingBox
-<http://www.w3.org/2015/03/inspire/ef/boundingBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/2015/03/inspire/ef/boundingBox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> .
-<http://www.w3.org/2015/03/inspire/ef/boundingBox> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#wktLiteral> .
-<http://www.w3.org/2015/03/inspire/ef/boundingBox> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/name
-<http://www.w3.org/2015/03/inspire/ef/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/2015/03/inspire/ef/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> .
-<http://www.w3.org/2015/03/inspire/ef/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.w3.org/2015/03/inspire/ef/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/purpose
-<http://www.w3.org/2015/03/inspire/ef/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/2015/03/inspire/ef/purpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> .
-<http://www.w3.org/2015/03/inspire/ef/purpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.w3.org/2015/03/inspire/ef/purpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
 # 
 # 
 # 
@@ -386,6 +335,39 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 # 
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
+# 
+# http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Dataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
 # 
 # http://purl.org/cerif/frapo/FundingAgency
 <http://purl.org/cerif/frapo/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -397,8 +379,6 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/cerif/frapo/Grant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
 # http://purl.org/cerif/frapo/Investigation
-<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
 # http://purl.org/spar/fabio/Expression
 <http://purl.org/spar/fabio/Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -452,42 +432,7 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
 <http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
 # 
-# http://www.opengis.net/ont/geosparql#SpatialObject
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> .
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> .
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
-# http://www.w3.org/2015/03/inspire/ef/MonitoringActivity
-<http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2015/03/inspire/ef> .
-# 
 # http://www.w3.org/ns/prov#Activity
-<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
 # 
 # http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -525,15 +470,15 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://xmlns.com/foaf/0.1/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/Project> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
 # 
-# https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation
-<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "spatial representation"@en .
+# https://ceh.ac.uk/digital-objects-ontology/Method
 # 
-# https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF
-<https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> <http://www.w3.org/2000/01/rdf-schema#label> "specialised EMF"@en .
+# https://ceh.ac.uk/method-metadata-ontology/Method
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/method-metadata-ontology> .
+# 
+# https://www.w3.org/ns/dcat#Dataset
+<https://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat> .
 # 
 # https://www.w3.org/ns/dcat#Resource
 <https://www.w3.org/ns/dcat#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1143,48 +1088,6 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
 <http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
 # 
-# https://ceh.ac.uk/digital-objects-ontology/platform
-<https://ceh.ac.uk/digital-objects-ontology/platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> .
-<https://ceh.ac.uk/digital-objects-ontology/platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/platform> <http://www.w3.org/2000/01/rdf-schema#label> "platform"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/raster
-<https://ceh.ac.uk/digital-objects-ontology/raster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/raster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
-<https://ceh.ac.uk/digital-objects-ontology/raster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/raster> <http://www.w3.org/2000/01/rdf-schema#label> "raster"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/sensor
-<https://ceh.ac.uk/digital-objects-ontology/sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> .
-<https://ceh.ac.uk/digital-objects-ontology/sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/sensor> <http://www.w3.org/2000/01/rdf-schema#label> "sensor"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/site
-<https://ceh.ac.uk/digital-objects-ontology/site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> .
-<https://ceh.ac.uk/digital-objects-ontology/site> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/site> <http://www.w3.org/2000/01/rdf-schema#label> "site"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/station
-<https://ceh.ac.uk/digital-objects-ontology/station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> .
-<https://ceh.ac.uk/digital-objects-ontology/station> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/station> <http://www.w3.org/2000/01/rdf-schema#label> "station"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/tabular
-<https://ceh.ac.uk/digital-objects-ontology/tabular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/tabular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
-<https://ceh.ac.uk/digital-objects-ontology/tabular> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/tabular> <http://www.w3.org/2000/01/rdf-schema#label> "tabular"@en .
-# 
-# https://ceh.ac.uk/digital-objects-ontology/vector
-<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> .
-<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/digital-objects-ontology> .
-<https://ceh.ac.uk/digital-objects-ontology/vector> <http://www.w3.org/2000/01/rdf-schema#label> "vector"@en .
-# 
 # 
 # 
 # #################################################################
@@ -1213,29 +1116,5 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann> .
 # 
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    General axioms
-# #
-# #################################################################
-# 
-# 
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
-_:genid23 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ceh.ac.uk/digital-objects-ontology/station> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ceh.ac.uk/digital-objects-ontology/site> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ceh.ac.uk/digital-objects-ontology/sensor> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ceh.ac.uk/digital-objects-ontology/platform> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

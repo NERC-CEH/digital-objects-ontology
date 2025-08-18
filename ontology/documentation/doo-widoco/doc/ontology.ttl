@@ -18,6 +18,7 @@
                                               <http://purl.org/dc/terms/title> "Digital Objects Ontology"@en ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" ;
                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ceh.ac.uk/digital-objects-ontology/" ;
+                                              rdfs:label "Digital Objects Ontology"@en ;
                                               owl:versionInfo "0.0.1" .
 
 _:genid1 <https://schema.org/affiliation> _:genid2 ;
@@ -115,18 +116,47 @@ xsd:date rdf:type rdfs:Datatype ;
 #    Object Properties
 #################################################################
 
+###  http://fdri.ceh.ac.uk/vocab/metadata/contains
+<http://fdri.ceh.ac.uk/vocab/metadata/contains> rdf:type owl:ObjectProperty ;
+                                                rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> ;
+                                                           rdfs:range <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> ;
+                                                           rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> ;
+                                                            rdfs:range <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> ;
+                                                            rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> ;
+                                                       rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/utilises
+<http://fdri.ceh.ac.uk/vocab/metadata/utilises> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> ;
+                                                rdfs:range [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility>
+                                                                           <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork>
+                                                                         )
+                                                           ] ;
+                                                rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
 ###  http://purl.org/cerif/frapo/awards
 <http://purl.org/cerif/frapo/awards> rdf:type owl:ObjectProperty ;
                                      rdfs:domain <http://purl.org/cerif/frapo/FundingAgency> ;
                                      rdfs:range <http://purl.org/cerif/frapo/Grant> ;
                                      rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
-
-
-###  http://purl.org/cerif/frapo/enables
-<http://purl.org/cerif/frapo/enables> rdf:type owl:ObjectProperty ;
-                                      rdfs:domain <http://xmlns.com/foaf/0.1/Project> ;
-                                      rdfs:range <http://purl.org/cerif/frapo/Investigation> ;
-                                      rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
 ###  http://purl.org/cerif/frapo/funds
@@ -138,13 +168,6 @@ xsd:date rdf:type rdfs:Datatype ;
                                                 ] ;
                                     rdfs:range <http://xmlns.com/foaf/0.1/Project> ;
                                     rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
-
-
-###  http://purl.org/cerif/frapo/hasOutput
-<http://purl.org/cerif/frapo/hasOutput> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain <http://purl.org/cerif/frapo/Investigation> ;
-                                        rdfs:range <http://www.w3.org/ns/prov#Entity> ;
-                                        rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
 ###  http://purl.org/dc/terms/hasPart
@@ -173,55 +196,6 @@ xsd:date rdf:type rdfs:Datatype ;
                                     rdfs:domain <http://purl.org/spar/pro/RoleInTime> ;
                                     rdfs:range <http://purl.org/spar/pro/Role> ;
                                     rdfs:isDefinedBy <http://purl.org/spar/pro> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/belongsTo
-<http://www.w3.org/2015/03/inspire/ef/belongsTo> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                 rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/contains
-<http://www.w3.org/2015/03/inspire/ef/contains> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> ;
-                                                rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/involvedIn
-<http://www.w3.org/2015/03/inspire/ef/involvedIn> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> ;
-                                                  rdfs:range <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/relatedTo
-<http://www.w3.org/2015/03/inspire/ef/relatedTo> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                 rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/setUpFor
-<http://www.w3.org/2015/03/inspire/ef/setUpFor> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> ;
-                                                rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/triggers
-<http://www.w3.org/2015/03/inspire/ef/triggers> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> ;
-                                                rdfs:range <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/uses
-<http://www.w3.org/2015/03/inspire/ef/uses> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> ;
-                                            rdfs:range <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> ;
-                                            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
 
 
 ###  http://www.w3.org/ns/prov#used
@@ -273,6 +247,24 @@ xsd:date rdf:type rdfs:Datatype ;
                                             rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
+###  https://ceh.ac.uk/digital-objects-ontology/hasInput
+<https://ceh.ac.uk/digital-objects-ontology/hasInput> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://ceh.ac.uk/digital-objects-ontology/Method> ;
+                                                      rdfs:range <https://www.w3.org/ns/dcat#Dataset> ;
+                                                      <http://purl.org/dc/terms/description> "A dataset that is the input of a method."@en ;
+                                                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                      rdfs:label "has input"@en .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/isOutputOf
+<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://www.w3.org/ns/dcat#Dataset> ;
+                                                        rdfs:range <https://ceh.ac.uk/digital-objects-ontology/Method> ;
+                                                        <http://purl.org/dc/terms/description> "A dataset that is the output of a method."@en ;
+                                                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                        rdfs:label "is output of"@en .
+
+
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
 <https://ceh.ac.uk/digital-objects-ontology/originatingGrant> rdf:type owl:ObjectProperty ;
                                                               rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
@@ -289,45 +281,6 @@ xsd:date rdf:type rdfs:Datatype ;
                                                                 <http://purl.org/dc/terms/description> "A project that produced a digital object."@en ;
                                                                 rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
                                                                 rdfs:label "originating project"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:domain <https://www.w3.org/ns/dcat#Resource> ;
-                                                                       rdfs:range <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                                       <http://purl.org/dc/terms/description> "The spatial representation type of a digital object."@en ;
-                                                                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                                       rdfs:label "spatial representation type"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType
-<https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType> rdf:type owl:ObjectProperty ;
-                                                                rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                                rdfs:range <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> ;
-                                                                <http://purl.org/dc/terms/description> "The specialised type of an environmental monitoring facility (EMF)."@en ;
-                                                                rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                                rdfs:label "specialied EMF type"@en .
-
-
-###  https://epimorphics.com/ceh/originatingFacility
-<https://epimorphics.com/ceh/originatingFacility> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
-                                                  rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                                  rdfs:isDefinedBy <https://epimorphics.com/ceh> .
-
-
-###  https://epimorphics.com/ceh/originatingProgramme
-<https://epimorphics.com/ceh/originatingProgramme> rdf:type owl:ObjectProperty ;
-                                                   rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
-                                                   rdfs:range <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> ;
-                                                   rdfs:isDefinedBy <https://epimorphics.com/ceh> .
-
-
-###  https://epimorphics.com/ceh/utilises
-<https://epimorphics.com/ceh/utilises> rdf:type owl:ObjectProperty ;
-                                       rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> ;
-                                       rdfs:range <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> ;
-                                       rdfs:isDefinedBy <https://epimorphics.com/ceh> .
 
 
 #################################################################
@@ -372,30 +325,50 @@ xsd:date rdf:type rdfs:Datatype ;
                                            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
 
-###  http://www.w3.org/2015/03/inspire/ef/boundingBox
-<http://www.w3.org/2015/03/inspire/ef/boundingBox> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> ;
-                                                   rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
-                                                   rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/name
-<http://www.w3.org/2015/03/inspire/ef/name> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> ;
-                                            rdfs:range xsd:string ;
-                                            rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/purpose
-<http://www.w3.org/2015/03/inspire/ef/purpose> rdf:type owl:DatatypeProperty ;
-                                               rdfs:domain <http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> ;
-                                               rdfs:range xsd:string ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
 #################################################################
 #    Classes
 #################################################################
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> rdf:type owl:Class ;
+                                                                       rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork> rdf:type owl:Class ;
+                                                                      rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform> rdf:type owl:Class ;
+                                                                       rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme> rdf:type owl:Class ;
+                                                                        rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor> rdf:type owl:Class ;
+                                                                     rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> rdf:type owl:Class ;
+                                                                   rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem> rdf:type owl:Class ;
+                                                                     rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
+
+###  http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset
+<http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://www.w3.org/ns/dcat#Dataset> ;
+                                                          rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+
 
 ###  http://purl.org/cerif/frapo/FundingAgency
 <http://purl.org/cerif/frapo/FundingAgency> rdf:type owl:Class ;
@@ -409,8 +382,7 @@ xsd:date rdf:type rdfs:Datatype ;
 
 
 ###  http://purl.org/cerif/frapo/Investigation
-<http://purl.org/cerif/frapo/Investigation> rdf:type owl:Class ;
-                                            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+<http://purl.org/cerif/frapo/Investigation> rdf:type owl:Class .
 
 
 ###  http://purl.org/spar/fabio/Expression
@@ -476,49 +448,8 @@ xsd:date rdf:type rdfs:Datatype ;
                                          rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
-###  http://www.opengis.net/ont/geosparql#SpatialObject
-<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
-                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
-                                                                                 <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> ;
-                                                                 rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject
-<http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> rdf:type owl:Class ;
-                                                                rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> ;
-                                                                       rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature> ;
-                                                                      rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme
-<http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject> ;
-                                                                        rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
-###  http://www.w3.org/2015/03/inspire/ef/MonitoringActivity
-<http://www.w3.org/2015/03/inspire/ef/MonitoringActivity> rdf:type owl:Class ;
-                                                          rdfs:isDefinedBy <http://www.w3.org/2015/03/inspire/ef> .
-
-
 ###  http://www.w3.org/ns/prov#Activity
-<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Agent
@@ -565,16 +496,18 @@ xsd:date rdf:type rdfs:Datatype ;
                                     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation
-<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> rdf:type owl:Class ;
-                                                                   rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                                   rdfs:label "spatial representation"@en .
+###  https://ceh.ac.uk/digital-objects-ontology/Method
+<https://ceh.ac.uk/digital-objects-ontology/Method> rdf:type owl:Class .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF
-<https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> rdf:type owl:Class ;
-                                                            rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                            rdfs:label "specialised EMF"@en .
+###  https://ceh.ac.uk/method-metadata-ontology/Method
+<https://ceh.ac.uk/method-metadata-ontology/Method> rdf:type owl:Class ;
+                                                    rdfs:isDefinedBy <https://ceh.ac.uk/method-metadata-ontology> .
+
+
+###  https://www.w3.org/ns/dcat#Dataset
+<https://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/dcat> .
 
 
 ###  https://www.w3.org/ns/dcat#Resource
@@ -1300,55 +1233,6 @@ xsd:date rdf:type rdfs:Datatype ;
                                                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/platform
-<https://ceh.ac.uk/digital-objects-ontology/platform> rdf:type owl:NamedIndividual ,
-                                                               <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> ;
-                                                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                      rdfs:label "platform"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/raster
-<https://ceh.ac.uk/digital-objects-ontology/raster> rdf:type owl:NamedIndividual ,
-                                                             <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                    rdfs:label "raster"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/sensor
-<https://ceh.ac.uk/digital-objects-ontology/sensor> rdf:type owl:NamedIndividual ,
-                                                             <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> ;
-                                                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                    rdfs:label "sensor"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/site
-<https://ceh.ac.uk/digital-objects-ontology/site> rdf:type owl:NamedIndividual ,
-                                                           <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> ;
-                                                  rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                  rdfs:label "site"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/station
-<https://ceh.ac.uk/digital-objects-ontology/station> rdf:type owl:NamedIndividual ,
-                                                              <https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF> ;
-                                                     rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                     rdfs:label "station"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/tabular
-<https://ceh.ac.uk/digital-objects-ontology/tabular> rdf:type owl:NamedIndividual ,
-                                                              <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                     rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                     rdfs:label "tabular"@en .
-
-
-###  https://ceh.ac.uk/digital-objects-ontology/vector
-<https://ceh.ac.uk/digital-objects-ontology/vector> rdf:type owl:NamedIndividual ,
-                                                             <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
-                                                    rdfs:label "vector"@en .
-
-
 #################################################################
 #    Annotations
 #################################################################
@@ -1381,19 +1265,6 @@ xsd:date rdf:type rdfs:Datatype ;
 
 
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdfs:isDefinedBy <http://purl.org/vocab/vann> .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <https://ceh.ac.uk/digital-objects-ontology/platform>
-                        <https://ceh.ac.uk/digital-objects-ontology/sensor>
-                        <https://ceh.ac.uk/digital-objects-ontology/site>
-                        <https://ceh.ac.uk/digital-objects-ontology/station>
-                      )
-] .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
