@@ -2,10 +2,12 @@
 
 # Digital Objects Ontology
 
+Documentation: https://nerc-ceh.github.io/digital-objects-ontology/
+
 ## Overview
 
 - Scope: rich metadata for diverse research outputs (articles, datasets, methods, etc.) including descriptions of the projects which allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles.
-- Four modules from external ontologies: [FRAPO](https://sparontologies.github.io/frapo/current/frapo.html), FDRI, [PRO](https://sparontologies.github.io/pro/current/pro.html) and [SCoRO](https://sparontologies.github.io/scoro/current/scoro.html).
+- Four modules from external ontologies: [FRAPO](https://sparontologies.github.io/frapo/current/frapo.html), [FDRI](https://nerc-ceh.github.io/fdri-ontology/), [PRO](https://sparontologies.github.io/pro/current/pro.html) and [SCoRO](https://sparontologies.github.io/scoro/current/scoro.html).
 - Also heavily relies on [PROV-O](https://www.w3.org/TR/prov-o/) and [FOAF](http://xmlns.com/foaf/spec/).
 - Includes a handful of new predicates, for which I have used the namespace https://ceh.ac.uk/digital-objects-ontology (for now).
 - This ontology works hand-in-hand with the [Environmental DCAT Application Profile (Env-DCAT-AP)](https://github.com/NERC-CEH/env-dcat-ap) to enable rich metadata descriptions of datasets.
