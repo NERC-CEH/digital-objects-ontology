@@ -1,16 +1,15 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
-@prefix ef: <http://www.w3.org/2015/03/inspire/ef#> .
-@prefix epi: <https://epimorphics.com/ceh/> .
+@prefix fdri: <http://fdri.ceh.ac.uk/vocab/metadata> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix mem: <https://ceh.ac.uk/method-metadata-ontology/> .
 @prefix org: <http://data.semanticweb.org/organization/> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
-@prefix wfo: <https://ceh.ac.uk/workflows-ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <https://catalogue.ceh.ac.uk/id/> .
 
@@ -23,22 +22,22 @@
 :a754cae2-d6a4-456e-b367-e99891d7920f
     a dcat:Dataset, prov:Entity ;
     doo:originatingProject <my:project> ;
-    epi:originatingProgramme <my:project> ;
+    fdri:originatingProgramme <my:project> ;
     doo:originatingGrant <my:grant> ;
-    epi:originatingFacility <my:facility> ;
+    fdri:originatingFacility <my:facility> ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> ;
     dcterms:isReferencedBy <my:article> ;
     prov:wasDerivedFrom <my:method> .
 
 # A PROJECT
 <my:project>
-    a foaf:Project, ef:EnvironmentalMonitoringProgramme ;
+    a foaf:Project, fdri:EnvironmentalMonitoringProgramme ;
     foaf:homepage <https://gtr.ukri.org/projects?ref=NE/L01016X/1> ;
     foaf:name "Analysis of historic drought and water scarcity in the UK: a systems-based study of drivers, impacts and their interactions"@en ;
     frapo:hasProjectIdentifier "NE/L01016X/1"^^xsd:string ;
     frapo:hasStartDate "2014-03-01T00:00:00"^^xsd:dateTime ;
     frapo:hasStartDate "2019-11-30T23:59:59"^^xsd:dateTime ;
-    epi:utilises <my:facility> .
+    fdri:utilises <my:facility> .
 
 # A FUNDING AGENCY
 <https://ror.org/02b5d8509>
@@ -57,8 +56,7 @@
 
 # A FACILITY
 <my:facility>
-    a ef:EnvironmentalMonitoringFacility ;
-    doo:specialisedEMFType doo:sensor .
+    a fdri:EnvironmentalMonitoringFacility .
 
 # A CONTRIBUTOR
 <https://orcid.org/0000-0002-0027-0436>
@@ -78,7 +76,7 @@
 # AN ORGANISATION
 <https://ror.org/00pggkr55>
     a foaf:Organization , prov:Organization ;
-    foaf:name "UKCEH" ;
+    foaf:name "UK Centre for Ecology & Hydrology"^^xsd:string ;
     foaf:homepage <https://www.ukceh.ac.uk> .
 
 # AN ARTICLE
@@ -88,5 +86,5 @@
 
 # A METHOD
 <my:method>
-    a wfo:MethodThing, prov:Entity ;
+    a mem:Method, prov:Entity ;
     dcterms:contributor <https://orcid.org/0000-0002-0027-0436> .
