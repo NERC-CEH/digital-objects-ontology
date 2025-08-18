@@ -188,14 +188,6 @@ prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
                        rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
-###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf prov:wasInfluencedBy ;
-                    rdfs:domain prov:Entity ;
-                    rdfs:range prov:Entity ;
-                    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
-
-
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
 prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf prov:wasInfluencedBy ;
