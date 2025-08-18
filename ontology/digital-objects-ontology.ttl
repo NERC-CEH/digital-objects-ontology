@@ -1,6 +1,7 @@
 @prefix : <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix mem: <https://ceh.ac.uk/method-metadata-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -499,9 +500,9 @@ dcat:Resource rdf:type owl:Class ;
               rdfs:isDefinedBy <http://www.w3.org/ns/dcat> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/Method
-doo:Method rdf:type owl:Class ;
-                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> .
+###  https://ceh.ac.uk/method-metadata-ontology/Method
+mem:Method rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://ceh.ac.uk/method-metadata-ontology> .
 
 #################################################################
 #    Individuals
