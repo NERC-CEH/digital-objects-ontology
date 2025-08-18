@@ -289,7 +289,7 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db1"
+        "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb1"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -329,15 +329,15 @@ td {
     ],
     "https://schema.org/publisher": [
       {
-        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db3"
+        "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb3"
       }
     ]
   },
   {
-    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db1",
+    "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb1",
     "https://schema.org/affiliation": [
       {
-        "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db2"
+        "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb2"
       }
     ],
     "https://schema.org/honorificPrefix": [
@@ -359,10 +359,10 @@ td {
     ]
   },
   {
-    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db2"
+    "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb2"
   },
   {
-    "@id": "_:ncbc36a0fc4994f789f6e59fe9b466b2db3",
+    "@id": "_:nb4e34cd12d644740a592a7dfd30a4b0bb3",
     "https://schema.org/identifier": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -514,6 +514,59 @@ td {
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="ObservationDataset">
+          <h3>Observation Dataset
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">fdri:originatingFacility</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">fdri:originatingProgramme</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="FundingAgency">
           <h3>Funding Agency
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -616,49 +669,6 @@ td {
                     </span>
                   </li>
                 </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Investigation">
-          <h3>Investigation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/cerif/frapo/Investigation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/cerif/frapo/hasOutput">frapo:hasOutput</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/cerif/frapo/enables">frapo:enables</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
               </td>
             </tr>
           </table>
@@ -1082,186 +1092,6 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="SpatialObject">
-          <h3>Spatial Object
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.opengis.net/ont/geosparql#SpatialObject</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="AbstractMonitoringFeature">
-          <h3>Abstract Monitoring Feature
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">ef:AbstractMonitoringObject</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/involvedIn">ef:involvedIn</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/uses">ef:uses</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/utilises">epi:utilises</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">ef:EnvironmentalMonitoringNetwork</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="AbstractMonitoringObject">
-          <h3>Abstract Monitoring Object
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/name">ef:name</a>
-                  <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">ef:EnvironmentalMonitoringProgramme</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="EnvironmentalMonitoringFacility">
           <h3>Environmental Monitoring Facility
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1270,7 +1100,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility</code>
               </td>
             </tr>
             <tr>
@@ -1278,51 +1108,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/belongsTo">ef:belongsTo</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/relatedTo">ef:relatedTo</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#specialisedEMFType">specialied EMF type</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/purpose">ef:purpose</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                </ul>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
             <tr>
@@ -1330,26 +1116,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/contains">ef:contains</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/relatedTo">ef:relatedTo</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/originatingFacility">epi:originatingFacility</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">fdri:originatingFacility</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -1362,7 +1132,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork</code>
               </td>
             </tr>
             <tr>
@@ -1370,40 +1140,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/contains">ef:contains</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/belongsTo">ef:belongsTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
           </table>
@@ -1416,7 +1153,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme</code>
               </td>
             </tr>
             <tr>
@@ -1424,73 +1161,42 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">ef:AbstractMonitoringObject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/utilises">fdri:utilises</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/triggers">ef:triggers</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/utilises">epi:utilises</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/setUpFor">ef:setUpFor</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/originatingProgramme">epi:originatingProgramme</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">fdri:originatingProgramme</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="MonitoringActivity">
-          <h3>Monitoring Activity
+        <div class="property entity" id="EnvironmentalMonitoringPlatform">
+          <h3>Environmental Monitoring Platform
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/MonitoringActivity</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform</code>
               </td>
             </tr>
             <tr>
@@ -1498,68 +1204,20 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/setUpFor">ef:setUpFor</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/uses">ef:uses</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/boundingBox">ef:boundingBox</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/involvedIn">ef:involvedIn</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/2015/03/inspire/ef/triggers">ef:triggers</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Activity">
-          <h3>Activity
+        <div class="property entity" id="EnvironmentalMonitoringSite">
+          <h3>Environmental Monitoring Site
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/ns/prov#Activity</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite</code>
               </td>
             </tr>
             <tr>
@@ -1567,55 +1225,49 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="EnvironmentalMonitoringSystem">
+          <h3>Environmental Monitoring System
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem</code>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/dc/terms/hasPart">Has Part</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/ns/prov#used">used</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/ns/prov#wasAssociatedWith">was associated with</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="EnvironmentalMonitoringSensor">
+          <h3>Environmental Monitoring Sensor
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor</code>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/dc/terms/hasPart">Has Part</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://www.w3.org/ns/prov#wasGeneratedBy">was generated by</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
           </table>
@@ -1722,18 +1374,6 @@ td {
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/originatingFacility">epi:originatingFacility</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://epimorphics.com/ceh/originatingProgramme">epi:originatingProgramme</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
                 </ul>
               </td>
             </tr>
@@ -1743,12 +1383,6 @@ td {
               </th>
               <td>
                 <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/cerif/frapo/hasOutput">frapo:hasOutput</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
                   <li>
                     <span>
                       <a href="http://purl.org/spar/pro/relatesToEntity">pro:relatesToEntity</a>
@@ -1985,17 +1619,6 @@ td {
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/cerif/frapo/enables">frapo:enables</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
@@ -2017,15 +1640,15 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="spatialrepresentation">
-          <h3>spatial representation
+        <div class="property entity" id="Dataset">
+          <h3>Dataset
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation</code>
+                <code>https://www.w3.org/ns/dcat#Dataset</code>
               </td>
             </tr>
             <tr>
@@ -2033,49 +1656,39 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="https://ceh.ac.uk/digital-objects-ontology">Digital Objects Ontology</a>
+                <a href="http://www.w3.org/ns/dcat">http://www.w3.org/ns/dcat</a>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
                 <span>
-                  <a href="#spatialRepresentationType">spatial representation type</a>
+                  <a href="#isOutputOf">is output of</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
-          </table>
-        </div>
-        <div class="property entity" id="specialisedEMF">
-          <h3>specialised EMF
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://ceh.ac.uk/digital-objects-ontology/SpecialisedEMF</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="https://ceh.ac.uk/digital-objects-ontology">Digital Objects Ontology</a>
-              </td>
-            </tr>
             <tr>
               <th>
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
                 <span>
-                  <a href="#specialisedEMFType">specialied EMF type</a>
+                  <a href="#hasInput">has input</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">fdri:ObservationDataset</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -2100,15 +1713,25 @@ td {
                 <a href="http://www.w3.org/ns/dcat">http://www.w3.org/ns/dcat</a>
               </td>
             </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Method">
+          <h3>Method
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://ceh.ac.uk/method-metadata-ontology/Method</code>
+              </td>
+            </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <span>
-                  <a href="#spatialRepresentationType">spatial representation type</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <a href="https://ceh.ac.uk/method-metadata-ontology">https://ceh.ac.uk/method-metadata-ontology</a>
               </td>
             </tr>
           </table>
@@ -2159,49 +1782,6 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="enables">
-          <h3>enables
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/cerif/frapo/enables</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="funds">
           <h3>funds
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -2227,12 +1807,12 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://purl.org/cerif/frapo/FundingAgency">frapo:FundingAgency</a>
+                  <a href="http://purl.org/cerif/frapo/Grant">frapo:Grant</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="http://purl.org/cerif/frapo/Grant">frapo:Grant</a>
+                  <a href="http://purl.org/cerif/frapo/FundingAgency">frapo:FundingAgency</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2244,49 +1824,6 @@ td {
               <td>
                 <span>
                   <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasOutput">
-          <h3>has output
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/cerif/frapo/hasOutput</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://purl.org/cerif/frapo">http://purl.org/cerif/frapo</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/ns/prov#Entity">Entity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2465,49 +2002,6 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="belongsTo">
-          <h3>belongs to
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/belongsTo</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">ef:EnvironmentalMonitoringNetwork</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="contains">
           <h3>contains
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -2516,7 +2010,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/contains</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/contains</code>
               </td>
             </tr>
             <tr>
@@ -2524,244 +2018,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringNetwork">ef:EnvironmentalMonitoringNetwork</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="involvedIn">
-          <h3>involved in
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/involvedIn</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">ef:MonitoringActivity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="relatedTo">
-          <h3>related to
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/relatedTo</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="setUpFor">
-          <h3>set up for
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/setUpFor</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">ef:MonitoringActivity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">ef:EnvironmentalMonitoringProgramme</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="triggers">
-          <h3>triggers
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/triggers</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">ef:EnvironmentalMonitoringProgramme</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">ef:MonitoringActivity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="uses">
-          <h3>uses
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/uses</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">ef:MonitoringActivity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
           </table>
@@ -3176,15 +2433,15 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="spatialRepresentationType">
-          <h3>spatial representation type
+        <div class="property entity" id="hasInput">
+          <h3>has input
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType</code>
+                <code>https://ceh.ac.uk/digital-objects-ontology/hasInput</code>
               </td>
             </tr>
             <tr>
@@ -3199,17 +2456,14 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The spatial representation type of a digital object.</p></td>
+              <td><p>A dataset that is the input of a method.</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <span>
-                  <a href="https://www.w3.org/ns/dcat#Resource">dcat:Resource</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="#Method1">doo:Method</a>
               </td>
             </tr>
             <tr>
@@ -3218,22 +2472,22 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#spatialrepresentation">spatial representation</a>
+                  <a href="https://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="specialisedEMFType">
-          <h3>specialied EMF type
+        <div class="property entity" id="isOutputOf">
+          <h3>is output of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://ceh.ac.uk/digital-objects-ontology/specialisedEMFType</code>
+                <code>https://ceh.ac.uk/digital-objects-ontology/isOutputOf</code>
               </td>
             </tr>
             <tr>
@@ -3248,7 +2502,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The specialised type of an environmental monitoring facility (EMF).</p></td>
+              <td><p>A dataset that is the output of a method.</p></td>
             </tr>
             <tr>
               <th>
@@ -3256,7 +2510,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
+                  <a href="https://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3266,10 +2520,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <span>
-                  <a href="#specialisedEMF">specialised EMF</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="#Method1">doo:Method</a>
               </td>
             </tr>
           </table>
@@ -3282,7 +2533,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://epimorphics.com/ceh/originatingFacility</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility</code>
               </td>
             </tr>
             <tr>
@@ -3290,7 +2541,18 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">Super Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">fdri:originatingSite</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -3299,7 +2561,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/ns/prov#Entity">Entity</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">fdri:ObservationDataset</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3310,7 +2572,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">fdri:EnvironmentalMonitoringFacility</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3325,7 +2587,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://epimorphics.com/ceh/originatingProgramme</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme</code>
               </td>
             </tr>
             <tr>
@@ -3333,7 +2595,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
             <tr>
@@ -3342,7 +2604,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/ns/prov#Entity">Entity</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">fdri:ObservationDataset</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3353,8 +2615,40 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">ef:EnvironmentalMonitoringProgramme</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">fdri:EnvironmentalMonitoringProgramme</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="originatingSite">
+          <h3>originating site
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/originatingSite</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">fdri:originatingFacility</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
@@ -3368,7 +2662,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://epimorphics.com/ceh/utilises</code>
+                <code>http://fdri.ceh.ac.uk/vocab/metadata/utilises</code>
               </td>
             </tr>
             <tr>
@@ -3376,7 +2670,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
               </th>
               <td>
-                <a href="https://epimorphics.com/ceh">https://epimorphics.com/ceh</a>
+                <a href="http://fdri.ceh.ac.uk/vocab/metadata">http://fdri.ceh.ac.uk/vocab/metadata</a>
               </td>
             </tr>
             <tr>
@@ -3385,7 +2679,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringProgramme">ef:EnvironmentalMonitoringProgramme</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">fdri:EnvironmentalMonitoringProgramme</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3396,7 +2690,12 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringFeature">ef:AbstractMonitoringFeature</a>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">fdri:EnvironmentalMonitoringNetwork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">fdri:EnvironmentalMonitoringFacility</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3431,17 +2730,17 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
                   <a href="http://purl.org/spar/pro/RoleInTime">pro:RoleInTime</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3566,12 +2865,12 @@ td {
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
+                  <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="http://xmlns.com/foaf/0.1/Project">foaf:Project</a>
+                  <a href="http://purl.org/cerif/frapo/Investigation">frapo:Investigation</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3582,126 +2881,6 @@ td {
               </th>
               <td>
                 <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="boundingBox">
-          <h3>bounding box
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/boundingBox</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/MonitoringActivity">ef:MonitoringActivity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="http://www.opengis.net/ont/geosparql#wktLiteral">geo:wktLiteral</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="name">
-          <h3>name
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/name</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/AbstractMonitoringObject">ef:AbstractMonitoringObject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="purpose">
-          <h3>purpose
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2015/03/inspire/ef/purpose</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2015/03/inspire/ef">http://www.w3.org/2015/03/inspire/ef</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2015/03/inspire/ef/EnvironmentalMonitoringFacility">ef:EnvironmentalMonitoringFacility</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
               </td>
             </tr>
           </table>
@@ -3935,17 +3114,13 @@ td {
           <dd>
             <code>https://ceh.ac.uk/digital-objects-ontology/</code>
           </dd>
-          <dt id="ef">ef</dt>
-          <dd>
-            <code>http://www.w3.org/2015/03/inspire/ef/</code>
-          </dd>
-          <dt id="epi">epi</dt>
-          <dd>
-            <code>https://epimorphics.com/ceh/</code>
-          </dd>
           <dt id="fabio">fabio</dt>
           <dd>
             <code>http://purl.org/spar/fabio/</code>
+          </dd>
+          <dt id="fdri">fdri</dt>
+          <dd>
+            <code>http://fdri.ceh.ac.uk/vocab/metadata/</code>
           </dd>
           <dt id="foaf">foaf</dt>
           <dd>
@@ -3958,6 +3133,10 @@ td {
           <dt id="geo">geo</dt>
           <dd>
             <code>http://www.opengis.net/ont/geosparql#</code>
+          </dd>
+          <dt id="mem">mem</dt>
+          <dd>
+            <code>https://ceh.ac.uk/method-metadata-ontology/</code>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
@@ -4054,13 +3233,13 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#ObservationDataset">Observation Dataset</a>
+            </li>
+            <li>
               <a href="#FundingAgency">Funding Agency</a>
             </li>
             <li>
               <a href="#Grant">Grant</a>
-            </li>
-            <li>
-              <a href="#Investigation">Investigation</a>
             </li>
             <li>
               <a href="#Expression">Expression</a>
@@ -4096,15 +3275,6 @@ td {
               <a href="#ProjectRole">Project Role</a>
             </li>
             <li>
-              <a href="#SpatialObject">Spatial Object</a>
-            </li>
-            <li>
-              <a href="#AbstractMonitoringFeature">Abstract Monitoring Feature</a>
-            </li>
-            <li>
-              <a href="#AbstractMonitoringObject">Abstract Monitoring Object</a>
-            </li>
-            <li>
               <a href="#EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a>
             </li>
             <li>
@@ -4114,10 +3284,16 @@ td {
               <a href="#EnvironmentalMonitoringProgramme">Environmental Monitoring Programme</a>
             </li>
             <li>
-              <a href="#MonitoringActivity">Monitoring Activity</a>
+              <a href="#EnvironmentalMonitoringPlatform">Environmental Monitoring Platform</a>
             </li>
             <li>
-              <a href="#Activity">Activity</a>
+              <a href="#EnvironmentalMonitoringSite">Environmental Monitoring Site</a>
+            </li>
+            <li>
+              <a href="#EnvironmentalMonitoringSystem">Environmental Monitoring System</a>
+            </li>
+            <li>
+              <a href="#EnvironmentalMonitoringSensor">Environmental Monitoring Sensor</a>
             </li>
             <li>
               <a href="#Agent">Agent</a>
@@ -4144,13 +3320,13 @@ td {
               <a href="#Project">Project</a>
             </li>
             <li>
-              <a href="#spatialrepresentation">spatial representation</a>
-            </li>
-            <li>
-              <a href="#specialisedEMF">specialised EMF</a>
+              <a href="#Dataset">Dataset</a>
             </li>
             <li>
               <a href="#Resource">Resource</a>
+            </li>
+            <li>
+              <a href="#Method">Method</a>
             </li>
           </ul>
         </li>
@@ -4163,13 +3339,7 @@ td {
               <a href="#awards">awards</a>
             </li>
             <li>
-              <a href="#enables">enables</a>
-            </li>
-            <li>
               <a href="#funds">funds</a>
-            </li>
-            <li>
-              <a href="#hasOutput">has output</a>
             </li>
             <li>
               <a href="#hasPart">has part</a>
@@ -4184,25 +3354,7 @@ td {
               <a href="#withRole">with role</a>
             </li>
             <li>
-              <a href="#belongsTo">belongs to</a>
-            </li>
-            <li>
               <a href="#contains">contains</a>
-            </li>
-            <li>
-              <a href="#involvedIn">involved in</a>
-            </li>
-            <li>
-              <a href="#relatedTo">related to</a>
-            </li>
-            <li>
-              <a href="#setUpFor">set up for</a>
-            </li>
-            <li>
-              <a href="#triggers">triggers</a>
-            </li>
-            <li>
-              <a href="#uses">uses</a>
             </li>
             <li>
               <a href="#used">used</a>
@@ -4226,16 +3378,19 @@ td {
               <a href="#originatingProject">originating project</a>
             </li>
             <li>
-              <a href="#spatialRepresentationType">spatial representation type</a>
+              <a href="#hasInput">has input</a>
             </li>
             <li>
-              <a href="#specialisedEMFType">specialied EMF type</a>
+              <a href="#isOutputOf">is output of</a>
             </li>
             <li>
               <a href="#originatingFacility">originating facility</a>
             </li>
             <li>
               <a href="#originatingProgramme">originating programme</a>
+            </li>
+            <li>
+              <a href="#originatingSite">originating site</a>
             </li>
             <li>
               <a href="#utilises">utilises</a>
@@ -4258,15 +3413,6 @@ td {
             </li>
             <li>
               <a href="#hasStartDate">has start date</a>
-            </li>
-            <li>
-              <a href="#boundingBox">bounding box</a>
-            </li>
-            <li>
-              <a href="#name">name</a>
-            </li>
-            <li>
-              <a href="#purpose">purpose</a>
             </li>
           </ul>
         </li>
@@ -4322,13 +3468,10 @@ td {
               <a href="#doo">doo</a>
             </li>
             <li>
-              <a href="#ef">ef</a>
-            </li>
-            <li>
-              <a href="#epi">epi</a>
-            </li>
-            <li>
               <a href="#fabio">fabio</a>
+            </li>
+            <li>
+              <a href="#fdri">fdri</a>
             </li>
             <li>
               <a href="#foaf">foaf</a>
@@ -4338,6 +3481,9 @@ td {
             </li>
             <li>
               <a href="#geo">geo</a>
+            </li>
+            <li>
+              <a href="#mem">mem</a>
             </li>
             <li>
               <a href="#owl">owl</a>
