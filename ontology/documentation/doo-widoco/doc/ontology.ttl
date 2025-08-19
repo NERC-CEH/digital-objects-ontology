@@ -145,6 +145,8 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
 <http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> rdf:type owl:ObjectProperty ;
                                                        rdfs:subPropertyOf <http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> ;
+                                                       rdfs:domain <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> ;
+                                                       rdfs:range <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> ;
                                                        rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
 
 
@@ -243,6 +245,7 @@ xsd:date rdf:type rdfs:Datatype ;
 
 ###  http://purl.org/cerif/frapo/hasEndDate
 <http://purl.org/cerif/frapo/hasEndDate> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://xmlns.com/foaf/0.1/Project> ;
                                          rdfs:range xsd:dateTime ;
                                          rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
@@ -263,6 +266,7 @@ xsd:date rdf:type rdfs:Datatype ;
 
 ###  http://purl.org/cerif/frapo/hasStartDate
 <http://purl.org/cerif/frapo/hasStartDate> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://xmlns.com/foaf/0.1/Project> ;
                                            rdfs:range xsd:dateTime ;
                                            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
@@ -274,6 +278,8 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
 <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> rdf:type owl:Class ;
                                                                        rdfs:subClassOf <https://www.w3.org/ns/dcat#Resource> ;
+                                                                       owl:disjointWith <https://ceh.ac.uk/method-metadata-ontology/Method> ,
+                                                                                        <https://www.w3.org/ns/dcat#Dataset> ;
                                                                        rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
 
 
@@ -404,6 +410,7 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  http://www.w3.org/ns/prov#Organization
 <http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                         owl:disjointWith <http://www.w3.org/ns/prov#Person> ;
                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
@@ -421,6 +428,7 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  http://xmlns.com/foaf/0.1/Organization
 <http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                         owl:disjointWith <http://xmlns.com/foaf/0.1/Person> ;
                                          rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
@@ -444,6 +452,7 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  https://ceh.ac.uk/method-metadata-ontology/Method
 <https://ceh.ac.uk/method-metadata-ontology/Method> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://www.w3.org/ns/dcat#Resource> ;
+                                                    owl:disjointWith <https://www.w3.org/ns/dcat#Dataset> ;
                                                     rdfs:isDefinedBy <https://ceh.ac.uk/method-metadata-ontology> .
 
 

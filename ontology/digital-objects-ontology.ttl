@@ -105,6 +105,10 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty ;
 sdo:affiliation rdf:type owl:AnnotationProperty .
 
 
+###  https://schema.org/codeRepository
+sdo:codeRepository rdf:type owl:AnnotationProperty .
+
+
 ###  https://schema.org/honorificPrefix
 sdo:honorificPrefix rdf:type owl:AnnotationProperty .
 
@@ -163,6 +167,8 @@ fdri:originatingProgramme rdf:type owl:ObjectProperty ;
 ###  http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
 fdri:originatingSite rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf fdri:originatingFacility ;
+                     rdfs:domain fdri:ObservationDataset ;
+                     rdfs:range fdri:EnvironmentalMonitoringSite ;
                      rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
 
 
@@ -261,6 +267,7 @@ doo:spatialRepresentationType rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/cerif/frapo/hasEndDate
 frapo:hasEndDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain foaf:Project ;
                  rdfs:range xsd:dateTime ;
                  rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
@@ -281,6 +288,7 @@ frapo:hasGrantNumber rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/cerif/frapo/hasStartDate
 frapo:hasStartDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain foaf:Project ;
                    rdfs:range xsd:dateTime ;
                    rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
 
@@ -292,6 +300,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
 fdri:EnvironmentalMonitoringFacility rdf:type owl:Class ;
                                      rdfs:subClassOf dcat:Resource ;
+                                     owl:disjointWith mem:Method ,
+                                                      dcat:Dataset ;
                                      rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
 
 
@@ -422,6 +432,7 @@ prov:Entity rdf:type owl:Class ;
 ###  http://www.w3.org/ns/prov#Organization
 prov:Organization rdf:type owl:Class ;
                   rdfs:subClassOf prov:Agent ;
+                  owl:disjointWith prov:Person ;
                   rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
@@ -439,6 +450,7 @@ foaf:Agent rdf:type owl:Class ;
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class ;
                   rdfs:subClassOf foaf:Agent ;
+                  owl:disjointWith foaf:Person ;
                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
@@ -462,6 +474,7 @@ doo:SpatialRepresentation rdf:type owl:Class ;
 ###  https://ceh.ac.uk/method-metadata-ontology/Method
 mem:Method rdf:type owl:Class ;
            rdfs:subClassOf dcat:Resource ;
+           owl:disjointWith dcat:Dataset ;
            rdfs:isDefinedBy <https://ceh.ac.uk/method-metadata-ontology> .
 
 

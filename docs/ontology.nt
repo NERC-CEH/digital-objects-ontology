@@ -127,6 +127,8 @@ _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://ww
 # http://fdri.ceh.ac.uk/vocab/metadata/originatingSite
 <http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset> .
+<http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite> .
 <http://fdri.ceh.ac.uk/vocab/metadata/originatingSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
 # 
 # http://fdri.ceh.ac.uk/vocab/metadata/utilises
@@ -231,6 +233,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/cerif/frapo/hasEndDate
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Project> .
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/cerif/frapo/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
@@ -248,6 +251,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/cerif/frapo/hasStartDate
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Project> .
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/cerif/frapo/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
@@ -263,6 +267,8 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility
 <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2002/07/owl#disjointWith> <https://ceh.ac.uk/method-metadata-ontology/Method> .
+<http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/dcat#Dataset> .
 <http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://fdri.ceh.ac.uk/vocab/metadata> .
 # 
 # http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork
@@ -370,6 +376,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.w3.org/ns/prov#Organization
 <http://www.w3.org/ns/prov#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/prov#Person> .
 <http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov> .
 # 
 # http://www.w3.org/ns/prov#Person
@@ -384,6 +391,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://xmlns.com/foaf/0.1/Organization
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2002/07/owl#disjointWith> <http://xmlns.com/foaf/0.1/Person> .
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1> .
 # 
 # http://xmlns.com/foaf/0.1/Person
@@ -403,6 +411,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://ceh.ac.uk/method-metadata-ontology/Method
 <https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
+<https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/dcat#Dataset> .
 <https://ceh.ac.uk/method-metadata-ontology/Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ceh.ac.uk/method-metadata-ontology> .
 # 
 # https://www.w3.org/ns/dcat#Dataset

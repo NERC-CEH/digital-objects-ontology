@@ -76,6 +76,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
+  }, {
+    "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork",
@@ -173,8 +178,14 @@
 }, {
   "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"
@@ -233,6 +244,9 @@
 }, {
   "@id" : "http://purl.org/cerif/frapo/hasEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Project"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/cerif/frapo"
   } ],
@@ -266,6 +280,9 @@
 }, {
   "@id" : "http://purl.org/cerif/frapo/hasStartDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Project"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/cerif/frapo"
   } ],
@@ -1561,6 +1578,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#Person",
@@ -1585,6 +1605,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/Person",
@@ -1824,6 +1847,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "https://schema.org/affiliation",

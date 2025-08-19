@@ -248,6 +248,8 @@
 
     <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">
         <rdfs:subPropertyOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"/>
+        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"/>
+        <rdfs:range rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"/>
         <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
     </owl:ObjectProperty>
     
@@ -407,6 +409,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasEndDate">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo"/>
     </owl:DatatypeProperty>
@@ -439,6 +442,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasStartDate">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo"/>
     </owl:DatatypeProperty>
@@ -462,6 +466,8 @@
 
     <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">
         <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <owl:disjointWith rdf:resource="https://ceh.ac.uk/method-metadata-ontology/Method"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
     </owl:Class>
     
@@ -684,6 +690,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Organization">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#Person"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
     </owl:Class>
     
@@ -713,6 +720,7 @@
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1"/>
     </owl:Class>
     
@@ -752,6 +760,7 @@
 
     <owl:Class rdf:about="https://ceh.ac.uk/method-metadata-ontology/Method">
         <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:isDefinedBy rdf:resource="https://ceh.ac.uk/method-metadata-ontology"/>
     </owl:Class>
     
