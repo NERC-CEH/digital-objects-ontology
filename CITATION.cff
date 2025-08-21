@@ -15,4 +15,5 @@ abstract: "This is an ontology that covers rich metadata for diverse research ou
 keywords:
   - OWL
   - ontology
+url: "https://nerc-ceh.github.io/digital-objects-ontology/"
 license: OGL-UK-3.0
