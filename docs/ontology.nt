@@ -1,6 +1,7 @@
 <https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://ceh.ac.uk/digital-objects-ontology/0.0.1/> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/created> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://ceh.ac.uk/digital-objects-ontology/0.1.0/> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/abstract> "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/name> "Helen Mair Rawsthorne" .
 _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-6540-8547> .
@@ -9,20 +10,22 @@ _:genid1 <https://schema.org/affiliation> _:genid2 .
 _:genid2 <https://schema.org/url> "https://www.ceh.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 _:genid2 <https://schema.org/name> "UK Centre for Ecology & Hydrology" .
 _:genid2 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/description> "This ontology allows describing diverse research outputs (articles, datasets, methods, etc.), the projects which allowed the creation of the outputs, the grants that funded the projects, environmental monitoring facilities, programmes, activities and networks, the people and organisations who contributed to the projects and outputs, and their roles."@en .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/issued> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/license> <https://eidc.ceh.ac.uk/licences/OGL/plain> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/modified> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/issued> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/license> <https://www.gnu.org/licenses/gpl-3.0> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/publisher> _:genid3 .
 _:genid3 <https://schema.org/url> "https://www.ceh.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 _:genid3 <https://schema.org/name> "UK Centre for Ecology & Hydrology" .
 _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/title> "Digital Objects Ontology"@en .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/title> "Digital Objects Ontology (Beta)"@en .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ceh.ac.uk/digital-objects-ontology/" .
 <https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Objects Ontology"@en .
-<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
 <https://ceh.ac.uk/digital-objects-ontology> <https://schema.org/codeRepository> <https://github.com/NERC-CEH/digital-objects-ontology> .
+<https://ceh.ac.uk/digital-objects-ontology> <https://schema.org/image> <https://github.com/NERC-CEH/digital-objects-ontology/blob/main/ontology/diagrams/digital_objects_ontology.png> .
+<https://ceh.ac.uk/digital-objects-ontology> <https://w3id.org/widoco/vocab#introduction> "The Digital Objects Ontology (DOO) allows describing environmental research outputs with structured metadata that goes beyond the standard metadata fields with which we have all become familiar (authors, description, spatial/temporal coverage, licence, keywords, associated publications, etc.). For any type of environmental research output, the DOO makes it possible to describe and link elements including the projects that enabled the research, the funding organisations and grants that funded it, the environmental monitoring facilities and networks that were used, the people and organisations responsible for delivering the outputs, their roles, and any other research outputs that informed or contributed to the creation of the output. In practice this means that a metadata record for a dataset, for example, could link to the workflow that generated it as well as the environmental monitoring facility used to produce the data in it. It could point to a scientific model that used the dataset as input. It also allows linking all those involved, such as the field technician, data curator and project manager who played vital roles in producing and publishing the dataset, and the organisations and grants that funded the research. This enhanced and structured metadata offering comes with a multitude of benefits for environmental researchers, stakeholders and the environmental science community more broadly: it increases the FAIRness of research outputs thanks to better traceability and transparency around their provenance; it improves the visibility of research outputs by making them discoverable via new avenues and enhances the profile of the researcher; it raises awareness of environmental monitoring facilities and how they are being used; it encourages collaboration and multi-disciplinarity by showcasing the people and projects who are using facilities and re-using outputs; and it allows researchers to tell a story about their outputs by linking them to tangible elements such as infrastructure, thereby allowing stakeholders to explore the bigger picture behind a research output."@en .
 # 
 # 
 # #################################################################
@@ -31,6 +34,9 @@ _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://ww
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -74,11 +80,17 @@ _:genid3 <https://schema.org/identifier> "https://ror.org/00pggkr55"^^<http://ww
 # https://schema.org/identifier
 <https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# https://schema.org/image
+<https://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://schema.org/url
 <https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
