@@ -1683,7 +1683,7 @@
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
   } ],
   "https://schema.org/image" : [ {
-    "@id" : "https://github.com/NERC-CEH/digital-objects-ontology/blob/main/ontology/diagrams/digital_objects_ontology.png"
+    "@id" : "https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png"
   } ],
   "https://w3id.org/widoco/vocab#introduction" : [ {
     "@language" : "en",
