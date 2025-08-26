@@ -49,7 +49,7 @@
                                               rdfs:label "Digital Objects Ontology"@en ;
                                               owl:versionInfo "0.1.0" ;
                                               sdo:codeRepository <https://github.com/NERC-CEH/digital-objects-ontology> ;
-                                              sdo:image <https://github.com/NERC-CEH/digital-objects-ontology/blob/main/ontology/diagrams/digital_objects_ontology.png> .
+                                              sdo:image <https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png> .
 
 #################################################################
 #    Annotation properties
