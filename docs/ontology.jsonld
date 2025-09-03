@@ -1,5 +1,8 @@
 [ {
   "@id" : "_:genid1",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
+  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid2"
   } ],
@@ -17,6 +20,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "http://purl.org/cerif/frapo/FundingAgency"
+    }, {
+      "@id" : "http://purl.org/cerif/frapo/Grant"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
     }, {
       "@id" : "https://www.w3.org/ns/dcat#Dataset"
@@ -25,47 +38,73 @@
 }, {
   "@id" : "_:genid2",
   "https://schema.org/identifier" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://ror.org/00pggkr55"
+    "@id" : "https://ror.org/00pggkr55"
   } ],
   "https://schema.org/name" : [ {
+    "@language" : "en",
     "@value" : "UK Centre for Ecology & Hydrology"
   } ],
   "https://schema.org/url" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://www.ceh.ac.uk/"
+    "@id" : "https://www.ceh.ac.uk/"
   } ]
 }, {
   "@id" : "_:genid3",
+  "https://schema.org/affiliation" : [ {
+    "@id" : "_:genid4"
+  } ],
   "https://schema.org/identifier" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://ror.org/00pggkr55"
+    "@id" : "https://orcid.org/0000-0002-3690-2941"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "UK Centre for Ecology & Hydrology"
-  } ],
-  "https://schema.org/url" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://www.ceh.ac.uk/"
+    "@value" : "Phil Trembath"
   } ]
 }, {
   "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-    }, {
-      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"
-    } ]
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://ror.org/00pggkr55"
+  } ],
+  "https://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "UK Centre for Ecology & Hydrology"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.ceh.ac.uk/"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.ceh.ac.uk/"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://ror.org/00pggkr55"
+  } ],
+  "https://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "UK Centre for Ecology & Hydrology"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.ceh.ac.uk/"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://ror.org/00pggkr55"
+  } ],
+  "https://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "UK Centre for Ecology & Hydrology"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://www.ceh.ac.uk/"
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/cerif/frapo/FundingAgency"
+      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
     }, {
-      "@id" : "http://purl.org/cerif/frapo/Grant"
+      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"
     } ]
   } ]
 }, {
@@ -200,7 +239,7 @@
     "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://purl.org/cerif/frapo/FundingAgency",
@@ -233,7 +272,7 @@
   "@id" : "http://purl.org/cerif/frapo/funds",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/cerif/frapo"
@@ -291,6 +330,9 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
@@ -1628,18 +1670,26 @@
     "@id" : "http://xmlns.com/foaf/0.1"
   } ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://ceh.ac.uk/digital-objects-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
     "@value" : "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."
   } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid3"
+  } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid5"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -1654,10 +1704,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-09-03"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
-    "@id" : "_:genid3"
+    "@id" : "_:genid6"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -1681,6 +1731,14 @@
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
+  } ],
+  "https://schema.org/funder" : [ {
+    "@id" : "https://ror.org/00pggkr55"
+  }, {
+    "@id" : "https://ror.org/02b5d8509"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@value" : "NE/Y006208/1"
   } ],
   "https://schema.org/image" : [ {
     "@id" : "https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png"
@@ -1776,7 +1834,7 @@
   "@id" : "https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://ceh.ac.uk/digital-objects-ontology"
@@ -1870,6 +1928,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/funder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/funding",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/honorificPrefix",

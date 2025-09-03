@@ -4,9 +4,13 @@
 @prefix : <> .
 <https://ceh.ac.uk/digital-objects-ontology/0.1.0/> a prov:Entity;
 	 dc:title "Digital Objects Ontology (Beta)";
+	 prov:wasAttributedTo <https://www.ceh.ac.uk/>;
+	 dc:creator <https://www.ceh.ac.uk/>;
+	 prov:wasAttributedTo <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
+	 dc:contributor <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://ceh.ac.uk/digital-objects-ontology/>;
 	 prov:wasGeneratedAt "2025-08-18";
 .
-:agent0 a prov:Agent; foaf:name "Helen Mair Rawsthorne".
+:agent0 a prov:Agent; foaf:name "Phil Trembath".
