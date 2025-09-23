@@ -51,7 +51,7 @@
                                               dcterms:description "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               dcterms:issued "2025-08-18"^^xsd:date ;
                                               dcterms:license <https://www.gnu.org/licenses/gpl-3.0> ;
-                                              dcterms:modified "2025-09-03"^^xsd:date ;
+                                              dcterms:modified "2025-09-23"^^xsd:date ;
                                               dcterms:publisher [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                   sdo:name "UK Centre for Ecology & Hydrology"@en ;
                                                                   sdo:url <https://www.ceh.ac.uk/>
@@ -244,24 +244,48 @@ pro:withRole rdf:type owl:ObjectProperty ;
 ###  https://ceh.ac.uk/digital-objects-ontology/hasInput
 doo:hasInput rdf:type owl:ObjectProperty ;
              rdfs:domain mem:Method ;
-             rdfs:range dcat:Dataset ;
-             dcterms:description "A dataset that is the input of a method."@en ;
+             rdfs:range prov:Entity ;
+             dcterms:description "A digital object that is the input of a method."@en ;
              rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
              rdfs:label "has input"@en .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/isOutputOf
 doo:isOutputOf rdf:type owl:ObjectProperty ;
-               rdfs:domain dcat:Dataset ;
+               rdfs:subPropertyOf prov:wasDerivedFrom ;
+               rdfs:domain prov:Entity ;
                rdfs:range mem:Method ;
-               dcterms:description "A dataset that is the output of a method."@en ;
+               dcterms:description "A digital object that is the output of a method."@en ;
                rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
                rdfs:label "is output of"@en .
 
 
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:Person rdf:type owl:ObjectProperty ;
+            rdfs:domain prov:Entity ;
+            rdfs:range prov:Entity ;
+            rdfs:subPropertyOf prov:wasInfluencedBy ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+prov:Person rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( prov:Agent
+                                         prov:Entity
+                                       )
+                         ] ;
+            rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( prov:Agent
+                                         prov:Entity
+                                       )
+                         ] ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+
 ###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
 doo:originatingGrant rdf:type owl:ObjectProperty ;
-                     rdfs:domain prov:Entity ;
+                     rdfs:domain dcat:Resource ;
                      rdfs:range frapo:Grant ;
                      dcterms:description "A grant that funded the production of a digital object."@en ;
                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
