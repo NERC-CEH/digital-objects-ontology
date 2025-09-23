@@ -5,9 +5,17 @@ cff-version: 1.2.0
 title: "Digital Objects Ontology"
 message: "If you use this ontology, please cite it using the metadata from this file."
 authors:
+  - name: "UK Centre for Ecology & Hydrology"
+    country: GB
+    website: "https://www.ceh.ac.uk/"
   - given-names: "Helen Mair"
     family-names: Rawsthorne
     orcid: "https://orcid.org/0000-0002-6540-8547"
+    affiliation: "UK Centre for Ecology & Hydrology"
+    city: Lancaster
+  - given-names: "Philip"
+    family-names: Trembath
+    orcid: "https://orcid.org/0000-0002-3690-2941"
     affiliation: "UK Centre for Ecology & Hydrology"
     city: Lancaster
 repository-code: "https://github.com/NERC-CEH/digital-objects-ontology"
