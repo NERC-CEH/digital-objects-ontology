@@ -51,7 +51,7 @@
                                               dcterms:description "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               dcterms:issued "2025-08-18"^^xsd:date ;
                                               dcterms:license <https://www.gnu.org/licenses/gpl-3.0> ;
-                                              dcterms:modified "2025-09-23"^^xsd:date ;
+                                              dcterms:modified "2025-09-24"^^xsd:date ;
                                               dcterms:publisher [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                   sdo:name "UK Centre for Ecology & Hydrology"@en ;
                                                                   sdo:url <https://www.ceh.ac.uk/>
@@ -258,6 +258,15 @@ doo:isOutputOf rdf:type owl:ObjectProperty ;
                dcterms:description "A digital object that is the output of a method."@en ;
                rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
                rdfs:label "is output of"@en .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication
+doo:isDescribedByPublication rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Resource ;
+               rdfs:range fabio:Expression ;
+               dcterms:description "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."@en ;
+               rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+               rdfs:label "is described by publication"@en .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom

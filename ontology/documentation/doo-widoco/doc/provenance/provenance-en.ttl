@@ -6,9 +6,9 @@
 	 dc:title "Digital Objects Ontology (Beta)";
 	 prov:wasAttributedTo <https://www.ceh.ac.uk/>;
 	 dc:creator <https://www.ceh.ac.uk/>;
-	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
 	 dc:contributor <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
+	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://ceh.ac.uk/digital-objects-ontology/>;
 	 prov:wasGeneratedAt "2025-08-18";

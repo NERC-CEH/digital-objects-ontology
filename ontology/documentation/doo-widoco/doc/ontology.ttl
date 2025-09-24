@@ -16,7 +16,7 @@
                                               <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               <http://purl.org/dc/terms/issued> "2025-08-18"^^xsd:date ;
                                               <http://purl.org/dc/terms/license> <https://www.gnu.org/licenses/gpl-3.0> ;
-                                              <http://purl.org/dc/terms/modified> "2025-09-23"^^xsd:date ;
+                                              <http://purl.org/dc/terms/modified> "2025-09-24"^^xsd:date ;
                                               <http://purl.org/dc/terms/publisher> _:genid6 ;
                                               <http://purl.org/dc/terms/title> "Digital Objects Ontology (Beta)"@en ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" ;
@@ -30,15 +30,15 @@
                                               <https://schema.org/image> <https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png> ;
                                               <https://w3id.org/widoco/vocab#introduction> "The Digital Objects Ontology (DOO) allows describing environmental research outputs with structured metadata that goes beyond the standard metadata fields with which we have all become familiar (authors, description, spatial/temporal coverage, licence, keywords, associated publications, etc.). For any type of environmental research output, the DOO makes it possible to describe and link elements including the projects that enabled the research, the funding organisations and grants that funded it, the environmental monitoring facilities and networks that were used, the people and organisations responsible for delivering the outputs, their roles, and any other research outputs that informed or contributed to the creation of the output. In practice this means that a metadata record for a dataset, for example, could link to the workflow that generated it as well as the environmental monitoring facility used to produce the data in it. It could point to a scientific model that used the dataset as input. It also allows linking all those involved, such as the field technician, data curator and project manager who played vital roles in producing and publishing the dataset, and the organisations and grants that funded the research. This enhanced and structured metadata offering comes with a multitude of benefits for environmental researchers, stakeholders and the environmental science community more broadly: it increases the FAIRness of research outputs thanks to better traceability and transparency around their provenance; it improves the visibility of research outputs by making them discoverable via new avenues and enhances the profile of the researcher; it raises awareness of environmental monitoring facilities and how they are being used; it encourages collaboration and multi-disciplinarity by showcasing the people and projects who are using facilities and re-using outputs; and it allows researchers to tell a story about their outputs by linking them to tangible elements such as infrastructure, thereby allowing stakeholders to explore the bigger picture behind a research output."@en .
 
-_:genid1 <https://schema.org/affiliation> _:genid2 ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-3690-2941> ;
-          <https://schema.org/name> "Phil Trembath" .
-
-_:genid3 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/staff/helen-rawsthorne> ;
-          <https://schema.org/affiliation> _:genid4 ;
+_:genid1 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/staff/helen-rawsthorne> ;
+          <https://schema.org/affiliation> _:genid2 ;
           <https://schema.org/honorificPrefix> "Dr" ;
           <https://schema.org/identifier> <https://orcid.org/0000-0002-6540-8547> ;
           <https://schema.org/name> "Helen Mair Rawsthorne" .
+
+_:genid3 <https://schema.org/affiliation> _:genid4 ;
+          <https://schema.org/identifier> <https://orcid.org/0000-0002-3690-2941> ;
+          <https://schema.org/name> "Phil Trembath" .
 
 _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/> ;
           <https://schema.org/identifier> <https://ror.org/00pggkr55> ;
@@ -282,6 +282,15 @@ xsd:date rdf:type rdfs:Datatype ;
                                                       <http://purl.org/dc/terms/description> "A digital object that is the input of a method."@en ;
                                                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
                                                       rdfs:label "has input"@en .
+
+
+###  https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication
+<https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <https://www.w3.org/ns/dcat#Resource> ;
+                                                                      rdfs:range <http://purl.org/spar/fabio/Expression> ;
+                                                                      <http://purl.org/dc/terms/description> "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."@en ;
+                                                                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                                      rdfs:label "is described by publication"@en .
 
 
 ###  https://ceh.ac.uk/digital-objects-ontology/isOutputOf

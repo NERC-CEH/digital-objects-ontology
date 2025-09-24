@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://ceh.ac.uk/digital-objects-ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://ceh.ac.uk/digital-objects-ontology/","name":"Digital Objects Ontology (Beta)", "headline":"A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.", "dateReleased":"2025-08-18", "dateModified":"2025-09-23", "version":"0.1.0", "license":"https://www.gnu.org/licenses/gpl-3.0", "codeRepository":"https://github.com/NERC-CEH/digital-objects-ontology", "author":[{"@type":"Person","name":"UK Centre for Ecology & Hydrology","url":"https://www.ceh.ac.uk/"}], "contributor":[{"@type":"Person","name":"Phil Trembath"},{"@type":"Person","name":"Helen Mair Rawsthorne","url":"https://www.ceh.ac.uk/staff/helen-rawsthorne"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://ceh.ac.uk/digital-objects-ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://ceh.ac.uk/digital-objects-ontology/","name":"Digital Objects Ontology (Beta)", "headline":"A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.", "dateReleased":"2025-08-18", "dateModified":"2025-09-24", "version":"0.1.0", "license":"https://www.gnu.org/licenses/gpl-3.0", "codeRepository":"https://github.com/NERC-CEH/digital-objects-ontology", "author":[{"@type":"Person","name":"UK Centre for Ecology & Hydrology","url":"https://www.ceh.ac.uk/"}], "contributor":[{"@type":"Person","name":"Helen Mair Rawsthorne","url":"https://www.ceh.ac.uk/staff/helen-rawsthorne"},{"@type":"Person","name":"Phil Trembath"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-09-23</dt>
+<dt>Modified on: 2025-09-24</dt>
 <dt>This version:</dt>
 <dd><a href="https://ceh.ac.uk/digital-objects-ontology/0.1.0/">https://ceh.ac.uk/digital-objects-ontology/0.1.0/</a></dd>
 <dt>Latest version:</dt>
@@ -83,7 +83,7 @@ $(function(){
 <dd><a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd>
 
 <dt>Contributors:</dt>
-<dd>Phil Trembath, <a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd><dd><a href="https://www.ceh.ac.uk/staff/helen-rawsthorne">Helen Mair Rawsthorne</a>, <a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd>
+<dd><a href="https://www.ceh.ac.uk/staff/helen-rawsthorne">Helen Mair Rawsthorne</a>, <a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd><dd>Phil Trembath, <a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd>
 
 <dt>Publisher:</dt>
 <dd><a href="https://www.ceh.ac.uk/">UK Centre for Ecology & Hydrology</a></dd>
@@ -356,6 +356,10 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/spar/pro/holdsRoleInTime" title="http://purl.org/spar/pro/holdsRoleInTime">
          <span>holds Role In Time</span>
       </a>
+   </li>
+   <li>
+      <a href="#isDescribedByPublication"
+         title="https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication">is described by publication</a>
    </li>
    <li>
       <a href="#isOutputOf"
@@ -1501,6 +1505,14 @@ This section provides details for each class and property defined by Digital Obj
     <a href="http://purl.org/spar/fabio">http://purl.org/spar/fabio</a>
    </dd>
   </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isDescribedByPublication" title="https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication">is described by publication</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="http://purl.org/spar/scoro/FinancialRole">
   <h3>Financial Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -1904,7 +1916,7 @@ This section provides details for each class and property defined by Digital Obj
     is in domain of
    </dt>
    <dd>
-    <a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isDescribedByPublication" title="https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication">is described by publication</a> <sup class="type-op" title="object property">op</sup>, <a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1994,6 +2006,7 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#http://purl.org/cerif/frapo/funds" title="http://purl.org/cerif/frapo/funds"> <span>funds</span> </a></li>
   <li><a href="#hasInput" title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a></li>
   <li><a href="#http://purl.org/spar/pro/holdsRoleInTime" title="http://purl.org/spar/pro/holdsRoleInTime"> <span>holds Role In Time</span> </a></li>
+  <li><a href="#isDescribedByPublication" title="https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication">is described by publication</a></li>
   <li><a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a></li>
   <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"> <span>originating Facility</span> </a></li>
   <li><a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a></li>
@@ -2141,6 +2154,34 @@ This section provides details for each class and property defined by Digital Obj
     </dt>
     <dd>
      <a href="#http://purl.org/spar/pro/RoleInTime" title="http://purl.org/spar/pro/RoleInTime">Role In Time</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isDescribedByPublication">
+  <h3>is described by publication<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://ceh.ac.uk/digital-objects-ontology">https://ceh.ac.uk/digital-objects-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://www.w3.org/ns/dcat#Resource" title="https://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.org/spar/fabio/Expression" title="http://purl.org/spar/fabio/Expression">Expression</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

@@ -1,13 +1,19 @@
 [ {
   "@id" : "_:genid1",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
+  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid2"
   } ],
+  "https://schema.org/honorificPrefix" : [ {
+    "@value" : "Dr"
+  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-3690-2941"
+    "@id" : "https://orcid.org/0000-0002-6540-8547"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Phil Trembath"
+    "@value" : "Helen Mair Rawsthorne"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -63,20 +69,14 @@
   } ]
 }, {
   "@id" : "_:genid3",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
-  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid4"
   } ],
-  "https://schema.org/honorificPrefix" : [ {
-    "@value" : "Dr"
-  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-6540-8547"
+    "@id" : "https://orcid.org/0000-0002-3690-2941"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Helen Mair Rawsthorne"
+    "@value" : "Phil Trembath"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -1743,7 +1743,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-09-23"
+    "@value" : "2025-09-24"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"
@@ -1828,6 +1828,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is described by publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/spar/fabio/Expression"
   } ]
 }, {
   "@id" : "https://ceh.ac.uk/digital-objects-ontology/isOutputOf",
