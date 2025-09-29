@@ -433,12 +433,22 @@
     
 
 
-    <!-- http://www.w3.org/ns/prov#Person -->
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#Person">
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -447,7 +457,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -456,21 +465,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
     
 
 
@@ -854,6 +850,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
     </owl:Class>
     
 
@@ -2243,9 +2240,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Person">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
     </rdf:Description>
 </rdf:RDF>
 

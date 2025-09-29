@@ -285,7 +285,7 @@ doo:isDescribedByPublication rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:Person rdf:type owl:ObjectProperty ;
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
             rdfs:domain prov:Entity ;
             rdfs:range prov:Entity ;
             rdfs:subPropertyOf prov:wasInfluencedBy ;
@@ -293,7 +293,7 @@ prov:Person rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy
-prov:Person rdf:type owl:ObjectProperty ;
+prov:wasInfluencedBy rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( prov:Agent
                                          prov:Entity

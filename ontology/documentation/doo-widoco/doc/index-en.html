@@ -399,11 +399,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">
-         <span>Person</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity">
          <span>relates To Entity</span>
       </a>
@@ -415,6 +410,16 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises">
          <span>utilises</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">
+         <span>was Derived From</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">
+         <span>was Influenced By</span>
       </a>
    </li>
    <li>
@@ -1145,13 +1150,13 @@ This section provides details for each class and property defined by Digital Obj
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1313,13 +1318,13 @@ This section provides details for each class and property defined by Digital Obj
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInput" title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity">relates To Entity</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasInput" title="https://ceh.ac.uk/digital-objects-ontology/hasInput">has input</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity">relates To Entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1786,6 +1791,14 @@ This section provides details for each class and property defined by Digital Obj
  <div class="entity" id="http://www.w3.org/ns/prov#Person">
   <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Person</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>
+   </dd>
+  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -1798,12 +1811,6 @@ This section provides details for each class and property defined by Digital Obj
    </dt>
    <dd>
     <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">Organization</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is also defined as
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/ns/prov#Person">object property</a>
    </dd>
   </dl>
  </div>
@@ -2037,10 +2044,11 @@ This section provides details for each class and property defined by Digital Obj
   <li><a href="#originatingGrant" title="https://ceh.ac.uk/digital-objects-ontology/originatingGrant">originating grant</a></li>
   <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme"> <span>originating Programme</span> </a></li>
   <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/originatingSite" title="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite"> <span>originating Site</span> </a></li>
-  <li><a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person"> <span>Person</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/relatesToEntity" title="http://purl.org/spar/pro/relatesToEntity"> <span>relates To Entity</span> </a></li>
   <li><a href="#spatialRepresentationType" title="https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType">spatial representation type</a></li>
   <li><a href="#http://fdri.ceh.ac.uk/vocab/metadata/utilises" title="http://fdri.ceh.ac.uk/vocab/metadata/utilises"> <span>utilises</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom"> <span>was Derived From</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy"> <span>was Influenced By</span> </a></li>
   <li><a href="#http://purl.org/spar/pro/withRole" title="http://purl.org/spar/pro/withRole"> <span>with Role</span> </a></li>
  </ul>
  <div class="entity" id="http://purl.org/cerif/frapo/awards">
@@ -2256,7 +2264,7 @@ This section provides details for each class and property defined by Digital Obj
      has super-properties
     </dt>
     <dd>
-     <a href="http://www.w3.org/ns/prov#wasDerivedFrom" target="_blank" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has domain
@@ -2425,50 +2433,6 @@ This section provides details for each class and property defined by Digital Obj
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/ns/prov#Person">
-  <h3>Person<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Person</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/ns/prov#wasInfluencedBy" target="_blank" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is disjoint with
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/ns/prov#Organization" target="_blank" title="http://www.w3.org/ns/prov#Organization">Organization</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is also defined as
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#Person">class</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://purl.org/spar/pro/relatesToEntity">
   <h3>relates To Entity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/spar/pro/relatesToEntity</p>
@@ -2549,6 +2513,80 @@ This section provides details for each class and property defined by Digital Obj
     </dt>
     <dd>
      <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">Environmental Monitoring Facility</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork" title="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">Environmental Monitoring Network</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasDerivedFrom">
+  <h3>was Derived From<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasDerivedFrom</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#wasInfluencedBy" title="http://www.w3.org/ns/prov#wasInfluencedBy">was Influenced By</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#isOutputOf" title="https://ceh.ac.uk/digital-objects-ontology/isOutputOf">is output of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasInfluencedBy">
+  <h3>was Influenced By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasInfluencedBy</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was Derived From</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
