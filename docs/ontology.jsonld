@@ -1,19 +1,13 @@
 [ {
   "@id" : "_:genid1",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
-  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid2"
   } ],
-  "https://schema.org/honorificPrefix" : [ {
-    "@value" : "Dr"
-  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-6540-8547"
+    "@id" : "https://orcid.org/0000-0002-3690-2941"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Helen Mair Rawsthorne"
+    "@value" : "Phil Trembath"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -69,14 +63,20 @@
   } ]
 }, {
   "@id" : "_:genid3",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
+  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid4"
   } ],
+  "https://schema.org/honorificPrefix" : [ {
+    "@value" : "Dr"
+  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-3690-2941"
+    "@id" : "https://orcid.org/0000-0002-6540-8547"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Phil Trembath"
+    "@value" : "Helen Mair Rawsthorne"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -335,6 +335,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/cerif/frapo/hasOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/cerif/frapo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
   } ]
 }, {
   "@id" : "http://purl.org/cerif/frapo/hasStartDate",
@@ -1624,6 +1636,18 @@
     "@id" : "http://www.w3.org/2001/XMLSchema"
   } ]
 }, {
+  "@id" : "http://www.w3.org/ns/org#memberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/org"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ]
+}, {
   "@id" : "http://www.w3.org/ns/prov#Agent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -1743,7 +1767,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-09-24"
+    "@value" : "2025-09-29"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"

@@ -2,6 +2,7 @@
 @prefix doo: <https://ceh.ac.uk/digital-objects-ontology/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix mem: <https://ceh.ac.uk/method-metadata-ontology/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -51,7 +52,7 @@
                                               dcterms:description "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               dcterms:issued "2025-08-18"^^xsd:date ;
                                               dcterms:license <https://www.gnu.org/licenses/gpl-3.0> ;
-                                              dcterms:modified "2025-09-24"^^xsd:date ;
+                                              dcterms:modified "2025-09-29"^^xsd:date ;
                                               dcterms:publisher [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                   sdo:name "UK Centre for Ecology & Hydrology"@en ;
                                                                   sdo:url <https://www.ceh.ac.uk/>
@@ -218,6 +219,20 @@ frapo:funds rdf:type owl:ObjectProperty ;
                         ] ;
             rdfs:range foaf:Project ;
             rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+
+
+###  http://purl.org/cerif/frapo/hasOutput
+frapo:hasOutput rdf:type owl:ObjectProperty ;
+            rdfs:domain foaf:Project ;
+            rdfs:range dcat:Resource ;
+            rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+
+
+###  http://www.w3.org/ns/org#memberOf
+org:memberOf rdf:type owl:ObjectProperty ;
+            rdfs:domain foaf:Agent ;
+            rdfs:range foaf:Organization ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/org> .
 
 
 ###  http://purl.org/spar/pro/holdsRoleInTime

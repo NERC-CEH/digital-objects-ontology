@@ -2,21 +2,21 @@
 <https://ceh.ac.uk/digital-objects-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://ceh.ac.uk/digital-objects-ontology/0.1.0/> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/abstract> "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."@en .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/contributor> _:genid1 .
-_:genid1 <https://schema.org/name> "Helen Mair Rawsthorne" .
-_:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-6540-8547> .
-_:genid1 <https://schema.org/honorificPrefix> "Dr" .
+_:genid1 <https://schema.org/name> "Phil Trembath" .
+_:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-3690-2941> .
 _:genid1 <https://schema.org/affiliation> _:genid2 .
 _:genid2 <https://schema.org/url> <https://www.ceh.ac.uk/> .
 _:genid2 <https://schema.org/name> "UK Centre for Ecology & Hydrology"@en .
 _:genid2 <https://schema.org/identifier> <https://ror.org/00pggkr55> .
-_:genid1 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/staff/helen-rawsthorne> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/contributor> _:genid3 .
-_:genid3 <https://schema.org/name> "Phil Trembath" .
-_:genid3 <https://schema.org/identifier> <https://orcid.org/0000-0002-3690-2941> .
+_:genid3 <https://schema.org/name> "Helen Mair Rawsthorne" .
+_:genid3 <https://schema.org/identifier> <https://orcid.org/0000-0002-6540-8547> .
+_:genid3 <https://schema.org/honorificPrefix> "Dr" .
 _:genid3 <https://schema.org/affiliation> _:genid4 .
 _:genid4 <https://schema.org/url> <https://www.ceh.ac.uk/> .
 _:genid4 <https://schema.org/name> "UK Centre for Ecology & Hydrology"@en .
 _:genid4 <https://schema.org/identifier> <https://ror.org/00pggkr55> .
+_:genid3 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/staff/helen-rawsthorne> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/creator> _:genid5 .
 _:genid5 <https://schema.org/url> <https://www.ceh.ac.uk/> .
@@ -26,7 +26,7 @@ _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/issued> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/license> <https://www.gnu.org/licenses/gpl-3.0> .
-<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/modified> "2025-09-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/modified> "2025-09-29"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://ceh.ac.uk/digital-objects-ontology> <http://purl.org/dc/terms/publisher> _:genid6 .
 _:genid6 <https://schema.org/url> <https://www.ceh.ac.uk/> .
 _:genid6 <https://schema.org/name> "UK Centre for Ecology & Hydrology"@en .
@@ -205,6 +205,12 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Project> .
 <http://purl.org/cerif/frapo/funds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
+# http://purl.org/cerif/frapo/hasOutput
+<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Project> .
+<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/dcat#Resource> .
+<http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+# 
 # http://purl.org/spar/pro/holdsRoleInTime
 <http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
@@ -222,6 +228,12 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/RoleInTime> .
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/Role> .
 <http://purl.org/spar/pro/withRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro> .
+# 
+# http://www.w3.org/ns/org#memberOf
+<http://www.w3.org/ns/org#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/org#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3.org/ns/org#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.w3.org/ns/org#memberOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
 # 
 # http://www.w3.org/ns/prov#Person
 <http://www.w3.org/ns/prov#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
