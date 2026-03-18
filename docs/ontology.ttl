@@ -1,13 +1,13 @@
-@prefix : <https://ceh.ac.uk/digital-objects-ontology#> .
+@prefix : <https://digital.ceh.ac.uk/ontology/doo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://ceh.ac.uk/digital-objects-ontology#> .
+@base <https://digital.ceh.ac.uk/ontology/doo/> .
 
-<https://ceh.ac.uk/digital-objects-ontology> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://ceh.ac.uk/digital-objects-ontology/0.1.0/> ;
+<https://digital.ceh.ac.uk/ontology/doo> rdf:type owl:Ontology ;
+                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.1.0/> ;
                                               <http://purl.org/dc/terms/abstract> "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."@en ;
                                               <http://purl.org/dc/terms/contributor> _:genid1 ,
                                                                                      _:genid3 ;
@@ -20,7 +20,7 @@
                                               <http://purl.org/dc/terms/publisher> _:genid6 ;
                                               <http://purl.org/dc/terms/title> "Digital Objects Ontology (Beta)"@en ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" ;
-                                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ceh.ac.uk/digital-objects-ontology/" ;
+                                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://digital.ceh.ac.uk/ontology/doo/" ;
                                               rdfs:label "Digital Objects Ontology"@en ;
                                               owl:versionInfo "0.1.0" ;
                                               <https://schema.org/codeRepository> <https://github.com/NERC-CEH/digital-objects-ontology> ;
@@ -287,52 +287,52 @@ xsd:date rdf:type rdfs:Datatype ;
                                             rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/hasInput
-<https://ceh.ac.uk/digital-objects-ontology/hasInput> rdf:type owl:ObjectProperty ;
+###  https://digital.ceh.ac.uk/ontology/doo/hasInput
+<https://digital.ceh.ac.uk/ontology/doo/hasInput> rdf:type owl:ObjectProperty ;
                                                       rdfs:domain <https://ceh.ac.uk/method-metadata-ontology/Method> ;
                                                       rdfs:range <http://www.w3.org/ns/prov#Entity> ;
                                                       <http://purl.org/dc/terms/description> "A digital object that is the input of a method."@en ;
-                                                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                       rdfs:label "has input"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication
-<https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication> rdf:type owl:ObjectProperty ;
+###  https://digital.ceh.ac.uk/ontology/doo/isDescribedByPublication
+<https://digital.ceh.ac.uk/ontology/doo/isDescribedByPublication> rdf:type owl:ObjectProperty ;
                                                                       rdfs:domain <https://www.w3.org/ns/dcat#Resource> ;
                                                                       rdfs:range <http://purl.org/spar/fabio/Expression> ;
                                                                       <http://purl.org/dc/terms/description> "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."@en ;
-                                                                      rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                                      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                                       rdfs:label "is described by publication"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/isOutputOf
-<https://ceh.ac.uk/digital-objects-ontology/isOutputOf> rdf:type owl:ObjectProperty ;
+###  https://digital.ceh.ac.uk/ontology/doo/isOutputOf
+<https://digital.ceh.ac.uk/ontology/doo/isOutputOf> rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
                                                         rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
                                                         rdfs:range <https://ceh.ac.uk/method-metadata-ontology/Method> ;
                                                         <http://purl.org/dc/terms/description> "A digital object that is the output of a method."@en ;
-                                                        rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                        rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                         rdfs:label "is output of"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/originatingGrant
-<https://ceh.ac.uk/digital-objects-ontology/originatingGrant> rdf:type owl:ObjectProperty ;
+###  https://digital.ceh.ac.uk/ontology/doo/originatingGrant
+<https://digital.ceh.ac.uk/ontology/doo/originatingGrant> rdf:type owl:ObjectProperty ;
                                                               rdfs:domain <https://www.w3.org/ns/dcat#Resource> ;
                                                               rdfs:range <http://purl.org/cerif/frapo/Grant> ;
                                                               <http://purl.org/dc/terms/description> "A grant that funded the production of a digital object."@en ;
-                                                              rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                               rdfs:label "originating grant"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType
-<https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType> rdf:type owl:ObjectProperty ;
+###  https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType
+<https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType> rdf:type owl:ObjectProperty ;
                                                                        rdfs:domain [ rdf:type owl:Class ;
                                                                                      owl:unionOf ( <https://ceh.ac.uk/method-metadata-ontology/Method>
                                                                                                    <https://www.w3.org/ns/dcat#Dataset>
                                                                                                  )
                                                                                    ] ;
-                                                                       rdfs:range <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+                                                                       rdfs:range <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                                       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                                        rdfs:label "spatial representation type"@en .
 
 
@@ -540,9 +540,9 @@ xsd:date rdf:type rdfs:Datatype ;
                                     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation
-<https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> rdf:type owl:Class ;
-                                                                   rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation
+<https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> rdf:type owl:Class ;
+                                                                   rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                                    rdfs:label "spatial representation"@en .
 
 
@@ -1282,45 +1282,45 @@ xsd:date rdf:type rdfs:Datatype ;
                                                 rdfs:isDefinedBy <http://purl.org/spar/scoro> .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/grid
-<https://ceh.ac.uk/digital-objects-ontology/grid> rdf:type owl:NamedIndividual ,
-                                                           <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                  rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/grid
+<https://digital.ceh.ac.uk/ontology/doo/grid> rdf:type owl:NamedIndividual ,
+                                                           <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                  rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                   rdfs:label "grid"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/stereoModel
-<https://ceh.ac.uk/digital-objects-ontology/stereoModel> rdf:type owl:NamedIndividual ,
-                                                                  <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                         rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/stereoModel
+<https://digital.ceh.ac.uk/ontology/doo/stereoModel> rdf:type owl:NamedIndividual ,
+                                                                  <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                         rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                          rdfs:label "stereo model"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/textTable
-<https://ceh.ac.uk/digital-objects-ontology/textTable> rdf:type owl:NamedIndividual ,
-                                                                <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                       rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/textTable
+<https://digital.ceh.ac.uk/ontology/doo/textTable> rdf:type owl:NamedIndividual ,
+                                                                <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                        rdfs:label "text table"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/tin
-<https://ceh.ac.uk/digital-objects-ontology/tin> rdf:type owl:NamedIndividual ,
-                                                          <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                 rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/tin
+<https://digital.ceh.ac.uk/ontology/doo/tin> rdf:type owl:NamedIndividual ,
+                                                          <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                 rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                  rdfs:label "triangular irregular network (TIN)"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/vector
-<https://ceh.ac.uk/digital-objects-ontology/vector> rdf:type owl:NamedIndividual ,
-                                                             <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                    rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/vector
+<https://digital.ceh.ac.uk/ontology/doo/vector> rdf:type owl:NamedIndividual ,
+                                                             <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                    rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                     rdfs:label "vector"@en .
 
 
-###  https://ceh.ac.uk/digital-objects-ontology/video
-<https://ceh.ac.uk/digital-objects-ontology/video> rdf:type owl:NamedIndividual ,
-                                                            <https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation> ;
-                                                   rdfs:isDefinedBy <https://ceh.ac.uk/digital-objects-ontology> ;
+###  https://digital.ceh.ac.uk/ontology/doo/video
+<https://digital.ceh.ac.uk/ontology/doo/video> rdf:type owl:NamedIndividual ,
+                                                            <https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation> ;
+                                                   rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
                                                    rdfs:label "video"@en .
 
 

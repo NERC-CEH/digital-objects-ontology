@@ -1744,7 +1744,7 @@
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
@@ -1788,14 +1788,14 @@
     "@value" : "doo"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://ceh.ac.uk/digital-objects-ontology/"
+    "@value" : "https://digital.ceh.ac.uk/ontology/doo/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Digital Objects Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/0.1.0/"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.1.0/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.1.0"
@@ -1819,30 +1819,30 @@
     "@value" : "The Digital Objects Ontology (DOO) allows describing environmental research outputs with structured metadata that goes beyond the standard metadata fields with which we have all become familiar (authors, description, spatial/temporal coverage, licence, keywords, associated publications, etc.). For any type of environmental research output, the DOO makes it possible to describe and link elements including the projects that enabled the research, the funding organisations and grants that funded it, the environmental monitoring facilities and networks that were used, the people and organisations responsible for delivering the outputs, their roles, and any other research outputs that informed or contributed to the creation of the output. In practice this means that a metadata record for a dataset, for example, could link to the workflow that generated it as well as the environmental monitoring facility used to produce the data in it. It could point to a scientific model that used the dataset as input. It also allows linking all those involved, such as the field technician, data curator and project manager who played vital roles in producing and publishing the dataset, and the organisations and grants that funded the research. This enhanced and structured metadata offering comes with a multitude of benefits for environmental researchers, stakeholders and the environmental science community more broadly: it increases the FAIRness of research outputs thanks to better traceability and transparency around their provenance; it improves the visibility of research outputs by making them discoverable via new avenues and enhances the profile of the researcher; it raises awareness of environmental monitoring facilities and how they are being used; it encourages collaboration and multi-disciplinarity by showcasing the people and projects who are using facilities and re-using outputs; and it allows researchers to tell a story about their outputs by linking them to tangible elements such as infrastructure, thereby allowing stakeholders to explore the bigger picture behind a research output."
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "spatial representation"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/grid",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/grid",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "grid"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/hasInput",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasInput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -1852,7 +1852,7 @@
     "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1862,7 +1862,7 @@
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/isDescribedByPublication",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -1872,7 +1872,7 @@
     "@id" : "https://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1882,7 +1882,7 @@
     "@id" : "http://purl.org/spar/fabio/Expression"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/isOutputOf",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/isOutputOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -1892,7 +1892,7 @@
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1905,7 +1905,7 @@
     "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/originatingGrant",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/originatingGrant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -1915,7 +1915,7 @@
     "@id" : "https://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1925,81 +1925,81 @@
     "@id" : "http://purl.org/cerif/frapo/Grant"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid19"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "spatial representation type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/stereoModel",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/stereoModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stereo model"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/textTable",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/textTable",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "text table"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/tin",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/tin",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "triangular irregular network (TIN)"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/vector",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/vector",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "vector"
   } ]
 }, {
-  "@id" : "https://ceh.ac.uk/digital-objects-ontology/video",
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/video",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/digital-objects-ontology"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
