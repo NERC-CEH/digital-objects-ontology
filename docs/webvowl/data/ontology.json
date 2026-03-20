@@ -2,11 +2,11 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "https://ceh.ac.uk/method-metadata-ontology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/org", "https://ceh.ac.uk/digital-objects-ontology", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://fdri.ceh.ac.uk/vocab/metadata", "http://purl.org/cerif/frapo", "http://purl.org/spar/pro", "http://purl.org/spar/scoro", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://xmlns.com/foaf/0.1", "https://www.w3.org/ns/dcat", "http://www.opengis.net/ont/geosparql" ],
+    "baseIris" : [ "https://ceh.ac.uk/method-metadata-ontology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/org", "https://digital.ceh.ac.uk/ontology/doo", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://fdri.ceh.ac.uk/vocab/metadata", "http://purl.org/cerif/frapo", "http://purl.org/spar/pro", "http://purl.org/spar/scoro", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://xmlns.com/foaf/0.1", "https://www.w3.org/ns/dcat", "http://www.opengis.net/ont/geosparql" ],
     "title" : {
       "en" : "Digital Objects Ontology (Beta)"
     },
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo",
     "version" : "0.1.0",
     "author" : [ "_:genid2147483653" ],
     "description" : {
@@ -113,7 +113,7 @@
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology/",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo/",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -1539,14 +1539,14 @@
     "id" : "18",
     "superClasses" : [ "3" ]
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/SpatialRepresentation",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
@@ -1555,13 +1555,13 @@
       "en" : "spatial representation"
     },
     "individuals" : [ {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/grid",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/grid",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -1570,13 +1570,13 @@
         "en" : "grid"
       }
     }, {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/video",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/video",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -1585,13 +1585,13 @@
         "en" : "video"
       }
     }, {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/tin",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/tin",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -1600,13 +1600,13 @@
         "en" : "triangular irregular network (TIN)"
       }
     }, {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/stereoModel",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/stereoModel",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -1615,13 +1615,13 @@
         "en" : "stereo model"
       }
     }, {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/vector",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/vector",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -1630,13 +1630,13 @@
         "en" : "vector"
       }
     }, {
-      "iri" : "https://ceh.ac.uk/digital-objects-ontology/textTable",
-      "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/textTable",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://ceh.ac.uk/digital-objects-ontology",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
           "type" : "iri"
         } ]
       },
@@ -3066,8 +3066,8 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "54"
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/isOutputOf",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/isOutputOf",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "range" : "23",
     "description" : {
       "en" : "A digital object that is the output of a method."
@@ -3076,7 +3076,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
@@ -3107,8 +3107,8 @@
     "attributes" : [ "object", "external" ],
     "id" : "60"
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/originatingGrant",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/originatingGrant",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "range" : "38",
     "description" : {
       "en" : "A grant that funded the production of a digital object."
@@ -3117,7 +3117,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
@@ -3223,14 +3223,14 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "75"
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/spatialRepresentationType",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "range" : "72",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
@@ -3260,8 +3260,8 @@
     "attributes" : [ "object", "external" ],
     "id" : "78"
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/hasInput",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasInput",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "range" : "16",
     "description" : {
       "en" : "A digital object that is the input of a method."
@@ -3270,7 +3270,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
@@ -3334,8 +3334,8 @@
     "attributes" : [ "object", "external" ],
     "id" : "86"
   }, {
-    "iri" : "https://ceh.ac.uk/digital-objects-ontology/isDescribedByPublication",
-    "baseIri" : "https://ceh.ac.uk/digital-objects-ontology",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/isDescribedByPublication",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "range" : "51",
     "description" : {
       "en" : "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."
@@ -3344,7 +3344,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://ceh.ac.uk/digital-objects-ontology",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },

@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://ceh.ac.uk/digital-objects-ontology/0.1.0/> a prov:Entity;
+<https://digital.ceh.ac.uk/ontology/doo/0.1.0/> a prov:Entity;
 	 dc:title "Digital Objects Ontology (Beta)";
 	 prov:wasAttributedTo <https://www.ceh.ac.uk/>;
 	 dc:creator <https://www.ceh.ac.uk/>;
@@ -10,7 +10,7 @@
 	 prov:wasAttributedTo <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
 	 dc:contributor <https://www.ceh.ac.uk/staff/helen-rawsthorne>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:specializationOf <https://ceh.ac.uk/digital-objects-ontology/>;
+	 prov:specializationOf <https://digital.ceh.ac.uk/ontology/doo/>;
 	 prov:wasGeneratedAt "2025-08-18";
 .
 :agent0 a prov:Agent; foaf:name "Phil Trembath".
