@@ -1,7 +1,16 @@
 {
-    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@context": "https://w3id.org/codemeta/3.0",
     "type": "SoftwareSourceCode",
     "author": [
+        {
+            "id": "https://ror.org/00pggkr55",
+            "type": "Organization",
+            "name": "UK Centre for Ecology & Hydrology",
+            "alternateName": "UKCEH",
+            "url": "https://www.ceh.ac.uk/"
+        }
+    ],
+    "contributor": [
         {
             "id": "https://orcid.org/0000-0002-6540-8547",
             "type": "Person",
@@ -11,6 +20,16 @@
             },
             "familyName": "Rawsthorne",
             "givenName": "Helen"
+        },
+        {
+            "id": "https://orcid.org/0000-0002-3690-2941",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "UK Centre for Ecology & Hydrology"
+            },
+            "familyName": "Trembath",
+            "givenName": "Phil"
         }
     ],
     "codeRepository": "https://github.com/NERC-CEH/digital-objects-ontology",
@@ -22,5 +41,11 @@
     "license": "https://opensource.org/license/MIT",
     "name": "Digital Objects Ontology",
     "programmingLanguage": "OWL",
-    "developmentStatus": "wip"
+    "funding": "NE/Y006208/1",
+    "version": "0.1.0",
+    "developmentStatus": "wip",
+    "dateCreated": "2025-08-18",
+    "dateModified": "2026-03-18",
+    "datePublished": "2025-08-18",
+    "url": "https://nerc-ceh.github.io/digital-objects-ontology/"
 }
