@@ -13,7 +13,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-6540-8547"
     affiliation: "UK Centre for Ecology & Hydrology"
     city: Lancaster
-  - given-names: "Philip"
+  - given-names: "Phil"
     family-names: Trembath
     orcid: "https://orcid.org/0000-0002-3690-2941"
     affiliation: "UK Centre for Ecology & Hydrology"
@@ -24,4 +24,4 @@ keywords:
   - OWL
   - ontology
 url: "https://nerc-ceh.github.io/digital-objects-ontology/"
-license: OGL-UK-3.0
+license: MIT

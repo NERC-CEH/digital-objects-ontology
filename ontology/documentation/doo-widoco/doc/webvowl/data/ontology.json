@@ -72,7 +72,7 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.gnu.org/licenses/gpl-3.0",
+        "value" : "https://opensource.org/license/MIT",
         "type" : "iri"
       } ],
       "contributor" : [ {

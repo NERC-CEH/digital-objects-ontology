@@ -19,7 +19,7 @@
         "OWL",
         "ontology"
     ],
-    "license": "https://spdx.org/licenses/OGL-UK-3.0",
+    "license": "https://opensource.org/license/MIT",
     "name": "Digital Objects Ontology",
     "programmingLanguage": "OWL",
     "developmentStatus": "wip"

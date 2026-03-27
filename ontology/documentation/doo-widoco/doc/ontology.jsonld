@@ -1771,7 +1771,7 @@
     "@value" : "2025-08-18"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://www.gnu.org/licenses/gpl-3.0"
+    "@id" : "https://opensource.org/license/MIT"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
