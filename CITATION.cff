@@ -12,12 +12,10 @@ authors:
     family-names: Rawsthorne
     orcid: "https://orcid.org/0000-0002-6540-8547"
     affiliation: "UK Centre for Ecology & Hydrology"
-    city: Lancaster
-  - given-names: "Phil"
+  - given-names: Phil
     family-names: Trembath
     orcid: "https://orcid.org/0000-0002-3690-2941"
     affiliation: "UK Centre for Ecology & Hydrology"
-    city: Lancaster
 repository-code: "https://github.com/NERC-CEH/digital-objects-ontology"
 abstract: "This is an ontology that covers rich metadata for diverse research outputs (articles, datasets, methods, etc.) including descriptions of the projects which allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."
 keywords:
