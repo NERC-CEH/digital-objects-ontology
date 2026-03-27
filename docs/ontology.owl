@@ -21,7 +21,7 @@
         <terms:description xml:lang="en">[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:issued>
         <terms:license rdf:resource="https://www.gnu.org/licenses/gpl-3.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-29</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-18</terms:modified>
         <terms:publisher rdf:nodeID="genid6"/>
         <terms:title xml:lang="en">Digital Objects Ontology (Beta)</terms:title>
         <vann:preferredNamespacePrefix>doo</vann:preferredNamespacePrefix>
