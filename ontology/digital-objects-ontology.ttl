@@ -377,7 +377,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
                   :EnvironmentalMonitoringFeature
             )
       ] ;
-      rdfs:comment "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."@en .
+      rdfs:comment "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature
 :EnvironmentalMonitoringFeature rdf:type owl:Class ; 
