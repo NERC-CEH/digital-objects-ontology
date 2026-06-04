@@ -412,7 +412,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringFacility
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring facility"@en ;
-      rdfs:comment "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en .
+      rdfs:comment "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringPlatform
 :EnvironmentalMonitoringPlatform rdf:type owl:Class ;
