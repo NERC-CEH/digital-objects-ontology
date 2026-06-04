@@ -395,30 +395,30 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringNetwork
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork
 :EnvironmentalMonitoringNetwork rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring network"@en ;
       rdfs:comment "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"@en ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringProgramme
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme
 :EnvironmentalMonitoringProgramme rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring programme"@en ;
       rdfs:comment "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringActivity
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity
 :EnvironmentalMonitoringActivity rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring activity"@en ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringFacility
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring facility"@en ;
       rdfs:comment "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringPlatform
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform
 :EnvironmentalMonitoringPlatform rdf:type owl:Class ;
       rdfs:subClassOf :EnvironmentalMonitoringFacility ;
       rdfs:label "Environmental monitoring platform"@en  ;
