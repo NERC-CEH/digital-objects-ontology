@@ -166,7 +166,7 @@ xsd:date rdf:type rdfs:Datatype ;
 :contains rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringNetwork ;
               rdfs:range :EnvironmentalMonitoringFacility ;
-              rdfs:isDefinedBy <http://fdri.ceh.ac.uk/vocab/metadata> .
+              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/utilises
 :utilises rdf:type owl:ObjectProperty ;
