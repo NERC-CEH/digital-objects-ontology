@@ -365,7 +365,7 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringObject
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject
 :EnvironmentalMonitoringObject rdf:type owl:Class ; 
       rdfs:subClassOf dcat:Resource ;
       owl:disjointWith mem:Method ,  dcat:Dataset;
