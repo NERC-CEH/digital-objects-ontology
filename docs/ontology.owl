@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://digital.ceh.ac.uk/ontology/doo/"
+<rdf:RDF xmlns="https://digital.ceh.ac.uk/ontology/doo#"
      xml:base="https://digital.ceh.ac.uk/ontology/doo"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,7 +12,7 @@
      xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://digital.ceh.ac.uk/ontology/doo">
-        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.1.0/"/>
+        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.2.0/"/>
         <terms:abstract xml:lang="en">A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology &amp; Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.</terms:abstract>
         <terms:contributor rdf:nodeID="genid1"/>
         <terms:contributor rdf:nodeID="genid3"/>
@@ -21,13 +21,13 @@
         <terms:description xml:lang="en">[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:issued>
         <terms:license rdf:resource="https://opensource.org/license/MIT"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-04</terms:modified>
         <terms:publisher rdf:nodeID="genid6"/>
         <terms:title xml:lang="en">Digital Objects Ontology (Beta)</terms:title>
         <vann:preferredNamespacePrefix>doo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://digital.ceh.ac.uk/ontology/doo/</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">Digital Objects Ontology</rdfs:label>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <owl:versionInfo>0.2.0</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/NERC-CEH/digital-objects-ontology"/>
         <schema:funder rdf:resource="https://ror.org/00pggkr55"/>
         <schema:funder rdf:resource="https://ror.org/02b5d8509"/>
@@ -36,16 +36,16 @@
         <vocab:introduction xml:lang="en">The Digital Objects Ontology (DOO) allows describing environmental research outputs with structured metadata that goes beyond the standard metadata fields with which we have all become familiar (authors, description, spatial/temporal coverage, licence, keywords, associated publications, etc.). For any type of environmental research output, the DOO makes it possible to describe and link elements including the projects that enabled the research, the funding organisations and grants that funded it, the environmental monitoring facilities and networks that were used, the people and organisations responsible for delivering the outputs, their roles, and any other research outputs that informed or contributed to the creation of the output. In practice this means that a metadata record for a dataset, for example, could link to the workflow that generated it as well as the environmental monitoring facility used to produce the data in it. It could point to a scientific model that used the dataset as input. It also allows linking all those involved, such as the field technician, data curator and project manager who played vital roles in producing and publishing the dataset, and the organisations and grants that funded the research. This enhanced and structured metadata offering comes with a multitude of benefits for environmental researchers, stakeholders and the environmental science community more broadly: it increases the FAIRness of research outputs thanks to better traceability and transparency around their provenance; it improves the visibility of research outputs by making them discoverable via new avenues and enhances the profile of the researcher; it raises awareness of environmental monitoring facilities and how they are being used; it encourages collaboration and multi-disciplinarity by showcasing the people and projects who are using facilities and re-using outputs; and it allows researchers to tell a story about their outputs by linking them to tangible elements such as infrastructure, thereby allowing stakeholders to explore the bigger picture behind a research output.</vocab:introduction>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <schema:affiliation rdf:nodeID="genid2"/>
-        <schema:identifier rdf:resource="https://orcid.org/0000-0002-3690-2941"/>
-        <schema:name>Phil Trembath</schema:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid3">
         <foaf:homepage rdf:resource="https://www.ceh.ac.uk/staff/helen-rawsthorne"/>
-        <schema:affiliation rdf:nodeID="genid4"/>
+        <schema:affiliation rdf:nodeID="genid2"/>
         <schema:honorificPrefix>Dr</schema:honorificPrefix>
         <schema:identifier rdf:resource="https://orcid.org/0000-0002-6540-8547"/>
         <schema:name>Helen Mair Rawsthorne</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <schema:affiliation rdf:nodeID="genid4"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-3690-2941"/>
+        <schema:name>Philip Trembath</schema:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
         <foaf:homepage rdf:resource="https://www.ceh.ac.uk/"/>
@@ -286,69 +286,6 @@
     
 
 
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/contains -->
-
-
-    <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/contains">
-        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"/>
-        <rdfs:range rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility -->
-
-
-    <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility">
-        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"/>
-        <rdfs:range rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme -->
-
-
-    <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme">
-        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"/>
-        <rdfs:range rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/originatingSite -->
-
-
-    <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/originatingSite">
-        <rdfs:subPropertyOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"/>
-        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"/>
-        <rdfs:range rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/utilises -->
-
-
-    <owl:ObjectProperty rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/utilises">
-        <rdfs:domain rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-                    <rdf:Description rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/cerif/frapo/awards -->
 
 
@@ -470,6 +407,75 @@
     
 
 
+    <!-- https://digital.ceh.ac.uk/ontology/doo/contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/contains">
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChild -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChild">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildFacility -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildFacility">
+        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork">
+        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme">
+        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/hasFacilityType -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasFacilityType">
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://digital.ceh.ac.uk/ontology/doo/hasInput -->
 
 
@@ -542,6 +548,23 @@
     
 
 
+    <!-- https://digital.ceh.ac.uk/ontology/doo/utilises -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/utilises">
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -607,86 +630,6 @@
      -->
 
 
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
-        <owl:disjointWith rdf:resource="https://ceh.ac.uk/method-metadata-ontology/Method"/>
-        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork">
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform">
-        <rdfs:subClassOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme">
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor">
-        <rdfs:subClassOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite">
-        <rdfs:subClassOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem">
-        <rdfs:subClassOf rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
-    
-
-
-    <!-- http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset -->
-
-
-    <owl:Class rdf:about="http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:isDefinedBy rdf:resource="http://fdri.ceh.ac.uk/vocab/metadata"/>
-    </owl:Class>
     
 
 
@@ -816,6 +759,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
     <!-- http://www.w3.org/ns/prov#Agent -->
 
 
@@ -894,23 +844,120 @@
     
 
 
+    <!-- https://ceh.ac.uk/method-metadata-ontology/Method -->
+
+
+    <owl:Class rdf:about="https://ceh.ac.uk/method-metadata-ontology/Method">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <owl:disjointWith rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"/>
+        <owl:disjointWith rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:isDefinedBy rdf:resource="https://ceh.ac.uk/method-metadata-ontology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity">
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">Environmental monitoring activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility">
+        <rdfs:comment xml:lang="en">A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">Environmental monitoring facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork">
+        <rdfs:comment xml:lang="en">A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">Environmental monitoring network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"/>
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"/>
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform">
+        <rdfs:subClassOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">Environmental monitoring platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme -->
+
+
+    <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme">
+        <rdfs:comment xml:lang="en">A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">Environmental monitoring programme</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation -->
 
 
     <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation">
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">spatial representation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://ceh.ac.uk/method-metadata-ontology/Method -->
-
-
-    <owl:Class rdf:about="https://ceh.ac.uk/method-metadata-ontology/Method">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
-        <owl:disjointWith rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:isDefinedBy rdf:resource="https://ceh.ac.uk/method-metadata-ontology"/>
     </owl:Class>
     
 

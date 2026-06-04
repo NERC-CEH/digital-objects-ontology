@@ -2,13 +2,13 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "https://ceh.ac.uk/method-metadata-ontology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/org", "https://digital.ceh.ac.uk/ontology/doo", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://fdri.ceh.ac.uk/vocab/metadata", "http://purl.org/cerif/frapo", "http://purl.org/spar/pro", "http://purl.org/spar/scoro", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://xmlns.com/foaf/0.1", "https://www.w3.org/ns/dcat", "http://www.opengis.net/ont/geosparql" ],
+    "baseIris" : [ "https://ceh.ac.uk/method-metadata-ontology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/org", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "https://digital.ceh.ac.uk/ontology/doo", "http://purl.org/cerif/frapo", "http://purl.org/spar/pro", "http://purl.org/spar/scoro", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://xmlns.com/foaf/0.1", "https://www.w3.org/ns/dcat", "http://www.opengis.net/ont/geosparql", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "en" : "Digital Objects Ontology (Beta)"
     },
     "iri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "version" : "0.1.0",
-    "author" : [ "_:genid2147483653" ],
+    "version" : "0.2.0",
+    "author" : [ "_:genid2147483650" ],
     "description" : {
       "en" : "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."
     },
@@ -19,12 +19,12 @@
       "funder" : [ {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "https://ror.org/00pggkr55",
+        "value" : "https://ror.org/02b5d8509",
         "type" : "iri"
       }, {
         "identifier" : "funder",
         "language" : "undefined",
-        "value" : "https://ror.org/02b5d8509",
+        "value" : "https://ror.org/00pggkr55",
         "type" : "iri"
       } ],
       "image" : [ {
@@ -33,16 +33,16 @@
         "value" : "https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png",
         "type" : "iri"
       } ],
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483653",
-        "type" : "label"
-      } ],
       "funding" : [ {
         "identifier" : "funding",
         "language" : "undefined",
         "value" : "NE/Y006208/1",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483650",
         "type" : "label"
       } ],
       "created" : [ {
@@ -60,7 +60,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.1.0",
+        "value" : "0.2.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -78,12 +78,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483649",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -95,13 +95,13 @@
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483651",
         "type" : "label"
       } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-03-27",
+        "value" : "2026-06-04",
         "type" : "label"
       } ],
       "codeRepository" : [ {
@@ -133,147 +133,154 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "0",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "25",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "39",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "55",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "63",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
     "type" : "owl:Class"
   }, {
     "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "65",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "62",
-    "type" : "owl:unionOf"
-  }, {
     "id" : "85",
     "type" : "owl:unionOf"
   }, {
-    "id" : "81",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "66",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "82",
+    "id" : "79",
     "type" : "owl:unionOf"
   }, {
-    "id" : "77",
+    "id" : "80",
     "type" : "owl:unionOf"
   }, {
-    "id" : "27",
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
     "type" : "owl:Class"
   }, {
     "id" : "23",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
+    "id" : "33",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "EnvironmentalMonitoringPlatform"
+      "IRI-based" : "EnvironmentalMonitoringFeature"
     },
-    "attributes" : [ "external" ],
+    "union" : [ "2", "3" ],
+    "comment" : {
+      "en" : "An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses."
+    },
+    "attributes" : [ "external", "union" ],
     "id" : "0",
     "superClasses" : [ "1" ]
   }, {
@@ -334,20 +341,6 @@
         "IRI-based" : "senior-author"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/consortium-author",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "consortium-author"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/principal-author",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -360,6 +353,20 @@
       },
       "labels" : {
         "IRI-based" : "principal-author"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/consortium-author",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "consortium-author"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/article-guarantor",
@@ -391,8 +398,17 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "2",
-    "superClasses" : [ "3" ]
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Agent",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -408,9 +424,9 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "7", "8" ],
+    "subClasses" : [ "14", "15" ],
     "attributes" : [ "external" ],
-    "id" : "6"
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -427,7 +443,7 @@
       "IRI-based" : "Entity"
     },
     "attributes" : [ "external" ],
-    "id" : "16"
+    "id" : "9"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Organization",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -443,10 +459,10 @@
     "label" : {
       "IRI-based" : "Organization"
     },
-    "subClasses" : [ "25" ],
+    "subClasses" : [ "26" ],
     "attributes" : [ "external" ],
-    "id" : "7",
-    "superClasses" : [ "6" ]
+    "id" : "14",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Person",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -463,50 +479,82 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "33",
-    "superClasses" : [ "34" ]
+    "id" : "30",
+    "superClasses" : [ "31" ]
   }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "EnvironmentalMonitoringSensor"
+      "IRI-based" : "EnvironmentalMonitoringActivity",
+      "en" : "Environmental monitoring activity"
     },
     "attributes" : [ "external" ],
-    "id" : "40",
-    "superClasses" : [ "32" ]
+    "id" : "39"
   }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "ObservationDataset"
+      "IRI-based" : "EnvironmentalMonitoringFacility",
+      "en" : "Environmental monitoring facility"
+    },
+    "subClasses" : [ "33" ],
+    "comment" : {
+      "en" : "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."
     },
     "attributes" : [ "external" ],
-    "id" : "10",
-    "superClasses" : [ "27" ]
+    "id" : "3"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalMonitoringNetwork",
+      "en" : "Environmental monitoring network"
+    },
+    "comment" : {
+      "en" : "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
+    "id" : "42",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://purl.org/cerif/frapo/FundingAgency",
@@ -524,8 +572,8 @@
       "IRI-based" : "FundingAgency"
     },
     "attributes" : [ "external" ],
-    "id" : "25",
-    "superClasses" : [ "7" ]
+    "id" : "26",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Project",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -542,7 +590,21 @@
       "IRI-based" : "Project"
     },
     "attributes" : [ "external" ],
-    "id" : "14"
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "50",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -558,16 +620,14 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "33", "46" ],
+    "subClasses" : [ "30", "36" ],
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "31"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
+    "instances" : 0,
+    "union" : [ "10", "28" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "51"
   }, {
     "iri" : "http://purl.org/spar/fabio/Expression",
     "baseIri" : "http://purl.org/spar/fabio",
@@ -584,7 +644,7 @@
       "IRI-based" : "Expression"
     },
     "attributes" : [ "external" ],
-    "id" : "51"
+    "id" : "52"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -601,22 +661,20 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "8",
-    "superClasses" : [ "6" ]
+    "id" : "15",
+    "superClasses" : [ "13" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "39",
+    "id" : "54",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "dateTime"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "55",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
+    "instances" : 0,
+    "union" : [ "2", "3" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "55"
   }, {
     "iri" : "http://purl.org/spar/scoro/ProjectRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -718,8 +776,8 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "58",
-    "superClasses" : [ "3" ]
+    "id" : "56",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/spar/pro/RoleInTime",
     "baseIri" : "http://purl.org/spar/pro",
@@ -736,24 +794,7 @@
       "IRI-based" : "RoleInTime"
     },
     "attributes" : [ "external" ],
-    "id" : "59"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EnvironmentalMonitoringNetwork"
-    },
-    "attributes" : [ "external" ],
-    "id" : "53"
+    "id" : "58"
   }, {
     "iri" : "http://purl.org/spar/pro/PublishingRole",
     "baseIri" : "http://purl.org/spar/pro",
@@ -910,20 +951,6 @@
         "IRI-based" : "ghost-writer"
       }
     }, {
-      "iri" : "http://purl.org/spar/pro/series-editor",
-      "baseIri" : "http://purl.org/spar/pro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/pro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "series-editor"
-      }
-    }, {
       "iri" : "http://purl.org/spar/pro/production-editor",
       "baseIri" : "http://purl.org/spar/pro",
       "annotations" : {
@@ -936,6 +963,20 @@
       },
       "labels" : {
         "IRI-based" : "production-editor"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/pro/series-editor",
+      "baseIri" : "http://purl.org/spar/pro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/pro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "series-editor"
       }
     }, {
       "iri" : "http://purl.org/spar/pro/copyright-owner",
@@ -1064,20 +1105,6 @@
         "IRI-based" : "distributor"
       }
     }, {
-      "iri" : "http://purl.org/spar/pro/author",
-      "baseIri" : "http://purl.org/spar/pro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/pro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "author"
-      }
-    }, {
       "iri" : "http://purl.org/spar/pro/reviewer",
       "baseIri" : "http://purl.org/spar/pro",
       "annotations" : {
@@ -1090,6 +1117,20 @@
       },
       "labels" : {
         "IRI-based" : "reviewer"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/pro/author",
+      "baseIri" : "http://purl.org/spar/pro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/pro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "author"
       }
     }, {
       "iri" : "http://purl.org/spar/pro/deputy-editor",
@@ -1120,20 +1161,6 @@
         "IRI-based" : "senior-editor"
       }
     }, {
-      "iri" : "http://purl.org/spar/pro/guest-editor",
-      "baseIri" : "http://purl.org/spar/pro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/pro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "guest-editor"
-      }
-    }, {
       "iri" : "http://purl.org/spar/pro/proof-reader",
       "baseIri" : "http://purl.org/spar/pro",
       "annotations" : {
@@ -1146,6 +1173,20 @@
       },
       "labels" : {
         "IRI-based" : "proof-reader"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/pro/guest-editor",
+      "baseIri" : "http://purl.org/spar/pro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/pro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "guest-editor"
       }
     }, {
       "iri" : "http://purl.org/spar/pro/authors-agent",
@@ -1219,8 +1260,8 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "5",
-    "superClasses" : [ "3" ]
+    "id" : "7",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/spar/scoro/EducationalRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -1237,20 +1278,6 @@
       "IRI-based" : "EducationalRole"
     },
     "individuals" : [ {
-      "iri" : "http://purl.org/spar/scoro/master-student",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "master-student"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/postgraduate-student",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -1263,6 +1290,20 @@
       },
       "labels" : {
         "IRI-based" : "postgraduate-student"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/master-student",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "master-student"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/faculty-member",
@@ -1322,45 +1363,8 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "63",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EnvironmentalMonitoringFacility"
-    },
-    "subClasses" : [ "0", "32", "11" ],
-    "attributes" : [ "external" ],
-    "id" : "1",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EnvironmentalMonitoringSite"
-    },
-    "attributes" : [ "external" ],
-    "id" : "11",
-    "superClasses" : [ "1" ]
+    "id" : "59",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/spar/pro/Role",
     "baseIri" : "http://purl.org/spar/pro",
@@ -1376,9 +1380,9 @@
     "label" : {
       "IRI-based" : "Role"
     },
-    "subClasses" : [ "2", "20", "18", "5", "63", "65", "58", "66" ],
+    "subClasses" : [ "4", "21", "19", "7", "59", "61", "56", "62" ],
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "5"
   }, {
     "iri" : "http://purl.org/spar/scoro/DataRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -1395,20 +1399,6 @@
       "IRI-based" : "DataRole"
     },
     "individuals" : [ {
-      "iri" : "http://purl.org/spar/scoro/embargo-controller",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "embargo-controller"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/data-user",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -1423,7 +1413,7 @@
         "IRI-based" : "data-user"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/repository-manager",
+      "iri" : "http://purl.org/spar/scoro/embargo-controller",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -1434,7 +1424,7 @@
         } ]
       },
       "labels" : {
-        "IRI-based" : "repository-manager"
+        "IRI-based" : "embargo-controller"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/data-creator",
@@ -1451,6 +1441,20 @@
         "IRI-based" : "data-creator"
       }
     }, {
+      "iri" : "http://purl.org/spar/scoro/repository-manager",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "repository-manager"
+      }
+    }, {
       "iri" : "http://purl.org/spar/scoro/data-curator",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -1463,6 +1467,20 @@
       },
       "labels" : {
         "IRI-based" : "data-curator"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/access-provider",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "access-provider"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/curator",
@@ -1491,20 +1509,6 @@
       },
       "labels" : {
         "IRI-based" : "data-manager"
-      }
-    }, {
-      "iri" : "http://purl.org/spar/scoro/access-provider",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "access-provider"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/data-publisher",
@@ -1536,10 +1540,10 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "18",
-    "superClasses" : [ "3" ]
+    "id" : "19",
+    "superClasses" : [ "5" ]
   }, {
-    "iri" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme",
     "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
     "instances" : 0,
     "annotations" : {
@@ -1551,119 +1555,14 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "SpatialRepresentation",
-      "en" : "spatial representation"
+      "IRI-based" : "EnvironmentalMonitoringProgramme",
+      "en" : "Environmental monitoring programme"
     },
-    "individuals" : [ {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/grid",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "grid",
-        "en" : "grid"
-      }
-    }, {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/video",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "video",
-        "en" : "video"
-      }
-    }, {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/tin",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "tin",
-        "en" : "triangular irregular network (TIN)"
-      }
-    }, {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/stereoModel",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "stereoModel",
-        "en" : "stereo model"
-      }
-    }, {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/vector",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "vector",
-        "en" : "vector"
-      }
-    }, {
-      "iri" : "https://digital.ceh.ac.uk/ontology/doo/textTable",
-      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://digital.ceh.ac.uk/ontology/doo",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "textTable",
-        "en" : "text table"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "72"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EnvironmentalMonitoringProgramme"
+    "comment" : {
+      "en" : "A planned and managed long?term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."
     },
     "attributes" : [ "external" ],
-    "id" : "61"
+    "id" : "74"
   }, {
     "iri" : "http://purl.org/spar/scoro/InvestigationRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -1891,42 +1790,13 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "65",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EnvironmentalMonitoringSystem"
-    },
-    "subClasses" : [ "40" ],
-    "attributes" : [ "external" ],
-    "id" : "32",
-    "superClasses" : [ "1" ]
+    "id" : "61",
+    "superClasses" : [ "5" ]
   }, {
     "instances" : 0,
-    "union" : [ "53", "1" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "62"
-  }, {
-    "instances" : 0,
-    "union" : [ "38", "25" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "41", "26" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "85"
-  }, {
-    "instances" : 0,
-    "union" : [ "16", "34" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "81"
   }, {
     "iri" : "http://purl.org/spar/scoro/FinancialRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -1971,6 +1841,20 @@
         "IRI-based" : "funding-recipient"
       }
     }, {
+      "iri" : "http://purl.org/spar/scoro/supplier",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "supplier"
+      }
+    }, {
       "iri" : "http://purl.org/spar/scoro/contractor",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -1997,20 +1881,6 @@
       },
       "labels" : {
         "IRI-based" : "accountant"
-      }
-    }, {
-      "iri" : "http://purl.org/spar/scoro/supplier",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "supplier"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/purchaser",
@@ -2112,18 +1982,18 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "66",
-    "superClasses" : [ "3" ]
+    "id" : "62",
+    "superClasses" : [ "5" ]
   }, {
     "instances" : 0,
-    "union" : [ "16", "34" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "82"
+    "union" : [ "9", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "79"
   }, {
     "instances" : 0,
-    "union" : [ "23", "27" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "77"
+    "union" : [ "9", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "80"
   }, {
     "iri" : "https://www.w3.org/ns/dcat#Dataset",
     "baseIri" : "https://www.w3.org/ns/dcat",
@@ -2139,10 +2009,9 @@
     "label" : {
       "IRI-based" : "Dataset"
     },
-    "subClasses" : [ "10" ],
     "attributes" : [ "external" ],
-    "id" : "27",
-    "superClasses" : [ "15" ]
+    "id" : "28",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://ceh.ac.uk/method-metadata-ontology/Method",
     "baseIri" : "https://ceh.ac.uk/method-metadata-ontology",
@@ -2159,8 +2028,117 @@
       "IRI-based" : "Method"
     },
     "attributes" : [ "external" ],
-    "id" : "23",
-    "superClasses" : [ "15" ]
+    "id" : "10",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialRepresentation",
+      "en" : "spatial representation"
+    },
+    "individuals" : [ {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/textTable",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "textTable",
+        "en" : "text table"
+      }
+    }, {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/video",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "video",
+        "en" : "video"
+      }
+    }, {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/grid",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "grid",
+        "en" : "grid"
+      }
+    }, {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/stereoModel",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "stereoModel",
+        "en" : "stereo model"
+      }
+    }, {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/tin",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tin",
+        "en" : "triangular irregular network (TIN)"
+      }
+    }, {
+      "iri" : "https://digital.ceh.ac.uk/ontology/doo/vector",
+      "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://digital.ceh.ac.uk/ontology/doo",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "vector",
+        "en" : "vector"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "90"
   }, {
     "iri" : "http://purl.org/cerif/frapo/Grant",
     "baseIri" : "http://purl.org/cerif/frapo",
@@ -2177,7 +2155,29 @@
       "IRI-based" : "Grant"
     },
     "attributes" : [ "external" ],
-    "id" : "38"
+    "id" : "41"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalMonitoringObject"
+    },
+    "union" : [ "0", "74", "39" ],
+    "comment" : {
+      "en" : "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."
+    },
+    "attributes" : [ "external", "union" ],
+    "id" : "23",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://purl.org/spar/scoro/OrganizationalRole",
     "baseIri" : "http://purl.org/spar/scoro",
@@ -2208,20 +2208,6 @@
         "IRI-based" : "possessor"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/contact-person",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "contact-person"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/manager",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -2234,6 +2220,20 @@
       },
       "labels" : {
         "IRI-based" : "manager"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/contact-person",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "contact-person"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/college-head",
@@ -2306,20 +2306,6 @@
         "IRI-based" : "programme-manager"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/chief-executive-officer",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "chief-executive-officer"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/participant",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -2332,6 +2318,20 @@
       },
       "labels" : {
         "IRI-based" : "participant"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/chief-executive-officer",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "chief-executive-officer"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/employer",
@@ -2418,20 +2418,6 @@
         "IRI-based" : "registrar"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/agent",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "agent"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/chief-technology-officer",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -2444,6 +2430,20 @@
       },
       "labels" : {
         "IRI-based" : "chief-technology-officer"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/agent",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "agent"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/registration-agency",
@@ -2516,20 +2516,6 @@
         "IRI-based" : "registration-authority"
       }
     }, {
-      "iri" : "http://purl.org/spar/scoro/employee",
-      "baseIri" : "http://purl.org/spar/scoro",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://purl.org/spar/scoro",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "employee"
-      }
-    }, {
       "iri" : "http://purl.org/spar/scoro/spokesperson",
       "baseIri" : "http://purl.org/spar/scoro",
       "annotations" : {
@@ -2542,6 +2528,20 @@
       },
       "labels" : {
         "IRI-based" : "spokesperson"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/scoro/employee",
+      "baseIri" : "http://purl.org/spar/scoro",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/scoro",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "employee"
       }
     }, {
       "iri" : "http://purl.org/spar/scoro/organizer",
@@ -2629,8 +2629,8 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "20",
-    "superClasses" : [ "3" ]
+    "id" : "21",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Organization",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -2647,8 +2647,8 @@
       "IRI-based" : "Organization"
     },
     "attributes" : [ "external" ],
-    "id" : "46",
-    "superClasses" : [ "34" ]
+    "id" : "36",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "https://www.w3.org/ns/dcat#Resource",
     "baseIri" : "https://www.w3.org/ns/dcat",
@@ -2664,31 +2664,44 @@
     "label" : {
       "IRI-based" : "Resource"
     },
-    "subClasses" : [ "23", "1", "27" ],
+    "subClasses" : [ "10", "0", "23", "28" ],
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "1"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalMonitoringPlatform",
+      "en" : "Environmental monitoring platform"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "3" ]
   } ],
   "property" : [ {
-    "id" : "4",
+    "id" : "6",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "9",
+    "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "13",
+    "id" : "16",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "19",
+    "id" : "20",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "12",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "22",
     "type" : "rdfs:SubClassOf"
@@ -2696,104 +2709,110 @@
     "id" : "24",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "26",
+    "id" : "25",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "28",
+    "id" : "27",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
+    "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "31",
+    "id" : "34",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "35",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "37",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "41",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "42",
-    "type" : "owl:objectProperty"
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "43",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "44",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "47",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "48",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "49",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "52",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "54",
+    "id" : "53",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "owl:objectProperty"
   }, {
     "id" : "60",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "67",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "68",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "69",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "70",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "57",
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
     "type" : "owl:objectProperty"
   }, {
     "id" : "73",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "75",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "76",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "78",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "79",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "80",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "71",
+    "id" : "67",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "82",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "83",
     "type" : "owl:disjointWith"
@@ -2813,262 +2832,21 @@
     "id" : "89",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "90",
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "range" : "3",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "4"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingSite",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "range" : "11",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "originatingSite"
-    },
-    "superproperty" : [ "12" ],
-    "domain" : "10",
-    "attributes" : [ "object", "external" ],
-    "id" : "9"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/hasOutput",
-    "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "15",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/cerif/frapo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOutput"
-    },
-    "domain" : "14",
-    "attributes" : [ "object", "external" ],
-    "id" : "13"
-  }, {
-    "range" : "3",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "17"
-  }, {
-    "range" : "3",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "19"
-  }, {
-    "range" : "15",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "21"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "range" : "1",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "originatingFacility"
-    },
-    "domain" : "10",
-    "subproperty" : [ "9" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "12"
-  }, {
-    "range" : "15",
-    "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "22"
-  }, {
-    "range" : "3",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
-  }, {
-    "range" : "15",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "26"
-  }, {
-    "range" : "1",
-    "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
-  }, {
-    "range" : "27",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "29"
-  }, {
-    "range" : "1",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "30"
-  }, {
-    "range" : "1",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "31"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/hasStartDate",
-    "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "36",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/cerif/frapo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasStartDate"
-    },
-    "domain" : "14",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "35"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/hasGrantNumber",
-    "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "39",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/cerif/frapo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasGrantNumber"
-    },
-    "domain" : "38",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "37"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/awards",
-    "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "38",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/cerif/frapo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "awards"
-    },
-    "domain" : "25",
-    "attributes" : [ "object", "external" ],
-    "id" : "41"
-  }, {
-    "iri" : "http://www.w3.org/ns/org#memberOf",
-    "baseIri" : "http://www.w3.org/ns/org",
-    "range" : "7",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/org",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "memberOf"
-    },
-    "domain" : "6",
-    "attributes" : [ "object", "external" ],
-    "id" : "42"
-  }, {
-    "range" : "34",
-    "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "43"
-  }, {
-    "range" : "32",
-    "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
-  }, {
-    "range" : "34",
-    "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "45"
-  }, {
-    "range" : "6",
+    "range" : "5",
     "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "47"
-  }, {
-    "range" : "7",
-    "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "48"
-  }, {
-    "range" : "6",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "49"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/contains",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "range" : "1",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "contains"
-    },
-    "domain" : "53",
-    "attributes" : [ "object", "external" ],
-    "id" : "52"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/hasFunderIdentifier",
-    "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "55",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/cerif/frapo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFunderIdentifier"
-    },
-    "domain" : "25",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "54"
+    "id" : "6"
   }, {
     "iri" : "https://digital.ceh.ac.uk/ontology/doo/isOutputOf",
     "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "range" : "23",
+    "range" : "10",
     "description" : {
       "en" : "A digital object that is the output of a method."
     },
@@ -3084,130 +2862,14 @@
       "IRI-based" : "isOutputOf",
       "en" : "is output of"
     },
-    "superproperty" : [ "57" ],
-    "domain" : "16",
+    "superproperty" : [ "11" ],
+    "domain" : "9",
     "attributes" : [ "object", "external" ],
-    "id" : "56"
+    "id" : "8"
   }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/utilises",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "range" : "62",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "utilises"
-    },
-    "domain" : "61",
-    "attributes" : [ "object", "external" ],
-    "id" : "60"
-  }, {
-    "iri" : "https://digital.ceh.ac.uk/ontology/doo/originatingGrant",
-    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "range" : "38",
-    "description" : {
-      "en" : "A grant that funded the production of a digital object."
-    },
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://digital.ceh.ac.uk/ontology/doo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "originatingGrant",
-      "en" : "originating grant"
-    },
-    "domain" : "15",
-    "attributes" : [ "object", "external" ],
-    "id" : "64"
-  }, {
-    "range" : "3",
-    "domain" : "65",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "67"
-  }, {
-    "range" : "3",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "68"
-  }, {
-    "range" : "3",
-    "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "69"
-  }, {
-    "range" : "3",
-    "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "70"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "16",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasDerivedFrom"
-    },
-    "superproperty" : [ "71" ],
-    "domain" : "16",
-    "subproperty" : [ "56" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "57"
-  }, {
-    "iri" : "http://purl.org/spar/pro/holdsRoleInTime",
-    "baseIri" : "http://purl.org/spar/pro",
-    "range" : "59",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/spar/pro",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "holdsRoleInTime"
-    },
-    "domain" : "6",
-    "attributes" : [ "object", "external" ],
-    "id" : "73"
-  }, {
-    "iri" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme",
-    "baseIri" : "http://fdri.ceh.ac.uk/vocab/metadata",
-    "range" : "61",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://fdri.ceh.ac.uk/vocab/metadata",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "originatingProgramme"
-    },
-    "domain" : "10",
-    "attributes" : [ "object", "external" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/hasEndDate",
+    "iri" : "http://purl.org/cerif/frapo/hasOutput",
     "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "50",
+    "range" : "1",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3217,52 +2879,152 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "hasEndDate"
+      "IRI-based" : "hasOutput"
     },
-    "domain" : "14",
+    "domain" : "17",
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "range" : "5",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "1",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "3",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "1",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "31",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://purl.org/cerif/frapo/hasStartDate",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/cerif/frapo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStartDate"
+    },
+    "domain" : "17",
     "attributes" : [ "external", "datatype" ],
-    "id" : "75"
+    "id" : "37"
   }, {
-    "iri" : "https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType",
-    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "range" : "72",
+    "iri" : "http://purl.org/cerif/frapo/hasGrantNumber",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "range" : "42",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "value" : "http://purl.org/cerif/frapo",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "spatialRepresentationType",
-      "en" : "spatial representation type"
+      "IRI-based" : "hasGrantNumber"
     },
-    "domain" : "77",
-    "attributes" : [ "object", "external" ],
-    "id" : "76"
+    "domain" : "41",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "40"
   }, {
-    "iri" : "http://purl.org/spar/pro/relatesToEntity",
-    "baseIri" : "http://purl.org/spar/pro",
-    "range" : "16",
+    "iri" : "http://purl.org/cerif/frapo/awards",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "range" : "41",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://purl.org/spar/pro",
+        "value" : "http://purl.org/cerif/frapo",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "relatesToEntity"
+      "IRI-based" : "awards"
     },
-    "domain" : "59",
+    "domain" : "26",
     "attributes" : [ "object", "external" ],
-    "id" : "78"
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/ns/org#memberOf",
+    "baseIri" : "http://www.w3.org/ns/org",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/org",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "memberOf"
+    },
+    "domain" : "13",
+    "attributes" : [ "object", "external" ],
+    "id" : "44"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "14",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
   }, {
     "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasInput",
     "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "range" : "16",
+    "range" : "9",
     "description" : {
       "en" : "A digital object that is the input of a method."
     },
@@ -3278,47 +3040,13 @@
       "IRI-based" : "hasInput",
       "en" : "has input"
     },
-    "domain" : "23",
+    "domain" : "10",
     "attributes" : [ "object", "external" ],
-    "id" : "79"
+    "id" : "49"
   }, {
-    "range" : "33",
-    "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "80"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasInfluencedBy",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "82",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasInfluencedBy"
-    },
-    "domain" : "81",
-    "subproperty" : [ "57" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "71"
-  }, {
-    "range" : "8",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
-  }, {
-    "range" : "27",
-    "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "84"
-  }, {
-    "iri" : "http://purl.org/cerif/frapo/funds",
+    "iri" : "http://purl.org/cerif/frapo/hasFunderIdentifier",
     "baseIri" : "http://purl.org/cerif/frapo",
-    "range" : "14",
+    "range" : "48",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3328,15 +3056,110 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "funds"
+      "IRI-based" : "hasFunderIdentifier"
     },
-    "domain" : "85",
+    "domain" : "26",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasFacilityType",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFacilityType"
+    },
+    "domain" : "3",
     "attributes" : [ "object", "external" ],
-    "id" : "86"
+    "id" : "57"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/contains",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contains"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "range" : "5",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "5",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "5",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "5",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasDerivedFrom"
+    },
+    "superproperty" : [ "67" ],
+    "domain" : "9",
+    "subproperty" : [ "8" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChildNetwork"
+    },
+    "superproperty" : [ "69" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "68"
   }, {
     "iri" : "https://digital.ceh.ac.uk/ontology/doo/isDescribedByPublication",
     "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
-    "range" : "51",
+    "range" : "52",
     "description" : {
       "en" : "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."
     },
@@ -3352,23 +3175,228 @@
       "IRI-based" : "isDescribedByPublication",
       "en" : "is described by publication"
     },
-    "domain" : "15",
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://purl.org/spar/pro/holdsRoleInTime",
+    "baseIri" : "http://purl.org/spar/pro",
+    "range" : "58",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "holdsRoleInTime"
+    },
+    "domain" : "13",
+    "attributes" : [ "object", "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasChildFacility",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChildFacility"
+    },
+    "superproperty" : [ "69" ],
+    "domain" : "3",
+    "attributes" : [ "object", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "74",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChildProgramme"
+    },
+    "superproperty" : [ "69" ],
+    "domain" : "74",
+    "attributes" : [ "object", "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://purl.org/cerif/frapo/hasEndDate",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "range" : "54",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/cerif/frapo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEndDate"
+    },
+    "domain" : "17",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/hasChild",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChild"
+    },
+    "domain" : "50",
+    "subproperty" : [ "73", "68", "72" ],
+    "attributes" : [ "irreflexive", "object", "asymmetric", "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/originatingGrant",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "41",
+    "description" : {
+      "en" : "A grant that funded the production of a digital object."
+    },
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "originatingGrant",
+      "en" : "originating grant"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://purl.org/spar/pro/relatesToEntity",
+    "baseIri" : "http://purl.org/spar/pro",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatesToEntity"
+    },
+    "domain" : "58",
+    "attributes" : [ "object", "external" ],
+    "id" : "77"
+  }, {
+    "range" : "0",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasInfluencedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "80",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasInfluencedBy"
+    },
+    "domain" : "79",
+    "subproperty" : [ "11" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "67"
+  }, {
+    "range" : "23",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "28",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "28",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "28",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://purl.org/cerif/frapo/funds",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "range" : "17",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/cerif/frapo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "funds"
+    },
+    "domain" : "85",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/utilises",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "utilises"
+    },
+    "domain" : "74",
     "attributes" : [ "object", "external" ],
     "id" : "87"
   }, {
-    "range" : "23",
-    "domain" : "1",
+    "range" : "30",
+    "domain" : "36",
     "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
-    "range" : "27",
-    "domain" : "1",
+    "range" : "15",
+    "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "iri" : "http://purl.org/spar/pro/withRole",
     "baseIri" : "http://purl.org/spar/pro",
-    "range" : "3",
+    "range" : "5",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3380,8 +3408,27 @@
     "label" : {
       "IRI-based" : "withRole"
     },
-    "domain" : "59",
+    "domain" : "58",
     "attributes" : [ "object", "external" ],
-    "id" : "90"
+    "id" : "91"
+  }, {
+    "iri" : "https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType",
+    "baseIri" : "https://digital.ceh.ac.uk/ontology/doo",
+    "range" : "90",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://digital.ceh.ac.uk/ontology/doo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spatialRepresentationType",
+      "en" : "spatial representation type"
+    },
+    "domain" : "51",
+    "attributes" : [ "object", "external" ],
+    "id" : "92"
   } ]
 }

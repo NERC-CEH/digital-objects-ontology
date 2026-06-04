@@ -1,22 +1,28 @@
 [ {
   "@id" : "_:genid1",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
+  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid2"
   } ],
+  "https://schema.org/honorificPrefix" : [ {
+    "@value" : "Dr"
+  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-3690-2941"
+    "@id" : "https://orcid.org/0000-0002-6540-8547"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Phil Trembath"
+    "@value" : "Helen Mair Rawsthorne"
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/cerif/frapo/FundingAgency"
+      "@id" : "http://www.w3.org/ns/prov#Agent"
     }, {
-      "@id" : "http://purl.org/cerif/frapo/Grant"
+      "@id" : "http://www.w3.org/ns/prov#Entity"
     } ]
   } ]
 }, {
@@ -34,9 +40,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/ns/prov#Agent"
+      "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
     }, {
-      "@id" : "http://www.w3.org/ns/prov#Entity"
+      "@id" : "https://www.w3.org/ns/dcat#Dataset"
     } ]
   } ]
 }, {
@@ -44,9 +50,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
     }, {
-      "@id" : "https://www.w3.org/ns/dcat#Dataset"
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
     } ]
   } ]
 }, {
@@ -62,21 +68,37 @@
     "@id" : "https://www.ceh.ac.uk/"
   } ]
 }, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+    }, {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"
+    }, {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"
+    }, {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid3",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.ceh.ac.uk/staff/helen-rawsthorne"
-  } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "_:genid4"
   } ],
-  "https://schema.org/honorificPrefix" : [ {
-    "@value" : "Dr"
-  } ],
   "https://schema.org/identifier" : [ {
-    "@id" : "https://orcid.org/0000-0002-6540-8547"
+    "@id" : "https://orcid.org/0000-0002-3690-2941"
   } ],
   "https://schema.org/name" : [ {
-    "@value" : "Helen Mair Rawsthorne"
+    "@value" : "Philip Trembath"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -122,144 +144,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
+      "@id" : "http://purl.org/cerif/frapo/FundingAgency"
     }, {
-      "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"
+      "@id" : "http://purl.org/cerif/frapo/Grant"
     } ]
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
-  }, {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringPlatform",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/contains",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringNetwork"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingProgramme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingSite",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/ObservationDataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringSite"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/originatingFacility"
-  } ]
-}, {
-  "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/utilises",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata/EnvironmentalMonitoringProgramme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://fdri.ceh.ac.uk/vocab/metadata"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://purl.org/cerif/frapo/FundingAgency",
@@ -292,7 +180,7 @@
   "@id" : "http://purl.org/cerif/frapo/funds",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/cerif/frapo"
@@ -1636,6 +1524,9 @@
     "@id" : "http://www.w3.org/2001/XMLSchema"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.w3.org/ns/org#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1699,13 +1590,13 @@
   "@id" : "http://www.w3.org/ns/prov#wasInfluencedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/prov"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid16"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/Agent",
@@ -1744,6 +1635,22 @@
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://ceh.ac.uk/method-metadata-ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"
+  }, {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject"
+  }, {
+    "@id" : "https://www.w3.org/ns/dcat#Dataset"
+  } ]
+}, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
@@ -1775,7 +1682,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-27"
+    "@value" : "2026-06-04"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"
@@ -1795,10 +1702,10 @@
     "@value" : "Digital Objects Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.1.0/"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.2.0/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.0"
+    "@value" : "0.2.0"
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
@@ -1819,6 +1726,109 @@
     "@value" : "The Digital Objects Ontology (DOO) allows describing environmental research outputs with structured metadata that goes beyond the standard metadata fields with which we have all become familiar (authors, description, spatial/temporal coverage, licence, keywords, associated publications, etc.). For any type of environmental research output, the DOO makes it possible to describe and link elements including the projects that enabled the research, the funding organisations and grants that funded it, the environmental monitoring facilities and networks that were used, the people and organisations responsible for delivering the outputs, their roles, and any other research outputs that informed or contributed to the creation of the output. In practice this means that a metadata record for a dataset, for example, could link to the workflow that generated it as well as the environmental monitoring facility used to produce the data in it. It could point to a scientific model that used the dataset as input. It also allows linking all those involved, such as the field technician, data curator and project manager who played vital roles in producing and publishing the dataset, and the organisations and grants that funded the research. This enhanced and structured metadata offering comes with a multitude of benefits for environmental researchers, stakeholders and the environmental science community more broadly: it increases the FAIRness of research outputs thanks to better traceability and transparency around their provenance; it improves the visibility of research outputs by making them discoverable via new avenues and enhances the profile of the researcher; it raises awareness of environmental monitoring facilities and how they are being used; it encourages collaboration and multi-disciplinarity by showcasing the people and projects who are using facilities and re-using outputs; and it allows researchers to tell a story about their outputs by linking them to tangible elements such as infrastructure, thereby allowing stakeholders to explore the bigger picture behind a research output."
   } ]
 }, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental monitoring activity"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental monitoring facility"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid22"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental monitoring network"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid25"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental monitoring platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental monitoring programme"
+  } ]
+}, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -1827,6 +1837,18 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "spatial representation"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/grid",
@@ -1840,6 +1862,69 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "grid"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChildFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChild"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChild"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasChild"
+  } ]
+}, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasFacilityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/hasInput",
@@ -1928,7 +2013,7 @@
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid16"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
@@ -1980,6 +2065,15 @@
     "@value" : "triangular irregular network (TIN)"
   } ]
 }, {
+  "@id" : "https://digital.ceh.ac.uk/ontology/doo/utilises",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/vector",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2004,18 +2098,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "video"
-  } ]
-}, {
-  "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://ceh.ac.uk/method-metadata-ontology"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "https://schema.org/affiliation",
