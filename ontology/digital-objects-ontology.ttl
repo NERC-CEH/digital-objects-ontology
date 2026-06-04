@@ -211,8 +211,8 @@ xsd:date rdf:type rdfs:Datatype ;
 :hasChildFacility rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasChild ;
               rdfs:domain :EnvironmentalMonitoringFacility ;
-              rdfs:range :EnvironmentalMonitoringFacility .
-
+              rdfs:range :EnvironmentalMonitoringFacility ;
+              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  http://purl.org/cerif/frapo/awards
 frapo:awards rdf:type owl:ObjectProperty ;
