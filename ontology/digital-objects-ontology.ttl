@@ -391,7 +391,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
                   :EnvironmentalMonitoringFacility
             )
       ] ;
-      rdfs:comment "An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses."@en .
+      rdfs:comment "An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses."@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringNetwork
