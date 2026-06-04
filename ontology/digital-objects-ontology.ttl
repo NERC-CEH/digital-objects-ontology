@@ -196,7 +196,8 @@ xsd:date rdf:type rdfs:Datatype ;
 :hasChildProgramme rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasChild ;
               rdfs:domain :EnvironmentalMonitoringProgramme ;
-              rdfs:range :EnvironmentalMonitoringProgramme.
+              rdfs:range :EnvironmentalMonitoringProgramme ;
+              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 
 ###  https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork
