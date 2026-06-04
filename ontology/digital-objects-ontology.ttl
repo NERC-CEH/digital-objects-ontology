@@ -407,7 +407,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringActivity
 :EnvironmentalMonitoringActivity rdf:type owl:Class ; 
-      rdfs:label "Environmental monitoring activity"@en .
+      rdfs:label "Environmental monitoring activity"@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringFacility
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
