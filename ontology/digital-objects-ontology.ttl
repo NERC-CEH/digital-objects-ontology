@@ -181,7 +181,8 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  https://digital.ceh.ac.uk/ontology/doo/hasFacilityType
 :hasFacilityType rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringFacility ;
-              rdfs:range skos:Concept.
+              rdfs:range skos:Concept ;
+              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 
 ###  https://digital.ceh.ac.uk/ontology/doo/hasChild
