@@ -402,8 +402,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringProgramme
 :EnvironmentalMonitoringProgramme rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring programme"@en ;
-      rdfs:comment "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en
-      .
+      rdfs:comment "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringActivity
 :EnvironmentalMonitoringActivity rdf:type owl:Class ; 
