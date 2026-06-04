@@ -394,7 +394,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringNetwork
 :EnvironmentalMonitoringNetwork rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring network"@en ;
-      rdfs:comment "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"@en.
+      rdfs:comment "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringProgramme
 :EnvironmentalMonitoringProgramme rdf:type owl:Class ; 
