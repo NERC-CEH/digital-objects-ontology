@@ -23,7 +23,7 @@
 @base <https://digital.ceh.ac.uk/ontology/doo/> .
 
 <https://digital.ceh.ac.uk/ontology/doo> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.1.0/> ;
+                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.2.0/> ;
                                               dcterms:created "2025-08-18"^^xsd:date ;
                                               dcterms:creator [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                 sdo:name "UK Centre for Ecology & Hydrology"@en ;
