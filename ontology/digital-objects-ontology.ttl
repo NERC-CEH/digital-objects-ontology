@@ -416,7 +416,8 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo//EnvironmentalMonitoringPlatform
 :EnvironmentalMonitoringPlatform rdf:type owl:Class ;
       rdfs:subClassOf :EnvironmentalMonitoringFacility ;
-      rdfs:label "Environmental monitoring platform"@en  .
+      rdfs:label "Environmental monitoring platform"@en  ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  http://purl.org/cerif/frapo/FundingAgency
 frapo:FundingAgency rdf:type owl:Class ;
