@@ -187,7 +187,8 @@ xsd:date rdf:type rdfs:Datatype ;
 ###  https://digital.ceh.ac.uk/ontology/doo/hasChild
 :hasChild rdf:type owl:ObjectProperty ,
               owl:AsymmetricProperty ,
-              owl:IrreflexiveProperty .
+              owl:IrreflexiveProperty ;
+              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 
 ###  https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme
