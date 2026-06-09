@@ -23,7 +23,7 @@
 @base <https://digital.ceh.ac.uk/ontology/doo/> .
 
 <https://digital.ceh.ac.uk/ontology/doo> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.2.0/> ;
+                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.2.1/> ;
                                               dcterms:created "2025-08-18"^^xsd:date ;
                                               dcterms:creator [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                 sdo:name "UK Centre for Ecology & Hydrology"@en ;
@@ -51,7 +51,7 @@
                                               dcterms:description "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                               dcterms:issued "2025-08-18"^^xsd:date ;
                                               dcterms:license <https://opensource.org/license/MIT> ;
-                                              dcterms:modified "2026-06-04"^^xsd:date ;
+                                              dcterms:modified "2026-06-09"^^xsd:date ;
                                               dcterms:publisher [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                   sdo:name "UK Centre for Ecology & Hydrology"@en ;
                                                                   sdo:url <https://www.ceh.ac.uk/>
@@ -62,7 +62,7 @@
                                               vann:preferredNamespacePrefix "doo"^^xsd:string ;
                                               vann:preferredNamespaceUri "https://digital.ceh.ac.uk/ontology/doo/" ;
                                               rdfs:label "Digital Objects Ontology"@en ;
-                                              owl:versionInfo "0.2.0" ;
+                                              owl:versionInfo "0.2.1" ;
                                               sdo:codeRepository <https://github.com/NERC-CEH/digital-objects-ontology> ;
                                               sdo:image <https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png> .
 
@@ -416,12 +416,6 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring facility"@en ;
       rdfs:comment "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en ;
-      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
-
-###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform
-:EnvironmentalMonitoringPlatform rdf:type owl:Class ;
-      rdfs:subClassOf :EnvironmentalMonitoringFacility ;
-      rdfs:label "Environmental monitoring platform"@en  ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  http://purl.org/cerif/frapo/FundingAgency

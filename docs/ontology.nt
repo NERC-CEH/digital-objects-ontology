@@ -1,5 +1,5 @@
 <https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionIRI> <https://digital.ceh.ac.uk/ontology/doo/0.2.0/> .
+<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionIRI> <https://digital.ceh.ac.uk/ontology/doo/0.2.1/> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/abstract> "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."@en .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/contributor> _:genid1 .
 _:genid1 <https://schema.org/name> "Helen Mair Rawsthorne" .
@@ -26,7 +26,7 @@ _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/issued> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/license> <https://opensource.org/license/MIT> .
-<https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/modified> "2026-06-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/modified> "2026-06-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/publisher> _:genid6 .
 _:genid6 <https://schema.org/url> <https://www.ceh.ac.uk/> .
 _:genid6 <https://schema.org/name> "UK Centre for Ecology & Hydrology"@en .
@@ -35,7 +35,7 @@ _:genid6 <https://schema.org/identifier> <https://ror.org/00pggkr55> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://digital.ceh.ac.uk/ontology/doo/" .
 <https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Objects Ontology"@en .
-<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
+<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.1" .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/codeRepository> <https://github.com/NERC-CEH/digital-objects-ontology> .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/funder> <https://ror.org/00pggkr55> .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/funder> <https://ror.org/02b5d8509> .
@@ -528,12 +528,6 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/dcat#Dataset> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."@en .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental monitoring platform"@en .
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

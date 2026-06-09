@@ -1682,7 +1682,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-04"
+    "@value" : "2026-06-09"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"
@@ -1702,10 +1702,10 @@
     "@value" : "Digital Objects Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.2.0/"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.2.1/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.0"
+    "@value" : "0.2.1"
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
@@ -1800,19 +1800,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid25"
-  } ]
-}, {
-  "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringPlatform",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Environmental monitoring platform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme",

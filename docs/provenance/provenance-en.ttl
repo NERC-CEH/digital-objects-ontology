@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://digital.ceh.ac.uk/ontology/doo/0.2.0/> a prov:Entity;
+<https://digital.ceh.ac.uk/ontology/doo/0.2.1/> a prov:Entity;
 	 dc:title "Digital Objects Ontology (Beta)";
 	 prov:wasAttributedTo <https://www.ceh.ac.uk/>;
 	 dc:creator <https://www.ceh.ac.uk/>;
