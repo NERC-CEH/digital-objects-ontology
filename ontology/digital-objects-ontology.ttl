@@ -166,6 +166,7 @@ xsd:date rdf:type rdfs:Datatype ;
 :contains rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringNetwork ;
               rdfs:range :EnvironmentalMonitoringFacility ;
+              rdfs:label "contains"@en .
               rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/utilises
@@ -175,43 +176,14 @@ xsd:date rdf:type rdfs:Datatype ;
                            owl:unionOf ( :EnvironmentalMonitoringFacility
                                          :EnvironmentalMonitoringNetwork
                                        )
-                         ] ;.
-
-
-###  https://digital.ceh.ac.uk/ontology/doo/hasFacilityType
-:hasFacilityType rdf:type owl:ObjectProperty ;
-              rdfs:domain :EnvironmentalMonitoringFacility ;
-              rdfs:range skos:Concept ;
+                         ] ;
               rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
-
-###  https://digital.ceh.ac.uk/ontology/doo/hasChild
-:hasChild rdf:type owl:ObjectProperty ,
-              owl:AsymmetricProperty ,
-              owl:IrreflexiveProperty ;
-              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
-
-
-###  https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme
-:hasChildProgramme rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasChild ;
+###  https://digital.ceh.ac.uk/ontology/doo/triggers
+:triggers rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringProgramme ;
-              rdfs:range :EnvironmentalMonitoringProgramme ;
-              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
-
-
-###  https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork
-:hasChildNetwork rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasChild ;
-              rdfs:domain :EnvironmentalMonitoringNetwork ;
-              rdfs:range :EnvironmentalMonitoringNetwork ;
-              rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
-
-###  https://digital.ceh.ac.uk/ontology/doo/hasChildFacility
-:hasChildFacility rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasChild ;
-              rdfs:domain :EnvironmentalMonitoringFacility ;
-              rdfs:range :EnvironmentalMonitoringFacility ;
+              rdfs:range :EnvironmentalMonitoringActivity ;
+              rdfs:label "triggers"@en .
               rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  http://purl.org/cerif/frapo/awards
@@ -399,13 +371,23 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 :EnvironmentalMonitoringNetwork rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring network"@en ;
       rdfs:comment "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"@en ;
-      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:hasPart ;
+            owl:allValuesFrom :EnvironmentalMonitoringNetwork
+      ] .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme
 :EnvironmentalMonitoringProgramme rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring programme"@en ;
       rdfs:comment "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en ;
-      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo>  ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:hasPart ;
+            owl:allValuesFrom :EnvironmentalMonitoringProgramme
+      ] .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity
 :EnvironmentalMonitoringActivity rdf:type owl:Class ; 
@@ -416,7 +398,18 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring facility"@en ;
       rdfs:comment "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en ;
-      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:hasPart ;
+            owl:allValuesFrom :EnvironmentalMonitoringFacility
+      ] ;
+      rdfs:subClassOf [
+        rdf:type owl:Restriction ;
+        owl:onProperty dct:type ;
+        owl:allValuesFrom skos:Concept
+      ] ;
+.
 
 ###  http://purl.org/cerif/frapo/FundingAgency
 frapo:FundingAgency rdf:type owl:Class ;
