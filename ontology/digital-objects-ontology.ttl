@@ -375,24 +375,33 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
             owl:onProperty dct:hasPart ;
-            owl:allValuesFrom :EnvironmentalMonitoringNetwork
+            owl:allValuesFrom :EnvironmentalMonitoringNetwork ;
+            rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en
+      ] ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:replaces ;
+            owl:allValuesFrom :EnvironmentalMonitoringNetwork ;
+            rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en
       ] .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme
 :EnvironmentalMonitoringProgramme rdf:type owl:Class ; 
       rdfs:label "Environmental monitoring programme"@en ;
-      rdfs:comment "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en ;
+      rdfs:comment "A planned and managed long-term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo>  ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
             owl:onProperty dct:hasPart ;
-            owl:allValuesFrom :EnvironmentalMonitoringProgramme
+            owl:allValuesFrom :EnvironmentalMonitoringProgramme ;
+            rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en
+      ] ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:replaces ;
+            owl:allValuesFrom :EnvironmentalMonitoringProgramme ;
+            rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en
       ] .
-
-###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity
-:EnvironmentalMonitoringActivity rdf:type owl:Class ; 
-      rdfs:label "Environmental monitoring activity"@en ;
-      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility
 :EnvironmentalMonitoringFacility rdf:type owl:Class ; 
@@ -402,7 +411,15 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
             owl:onProperty dct:hasPart ;
-            owl:allValuesFrom :EnvironmentalMonitoringFacility
+            owl:allValuesFrom :EnvironmentalMonitoringFacility ;
+            rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"@en
+      ] ;
+      rdfs:subClassOf [
+            rdf:type owl:Restriction ;
+            owl:onProperty dct:replaces ;
+            owl:allValuesFrom :EnvironmentalMonitoringFacility ;
+            rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en
+
       ] ;
       rdfs:subClassOf [
         rdf:type owl:Restriction ;
@@ -410,6 +427,12 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
         owl:allValuesFrom skos:Concept
       ] ;
 .
+
+###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity
+:EnvironmentalMonitoringActivity rdf:type owl:Class ; 
+      rdfs:label "Environmental monitoring activity"@en ;
+      rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
+
 
 ###  http://purl.org/cerif/frapo/FundingAgency
 frapo:FundingAgency rdf:type owl:Class ;
