@@ -12,7 +12,7 @@
      xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://digital.ceh.ac.uk/ontology/doo">
-        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.2.1/"/>
+        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.3.0/"/>
         <terms:abstract xml:lang="en">A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology &amp; Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.</terms:abstract>
         <terms:contributor rdf:nodeID="genid1"/>
         <terms:contributor rdf:nodeID="genid3"/>
@@ -27,7 +27,7 @@
         <vann:preferredNamespacePrefix>doo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://digital.ceh.ac.uk/ontology/doo/</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">Digital Objects Ontology</rdfs:label>
-        <owl:versionInfo>0.2.1</owl:versionInfo>
+        <owl:versionInfo>0.3.0</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/NERC-CEH/digital-objects-ontology"/>
         <schema:funder rdf:resource="https://ror.org/00pggkr55"/>
         <schema:funder rdf:resource="https://ror.org/02b5d8509"/>
@@ -326,6 +326,27 @@
     
 
 
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/replaces -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/replaces"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type"/>
+    
+
+
     <!-- http://purl.org/spar/pro/holdsRoleInTime -->
 
 
@@ -414,64 +435,7 @@
         <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
         <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChild -->
-
-
-    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChild">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildFacility -->
-
-
-    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildFacility">
-        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
-        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
-        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
-        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork -->
-
-
-    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork">
-        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
-        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
-        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
-        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme -->
-
-
-    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme">
-        <rdfs:subPropertyOf rdf:resource="https://digital.ceh.ac.uk/ontology/doo/hasChild"/>
-        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
-        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
-        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://digital.ceh.ac.uk/ontology/doo/hasFacilityType -->
-
-
-    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/hasFacilityType">
-        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -548,6 +512,18 @@
     
 
 
+    <!-- https://digital.ceh.ac.uk/ontology/doo/triggers -->
+
+
+    <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/triggers">
+        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+        <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"/>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
+        <rdfs:label xml:lang="en">triggers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://digital.ceh.ac.uk/ontology/doo/utilises -->
 
 
@@ -561,6 +537,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
     </owl:ObjectProperty>
     
 
@@ -871,6 +848,24 @@
 
 
     <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/replaces"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/type"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">Environmental monitoring facility</rdfs:label>
@@ -902,6 +897,18 @@
 
 
     <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/replaces"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">Environmental monitoring network</rdfs:label>
@@ -934,7 +941,19 @@
 
 
     <owl:Class rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme">
-        <rdfs:comment xml:lang="en">A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/replaces"/>
+                <owl:allValuesFrom rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A planned and managed long-term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">Environmental monitoring programme</rdfs:label>
     </owl:Class>
@@ -2235,6 +2254,24 @@
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">video</rdfs:label>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one.</rdfs:comment>
+    </rdf:Description>
     
 
 

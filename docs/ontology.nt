@@ -1,5 +1,5 @@
 <https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionIRI> <https://digital.ceh.ac.uk/ontology/doo/0.2.1/> .
+<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionIRI> <https://digital.ceh.ac.uk/ontology/doo/0.3.0/> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/abstract> "A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues."@en .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/contributor> _:genid1 .
 _:genid1 <https://schema.org/name> "Helen Mair Rawsthorne" .
@@ -35,7 +35,7 @@ _:genid6 <https://schema.org/identifier> <https://ror.org/00pggkr55> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://digital.ceh.ac.uk/ontology/doo/" .
 <https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Objects Ontology"@en .
-<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.1" .
+<https://digital.ceh.ac.uk/ontology/doo> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.0" .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/codeRepository> <https://github.com/NERC-CEH/digital-objects-ontology> .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/funder> <https://ror.org/00pggkr55> .
 <https://digital.ceh.ac.uk/ontology/doo> <https://schema.org/funder> <https://ror.org/02b5d8509> .
@@ -172,6 +172,15 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/dcat#Resource> .
 <http://purl.org/cerif/frapo/hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
 # 
+# http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://purl.org/spar/pro/holdsRoleInTime
 <http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
@@ -230,40 +239,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://digital.ceh.ac.uk/ontology/doo/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
 <https://digital.ceh.ac.uk/ontology/doo/contains> <http://www.w3.org/2000/01/rdf-schema#range> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
 <https://digital.ceh.ac.uk/ontology/doo/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/hasChild
-<https://digital.ceh.ac.uk/ontology/doo/hasChild> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChild> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChild> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChild> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/hasChildFacility
-<https://digital.ceh.ac.uk/ontology/doo/hasChildFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildFacility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://digital.ceh.ac.uk/ontology/doo/hasChild> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildFacility> <http://www.w3.org/2000/01/rdf-schema#range> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork
-<https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://digital.ceh.ac.uk/ontology/doo/hasChild> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork> <http://www.w3.org/2000/01/rdf-schema#range> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildNetwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme
-<https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://digital.ceh.ac.uk/ontology/doo/hasChild> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme> <http://www.w3.org/2000/01/rdf-schema#range> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
-<https://digital.ceh.ac.uk/ontology/doo/hasChildProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
-# 
-# https://digital.ceh.ac.uk/ontology/doo/hasFacilityType
-<https://digital.ceh.ac.uk/ontology/doo/hasFacilityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://digital.ceh.ac.uk/ontology/doo/hasFacilityType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
-<https://digital.ceh.ac.uk/ontology/doo/hasFacilityType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://digital.ceh.ac.uk/ontology/doo/hasFacilityType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
+<https://digital.ceh.ac.uk/ontology/doo/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
 # 
 # https://digital.ceh.ac.uk/ontology/doo/hasInput
 <https://digital.ceh.ac.uk/ontology/doo/hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -313,6 +289,13 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/spatialRepresentationType> <http://www.w3.org/2000/01/rdf-schema#label> "spatial representation type"@en .
 # 
+# https://digital.ceh.ac.uk/ontology/doo/triggers
+<https://digital.ceh.ac.uk/ontology/doo/triggers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://digital.ceh.ac.uk/ontology/doo/triggers> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
+<https://digital.ceh.ac.uk/ontology/doo/triggers> <http://www.w3.org/2000/01/rdf-schema#range> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity> .
+<https://digital.ceh.ac.uk/ontology/doo/triggers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
+<https://digital.ceh.ac.uk/ontology/doo/triggers> <http://www.w3.org/2000/01/rdf-schema#label> "triggers"@en .
+# 
 # https://digital.ceh.ac.uk/ontology/doo/utilises
 <https://digital.ceh.ac.uk/ontology/doo/utilises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://digital.ceh.ac.uk/ontology/doo/utilises> <http://www.w3.org/2000/01/rdf-schema#domain> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
@@ -325,6 +308,7 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://digital.ceh.ac.uk/ontology/doo/utilises> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 # 
 # 
 # 
@@ -430,6 +414,7 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/scoro/ProjectRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -484,21 +469,33 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/replaces> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/type> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "A facility that provides the physical or digital infrastructure required to acquire, process, or manage observations or measurements of environmental properties, such as physical, chemical, or biological parameters."@en .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental monitoring facility"@en .
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/dcat#Dataset> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract base class for environmental monitoring features in the real world. Must be specialised into one of its subclasses."@en .
@@ -506,24 +503,32 @@ _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/replaces> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of environmental monitoring facilities (and/or other networks) collected under a common purpose, design, or coordination framework to support systematic environmental observation or measurement"@en .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental monitoring network"@en .
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
-_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/dcat#Resource> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/dcat#Dataset> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for environmental monitoring entities. Must be specialised into one of its subclasses."@en .
@@ -531,7 +536,15 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#comment> "A planned and managed long‑term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/replaces> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#comment> "A planned and managed long-term initiative that defines the objectives, scope, methods, and resources for carrying out environmental monitoring over a defined period of time, typically realised through one or more monitoring networks, activities, or facilities."@en .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental monitoring programme"@en .
 # 
@@ -1189,6 +1202,12 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://digital.ceh.ac.uk/ontology/doo/video> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/video> <http://www.w3.org/2000/01/rdf-schema#label> "video"@en .
 # 
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en .
+_:genid37 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"@en .
+_:genid38 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en .
+_:genid39 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en .
+_:genid40 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en .
 # 
 # 
 # #################################################################
