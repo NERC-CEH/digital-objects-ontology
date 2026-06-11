@@ -26,7 +26,7 @@ _:genid5 <http://xmlns.com/foaf/0.1/homepage> <https://www.ceh.ac.uk/> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/issued> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/license> <https://opensource.org/license/MIT> .
-<https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/modified> "2026-06-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/modified> "2026-06-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://digital.ceh.ac.uk/ontology/doo> <http://purl.org/dc/terms/publisher> _:genid6 .
 _:genid6 <https://schema.org/url> <https://www.ceh.ac.uk/> .
 _:genid6 <https://schema.org/name> "UK Centre for Ecology & Hydrology"@en .
@@ -1202,12 +1202,12 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://digital.ceh.ac.uk/ontology/doo/video> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://digital.ceh.ac.uk/ontology/doo> .
 <https://digital.ceh.ac.uk/ontology/doo/video> <http://www.w3.org/2000/01/rdf-schema#label> "video"@en .
 # 
-_:genid36 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en .
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en .
 _:genid37 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"@en .
-_:genid38 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en .
-_:genid39 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en .
-_:genid40 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en .
-_:genid41 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en .
+_:genid38 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en .
+_:genid39 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en .
+_:genid40 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#comment> "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en .
 # 
 # 
 # #################################################################

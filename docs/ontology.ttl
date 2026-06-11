@@ -16,7 +16,7 @@
                                           <http://purl.org/dc/terms/description> "[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles."@en ;
                                           <http://purl.org/dc/terms/issued> "2025-08-18"^^xsd:date ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/license/MIT> ;
-                                          <http://purl.org/dc/terms/modified> "2026-06-09"^^xsd:date ;
+                                          <http://purl.org/dc/terms/modified> "2026-06-11"^^xsd:date ;
                                           <http://purl.org/dc/terms/publisher> _:genid6 ;
                                           <http://purl.org/dc/terms/title> "Digital Objects Ontology (Beta)"@en ;
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "doo" ;
@@ -1363,22 +1363,22 @@ xsd:date rdf:type rdfs:Datatype ;
                                                rdfs:label "video"@en .
 
 
-[ rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en
+[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en
 ] .
 
 [ rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"@en
  ] .
 
-[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en
- ] .
-
-[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en
+[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en
  ] .
 
 [ rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en
  ] .
 
-[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en
+[ rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en
+ ] .
+
+[ rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en
  ] .
 
 #################################################################
