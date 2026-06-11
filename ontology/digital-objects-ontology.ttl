@@ -23,7 +23,7 @@
 @base <https://digital.ceh.ac.uk/ontology/doo/> .
 
 <https://digital.ceh.ac.uk/ontology/doo> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.2.1/> ;
+                                              owl:versionIRI <https://digital.ceh.ac.uk/ontology/doo/0.3.0/> ;
                                               dcterms:created "2025-08-18"^^xsd:date ;
                                               dcterms:creator [ sdo:identifier <https://ror.org/00pggkr55> ;
                                                                 sdo:name "UK Centre for Ecology & Hydrology"@en ;
@@ -62,7 +62,7 @@
                                               vann:preferredNamespacePrefix "doo"^^xsd:string ;
                                               vann:preferredNamespaceUri "https://digital.ceh.ac.uk/ontology/doo/" ;
                                               rdfs:label "Digital Objects Ontology"@en ;
-                                              owl:versionInfo "0.2.1" ;
+                                              owl:versionInfo "0.3.0" ;
                                               sdo:codeRepository <https://github.com/NERC-CEH/digital-objects-ontology> ;
                                               sdo:image <https://raw.githubusercontent.com/NERC-CEH/digital-objects-ontology/refs/heads/main/ontology/diagrams/digital_objects_ontology.png> .
 
