@@ -166,7 +166,7 @@ xsd:date rdf:type rdfs:Datatype ;
 :contains rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringNetwork ;
               rdfs:range :EnvironmentalMonitoringFacility ;
-              rdfs:label "contains"@en .
+              rdfs:label "contains"@en ;
               rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/utilises
@@ -183,7 +183,7 @@ xsd:date rdf:type rdfs:Datatype ;
 :triggers rdf:type owl:ObjectProperty ;
               rdfs:domain :EnvironmentalMonitoringProgramme ;
               rdfs:range :EnvironmentalMonitoringActivity ;
-              rdfs:label "triggers"@en .
+              rdfs:label "triggers"@en ;
               rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> .
 
 ###  http://purl.org/cerif/frapo/awards
@@ -340,7 +340,7 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject
 :EnvironmentalMonitoringObject rdf:type owl:Class ; 
       rdfs:subClassOf dcat:Resource ;
-      owl:disjointWith mem:Method ,  dcat:Dataset;
+      owl:disjointWith mem:Method ,  dcat:Dataset ;
       owl:equivalentClass [
             rdf:type owl:Class ;
             owl:unionOf (
@@ -355,7 +355,7 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature
 :EnvironmentalMonitoringFeature rdf:type owl:Class ; 
       rdfs:subClassOf dcat:Resource ;
-      owl:disjointWith mem:Method ,  dcat:Dataset;
+      owl:disjointWith mem:Method ,  dcat:Dataset ;
       owl:equivalentClass [
             rdf:type owl:Class ;
             owl:unionOf (
@@ -374,13 +374,13 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:hasPart ;
+            owl:onProperty dcterms:hasPart ;
             owl:allValuesFrom :EnvironmentalMonitoringNetwork ;
             rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"@en
       ] ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:replaces ;
+            owl:onProperty dcterms:replaces ;
             owl:allValuesFrom :EnvironmentalMonitoringNetwork ;
             rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."@en
       ] .
@@ -392,13 +392,13 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo>  ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:hasPart ;
+            owl:onProperty dcterms:hasPart ;
             owl:allValuesFrom :EnvironmentalMonitoringProgramme ;
             rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"@en
       ] ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:replaces ;
+            owl:onProperty dcterms:replaces ;
             owl:allValuesFrom :EnvironmentalMonitoringProgramme ;
             rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."@en
       ] .
@@ -410,23 +410,22 @@ frapo:hasStartDate rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy <https://digital.ceh.ac.uk/ontology/doo> ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:hasPart ;
+            owl:onProperty dcterms:hasPart ;
             owl:allValuesFrom :EnvironmentalMonitoringFacility ;
             rdfs:comment "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"@en
       ] ;
       rdfs:subClassOf [
             rdf:type owl:Restriction ;
-            owl:onProperty dct:replaces ;
+            owl:onProperty dcterms:replaces ;
             owl:allValuesFrom :EnvironmentalMonitoringFacility ;
             rdfs:comment "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."@en
 
       ] ;
       rdfs:subClassOf [
         rdf:type owl:Restriction ;
-        owl:onProperty dct:type ;
+        owl:onProperty dcterms:type ;
         owl:allValuesFrom skos:Concept
-      ] ;
-.
+      ] .
 
 ###  https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity
 :EnvironmentalMonitoringActivity rdf:type owl:Class ; 
