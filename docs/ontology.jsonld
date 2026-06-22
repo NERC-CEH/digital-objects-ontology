@@ -50,9 +50,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"
     }, {
-      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
     } ]
   } ]
 }, {
@@ -69,33 +69,6 @@
   } ]
 }, {
   "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/replaces"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/type"
-  } ]
-}, {
-  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -105,22 +78,41 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/dc/terms/hasPart"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/dc/terms/replaces"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/type"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFacility"
+    }, {
+      "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+    } ]
   } ]
 }, {
   "@id" : "_:genid3",
@@ -134,7 +126,25 @@
     "@value" : "Philip Trembath"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/hasPart"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/replaces"
+  } ]
+}, {
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -146,7 +156,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
@@ -155,31 +165,13 @@
     "@id" : "http://purl.org/dc/terms/hasPart"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/dc/terms/replaces"
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid39",
@@ -203,13 +195,31 @@
   "@id" : "_:genid40",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid41",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
+    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid5",
@@ -1790,7 +1800,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-11"
+    "@value" : "2026-06-22"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"
@@ -1810,10 +1820,10 @@
     "@value" : "Digital Objects Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.3.0/"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.3.1/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.3.0"
+    "@value" : "0.3.1"
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
@@ -1858,11 +1868,11 @@
     "@value" : "Environmental monitoring facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid26"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature",
@@ -1881,7 +1891,7 @@
     "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringNetwork",
@@ -1898,9 +1908,9 @@
     "@value" : "Environmental monitoring network"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject",
@@ -1919,7 +1929,7 @@
     "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid30"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme",
@@ -1936,9 +1946,9 @@
     "@value" : "Environmental monitoring programme"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid34"
+    "@id" : "_:genid37"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/SpatialRepresentation",
@@ -2121,7 +2131,7 @@
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/triggers",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"
+    "@id" : "_:genid19"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
@@ -2143,7 +2153,7 @@
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo/vector",

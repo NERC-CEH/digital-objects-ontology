@@ -12,7 +12,7 @@
      xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://digital.ceh.ac.uk/ontology/doo">
-        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.3.0/"/>
+        <owl:versionIRI rdf:resource="https://digital.ceh.ac.uk/ontology/doo/0.3.1/"/>
         <terms:abstract xml:lang="en">A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology &amp; Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.</terms:abstract>
         <terms:contributor rdf:nodeID="genid1"/>
         <terms:contributor rdf:nodeID="genid3"/>
@@ -21,13 +21,13 @@
         <terms:description xml:lang="en">[Disclaimer: this is a beta version of the Digital Objects Ontology. The namespace has not yet been assigned.] This ontology allows describing diverse research outputs (articles, datasets, methods, workflows, etc.), the projects that allowed the creation of the outputs, the grants that funded the projects, the environmental monitoring facilities, programmes and networks that provided the data, the people and organisations who contributed to the projects and outputs, and their roles.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:issued>
         <terms:license rdf:resource="https://opensource.org/license/MIT"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-11</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-22</terms:modified>
         <terms:publisher rdf:nodeID="genid6"/>
         <terms:title xml:lang="en">Digital Objects Ontology (Beta)</terms:title>
         <vann:preferredNamespacePrefix>doo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://digital.ceh.ac.uk/ontology/doo/</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">Digital Objects Ontology</rdfs:label>
-        <owl:versionInfo>0.3.0</owl:versionInfo>
+        <owl:versionInfo>0.3.1</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/NERC-CEH/digital-objects-ontology"/>
         <schema:funder rdf:resource="https://ror.org/00pggkr55"/>
         <schema:funder rdf:resource="https://ror.org/02b5d8509"/>
@@ -516,7 +516,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://digital.ceh.ac.uk/ontology/doo/triggers">
-        <rdfs:domain rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"/>
+                    <rdf:Description rdf:about="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity"/>
         <rdfs:isDefinedBy rdf:resource="https://digital.ceh.ac.uk/ontology/doo"/>
         <rdfs:label xml:lang="en">triggers</rdfs:label>
@@ -2255,22 +2262,22 @@
         <rdfs:label xml:lang="en">video</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
-        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility</rdfs:comment>
+        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme</rdfs:comment>
     </rdf:Description>
     <rdf:Description>
         <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one.</rdfs:comment>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme</rdfs:comment>
+        <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility</rdfs:comment>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one.</rdfs:comment>
     </rdf:Description>
     <rdf:Description>
         <rdfs:comment xml:lang="en">Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one.</rdfs:comment>
     </rdf:Description>
     
 

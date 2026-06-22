@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://digital.ceh.ac.uk/ontology/doo/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://digital.ceh.ac.uk/ontology/doo/","name":"Digital Objects Ontology (Beta)", "headline":"A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.", "dateReleased":"2025-08-18", "dateModified":"2026-06-11", "version":"0.3.0", "license":"https://opensource.org/license/MIT", "codeRepository":"https://github.com/NERC-CEH/digital-objects-ontology", "author":[{"@type":"Person","name":"UK Centre for Ecology & Hydrology","url":"https://www.ceh.ac.uk/"}], "contributor":[{"@type":"Person","name":"Helen Mair Rawsthorne","url":"https://www.ceh.ac.uk/staff/helen-rawsthorne"},{"@type":"Person","name":"Philip Trembath"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://digital.ceh.ac.uk/ontology/doo/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://digital.ceh.ac.uk/ontology/doo/","name":"Digital Objects Ontology (Beta)", "headline":"A complex web of people, places, tools and funding underpins environmental science research, and this landscape is welcoming an ever-broader range of research output types that goes far beyond written publications and datasets. Community engagement events, software, scientific models and laboratory protocols, to name but a few, can now be recorded in online catalogues and along with metadata.  Describing and connecting research outputs robustly is key to making them discoverable and reusable by humans and machines, which benefits researchers and the scientific community by increasing the impact and reach of research outputs, showcasing existing infrastructure and encouraging multidisciplinary collaboration. At the UK Centre for Ecology & Hydrology (UKCEH) we have developed the Digital Objects Ontology (DOO) to improve how environmental research outputs are described and connected in online catalogues.", "dateReleased":"2025-08-18", "dateModified":"2026-06-22", "version":"0.3.1", "license":"https://opensource.org/license/MIT", "codeRepository":"https://github.com/NERC-CEH/digital-objects-ontology", "author":[{"@type":"Person","name":"UK Centre for Ecology & Hydrology","url":"https://www.ceh.ac.uk/"}], "contributor":[{"@type":"Person","name":"Helen Mair Rawsthorne","url":"https://www.ceh.ac.uk/staff/helen-rawsthorne"},{"@type":"Person","name":"Philip Trembath"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,13 +70,13 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-06-11</dt>
+<dt>Modified on: 2026-06-22</dt>
 <dt>This version:</dt>
-<dd><a href="https://digital.ceh.ac.uk/ontology/doo/0.3.0/">https://digital.ceh.ac.uk/ontology/doo/0.3.0/</a></dd>
+<dd><a href="https://digital.ceh.ac.uk/ontology/doo/0.3.1/">https://digital.ceh.ac.uk/ontology/doo/0.3.1/</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://digital.ceh.ac.uk/ontology/doo/">https://digital.ceh.ac.uk/ontology/doo/</a></dd>
 <dt>Revision:</dt>
-<dd>0.3.0</dd>
+<dd>0.3.1</dd>
 <dt>Issued on:</dt>
 <dd>2025-08-18</dd>
 <dt>Authors:</dt>
@@ -96,7 +96,7 @@ $(function(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://opensource.org/license/MIT" target="_blank"><img src="https://img.shields.io/badge/License-https://opensource.org/license/MIT-blue.svg" alt="https://opensource.org/license/MIT" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
-<dd>UK Centre for Ecology & Hydrology. Digital Objects Ontology (Beta). Revision: 0.3.0. Retrieved from: https://digital.ceh.ac.uk/ontology/doo/0.3.0/</dd>
+<dd>UK Centre for Ecology & Hydrology. Digital Objects Ontology (Beta). Revision: 0.3.1. Retrieved from: https://digital.ceh.ac.uk/ontology/doo/0.3.1/</dd>
 <dt>Vocabulary maintained at:</dt>
 <dd><a href="https://github.com/NERC-CEH/digital-objects-ontology">https://github.com/NERC-CEH/digital-objects-ontology</a></dd>
 </dl>
@@ -1292,6 +1292,12 @@ This section provides details for each class and property defined by Digital Obj
   </dl>
   <dl class="description">
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#triggers" title="https://digital.ceh.ac.uk/ontology/doo/triggers">triggers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
@@ -2328,7 +2334,7 @@ This section provides details for each class and property defined by Digital Obj
      has domain
     </dt>
     <dd>
-     <a href="#EnvironmentalMonitoringProgramme" title="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme">Environmental monitoring programme</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EnvironmentalMonitoringActivity" title="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringActivity">Environmental monitoring activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#EnvironmentalMonitoringProgramme" title="https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringProgramme">Environmental monitoring programme</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

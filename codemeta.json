@@ -42,10 +42,10 @@
     "name": "Digital Objects Ontology",
     "programmingLanguage": "OWL",
     "funding": "NE/Y006208/1",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "developmentStatus": "wip",
     "dateCreated": "2025-08-18",
-    "dateModified": "2026-06-11",
+    "dateModified": "2026-06-22",
     "datePublished": "2025-08-18",
     "url": "https://nerc-ceh.github.io/digital-objects-ontology/"
 }
