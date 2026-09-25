@@ -40,9 +40,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
+      "@id" : "http://www.w3.org/ns/dcat#Dataset"
     }, {
-      "@id" : "https://www.w3.org/ns/dcat#Dataset"
+      "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
     } ]
   } ]
 }, {
@@ -177,7 +177,7 @@
   "@id" : "_:genid39",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"
+    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -195,31 +195,31 @@
   "@id" : "_:genid40",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."
+    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring programme may have a child programme"
   } ]
 }, {
   "@id" : "_:genid41",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid42",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."
+    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring facility may have a child facility"
   } ]
 }, {
   "@id" : "_:genid43",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows hierarchies to be modelled. For example, this relation reflects that an environmental monitoring network may have a child network"
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring programme may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid44",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring network may be superseded by another one."
+    "@value" : "Allows genealogy links to be  modelled. This relation reflects that an environmental monitoring facility may be superseded by another one."
   } ]
 }, {
   "@id" : "_:genid5",
@@ -343,7 +343,7 @@
     "@id" : "http://purl.org/cerif/frapo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ]
 }, {
   "@id" : "http://purl.org/cerif/frapo/hasStartDate",
@@ -1645,6 +1645,28 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/dcat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://ceh.ac.uk/method-metadata-ontology/Method"
+  }, {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"
+  }, {
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/dcat"
+  } ]
+}, {
   "@id" : "http://www.w3.org/ns/org#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1759,14 +1781,12 @@
     "@id" : "https://ceh.ac.uk/method-metadata-ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringFeature"
   }, {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo/EnvironmentalMonitoringObject"
-  }, {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "https://digital.ceh.ac.uk/ontology/doo",
@@ -1800,7 +1820,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-22"
+    "@value" : "2026-09-25"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "_:genid6"
@@ -1820,10 +1840,10 @@
     "@value" : "Digital Objects Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.3.1/"
+    "@id" : "https://digital.ceh.ac.uk/ontology/doo/0.3.2/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.3.1"
+    "@value" : "0.3.2"
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/NERC-CEH/digital-objects-ontology"
@@ -1885,10 +1905,7 @@
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid28"
@@ -1923,10 +1940,7 @@
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Dataset"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid33"
@@ -2017,7 +2031,7 @@
     "@value" : "A publication that describes a digital object. The team of authors should be similar across both resources. Example: a data paper (publication) that describes a dataset (digital object)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
@@ -2060,7 +2074,7 @@
     "@value" : "A grant that funded the production of a digital object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://digital.ceh.ac.uk/ontology/doo"
@@ -2211,19 +2225,4 @@
 }, {
   "@id" : "https://w3id.org/widoco/vocab#introduction",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://www.w3.org/ns/dcat#Dataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/ns/dcat"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/dcat#Resource"
-  } ]
-}, {
-  "@id" : "https://www.w3.org/ns/dcat#Resource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/ns/dcat"
-  } ]
 } ]
