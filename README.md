@@ -10,15 +10,11 @@ Rich metadata for diverse research outputs (articles, datasets, methods, etc.) i
 
 ## Overview
 
-Four modules from external ontologies: [FRAPO](https://sparontologies.github.io/frapo/current/frapo.html), [FDRI](https://nerc-ceh.github.io/fdri-ontology/), [PRO](https://sparontologies.github.io/pro/current/pro.html) and [SCoRO](https://sparontologies.github.io/scoro/current/scoro.html).
+Three modules from external ontologies: [FRAPO](https://sparontologies.github.io/frapo/current/frapo.html), [PRO](https://sparontologies.github.io/pro/current/pro.html) and [SCoRO](https://sparontologies.github.io/scoro/current/scoro.html).
 
 Also heavily relies on [PROV-O](https://www.w3.org/TR/prov-o/) and [FOAF](http://xmlns.com/foaf/spec/).
 
 Includes a handful of new predicates, for which the namespace https://digital.ceh.ac.uk/ontology/doo is used.
-
-This ontology works hand-in-hand with the [Environmental DCAT Application Profile (Env-DCAT-AP)](https://github.com/NERC-CEH/env-dcat-ap) to enable rich metadata descriptions of datasets.
-
-This ontology is compatible with work being done on [modelling workflows/method-type things](https://github.com/NERC-CEH/workflows-ontology) and will be compatible with work on modelling observed properties in datasets.
 
 In the diagram below, classes that are coloured in are defined in more detail (i.e. the object properties and datatype properties that apply to them) elsewhere, either in the [Env-DCAT-AP](https://github.com/NERC-CEH/env-dcat-ap) or in the [Method Metadata Ontology](https://github.com/NERC-CEH/workflows-ontology/tree/main/method-metadata-ontology).
 
